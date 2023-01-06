@@ -2,18 +2,20 @@ project:
   type: website
 
 website:
-  title: "quarto"
+  title: 'UHC - HCUP Resource'
   navbar:
-    right:
-      - about.qmd
-      - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+    left:
+      - href: index.qmd
+        text: Home
+      - text: Manuals
+        menu:
+        - href: pages/manuals/parquet/index.qmd
+          text: "Parquet"  
+
 format:
   html:
-    theme: cosmo
+    theme: simplex
     css: styles.css
+    toc: true
 
 editor: visual
-
