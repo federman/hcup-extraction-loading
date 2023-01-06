@@ -24,7 +24,7 @@
   copy_load_program()
   
   ## Step 3: Run STATA to generate dta
-  get_elt_status()
+  get_elt_status() %>% select(-parquet, -codebook)
   
   ## Step 4: Load as parquet
   load_dta_to_db()
@@ -38,7 +38,7 @@
 
 { # 2. Datastores -----------------------------------------------------------
   
-  ## combined codebook
+  ## combined codebook for local EDA
   get_elt_status() %>% 
     make_target_endpoints() %>% 
     pull(path_codebook) %>% 
@@ -47,6 +47,7 @@
     fwrite("clean/df_codebooks.csv")
     
     
+  ## generate docs blocks in .md for DBT
   
   
 }

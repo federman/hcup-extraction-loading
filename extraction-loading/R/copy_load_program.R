@@ -30,7 +30,7 @@ copy_load_program = function(){
     message(glue("Copied .Do files for {nrow(df_missing)} files"))
     df_missing$dataset_id %>% walk(~message(glue("- {.x}")))
   } else {
-    print(get_elt_status())
+    print(get_elt_status() %>% select(dataset_id, Do))
     message(glue("No .Do files missing"))
   }
    

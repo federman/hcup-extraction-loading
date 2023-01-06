@@ -28,7 +28,7 @@ load_dta_to_db = function(){
     message(glue("Loaded .dta files to .parquet for {nrow(df_paths)} datasets"))
     df_paths$dataset_id %>% walk(~message(glue("- {.x}")))
   } else {
-    print(get_elt_status())
+    print(get_elt_status() %>% select(dataset_id, parquet))
     message(glue("No .parquet files missing"))
   }
   
