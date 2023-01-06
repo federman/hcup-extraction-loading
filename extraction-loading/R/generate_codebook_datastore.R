@@ -40,14 +40,19 @@ make_codebooks = function(df_id){
 
 generate_codebooks = function(){
   
-  df_targets = get_elt_status() %>% 
-    make_target_endpoints() %>% 
-    select(-path_dta) 
+  df_targets_without_codebooks = get_elt_status() %>% 
+    make_target_endpoints(keep_column = 'codebook') %>% 
+    select(-path_dta) %>% 
+    filter(!codebook)
   
-  df_targets %>% 
-    group_by(row_number()) %>% 
-    group_walk(~make_codebooks(.x))
-  
-  message(glue("Codebooks written for {nrow(df_targets)} datasets"))
+  if (nrow(df_targets_without_codebooks) == 0){
+    print( get_elt_status() %>% select(dataset_id, codebook))
+    message(glue("No codebooks missing!"))
+  } else {
+    df_targets_without_codebooks %>% 
+      group_by(row_number()) %>% 
+      group_walk(~make_codebooks(.x))
+    message(glue("Codebooks written for {nrow(df_targets)} datasets"))
+  }
   
 }
