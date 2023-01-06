@@ -1,16 +1,16 @@
 {# 0. Setup ----
   ## Load Dependencies
   rm(list= ls()); options(scipen = 999)
-  packages =  c('rstudioapi','tidyverse','stringr','glue',
-                'haven', 'readstata13',
-                'data.table','arrow','glue') 
-  lapply(packages, require, character.only = TRUE)
-  
+  library(rstudioapi) 
+  library(glue)         
+  library(stringr)
+  library(readstata13)
+  library(arrow)
+  library(tidyverse)
   
   ## Set directory and load helpers 
   setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
   sapply(list.files(path = 'R/', all.files = T,recursive = T, full.names = T, pattern = '.R'), source)
-  
 }
 
 
