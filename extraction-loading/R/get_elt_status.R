@@ -1,4 +1,6 @@
-#' Gets all current datsets iin elt folder
+#' This function will return the status of various files available for
+#' each dataset_id. Currently it only works in the `dev` context and
+#' searches the /raw-hcup directory for these files. 
 
 get_elt_status = function(){
 
