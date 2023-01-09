@@ -1,55 +1,28 @@
-#' This function will return the status of various files available for
-#' each dataset_id. Currently it only works in the `dev` context and
-#' searches the /raw-hcup directory for these files. 
+#' This function will take in a few arguemtns (mainly table name + metadata) and write dbt 
+#' source.yml files for those tables into the dbt repository. It relies on two help functions
+#' listed below
+#' 
+#' @param table_name: is the raw HCUP table name it should be upper case. e.g  table_name = 'NY_SEDD_2017_CHGS'
 
-vec__state_datasets = c("sedd","sid")
-
-parse_hcup_table_name = function(table_name){
-  table_info = table_name %>% 
-    str_to_lower() %>% 
-    str_split('_') %>% 
-    .[[1]] %>% 
-    set_names(c("state",'database','year','table')) %>% 
-    c(.,c("name" = table_name %>% str_to_lower)) %>% 
-    as.list()
-  return(table_info)
-}
+source("R/parse_hcup_table_name.R")
+source("R/get_dbt_models_dir.R")
 
 
-get_dbt_models_dir = function(table_info){
-  
-  ## table parameter 
-  tier1_path = ifelse(table_info$database%in%vec__state_datasets,'state','nationwide' )
-  tier2_path = table_info$database
-  tier3_path = table_info$state 
-  tier4_path = glue("{table_info$name}.yml") %>% str_to_lower()
-  
-  ## get end path
-  local_path = getwd()
-  git_index = local_path %>% str_locate('git') %>% max()
-  base_path = local_path %>% str_sub(0,git_index)
-  repo_dir = 'hcup-dbt/models/docs'
-  endpoint_dir = glue("{base_path}/{repo_dir}/{tier1_path}/{tier2_path}/{tier3_path}")
-  endpoint_file = glue("{endpoint_dir}/{tier4_path}")
-  
-  ## return
-  endpoint = list(
-    dir = endpoint_dir,
-    file = endpoint_file
-  )
-  return(endpoint)
-  }
-
-generate_source_yml <- function(table_name,db_tags,db_external_loc) {
+generate_source_yml <- function(table_name,db_external_loc) {
 
   # Parameters
   db_external_loc = "D:\\git\\hcup-extraction-loading\\extraction-loading\\raw-hcup\\{name}.parquet"
   table_name = 'NY_SEDD_2017_CHGS'
-  db_tags = c('State','ER','SEDD')
+  
+  ## Staging
+  db_tags = list(
+    sedd = c('State','ER','SEDD')
+  )
   
   
   ## Intermediaa
   table_info = parse_hcup_table_name(table_name)
+  db_tags_tmp = db_tags[[table_info$database]]
   table_desc = paste0('New York State SEDD 2017 CHGS. ','{{ doc("sedd_',table_info$table,'_description") }}' ) %>% 
     noquote()
   db_desc  = '{{ doc("sedd_description") }}'
@@ -61,7 +34,7 @@ generate_source_yml <- function(table_name,db_tags,db_external_loc) {
     sources= list(
       list(
         name= table_info$database %>% str_to_upper(),
-        tags= db_tags,
+        tags= db_tags_tmp,
         description = db_desc,
         meta = list(
           external_location = db_external_loc
