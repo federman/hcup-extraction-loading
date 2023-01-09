@@ -15,7 +15,7 @@ generate_source_yml <- function(table_name, env = "dev") {
   source_loc = case_when(
     env == "dev" ~ "D:\\git\\hcup-extraction-loading\\extraction-loading\\raw-hcup\\{name}.parquet",
     TRUE ~ "")
-  table_name = 'NY_SEDD_2017_CHGS'
+  # table_name = 'NY_SEDD_2017_CHGS'
   
   ## Staging
   db_tags = list(
@@ -26,7 +26,7 @@ generate_source_yml <- function(table_name, env = "dev") {
   ## Intermediaa
   table_info = parse_hcup_table_name(table_name)
   db_tags_tmp = db_tags[[table_info$database]]
-  table_desc = paste0('New York State SEDD 2017 CHGS. ','{{ doc("sedd_',table_info$table,'_description") }}' ) %>% 
+  table_desc = paste0('New York State SEDD 2017 ',str_to_upper(table_info$table),' file. ','{{ doc("sedd_',table_info$table,'_description") }}' ) %>% 
     noquote()
   db_desc  = '{{ doc("sedd_description") }}'
   
