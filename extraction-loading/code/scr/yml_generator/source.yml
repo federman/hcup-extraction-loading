@@ -1,7 +1,11 @@
-version: 2.0
+version: 2
 sources:
 - name: SEDD
-  tags: '["State","Emergency Department","ER","SEDD"]'
+  tags:
+  - State
+  - Emergency Department
+  - ER
+  - SEDD
   description: '{{ doc("sedd_description") }}'
   meta:
     external_location: D:\git\hcup-extraction-loading\extraction-loading\raw-hcup\{name}.parquet
