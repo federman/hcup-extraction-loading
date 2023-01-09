@@ -48,8 +48,9 @@
     
     
   ## generate docs blocks in .md for DBT
-  
-  generate_source_yml()
+  get_elt_status() 
+  generate_source_yml(table_name = "NY_SEDD_2018_CHGS")
+  generate_source_yml(table_name = "NY_SEDD_2018_CORE")
   
   
 }
