@@ -49,5 +49,7 @@
     
   ## generate docs blocks in .md for DBT
   
+  generate_source_yml()
+  
   
 }

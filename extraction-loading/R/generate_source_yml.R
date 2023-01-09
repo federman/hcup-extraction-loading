@@ -1,7 +1,6 @@
-library(rstudioapi) 
-library(yaml)
-library(glue)
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+#' This function will return the status of various files available for
+#' each dataset_id. Currently it only works in the `dev` context and
+#' searches the /raw-hcup directory for these files. 
 
 vec__state_datasets = c("sedd","sid")
 
@@ -83,10 +82,9 @@ generate_source_yml <- function(table_name,db_tags,db_external_loc) {
   
   # Write actual yaml file
   if(file.exists(endpoint$dir)) {
+    message(glue("Write source.yml for {table_name}"))
     write_yaml(source_yml, endpoint$file)
   }
-  write_yaml(source_yml, "source.yml")
+  # write_yaml(source_yml, "source.yml")
   
 }
-
-generate_source_yml()
