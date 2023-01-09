@@ -3,15 +3,18 @@
 #' listed below
 #' 
 #' @param table_name: is the raw HCUP table name it should be upper case. e.g  table_name = 'NY_SEDD_2017_CHGS'
+#' @param env: env will determine location of source file (local vs remote)
 
 source("R/parse_hcup_table_name.R")
 source("R/get_dbt_models_dir.R")
 
 
-generate_source_yml <- function(table_name,db_external_loc) {
+generate_source_yml <- function(table_name, env = "dev") {
 
   # Parameters
-  db_external_loc = "D:\\git\\hcup-extraction-loading\\extraction-loading\\raw-hcup\\{name}.parquet"
+  source_loc = case_when(
+    env == "dev" ~ "D:\\git\\hcup-extraction-loading\\extraction-loading\\raw-hcup\\{name}.parquet",
+    TRUE ~ "")
   table_name = 'NY_SEDD_2017_CHGS'
   
   ## Staging
@@ -37,7 +40,7 @@ generate_source_yml <- function(table_name,db_external_loc) {
         tags= db_tags_tmp,
         description = db_desc,
         meta = list(
-          external_location = db_external_loc
+          external_location = source_loc
         ),
         tables = list(
           list(
