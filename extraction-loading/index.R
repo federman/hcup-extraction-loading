@@ -4,6 +4,7 @@
   library(rstudioapi) 
   library(glue)         
   library(stringr)
+  library(yaml)
   library(readstata13)
   library(arrow)
   library(tidyverse)
@@ -48,9 +49,9 @@
     
     
   ## generate docs blocks in .md for DBT
-  get_elt_status() 
-  generate_source_yml(table_name = "NY_SEDD_2018_CHGS")
-  generate_source_yml(table_name = "NY_SEDD_2018_CORE")
+  get_elt_status() %>% 
+    pull(dataset_id) %>% 
+    walk(~generate_source_yml(.x))
   
   
 }
