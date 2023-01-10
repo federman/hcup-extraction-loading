@@ -8,6 +8,7 @@
 
 source("R/parse_hcup_file_name.R")
 source("R/get_dbt_models_dir.R")
+df_codebooks = read_csv("clean/eda/df_codebooks.csv")
 
 generate_source_yml <- function(file_name, env = "dev") {
 
@@ -16,8 +17,18 @@ generate_source_yml <- function(file_name, env = "dev") {
     env == "dev" ~ "D:\\git\\hcup-extraction-loading\\extraction-loading\\raw-hcup\\{name}.parquet"
     )
   file_metadata = parse_hcup_file_name(file_name)
+  column_metadata = df_codebooks %>% 
+    filter(dataset_id == file_name) %>% 
+    group_by(row_number()) %>%
+    group_map(~{
+      column = list(
+        name = .x$var,
+        type = .x$value_type,
+        description = .x$var_label
+      )
+      return(column)
+    })
   endpoint = get_dbt_models_dir(file_metadata)
-  
   
   ## Intermediate
   source_yml <- list(
@@ -33,7 +44,8 @@ generate_source_yml <- function(file_name, env = "dev") {
         tables = list(
           list(
             name = file_name,
-            description = file_metadata$file_desc
+            description = file_metadata$file_desc,
+            columns = column_metadata
           )
         )
       )
