@@ -3,7 +3,7 @@
 #' containing all the loaded file id's. 
 
 get_file_ids = function(){
-  df_codebooks = read_csv("clean/df_codebooks.csv")
+  df_codebooks = read.csv("clean/df_codebooks.csv")
   
   vec__file_ids = df_codebooks %>% 
     pull(dataset_id) %>% 

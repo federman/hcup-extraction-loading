@@ -10,12 +10,15 @@ source("R/parse_hcup_file_name.R")
 source("R/get_dbt_models_dir.R")
 df_codebooks = read_csv("clean/eda/df_codebooks.csv")
 
-generate_source_yml <- function(file_name, env = "dev") {
+generate_source_yml <- function(file_name) {
 
   # Staging
-  source_loc = case_when( 
-    env == "dev" ~ "D:\\git\\hcup-extraction-loading\\extraction-loading\\raw-hcup\\{name}.parquet"
-    )
+  # env = ifelse(getwd() == "D:/git/hcup-extraction-loading/extraction-loading", 'dev','prod')
+  # source_loc = case_when( 
+  #   env == "dev" ~ "D:\\git\\hcup-extraction-loading\\extraction-loading\\raw-hcup\\{name}.parquet",
+  #   env == "prod" ~  "\\files.drexel.edu\\encrypted\\SOPH\\UHC\\SchnakeMahl_HCUP\\dbt\\v0\\sources"
+  #   )
+  source_loc = "\\files.drexel.edu\\encrypted\\SOPH\\UHC\\SchnakeMahl_HCUP\\dbt\\v0\\sources\\{name}.parquet"
   file_metadata = parse_hcup_file_name(file_name)
   column_metadata = df_codebooks %>% 
     filter(dataset_id == file_name) %>% 
