@@ -6,6 +6,7 @@
   library(stringr)
   library(yaml)
   library(readstata13)
+  library(data.table)
   library(arrow)
   library(tidyverse)
   
@@ -16,7 +17,7 @@
 
 
 
-{ # 1. Extraction ----
+{ # 1. Extraction (done on desktop with high RAM) ----
 
   ## Step 1: Evaluate ELT status
   get_elt_status()
@@ -37,21 +38,11 @@
 
 
 
-{ # 2. Datastores -----------------------------------------------------------
+{ # 2. Loading  -----------------------------------------------------------
   
-  ## combined codebook for local EDA
-  get_elt_status() %>% 
-    make_target_endpoints() %>% 
-    pull(path_codebook) %>% 
-    map_df(~fread(.)) %>% 
-    as_tibble() %>% 
-    fwrite("clean/df_codebooks.csv")
-    
-    
-  ## generate docs blocks in .md for DBT
-  get_elt_status() %>% 
+  ## load source.ymls into dbt
+  get_file_ids() %>% 
     pull(dataset_id) %>% 
     walk(~generate_source_yml(.x))
-  
   
 }
