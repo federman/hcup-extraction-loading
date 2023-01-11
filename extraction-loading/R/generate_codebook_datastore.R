@@ -40,6 +40,7 @@ make_codebooks = function(df_id){
 
 generate_codebooks = function(){
   
+  ## Individual codebooks 
   df_targets_without_codebooks = get_elt_status() %>% 
     make_target_endpoints(keep_column = 'codebook') %>% 
     select(-path_dta) %>% 
@@ -55,4 +56,11 @@ generate_codebooks = function(){
     message(glue("Codebooks written for {nrow(df_targets)} datasets"))
   }
   
+  ## Compiled codebook
+  get_elt_status() %>% 
+    make_target_endpoints() %>% 
+    pull(path_codebook) %>% 
+    map_df(~fread(.)) %>% 
+    as_tibble() %>% 
+    fwrite("clean/df_codebooks.csv")
 }
