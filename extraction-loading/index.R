@@ -41,8 +41,6 @@
 { # 2. Loading  -----------------------------------------------------------
   
   ## load source.ymls into dbt
-  get_file_ids() %>% 
-    pull(dataset_id) %>% 
-    walk(~generate_source_yml(.x))
+  get_file_ids() %>% walk(~generate_source_yml(.x))
   
 }
