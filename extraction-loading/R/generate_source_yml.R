@@ -18,7 +18,7 @@ generate_source_yml <- function(file_name) {
   #   env == "dev" ~ "D:\\git\\hcup-extraction-loading\\extraction-loading\\raw-hcup\\{name}.parquet",
   #   env == "prod" ~  "\\files.drexel.edu\\encrypted\\SOPH\\UHC\\SchnakeMahl_HCUP\\dbt\\v0\\sources"
   #   )
-  source_loc = "\\files.drexel.edu\\encrypted\\SOPH\\UHC\\SchnakeMahl_HCUP\\dbt\\v0\\sources\\{name}.parquet"
+  source_loc = "\\\\files.drexel.edu\\encrypted\\SOPH\\UHC\\SchnakeMahl_HCUP\\dbt\\v0\\sources\\{name}.parquet"
   file_metadata = parse_hcup_file_name(file_name)
   column_metadata = df_codebooks %>% 
     filter(dataset_id == file_name) %>% 
@@ -57,11 +57,8 @@ generate_source_yml <- function(file_name) {
   
   
   # Final
-  if (file.exists(endpoint$dir)) {
-    message(glue("Write source.yml for {file_name}"))
-    write_yaml(source_yml, endpoint$file)
-  } else {
-    message(glue("ERROR: NEED TO  CREATE DIRECTORY FOR {file_name}"))
-  }
+  message(glue("Write source.yml for {file_name}"))
+  write_yaml(source_yml, endpoint$file)
+  
   
 }
