@@ -1,0 +1,73 @@
+---
+title: "HCUP NY 2017-2018 EDA"
+author: "Ran Li"
+date: "12/08/2022"
+format: 
+  html:
+    toc: true
+    self-contained: true
+editor: visual
+editor_options: 
+  chunk_output_type: console
+execute: 
+  warning: false
+  error: false  
+  echo: false
+---
+
+The goal here is for every file type to get a list of all conissnt fields avaiaible across all years. 
+
+## Import compiled codebooks
+
+Lets first import our codebook object.
+
+```{r}
+library(tidyverse)
+library(reactable)
+df_codebooks = read_csv("../../../clean/df_codebooks.csv") %>% 
+  rowwise() %>% 
+  mutate(split = str_split(dataset_id,pattern = "_"),
+         state = split[[1]],
+         database = split[[2]],
+         year = split[[3]],
+         file = split[[4]],
+         db_file = paste(database, file, sep = "_")
+         )  %>% 
+  select(db_file, dataset_id, var, var_label, value_type, everything(), - split) %>% ungroup()
+
+
+df_codebooks %>% reactable()
+```
+
+## Generate universal fields by file
+
+
+First we have `fields` aka `var` long, lets pivot taht wide
+```{r}
+
+stg = df_codebooks %>% 
+  select(db_file, state, year, dataset_id, var) %>% 
+  distinct()
+
+int_db_file = stg %>% 
+  select(db_file, dataset_id) %>% 
+  distinct() %>% 
+  count(db_file, name = 'n_files')
+  
+int_universal = stg %>% 
+  count(db_file,var, name = 'n_var') %>% 
+  left_join(int_db_file) %>% 
+  mutate(universal = n_var == n_files)
+
+int_universal %>% count(universal)
+
+mart_universal = int_universal %>% 
+  filter(universal) %>% 
+  select(db_file, universal_var)
+
+
+mart_universal %>% 
+  count(db_file)
+  
+```
+
