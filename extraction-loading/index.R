@@ -43,4 +43,8 @@
   ## load source.ymls into dbt
   get_file_ids() %>% walk(~generate_source_yml(.x))
   
+  ## generate stg model .ymls into dbt
+  get_stage_models() %>% walk(~generate_stg_model_yml(.x))
+  
+  
 }
