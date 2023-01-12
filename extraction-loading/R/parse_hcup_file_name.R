@@ -30,7 +30,7 @@ parse_hcup_file_name = function(file_name){
   
   ## Intermediate
   int_table_info = c(
-    "db_tags" =  get_db_tags(stg_table_info['database'])  ,
+    "db_tags" =  get_dbt_tags(stg_table_info['database'])  ,
     "db_desc" =  paste0('{{ doc("',stg_table_info['database'],'_description") }}'),
     "name" = file_name %>% str_to_lower,
     "year_grp" = stg_year_grp,
