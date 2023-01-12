@@ -2,15 +2,23 @@
 #' 
 #' @param id: This is either a stg_model_name or a databse_name
 
-get_dbt_tags = function(id){
+get_dbt_tags = function(id, stg = F){
   db_tags = list(
     sedd = c('State','ER','SEDD','Source'),
     sid = c('State','Inpatient','SID','Source')
   )
   
-  final = if (id%in%c("sedd","sid")){
-    list(db_tags[[id]])
+  ## stage
+  stg_db_tags = db_tags[[id]]
+  
+  ## int
+  int_tags = if (stg){
+    c(stg_db_tags,'Stage')
+  } else if (!stg) {
+    stg_db_tags
   }
   
+  ## final
+  final = list(int_tags)
   return(final)
 }
