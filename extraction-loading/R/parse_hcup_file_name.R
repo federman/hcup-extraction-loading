@@ -2,17 +2,13 @@
 #' each dataset_id. Currently it only works in the `dev` context and
 #' searches the /raw-hcup directory for these files. 
 
-
+source("R/get_dbt_tags.R")
 
 parse_hcup_file_name = function(file_name){
   
   ## Local objects
   vec__state_datasets = c("sedd","sid")
-  db_tags = list(
-    sedd = c('State','ER','SEDD','Source'),
-    sid = c('State','Inpatient','SID','Source')
-  )
-  
+
   ## Staging
   stg_table_info = file_name %>% 
     str_to_lower() %>% 
@@ -34,7 +30,7 @@ parse_hcup_file_name = function(file_name){
   
   ## Intermediate
   int_table_info = c(
-    "db_tags" = list(db_tags[[stg_table_info['database']]]),
+    "db_tags" =  get_db_tags(stg_table_info['database'])  ,
     "db_desc" =  paste0('{{ doc("',stg_table_info['database'],'_description") }}'),
     "name" = file_name %>% str_to_lower,
     "year_grp" = stg_year_grp,
