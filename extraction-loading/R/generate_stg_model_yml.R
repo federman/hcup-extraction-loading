@@ -20,7 +20,7 @@ generate_stg_model_yml = function(stg_model_metadata){
         name = stg_model_metadata$model,
         description =  paste0('{{ doc("stg_',stg_model_metadata$database,'_description") }}'),
         docs = list(
-          node_color = 'orange'
+          node_color = '#829356'
         ),
         config = list(
           tags = stg_model_tags
