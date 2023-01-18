@@ -29,7 +29,7 @@ classDef subgraph_padding fill:none,stroke:none
          end
          n4[.parquet]---n5[.parquet]
          subgraph <b>T</b>ransformation
-            n5[.parquet]--R+DuckDB-->n6[analytical_files]
+            n5[.parquet]--DBT-DuckDB-->n6[analytical_files]
         end
         end
  
