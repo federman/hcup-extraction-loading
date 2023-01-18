@@ -1,0 +1,13 @@
+---
+title: "Datawarehouse Proposal 2022 Slides"
+subtitle: "Background slides summarizing some basic data warehousing concepts."
+author: "Ran Li"
+date: "2022-12-09"
+slide-format: revealjs
+---
+
+Some slides
+
+```{=html}
+<iframe class="slide-deck" src="slides/hcup-infrastructure-proposal-slides.html"></iframe>
+```
