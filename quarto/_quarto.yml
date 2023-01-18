@@ -11,7 +11,8 @@ website:
         menu:
         - href: pages/manuals/parquet/index.qmd
           text: "Parquet"  
-
+      - text: "Blog"
+        href: blog.qmd
 format:
   html:
     theme: simplex
