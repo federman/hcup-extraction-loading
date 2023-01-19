@@ -4,6 +4,12 @@ This repo contains codebase for extraction raw HCUP data via HCUP load scripts t
 
 Please visit this [repository's GitHub page](https://drexel-uhc.github.io/hcup-extraction-loading/) for additional details.
 
+Other useful links include:
+
+- [DBT datawarehouse repo for HCUP project](https://github.com/Drexel-UHC/hcup-dbt)
+- [Grammer of data manipulation (R/Python) cheatsheet](https://github.com/ran-codes/python-rstudio)
+
+
 ## Folders 
 This folder contains our data pipeline.
 
