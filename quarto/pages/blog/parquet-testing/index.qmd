@@ -1,0 +1,137 @@
+---
+title: "Parquet Benchmarking!"
+subtitle: "Lets do some benchmark some CSV vs Parquet tests."
+author: "Ran Li"
+date: "2023-02-02"
+format: 
+  html:
+    df-print: kable
+    comments:
+      giscus: 
+        repo: Drexel-UHC/hcup-extraction-loading
+editor_options: 
+  chunk_output_type: console
+execute: 
+  warning: false
+---
+
+## Intro
+
+Similar to a CSV file, Parquet is a type of file. The difference is that Parquet is designed as a columnar storage format to support complex data processing.
+
+-   Apache Parquet is column-oriented and designed to bring efficient columnar storage (blocks, row group, column chunks...) of data compared to row-based like CSV
+-   Parquet files were designed with complex nested data structures in mind.
+-   Apache Parquet is built to support very efficient compression and encoding schemes (see Google Snappy)
+-   Apache Parquet allows lower storage costs for data files and **maximizes the effectiveness of querying data with serverless OLAP technologies** like DuckDB, Amazon Athena, Redshift Spectrum, BigQuery, and Azure Data Lakes.
+
+The "big data" association with this format may give the impression that the format is limited to specific use cases. However, as the format has moved out of the shadow of complex Hadoop big data solutions, it has gained broader support. For example, teams build low-cost, high-performance serverless business intelligence stacks with Apache Parquet, Tableau, and Amazon Athena.
+
+## Columnar Storage Test
+
+Columnar storage in a Parquet file saves on file size by compressing and encoding similar data values in the same column together, rather than spreading them across rows. This is because columnar storage is optimized for reading and processing specific columns, rather than entire rows.
+
+In the example you provided, a columnar storage format like Parquet would efficiently store the values "cat" and "dog" by encoding them once and referencing their encoding for each instance in the column, rather than repeating the entire value for each row. This results in a more compact representation of the data and reduces the overall file size.
+
+Let generate two tables both 2 trillion rows long. With a single column called pet with two possible values `cat` or `dog`. The first table we call `df_ordered` has 1 trillion cats and 1 trillion dogs ordered. The second table called `df_unordered` has the same values but alternating cat dog cat dog.
+
+Lets see the parquet storage sizes!
+
+```{r}
+library(dplyr)
+library(arrow)
+library(data.table)
+library(stringr)
+
+## Generate tables 
+n = 10^7
+df_ordered = tibble(pet = c(rep("cat",n),rep("dog",n)))
+df_unordered = tibble(pet = rep(c("cat","dog"),n))
+
+## Write to parquet and CSV
+df_ordered %>% fwrite('df_ordered.csv')
+df_ordered %>% write_parquet(sink = 'df_ordered.parquet')
+df_unordered %>% fwrite('df_unordered.csv')
+df_unordered %>% write_parquet(sink = 'df_unordered.parquet')
+
+## Get file sizes
+tibble( file = list.files(pattern = "df_")) %>% 
+  mutate(size_bytes = file.size(file),
+         size_kb = size_bytes/1024 %>% round(1),
+         size_mb = size_kb/1024 %>% round( 0))  %>% 
+  select(file, size_mb) %>% 
+  arrange(size_mb)
+  
+
+```
+
+As expect massive win in terms of storage size for parquet. Even in the case of completely alternating cat, dog, cat, dog values in df_unordered.parquet we still see huge size reduction. This is because parquet will encode cat and dogin the metadata then in the data itself just store encodings (a much more memory efficient object than a string).
+
+So hypotheticall if we had much longer strings. The df_unordred should be similar in size because of this encoding.
+
+```{r}
+df_unordered_long_str = df_unordered %>% 
+  mutate(pet = paste0(pet,"................."))
+
+df_unordered_long_str
+
+df_unordered_long_str %>% write_parquet(sink = 'df_unordered_long_str.parquet')
+df_unordered_long_str %>% fwrite('df_unordered_long_str.csv')
+
+tibble( file = list.files(pattern = "df_")) %>% 
+  mutate(size_bytes = file.size(file),
+         size_kb = size_bytes/1024 %>% round(1),
+         size_mb = size_kb/1024 %>% round( 0))  %>% 
+  select(file, size_mb) %>% 
+  arrange(size_mb) %>% 
+  filter(file%in%c('df_unordered.parquet','df_unordered_long_str.parquet'))
+```
+
+Indeed this encoding shows how even after appending a bunch of characteres to the pet column. We don't see any increase in the parquet file size.
+
+For giggles lets see what happens to CSV size when we add characters to the pet column values.
+
+```{r}
+tibble( file = list.files(pattern = "df_")) %>% 
+  mutate(size_bytes = file.size(file),
+         size_kb = size_bytes/1024 %>% round(1),
+         size_mb = size_kb/1024 %>% round( 0))  %>% 
+  select(file, size_mb) %>% 
+  arrange(size_mb) %>% 
+  filter(file%in%c('df_unordered.csv','df_unordered_long_str.csv'))
+```
+
+As expected we see an increase in size due to each cell value changing. Parquet smartly avoids this by using encoding!
+
+## Cons of CSV and parquet
+
+CSV is ubiquitous and straightforward. Many tools like Excel, Google Sheets, and a host of others can generate CSV files. You can even create CSV files with your favorite text editing tool.
+
+The price you pay for CSV files?
+
+-   columnar databases (column oriented OLAP like DuckDB, AWS Athena, Bigquery, AWS Redshift) charge by amount of data scanned.
+    -   CSV files have to be completely scanned to run a query.
+    -   Parquet files only selected columns are read.
+-   Storage size is much lower, so lower storage costs.
+-   no self contained metadata
+
+Parquet on the other handle resolves a lot of these issues but is less accessible. You can't just open it in excel (currently). Hopefully as parquet becomes more prevalent, I hope mainstream tools such as MS excel will be able to use parquet.
+
+## Parquet + Arrow: empowers existing data science workflows
+
+to polish...
+
+the syneregy between parquet + embedded databases (e.g. Arrow) brings so much power to existing R/Python workflows. Most of the time enables you do big data without any inffrastructure or tool change
+
+## Parquet and the modern data stack
+
+to polish...
+
+Storage is cheap, computation is expensive. Was how things use to be.
+
+Now modern databases are shifting towards `serverless` OLAP engines (DuckDB, AWS Athena, Google BigQuery) which charge based on consumption (e.g. how many megabytes of data scanned)...
+
+This cost mechanism when paired the benefits of columnar storage such as parquet means now computation/queries are extremely cheap.
+
+So the modern datastack is often some combination of the two.
+
+![](images/image-261784250.png)
