@@ -24,8 +24,9 @@
   
   ## Step 1: Evaluate ELT status
   get_elt_status()
+  get_elt_status() %>% filter(is.na(load_program ))
   
-  ## Step 2: Copy and .Do files as needed
+  ## Step 2: Copy load programs
   copy_load_program()
   
   ## Step 3: Run STATA to generate dta

@@ -27,16 +27,16 @@ copy_load_file = function(dataset_id){
 copy_load_program = function(){
   
   ## get any datasets missing .Do
-  df_missing = get_elt_status() %>% filter(is.na(Do))
+  df_missing = get_elt_status() %>% filter(is.na(load_program))
   
   if(nrow(df_missing)>0){
     df_missing$dataset_id %>% map(~copy_load_file(.x))
     print(get_elt_status())
-    message(glue("Copied .Do files for {nrow(df_missing)} files"))
+    message(glue("Copied load program files for {nrow(df_missing)} files"))
     df_missing$dataset_id %>% walk(~message(glue("- {.x}")))
   } else {
-    print(get_elt_status() %>% select(dataset_id, Do))
-    message(glue("No .Do files missing"))
+    print(get_elt_status() %>% select(dataset_id, load_program))
+    message(glue("No load program missing"))
   }
   
   
