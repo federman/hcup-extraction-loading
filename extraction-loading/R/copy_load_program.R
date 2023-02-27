@@ -1,21 +1,26 @@
 #' Copy STATA load program into raw directory 
- 
+
 #'    
 #'    @dataset_id: this arguemnt is just the HCUP dataset id (e.g. "NY_SEDD_2017_CHGS")
-#'    dataset_id = "NY_SEDD_2018_CHGS" 
+#'    dataset_id = "GA_SID_2018_CHGS" 
 #'    
 
 source("R/get_elt_status.R")
 
 copy_load_file = function(dataset_id){
   
-  stata_load_path = tibble( paths = list.files(path = 'documents/stata-load-program/',  recursive = T, full.names = T) ) %>% 
-    filter(str_detect(paths,dataset_id)) %>% 
-    pull(paths)
+  load_paths = tibble( 
+    paths = list.files(
+      path = 'documents/load-programs/',  
+      recursive = T, full.names = T) ) %>% 
+    filter(str_detect(paths,dataset_id),
+           !str_detect(paths,'.loc')) %>% 
+    pull(paths) %>% 
+    slice(1)
   
-  new_path = file.path("raw-hcup",basename(stata_load_path))
+  new_path = file.path("raw-hcup",basename(load_paths))
   
-  file.copy(from = stata_load_path, 
+  file.copy(from = load_paths, 
             to = new_path)
 }
 
@@ -33,6 +38,6 @@ copy_load_program = function(){
     print(get_elt_status() %>% select(dataset_id, Do))
     message(glue("No .Do files missing"))
   }
-   
-
+  
+  
 }
