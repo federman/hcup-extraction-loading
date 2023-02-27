@@ -1,6 +1,6 @@
 {# 0. Setup ----
   ## Load Dependencies
-  rm(list= ls()); options(scipen = 999)
+  rm(list= ls()); options(scipen = 999, readr.show_col_types = FALSE)
   library(rstudioapi) 
   library(glue)         
   library(stringr)
@@ -12,13 +12,16 @@
   
   ## Set directory and load helpers 
   setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-  sapply(list.files(path = 'R/', all.files = T,recursive = T, full.names = T, pattern = '.R'), source)
+  list.files(path = 'R/', all.files = T,recursive = T, full.names = T, pattern = '.R') %>% 
+    walk(~source(.x))
+  
+  message("Setup Success!")
 }
 
 
 
 { # 1. Extraction (done on desktop with high RAM) ----
-
+  
   ## Step 1: Evaluate ELT status
   get_elt_status()
   
