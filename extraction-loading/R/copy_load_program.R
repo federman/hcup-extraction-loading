@@ -9,18 +9,27 @@ source("R/get_elt_status.R")
 
 copy_load_file = function(dataset_id){
   
-  load_paths = tibble( 
-    paths = list.files(
+  all_load_paths = tibble( 
+    path = list.files(
       path = 'documents/load-programs/',  
       recursive = T, full.names = T) ) %>% 
-    filter(str_detect(paths,dataset_id),
-           !str_detect(paths,'.loc')) %>% 
-    pull(paths) %>% 
-    slice(1)
+    filter(str_detect(path,dataset_id),
+           !str_detect(path,'.loc'))
   
-  new_path = file.path("raw-hcup",basename(load_paths))
+  if (any(str_detect(all_load_paths$path,'.Do'))){
+    load_path = all_load_paths %>% 
+      filter(str_detect(path, '.Do')) %>% 
+      pull(path)
+  } else {
+    load_path = all_load_paths %>% 
+      slice(1) %>% 
+      pull(path)
+  }
+   
   
-  file.copy(from = load_paths, 
+  new_path = file.path("raw-hcup",basename(load_path))
+  
+  file.copy(from = load_path, 
             to = new_path)
 }
 
