@@ -24,19 +24,39 @@ copy_load_file = function(dataset_id){
             to = new_path)
 }
 
-copy_load_program = function(){
+copy_load_program = function(dev = F){
   
-  ## get any datasets missing .Do
-  df_missing = get_elt_status() %>% filter(is.na(load_program))
-  
-  if(nrow(df_missing)>0){
-    df_missing$dataset_id %>% map(~copy_load_file(.x))
-    print(get_elt_status())
-    message(glue("Copied load program files for {nrow(df_missing)} files"))
-    df_missing$dataset_id %>% walk(~message(glue("- {.x}")))
-  } else {
-    print(get_elt_status() %>% select(dataset_id, load_program))
-    message(glue("No load program missing"))
+  if (dev){
+    # dev: clears already consumed load programs ------------------------------
+    ## get state load programs that have already generated .dta files
+    stata_load_done = get_elt_status() %>% 
+      filter(load_program == '.Do',
+             !is.na(loaded_data)) %>% 
+      pull(dataset_id) %>% 
+      paste0("raw-hcup/",.,".Do") 
+    
+    ## get their paths from /raw-hcup
+    stata_load_done_paths =   tibble(load_program = list.files('raw-hcup/', full.names = T) ) %>% 
+      rowwise() %>% 
+      filter(load_program%in%stata_load_done) %>% 
+      pull(load_program)
+    
+    ## Delete these `used` load programs
+    stata_load_done_paths %>% walk(~unlink(.x))
+    message("Removed used stata load programs.")
+  } else  {
+    # prod: copies all --------------------------------------------------------
+    df_missing = get_elt_status() %>% filter(is.na(load_program))
+    
+    if(nrow(df_missing)>0){
+      df_missing$dataset_id %>% map(~copy_load_file(.x))
+      print(get_elt_status())
+      message(glue("Copied load program files for {nrow(df_missing)} files"))
+      df_missing$dataset_id %>% walk(~message(glue("- {.x}")))
+    } else {
+      print(get_elt_status() %>% select(dataset_id, load_program))
+      message(glue("No load program missing"))
+    }
   }
   
   
