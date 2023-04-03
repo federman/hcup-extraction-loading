@@ -42,20 +42,15 @@ infix 3 firstlineoffile                            ///
       using  "GA_SID_2019_DX_PR_GRPS.ASC"
 
 ***  Assign labels to the data elements ***
-label var I10_INJURY
-    "Injury ICD-10-CM diagnosis reported on record (1: First-listed injury; 2: Other than first-listed injury; 0: No injury)"
+label var I10_INJURY               "Injury ICD-10-CM diagnosis reported on record (1: First-listed injury; 2: Other than first-listed injury; 0: No injury)"
 label var I10_INJURY_CUT           "Mechanism of injury: cut or pierce"
 label var I10_INJURY_DROWN         "Mechanism of injury: drowning or submersion"
 label var I10_INJURY_FALL          "Mechanism of injury: fall"
 label var I10_INJURY_FIRE          "Mechanism of injury: fire, flame, hot object, or hot substance"
 label var I10_INJURY_FIREARM       "Mechanism of injury: firearm"
 label var I10_INJURY_MACHINERY     "Mechanism of injury: machinery"
-label var I10_INJURY_MVT
-
-"Mechanism of injury: motor vehicle traffic, including the occupant of a car, motorcyclist, pedal cyclist, pedestrian, other, or uns
-pecified"
-label var I10_INJURY_NATURE
-    "Mechanism of injury: natural or environmental, included venomous and nonvenomous bites and stings"
+label var I10_INJURY_MVT           "Mechanism of injury: motor vehicle traffic, including the occupant of a car, motorcyclist, pedal cyclist, pedestrian, other, or unspecified"
+label var I10_INJURY_NATURE        "Mechanism of injury: natural or environmental, included venomous and nonvenomous bites and stings"
 label var I10_INJURY_OVEREXERTION  "Mechanism of injury: overexertion"
 label var I10_INJURY_POISON        "Mechanism of injury: poisoning, including drugs and nondrugs"
 label var I10_INJURY_STRUCK        "Mechanism of injury: struck by or against"
