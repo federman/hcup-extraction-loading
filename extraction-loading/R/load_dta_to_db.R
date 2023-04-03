@@ -9,29 +9,25 @@ source("R/make_target_endpoints.R")
 
 load_dta_to_db = function(){
   
-  ## generate endpoints for datasets missing parquet
-  df_paths = get_elt_status() %>% 
-    filter(is.na(parquet)) %>% 
-    make_target_endpoints()
+  ## get datasets that have .dta but not parquet
+  datasets_to_load = get_elt_status() %>% 
+    filter(loaded_data == "dta",
+           is.na(parquet)) %>% 
+    pull(dataset_id)
   
-  if(nrow(df_paths)>0){
-    ## convert .dta to .parquet
-    df_paths %>% 
-      group_by(row_number()) %>% 
-      group_walk(~{
-        readstata13::read.dta13(.x$path_dta) %>%
-          write_parquet(sink = .x$path_parquet )
-      })
-    
-    ## log actions
-    print(get_elt_status())
-    message(glue("Loaded .dta files to .parquet for {nrow(df_paths)} datasets"))
-    df_paths$dataset_id %>% walk(~message(glue("- {.x}")))
+  if(length(datasets_to_load)>0){
+    datasets_to_load %>%
+      walk(function(dataset_id_tmp){
+        # dataset_id_tmp = datasets_to_load[1]
+        cli_alert("Start .dta to parquet conversion for {dataset_id_tmp}")
+        readstata13::read.dta13(glue("raw-hcup/{dataset_id_tmp}.dta")) %>%
+          write_parquet(sink = glue("raw-hcup/{dataset_id_tmp}.parquet"))
+        cli_alert_success("Finished .dta to parquet conversion for {dataset_id_tmp}")       
+      }) 
   } else {
     print(get_elt_status() %>% select(dataset_id, parquet))
-    message(glue("No .parquet files missing"))
+    cli_alert_warning("All .dta have been converted to .parquet. No Action taken.")
   }
   
-
-}
   
+}
