@@ -75,9 +75,9 @@ generate_codebooks = function(){
              state = split[[1]],
              db = split[[2]],
              year = str_sub(split[[3]],1,4),
-             file = split[4:length(split)] %>% paste(collapse = '_')) %>% 
-      select(-split)
-    
+             file = split[4:length(split)] %>% paste(collapse = '_'),
+             n_rows =   open_dataset(glue("raw-hcup/{dataset_id}.parquet"))$num_rows) %>% 
+      select(dataset_id, n_columns, n_rows, state, db, year, file)
     df_summary %>% write_parquet("clean/df_summary.parquet")
     cli_alert_success("Compiled source summary at clean/df_summary.parquet")
     
