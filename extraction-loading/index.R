@@ -1,4 +1,3 @@
-
 {# 1. Setup ----
 
   { # Load pipeline packages ----------------------------------------------
@@ -11,7 +10,6 @@
         library(glue)         
         library(stringr)
         library(yaml)
-        library(readstata13)
         library(data.table)
         library(arrow)
         library(tidyverse)
@@ -30,7 +28,6 @@
       walk(~source(.x))
   }
   
-  
   cli_alert_success("SALURBAL ETL pipeline setup completed!")
 }
 
@@ -43,14 +40,12 @@
   ## Step 2: Copy load programs
   copy_load_program()  
   
-  ## Step 3: Run STATA to generate dta
-  get_elt_status() %>%
-    filter(is.na(loaded_data)) %>% 
-    arrange(load_program) %>% 
-    select(-parquet, -codebook) %>% View()
+  ## Step 3: Run load programs 
+  get_elt_status() %>% filter(is.na(loaded_data)) 
   
   ## Step 4: Load as parquet
   load_dta_to_db()
+  load_sas7bdat_to_db()
   
   ## Step 5: Generate codebooks
   generate_codebooks()
