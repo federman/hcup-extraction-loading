@@ -455,8 +455,7 @@ label var HISPANIC_X               "Hispanic ethnicity (as received from source)
 label var HOSPBRTH                 "Indicator of birth in this hospital"
 label var HOSPST                   "Hospital state postal code"
 label var Homeless                 "Indicator that patient is homeless"
-label var HospitalUnit
-    "Indicator that patient was discharged from a special unit within an acute care hospital (reported by source)"
+label var HospitalUnit             "Indicator that patient was discharged from a special unit within an acute care hospital (reported by source)"
 label var KEY                      "HCUP record identifier"
 label var LOS                      "Length of stay (cleaned)"
 label var LOS_X                    "Length of stay (as received from source)"

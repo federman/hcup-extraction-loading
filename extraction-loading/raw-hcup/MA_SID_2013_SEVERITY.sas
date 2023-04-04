@@ -165,7 +165,7 @@ PROC FORMAT;
   ;                                                                             
   RUN;                                                                          
                                                                                 
-                                                                                
+                                                                            
 *******************************;                                                
 *  Data Step                  *;                                                
 *******************************;                                                
@@ -277,3 +277,7 @@ INPUT
                                                                                 
                                                                                 
 RUN;
+LIBNAME mylib "D:\git\hcup-extraction-loading\extraction-loading\raw-hcup";
+DATA mylib.MA_SIDC_2013_SEVERITY;
+    SET MA_SIDC_2013_SEVERITY;
+RUN;     

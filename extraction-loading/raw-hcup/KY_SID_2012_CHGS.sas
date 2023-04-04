@@ -189,3 +189,9 @@ INPUT
                                                                                 
                                                                                 
 RUN;
+
+
+LIBNAME mylib "D:\git\hcup-extraction-loading\extraction-loading\raw-hcup";
+DATA mylib.KY_SIDC_2012_CHGS;
+    SET KY_SIDC_2012_CHGS;
+RUN;

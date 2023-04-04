@@ -1365,3 +1365,8 @@ INPUT
                                                                                 
                                                                                 
 RUN;
+
+LIBNAME mylib "D:\git\hcup-extraction-loading\extraction-loading\raw-hcup";
+DATA mylib.KY_SIDC_2012_CORE;
+    SET KY_SIDC_2012_CORE;
+RUN;

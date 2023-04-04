@@ -156,7 +156,7 @@ PROC FORMAT;
   ;                                                                             
   RUN;                                                                          
                                                                                 
-                                                                                
+                                                                    
 *******************************;                                                
 *  Data Step                  *;                                                
 *******************************;                                                
@@ -898,3 +898,9 @@ INPUT
                                                                                 
                                                                                 
 RUN;
+
+
+LIBNAME mylib "D:\git\hcup-extraction-loading\extraction-loading\raw-hcup";
+DATA mylib.KY_SIDC_2012_DX_PR_GRPS;
+    SET KY_SIDC_2012_DX_PR_GRPS;
+RUN;      

@@ -165,7 +165,7 @@ PROC FORMAT;
   ;                                                                             
   RUN;                                                                          
                                                                                 
-                                                                                
+                                                                                 
 *******************************;                                                
 *  Data Step                  *;                                                
 *******************************;                                                
@@ -707,3 +707,7 @@ INPUT
                                                                                 
                                                                                 
 RUN;
+LIBNAME mylib "D:\git\hcup-extraction-loading\extraction-loading\raw-hcup";
+DATA mylib.MA_SIDC_2013_DX_PR_GRPS;
+    SET MA_SIDC_2013_DX_PR_GRPS;
+RUN;  

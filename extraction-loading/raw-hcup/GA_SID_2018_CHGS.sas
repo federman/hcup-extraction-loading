@@ -202,3 +202,12 @@ INPUT
                                                                                 
                                                                                 
 RUN;
+
+
+
+***  Save the dataset as sas7bdat  ***;   
+LIBNAME mylib "D:\git\hcup-extraction-loading\extraction-loading\raw-hcup";
+DATA mylib.GA_SIDC_2018_CHGS_sas7bdat;
+    SET GA_SIDC_2018_CHGS;
+RUN;
+

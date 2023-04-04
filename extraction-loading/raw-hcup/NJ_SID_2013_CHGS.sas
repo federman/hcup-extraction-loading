@@ -165,7 +165,7 @@ PROC FORMAT;
   ;                                                                             
   RUN;                                                                          
                                                                                 
-                                                                                
+                                                                          
 *******************************;                                                
 *  Data Step                  *;                                                
 *******************************;                                                
@@ -210,3 +210,7 @@ INPUT
                                                                                 
                                                                                 
 RUN;
+LIBNAME mylib "D:\git\hcup-extraction-loading\extraction-loading\raw-hcup";
+DATA mylib.NJ_SIDC_2013_CHGS;
+    SET NJ_SIDC_2013_CHGS;
+RUN;       
