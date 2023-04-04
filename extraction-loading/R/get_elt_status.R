@@ -8,8 +8,8 @@ get_elt_status = function(){
   
   elt_status = tibble(raw = elt_files) %>% 
     rowwise() %>% 
-    mutate(raw_split = str_split(raw,"\\.") ) %>% 
-    mutate(dataset_id = raw_split[[1]],
+    mutate(raw_split = str_split(raw,"\\."),
+           dataset_id = raw_split[[1]],
            file_extension = raw_split[[2]]) %>% 
     select(-contains('raw')) %>% 
     mutate(value = T) %>% 
@@ -19,7 +19,6 @@ get_elt_status = function(){
                                    file_extension),
            dataset_id = str_remove(dataset_id, "_codebook")) %>% 
     pivot_wider(names_from = 'file_extension', values_from = value) %>% 
-    mutate(sas7dat = NA) %>% 
     ## handle sas vs stata
     mutate(
       load_program = case_when(
@@ -29,9 +28,9 @@ get_elt_status = function(){
         !is.na(Do)~'.Do',
         TRUE  ~ "ERROR"  ),
       loaded_data = case_when(
-        is.na(dta)&is.na(sas7dat)~NA_character_,
-        !is.na(dta)&!is.na(sas7dat)~'REDUNDANT',
-        !is.na(sas7dat)~'sas7dat',
+        is.na(dta)&is.na(sas7bdat )~NA_character_,
+        !is.na(dta)&!is.na(sas7bdat )~'REDUNDANT',
+        !is.na(sas7bdat )~'sas7bdat',
         !is.na(dta)~'dta',
         TRUE  ~ "ERROR"  )) %>% 
     arrange(dataset_id) %>% 
@@ -43,16 +42,5 @@ get_elt_status = function(){
             load_program,
             asc)
   
-  # if (!"parquet"%in%names(elt_status)){
-  #   
-  #   elt_template = tibble(dataset_id = character(),
-  #                         asc = logical(),
-  #                         Do = logical(),
-  #                         dta = logical(),
-  #                         parquet = logical())
-  #   
-  #   elt_status = elt_status %>% 
-  #     left_join(elt_template)
-  # }
   return(elt_status)
 }
