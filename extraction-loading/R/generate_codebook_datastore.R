@@ -8,7 +8,7 @@ source("R/get_elt_status.R")
 source("R/make_target_endpoints.R")
 
 make_codebooks = function(df_id){
-  # df_id = df_targets %>% slice(1)
+  # df_id = df_targets_without_codebooks %>% slice(1)
   
   ds = arrow::open_dataset(df_id$path_parquet)
   
@@ -33,7 +33,7 @@ make_codebooks = function(df_id){
   codebook %>% write_csv(df_id$path_codebook)
   
   ## messeage
-  message(glue("Codebook written for {df_id$dataset_id}"))
+  cli_alert_success("Codebook written for {df_id$dataset_id}")
   
   
 }
@@ -44,19 +44,19 @@ generate_codebooks = function(){
   df_targets_without_codebooks = get_elt_status() %>% 
     make_target_endpoints(keep_column = 'codebook') %>% 
     select(-path_dta) %>% 
-    filter(!codebook)
+    filter(is.na(codebook))
   
   if (nrow(df_targets_without_codebooks) == 0){
-    print( get_elt_status() %>% select(dataset_id, codebook))
-    message(glue("No codebooks missing!"))
+    cli_alert_success("No codebooks missing - No Action taken!")
   } else {
     df_targets_without_codebooks %>% 
       group_by(row_number()) %>% 
       group_walk(~make_codebooks(.x))
-    message(glue("Codebooks written for {nrow(df_targets)} datasets"))
+    cli_alert_success("{nrow(df_targets_without_codebooks)} codebooks written!")
   }
   
   ## Compiled codebook
+  
   get_elt_status() %>% 
     make_target_endpoints() %>% 
     pull(path_codebook) %>% 
