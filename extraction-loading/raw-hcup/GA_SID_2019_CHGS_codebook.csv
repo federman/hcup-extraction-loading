@@ -1,0 +1,6 @@
+var,var_label,value_type,dataset_id
+CHARGE,Line item charges (as received from source),double,GA_SID_2019_CHGS
+CPTHCPCS,Line item CPT-4/HCPCS procedure code (as received from source),string,GA_SID_2019_CHGS
+KEY,HCUP record identifier,double,GA_SID_2019_CHGS
+REVCODE,Line item revenue code (as received from source),string,GA_SID_2019_CHGS
+UNITS,Line item units (as received from source),double,GA_SID_2019_CHGS

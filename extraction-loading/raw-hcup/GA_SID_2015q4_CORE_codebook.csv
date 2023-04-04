@@ -1,0 +1,618 @@
+var,var_label,value_type,dataset_id
+AGE,Age in years at admission,int32,GA_SID_2015q4_CORE
+AGEDAY,Age in days (when age < 1 year),int32,GA_SID_2015q4_CORE
+AGEMONTH,Age in months (when age < 11 years),int32,GA_SID_2015q4_CORE
+AMONTH,Admission month,int32,GA_SID_2015q4_CORE
+ATYPE,Admission type,int32,GA_SID_2015q4_CORE
+AWEEKEND,Admission day is a weekend,int32,GA_SID_2015q4_CORE
+BILLTYPE,"Type of bill, UB-04 coding",string,GA_SID_2015q4_CORE
+BWT,Birth weight in grams,int32,GA_SID_2015q4_CORE
+CPT1,CPT/HCPCS procedure code 1,string,GA_SID_2015q4_CORE
+CPT2,CPT/HCPCS procedure code 2,string,GA_SID_2015q4_CORE
+CPT3,CPT/HCPCS procedure code 3,string,GA_SID_2015q4_CORE
+CPT4,CPT/HCPCS procedure code 4,string,GA_SID_2015q4_CORE
+CPT5,CPT/HCPCS procedure code 5,string,GA_SID_2015q4_CORE
+CPT6,CPT/HCPCS procedure code 6,string,GA_SID_2015q4_CORE
+CPT7,CPT/HCPCS procedure code 7,string,GA_SID_2015q4_CORE
+CPT8,CPT/HCPCS procedure code 8,string,GA_SID_2015q4_CORE
+CPT9,CPT/HCPCS procedure code 9,string,GA_SID_2015q4_CORE
+CPT10,CPT/HCPCS procedure code 10,string,GA_SID_2015q4_CORE
+CPT11,CPT/HCPCS procedure code 11,string,GA_SID_2015q4_CORE
+CPT12,CPT/HCPCS procedure code 12,string,GA_SID_2015q4_CORE
+CPT13,CPT/HCPCS procedure code 13,string,GA_SID_2015q4_CORE
+CPT14,CPT/HCPCS procedure code 14,string,GA_SID_2015q4_CORE
+CPT15,CPT/HCPCS procedure code 15,string,GA_SID_2015q4_CORE
+CPT16,CPT/HCPCS procedure code 16,string,GA_SID_2015q4_CORE
+CPT17,CPT/HCPCS procedure code 17,string,GA_SID_2015q4_CORE
+CPT18,CPT/HCPCS procedure code 18,string,GA_SID_2015q4_CORE
+CPT19,CPT/HCPCS procedure code 19,string,GA_SID_2015q4_CORE
+CPT20,CPT/HCPCS procedure code 20,string,GA_SID_2015q4_CORE
+CPT21,CPT/HCPCS procedure code 21,string,GA_SID_2015q4_CORE
+CPT22,CPT/HCPCS procedure code 22,string,GA_SID_2015q4_CORE
+CPT23,CPT/HCPCS procedure code 23,string,GA_SID_2015q4_CORE
+CPT24,CPT/HCPCS procedure code 24,string,GA_SID_2015q4_CORE
+CPT25,CPT/HCPCS procedure code 25,string,GA_SID_2015q4_CORE
+CPT26,CPT/HCPCS procedure code 26,string,GA_SID_2015q4_CORE
+CPT27,CPT/HCPCS procedure code 27,string,GA_SID_2015q4_CORE
+CPT28,CPT/HCPCS procedure code 28,string,GA_SID_2015q4_CORE
+CPT29,CPT/HCPCS procedure code 29,string,GA_SID_2015q4_CORE
+CPT30,CPT/HCPCS procedure code 30,string,GA_SID_2015q4_CORE
+CPT31,CPT/HCPCS procedure code 31,string,GA_SID_2015q4_CORE
+CPT32,CPT/HCPCS procedure code 32,string,GA_SID_2015q4_CORE
+CPT33,CPT/HCPCS procedure code 33,string,GA_SID_2015q4_CORE
+CPT34,CPT/HCPCS procedure code 34,string,GA_SID_2015q4_CORE
+CPT35,CPT/HCPCS procedure code 35,string,GA_SID_2015q4_CORE
+CPT36,CPT/HCPCS procedure code 36,string,GA_SID_2015q4_CORE
+CPT37,CPT/HCPCS procedure code 37,string,GA_SID_2015q4_CORE
+CPT38,CPT/HCPCS procedure code 38,string,GA_SID_2015q4_CORE
+CPT39,CPT/HCPCS procedure code 39,string,GA_SID_2015q4_CORE
+CPT40,CPT/HCPCS procedure code 40,string,GA_SID_2015q4_CORE
+CPT41,CPT/HCPCS procedure code 41,string,GA_SID_2015q4_CORE
+CPT42,CPT/HCPCS procedure code 42,string,GA_SID_2015q4_CORE
+CPT43,CPT/HCPCS procedure code 43,string,GA_SID_2015q4_CORE
+CPT44,CPT/HCPCS procedure code 44,string,GA_SID_2015q4_CORE
+CPT45,CPT/HCPCS procedure code 45,string,GA_SID_2015q4_CORE
+CPT46,CPT/HCPCS procedure code 46,string,GA_SID_2015q4_CORE
+CPT47,CPT/HCPCS procedure code 47,string,GA_SID_2015q4_CORE
+CPT48,CPT/HCPCS procedure code 48,string,GA_SID_2015q4_CORE
+CPT49,CPT/HCPCS procedure code 49,string,GA_SID_2015q4_CORE
+CPT50,CPT/HCPCS procedure code 50,string,GA_SID_2015q4_CORE
+CPTCCS1,CCS: CPT 1,int32,GA_SID_2015q4_CORE
+CPTCCS2,CCS: CPT 2,int32,GA_SID_2015q4_CORE
+CPTCCS3,CCS: CPT 3,int32,GA_SID_2015q4_CORE
+CPTCCS4,CCS: CPT 4,int32,GA_SID_2015q4_CORE
+CPTCCS5,CCS: CPT 5,int32,GA_SID_2015q4_CORE
+CPTCCS6,CCS: CPT 6,int32,GA_SID_2015q4_CORE
+CPTCCS7,CCS: CPT 7,int32,GA_SID_2015q4_CORE
+CPTCCS8,CCS: CPT 8,int32,GA_SID_2015q4_CORE
+CPTCCS9,CCS: CPT 9,int32,GA_SID_2015q4_CORE
+CPTCCS10,CCS: CPT 10,int32,GA_SID_2015q4_CORE
+CPTCCS11,CCS: CPT 11,int32,GA_SID_2015q4_CORE
+CPTCCS12,CCS: CPT 12,int32,GA_SID_2015q4_CORE
+CPTCCS13,CCS: CPT 13,int32,GA_SID_2015q4_CORE
+CPTCCS14,CCS: CPT 14,int32,GA_SID_2015q4_CORE
+CPTCCS15,CCS: CPT 15,int32,GA_SID_2015q4_CORE
+CPTCCS16,CCS: CPT 16,int32,GA_SID_2015q4_CORE
+CPTCCS17,CCS: CPT 17,int32,GA_SID_2015q4_CORE
+CPTCCS18,CCS: CPT 18,int32,GA_SID_2015q4_CORE
+CPTCCS19,CCS: CPT 19,int32,GA_SID_2015q4_CORE
+CPTCCS20,CCS: CPT 20,int32,GA_SID_2015q4_CORE
+CPTCCS21,CCS: CPT 21,int32,GA_SID_2015q4_CORE
+CPTCCS22,CCS: CPT 22,int32,GA_SID_2015q4_CORE
+CPTCCS23,CCS: CPT 23,int32,GA_SID_2015q4_CORE
+CPTCCS24,CCS: CPT 24,int32,GA_SID_2015q4_CORE
+CPTCCS25,CCS: CPT 25,int32,GA_SID_2015q4_CORE
+CPTCCS26,CCS: CPT 26,int32,GA_SID_2015q4_CORE
+CPTCCS27,CCS: CPT 27,int32,GA_SID_2015q4_CORE
+CPTCCS28,CCS: CPT 28,int32,GA_SID_2015q4_CORE
+CPTCCS29,CCS: CPT 29,int32,GA_SID_2015q4_CORE
+CPTCCS30,CCS: CPT 30,int32,GA_SID_2015q4_CORE
+CPTCCS31,CCS: CPT 31,int32,GA_SID_2015q4_CORE
+CPTCCS32,CCS: CPT 32,int32,GA_SID_2015q4_CORE
+CPTCCS33,CCS: CPT 33,int32,GA_SID_2015q4_CORE
+CPTCCS34,CCS: CPT 34,int32,GA_SID_2015q4_CORE
+CPTCCS35,CCS: CPT 35,int32,GA_SID_2015q4_CORE
+CPTCCS36,CCS: CPT 36,int32,GA_SID_2015q4_CORE
+CPTCCS37,CCS: CPT 37,int32,GA_SID_2015q4_CORE
+CPTCCS38,CCS: CPT 38,int32,GA_SID_2015q4_CORE
+CPTCCS39,CCS: CPT 39,int32,GA_SID_2015q4_CORE
+CPTCCS40,CCS: CPT 40,int32,GA_SID_2015q4_CORE
+CPTCCS41,CCS: CPT 41,int32,GA_SID_2015q4_CORE
+CPTCCS42,CCS: CPT 42,int32,GA_SID_2015q4_CORE
+CPTCCS43,CCS: CPT 43,int32,GA_SID_2015q4_CORE
+CPTCCS44,CCS: CPT 44,int32,GA_SID_2015q4_CORE
+CPTCCS45,CCS: CPT 45,int32,GA_SID_2015q4_CORE
+CPTCCS46,CCS: CPT 46,int32,GA_SID_2015q4_CORE
+CPTCCS47,CCS: CPT 47,int32,GA_SID_2015q4_CORE
+CPTCCS48,CCS: CPT 48,int32,GA_SID_2015q4_CORE
+CPTCCS49,CCS: CPT 49,int32,GA_SID_2015q4_CORE
+CPTCCS50,CCS: CPT 50,int32,GA_SID_2015q4_CORE
+DaysToEvent,Days from 'start date' to admission,int32,GA_SID_2015q4_CORE
+DIED,Died during hospitalization,int32,GA_SID_2015q4_CORE
+DISP_X,Disposition of patient (as received from source),string,GA_SID_2015q4_CORE
+DISPUB04,Disposition of patient (UB-04 standard coding),int32,GA_SID_2015q4_CORE
+DISPUNIFORM,Disposition of patient (uniform),int32,GA_SID_2015q4_CORE
+DMONTH,Discharge month,int32,GA_SID_2015q4_CORE
+DQTR,Discharge quarter,int32,GA_SID_2015q4_CORE
+DRG,DRG in effect on discharge date,int32,GA_SID_2015q4_CORE
+DRG_NoPOA,"DRG in use on discharge date, calculated without POA",int32,GA_SID_2015q4_CORE
+DRG32,"DRG, version 32",int32,GA_SID_2015q4_CORE
+DRGVER,DRG grouper version used on discharge date,int32,GA_SID_2015q4_CORE
+DXPOA1,"Diagnosis 1, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA2,"Diagnosis 2, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA3,"Diagnosis 3, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA4,"Diagnosis 4, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA5,"Diagnosis 5, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA6,"Diagnosis 6, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA7,"Diagnosis 7, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA8,"Diagnosis 8, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA9,"Diagnosis 9, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA10,"Diagnosis 10, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA11,"Diagnosis 11, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA12,"Diagnosis 12, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA13,"Diagnosis 13, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA14,"Diagnosis 14, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA15,"Diagnosis 15, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA16,"Diagnosis 16, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA17,"Diagnosis 17, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA18,"Diagnosis 18, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA19,"Diagnosis 19, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA20,"Diagnosis 20, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA21,"Diagnosis 21, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA22,"Diagnosis 22, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA23,"Diagnosis 23, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA24,"Diagnosis 24, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA25,"Diagnosis 25, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA26,"Diagnosis 26, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA27,"Diagnosis 27, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA28,"Diagnosis 28, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA29,"Diagnosis 29, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA30,"Diagnosis 30, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA31,"Diagnosis 31, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA32,"Diagnosis 32, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA33,"Diagnosis 33, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA34,"Diagnosis 34, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA35,"Diagnosis 35, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA36,"Diagnosis 36, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA37,"Diagnosis 37, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA38,"Diagnosis 38, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA39,"Diagnosis 39, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA40,"Diagnosis 40, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA41,"Diagnosis 41, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA42,"Diagnosis 42, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA43,"Diagnosis 43, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA44,"Diagnosis 44, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA45,"Diagnosis 45, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA46,"Diagnosis 46, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA47,"Diagnosis 47, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA48,"Diagnosis 48, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA49,"Diagnosis 49, present on admission indicator",string,GA_SID_2015q4_CORE
+DXPOA50,"Diagnosis 50, present on admission indicator",string,GA_SID_2015q4_CORE
+DXVER,Diagnosis Version,int32,GA_SID_2015q4_CORE
+E_POA1,"E Cause 1, present on admission indicator",string,GA_SID_2015q4_CORE
+E_POA2,"E Cause 2, present on admission indicator",string,GA_SID_2015q4_CORE
+E_POA3,"E Cause 3, present on admission indicator",string,GA_SID_2015q4_CORE
+E_POA4,"E Cause 4, present on admission indicator",string,GA_SID_2015q4_CORE
+E_POA5,"E Cause 5, present on admission indicator",string,GA_SID_2015q4_CORE
+E_POA6,"E Cause 6, present on admission indicator",string,GA_SID_2015q4_CORE
+E_POA7,"E Cause 7, present on admission indicator",string,GA_SID_2015q4_CORE
+E_POA8,"E Cause 8, present on admission indicator",string,GA_SID_2015q4_CORE
+E_POA9,"E Cause 9, present on admission indicator",string,GA_SID_2015q4_CORE
+FEMALE,Indicator of sex,int32,GA_SID_2015q4_CORE
+HCUP_ED,HCUP Emergency Department service indicator,int32,GA_SID_2015q4_CORE
+HCUP_OS,HCUP Observation Stay service indicator,int32,GA_SID_2015q4_CORE
+HISPANIC,Hispanic ethnicity (uniform),int32,GA_SID_2015q4_CORE
+HISPANIC_X,Hispanic ethnicity (as received from source),string,GA_SID_2015q4_CORE
+Homeless,Indicator that patient is homeless,int32,GA_SID_2015q4_CORE
+HOSPST,Hospital state postal code,string,GA_SID_2015q4_CORE
+I10_DX1,ICD-10-CM Diagnosis 1,string,GA_SID_2015q4_CORE
+I10_DX2,ICD-10-CM Diagnosis 2,string,GA_SID_2015q4_CORE
+I10_DX3,ICD-10-CM Diagnosis 3,string,GA_SID_2015q4_CORE
+I10_DX4,ICD-10-CM Diagnosis 4,string,GA_SID_2015q4_CORE
+I10_DX5,ICD-10-CM Diagnosis 5,string,GA_SID_2015q4_CORE
+I10_DX6,ICD-10-CM Diagnosis 6,string,GA_SID_2015q4_CORE
+I10_DX7,ICD-10-CM Diagnosis 7,string,GA_SID_2015q4_CORE
+I10_DX8,ICD-10-CM Diagnosis 8,string,GA_SID_2015q4_CORE
+I10_DX9,ICD-10-CM Diagnosis 9,string,GA_SID_2015q4_CORE
+I10_DX10,ICD-10-CM Diagnosis 10,string,GA_SID_2015q4_CORE
+I10_DX11,ICD-10-CM Diagnosis 11,string,GA_SID_2015q4_CORE
+I10_DX12,ICD-10-CM Diagnosis 12,string,GA_SID_2015q4_CORE
+I10_DX13,ICD-10-CM Diagnosis 13,string,GA_SID_2015q4_CORE
+I10_DX14,ICD-10-CM Diagnosis 14,string,GA_SID_2015q4_CORE
+I10_DX15,ICD-10-CM Diagnosis 15,string,GA_SID_2015q4_CORE
+I10_DX16,ICD-10-CM Diagnosis 16,string,GA_SID_2015q4_CORE
+I10_DX17,ICD-10-CM Diagnosis 17,string,GA_SID_2015q4_CORE
+I10_DX18,ICD-10-CM Diagnosis 18,string,GA_SID_2015q4_CORE
+I10_DX19,ICD-10-CM Diagnosis 19,string,GA_SID_2015q4_CORE
+I10_DX20,ICD-10-CM Diagnosis 20,string,GA_SID_2015q4_CORE
+I10_DX21,ICD-10-CM Diagnosis 21,string,GA_SID_2015q4_CORE
+I10_DX22,ICD-10-CM Diagnosis 22,string,GA_SID_2015q4_CORE
+I10_DX23,ICD-10-CM Diagnosis 23,string,GA_SID_2015q4_CORE
+I10_DX24,ICD-10-CM Diagnosis 24,string,GA_SID_2015q4_CORE
+I10_DX25,ICD-10-CM Diagnosis 25,string,GA_SID_2015q4_CORE
+I10_DX26,ICD-10-CM Diagnosis 26,string,GA_SID_2015q4_CORE
+I10_DX27,ICD-10-CM Diagnosis 27,string,GA_SID_2015q4_CORE
+I10_DX28,ICD-10-CM Diagnosis 28,string,GA_SID_2015q4_CORE
+I10_DX29,ICD-10-CM Diagnosis 29,string,GA_SID_2015q4_CORE
+I10_DX30,ICD-10-CM Diagnosis 30,string,GA_SID_2015q4_CORE
+I10_DX31,ICD-10-CM Diagnosis 31,string,GA_SID_2015q4_CORE
+I10_DX32,ICD-10-CM Diagnosis 32,string,GA_SID_2015q4_CORE
+I10_DX33,ICD-10-CM Diagnosis 33,string,GA_SID_2015q4_CORE
+I10_DX34,ICD-10-CM Diagnosis 34,string,GA_SID_2015q4_CORE
+I10_DX35,ICD-10-CM Diagnosis 35,string,GA_SID_2015q4_CORE
+I10_DX36,ICD-10-CM Diagnosis 36,string,GA_SID_2015q4_CORE
+I10_DX37,ICD-10-CM Diagnosis 37,string,GA_SID_2015q4_CORE
+I10_DX38,ICD-10-CM Diagnosis 38,string,GA_SID_2015q4_CORE
+I10_DX39,ICD-10-CM Diagnosis 39,string,GA_SID_2015q4_CORE
+I10_DX40,ICD-10-CM Diagnosis 40,string,GA_SID_2015q4_CORE
+I10_DX41,ICD-10-CM Diagnosis 41,string,GA_SID_2015q4_CORE
+I10_DX42,ICD-10-CM Diagnosis 42,string,GA_SID_2015q4_CORE
+I10_DX43,ICD-10-CM Diagnosis 43,string,GA_SID_2015q4_CORE
+I10_DX44,ICD-10-CM Diagnosis 44,string,GA_SID_2015q4_CORE
+I10_DX45,ICD-10-CM Diagnosis 45,string,GA_SID_2015q4_CORE
+I10_DX46,ICD-10-CM Diagnosis 46,string,GA_SID_2015q4_CORE
+I10_DX47,ICD-10-CM Diagnosis 47,string,GA_SID_2015q4_CORE
+I10_DX48,ICD-10-CM Diagnosis 48,string,GA_SID_2015q4_CORE
+I10_DX49,ICD-10-CM Diagnosis 49,string,GA_SID_2015q4_CORE
+I10_DX50,ICD-10-CM Diagnosis 50,string,GA_SID_2015q4_CORE
+I10_DXCCS1,ICD-10-CM CCS: diagnosis 1,int32,GA_SID_2015q4_CORE
+I10_DXCCS2,ICD-10-CM CCS: diagnosis 2,int32,GA_SID_2015q4_CORE
+I10_DXCCS3,ICD-10-CM CCS: diagnosis 3,int32,GA_SID_2015q4_CORE
+I10_DXCCS4,ICD-10-CM CCS: diagnosis 4,int32,GA_SID_2015q4_CORE
+I10_DXCCS5,ICD-10-CM CCS: diagnosis 5,int32,GA_SID_2015q4_CORE
+I10_DXCCS6,ICD-10-CM CCS: diagnosis 6,int32,GA_SID_2015q4_CORE
+I10_DXCCS7,ICD-10-CM CCS: diagnosis 7,int32,GA_SID_2015q4_CORE
+I10_DXCCS8,ICD-10-CM CCS: diagnosis 8,int32,GA_SID_2015q4_CORE
+I10_DXCCS9,ICD-10-CM CCS: diagnosis 9,int32,GA_SID_2015q4_CORE
+I10_DXCCS10,ICD-10-CM CCS: diagnosis 10,int32,GA_SID_2015q4_CORE
+I10_DXCCS11,ICD-10-CM CCS: diagnosis 11,int32,GA_SID_2015q4_CORE
+I10_DXCCS12,ICD-10-CM CCS: diagnosis 12,int32,GA_SID_2015q4_CORE
+I10_DXCCS13,ICD-10-CM CCS: diagnosis 13,int32,GA_SID_2015q4_CORE
+I10_DXCCS14,ICD-10-CM CCS: diagnosis 14,int32,GA_SID_2015q4_CORE
+I10_DXCCS15,ICD-10-CM CCS: diagnosis 15,int32,GA_SID_2015q4_CORE
+I10_DXCCS16,ICD-10-CM CCS: diagnosis 16,int32,GA_SID_2015q4_CORE
+I10_DXCCS17,ICD-10-CM CCS: diagnosis 17,int32,GA_SID_2015q4_CORE
+I10_DXCCS18,ICD-10-CM CCS: diagnosis 18,int32,GA_SID_2015q4_CORE
+I10_DXCCS19,ICD-10-CM CCS: diagnosis 19,int32,GA_SID_2015q4_CORE
+I10_DXCCS20,ICD-10-CM CCS: diagnosis 20,int32,GA_SID_2015q4_CORE
+I10_DXCCS21,ICD-10-CM CCS: diagnosis 21,int32,GA_SID_2015q4_CORE
+I10_DXCCS22,ICD-10-CM CCS: diagnosis 22,int32,GA_SID_2015q4_CORE
+I10_DXCCS23,ICD-10-CM CCS: diagnosis 23,int32,GA_SID_2015q4_CORE
+I10_DXCCS24,ICD-10-CM CCS: diagnosis 24,int32,GA_SID_2015q4_CORE
+I10_DXCCS25,ICD-10-CM CCS: diagnosis 25,int32,GA_SID_2015q4_CORE
+I10_DXCCS26,ICD-10-CM CCS: diagnosis 26,int32,GA_SID_2015q4_CORE
+I10_DXCCS27,ICD-10-CM CCS: diagnosis 27,int32,GA_SID_2015q4_CORE
+I10_DXCCS28,ICD-10-CM CCS: diagnosis 28,int32,GA_SID_2015q4_CORE
+I10_DXCCS29,ICD-10-CM CCS: diagnosis 29,int32,GA_SID_2015q4_CORE
+I10_DXCCS30,ICD-10-CM CCS: diagnosis 30,int32,GA_SID_2015q4_CORE
+I10_DXCCS31,ICD-10-CM CCS: diagnosis 31,int32,GA_SID_2015q4_CORE
+I10_DXCCS32,ICD-10-CM CCS: diagnosis 32,int32,GA_SID_2015q4_CORE
+I10_DXCCS33,ICD-10-CM CCS: diagnosis 33,int32,GA_SID_2015q4_CORE
+I10_DXCCS34,ICD-10-CM CCS: diagnosis 34,int32,GA_SID_2015q4_CORE
+I10_DXCCS35,ICD-10-CM CCS: diagnosis 35,int32,GA_SID_2015q4_CORE
+I10_DXCCS36,ICD-10-CM CCS: diagnosis 36,int32,GA_SID_2015q4_CORE
+I10_DXCCS37,ICD-10-CM CCS: diagnosis 37,int32,GA_SID_2015q4_CORE
+I10_DXCCS38,ICD-10-CM CCS: diagnosis 38,int32,GA_SID_2015q4_CORE
+I10_DXCCS39,ICD-10-CM CCS: diagnosis 39,int32,GA_SID_2015q4_CORE
+I10_DXCCS40,ICD-10-CM CCS: diagnosis 40,int32,GA_SID_2015q4_CORE
+I10_DXCCS41,ICD-10-CM CCS: diagnosis 41,int32,GA_SID_2015q4_CORE
+I10_DXCCS42,ICD-10-CM CCS: diagnosis 42,int32,GA_SID_2015q4_CORE
+I10_DXCCS43,ICD-10-CM CCS: diagnosis 43,int32,GA_SID_2015q4_CORE
+I10_DXCCS44,ICD-10-CM CCS: diagnosis 44,int32,GA_SID_2015q4_CORE
+I10_DXCCS45,ICD-10-CM CCS: diagnosis 45,int32,GA_SID_2015q4_CORE
+I10_DXCCS46,ICD-10-CM CCS: diagnosis 46,int32,GA_SID_2015q4_CORE
+I10_DXCCS47,ICD-10-CM CCS: diagnosis 47,int32,GA_SID_2015q4_CORE
+I10_DXCCS48,ICD-10-CM CCS: diagnosis 48,int32,GA_SID_2015q4_CORE
+I10_DXCCS49,ICD-10-CM CCS: diagnosis 49,int32,GA_SID_2015q4_CORE
+I10_DXCCS50,ICD-10-CM CCS: diagnosis 50,int32,GA_SID_2015q4_CORE
+I10_ECAUSE1,ICD-10-CM E Cause 1,string,GA_SID_2015q4_CORE
+I10_ECAUSE2,ICD-10-CM E Cause 2,string,GA_SID_2015q4_CORE
+I10_ECAUSE3,ICD-10-CM E Cause 3,string,GA_SID_2015q4_CORE
+I10_ECAUSE4,ICD-10-CM E Cause 4,string,GA_SID_2015q4_CORE
+I10_ECAUSE5,ICD-10-CM E Cause 5,string,GA_SID_2015q4_CORE
+I10_ECAUSE6,ICD-10-CM E Cause 6,string,GA_SID_2015q4_CORE
+I10_ECAUSE7,ICD-10-CM E Cause 7,string,GA_SID_2015q4_CORE
+I10_ECAUSE8,ICD-10-CM E Cause 8,string,GA_SID_2015q4_CORE
+I10_ECAUSE9,ICD-10-CM E Cause 9,string,GA_SID_2015q4_CORE
+I10_ECauseCCS1,ICD-10-CM CCS: E Cause 1,int32,GA_SID_2015q4_CORE
+I10_ECauseCCS2,ICD-10-CM CCS: E Cause 2,int32,GA_SID_2015q4_CORE
+I10_ECauseCCS3,ICD-10-CM CCS: E Cause 3,int32,GA_SID_2015q4_CORE
+I10_ECauseCCS4,ICD-10-CM CCS: E Cause 4,int32,GA_SID_2015q4_CORE
+I10_ECauseCCS5,ICD-10-CM CCS: E Cause 5,int32,GA_SID_2015q4_CORE
+I10_ECauseCCS6,ICD-10-CM CCS: E Cause 6,int32,GA_SID_2015q4_CORE
+I10_ECauseCCS7,ICD-10-CM CCS: E Cause 7,int32,GA_SID_2015q4_CORE
+I10_ECauseCCS8,ICD-10-CM CCS: E Cause 8,int32,GA_SID_2015q4_CORE
+I10_ECauseCCS9,ICD-10-CM CCS: E Cause 9,int32,GA_SID_2015q4_CORE
+I10_HOSPBRTH,ICD-10-CM Indicator of birth in this hospital,int32,GA_SID_2015q4_CORE
+I10_NCHRONIC,ICD-10-CM Number of chronic conditions,int32,GA_SID_2015q4_CORE
+I10_NDX,ICD-10-CM Number of diagnoses on this record,int32,GA_SID_2015q4_CORE
+I10_NECAUSE,ICD-10-CM Number of E Causes on this record,int32,GA_SID_2015q4_CORE
+I10_NEOMAT,ICD-10-CM/PCS Neonatal and/or maternal I10_DX and/or I10_PR,int32,GA_SID_2015q4_CORE
+I10_NPR,ICD-10-PCS Number of procedures on this record,int32,GA_SID_2015q4_CORE
+I10_ORPROC,ICD-10-PCS Major operating room procedure indicator,int32,GA_SID_2015q4_CORE
+I10_PR1,ICD-10-PCS Procedure 1,string,GA_SID_2015q4_CORE
+I10_PR2,ICD-10-PCS Procedure 2,string,GA_SID_2015q4_CORE
+I10_PR3,ICD-10-PCS Procedure 3,string,GA_SID_2015q4_CORE
+I10_PR4,ICD-10-PCS Procedure 4,string,GA_SID_2015q4_CORE
+I10_PR5,ICD-10-PCS Procedure 5,string,GA_SID_2015q4_CORE
+I10_PR6,ICD-10-PCS Procedure 6,string,GA_SID_2015q4_CORE
+I10_PR7,ICD-10-PCS Procedure 7,string,GA_SID_2015q4_CORE
+I10_PR8,ICD-10-PCS Procedure 8,string,GA_SID_2015q4_CORE
+I10_PR9,ICD-10-PCS Procedure 9,string,GA_SID_2015q4_CORE
+I10_PR10,ICD-10-PCS Procedure 10,string,GA_SID_2015q4_CORE
+I10_PR11,ICD-10-PCS Procedure 11,string,GA_SID_2015q4_CORE
+I10_PR12,ICD-10-PCS Procedure 12,string,GA_SID_2015q4_CORE
+I10_PR13,ICD-10-PCS Procedure 13,string,GA_SID_2015q4_CORE
+I10_PR14,ICD-10-PCS Procedure 14,string,GA_SID_2015q4_CORE
+I10_PR15,ICD-10-PCS Procedure 15,string,GA_SID_2015q4_CORE
+I10_PR16,ICD-10-PCS Procedure 16,string,GA_SID_2015q4_CORE
+I10_PR17,ICD-10-PCS Procedure 17,string,GA_SID_2015q4_CORE
+I10_PR18,ICD-10-PCS Procedure 18,string,GA_SID_2015q4_CORE
+I10_PR19,ICD-10-PCS Procedure 19,string,GA_SID_2015q4_CORE
+I10_PR20,ICD-10-PCS Procedure 20,string,GA_SID_2015q4_CORE
+I10_PR21,ICD-10-PCS Procedure 21,string,GA_SID_2015q4_CORE
+I10_PR22,ICD-10-PCS Procedure 22,string,GA_SID_2015q4_CORE
+I10_PR23,ICD-10-PCS Procedure 23,string,GA_SID_2015q4_CORE
+I10_PR24,ICD-10-PCS Procedure 24,string,GA_SID_2015q4_CORE
+I10_PR25,ICD-10-PCS Procedure 25,string,GA_SID_2015q4_CORE
+I10_PR26,ICD-10-PCS Procedure 26,string,GA_SID_2015q4_CORE
+I10_PR27,ICD-10-PCS Procedure 27,string,GA_SID_2015q4_CORE
+I10_PR28,ICD-10-PCS Procedure 28,string,GA_SID_2015q4_CORE
+I10_PR29,ICD-10-PCS Procedure 29,string,GA_SID_2015q4_CORE
+I10_PR30,ICD-10-PCS Procedure 30,string,GA_SID_2015q4_CORE
+I10_PR31,ICD-10-PCS Procedure 31,string,GA_SID_2015q4_CORE
+I10_PR32,ICD-10-PCS Procedure 32,string,GA_SID_2015q4_CORE
+I10_PR33,ICD-10-PCS Procedure 33,string,GA_SID_2015q4_CORE
+I10_PR34,ICD-10-PCS Procedure 34,string,GA_SID_2015q4_CORE
+I10_PR35,ICD-10-PCS Procedure 35,string,GA_SID_2015q4_CORE
+I10_PR36,ICD-10-PCS Procedure 36,string,GA_SID_2015q4_CORE
+I10_PR37,ICD-10-PCS Procedure 37,string,GA_SID_2015q4_CORE
+I10_PR38,ICD-10-PCS Procedure 38,string,GA_SID_2015q4_CORE
+I10_PR39,ICD-10-PCS Procedure 39,string,GA_SID_2015q4_CORE
+I10_PR40,ICD-10-PCS Procedure 40,string,GA_SID_2015q4_CORE
+I10_PR41,ICD-10-PCS Procedure 41,string,GA_SID_2015q4_CORE
+I10_PR42,ICD-10-PCS Procedure 42,string,GA_SID_2015q4_CORE
+I10_PR43,ICD-10-PCS Procedure 43,string,GA_SID_2015q4_CORE
+I10_PR44,ICD-10-PCS Procedure 44,string,GA_SID_2015q4_CORE
+I10_PR45,ICD-10-PCS Procedure 45,string,GA_SID_2015q4_CORE
+I10_PR46,ICD-10-PCS Procedure 46,string,GA_SID_2015q4_CORE
+I10_PR47,ICD-10-PCS Procedure 47,string,GA_SID_2015q4_CORE
+I10_PR48,ICD-10-PCS Procedure 48,string,GA_SID_2015q4_CORE
+I10_PR49,ICD-10-PCS Procedure 49,string,GA_SID_2015q4_CORE
+I10_PR50,ICD-10-PCS Procedure 50,string,GA_SID_2015q4_CORE
+I10_PRCCS1,ICD-10-PCS CCS: procedure 1,int32,GA_SID_2015q4_CORE
+I10_PRCCS2,ICD-10-PCS CCS: procedure 2,int32,GA_SID_2015q4_CORE
+I10_PRCCS3,ICD-10-PCS CCS: procedure 3,int32,GA_SID_2015q4_CORE
+I10_PRCCS4,ICD-10-PCS CCS: procedure 4,int32,GA_SID_2015q4_CORE
+I10_PRCCS5,ICD-10-PCS CCS: procedure 5,int32,GA_SID_2015q4_CORE
+I10_PRCCS6,ICD-10-PCS CCS: procedure 6,int32,GA_SID_2015q4_CORE
+I10_PRCCS7,ICD-10-PCS CCS: procedure 7,int32,GA_SID_2015q4_CORE
+I10_PRCCS8,ICD-10-PCS CCS: procedure 8,int32,GA_SID_2015q4_CORE
+I10_PRCCS9,ICD-10-PCS CCS: procedure 9,int32,GA_SID_2015q4_CORE
+I10_PRCCS10,ICD-10-PCS CCS: procedure 10,int32,GA_SID_2015q4_CORE
+I10_PRCCS11,ICD-10-PCS CCS: procedure 11,int32,GA_SID_2015q4_CORE
+I10_PRCCS12,ICD-10-PCS CCS: procedure 12,int32,GA_SID_2015q4_CORE
+I10_PRCCS13,ICD-10-PCS CCS: procedure 13,int32,GA_SID_2015q4_CORE
+I10_PRCCS14,ICD-10-PCS CCS: procedure 14,int32,GA_SID_2015q4_CORE
+I10_PRCCS15,ICD-10-PCS CCS: procedure 15,int32,GA_SID_2015q4_CORE
+I10_PRCCS16,ICD-10-PCS CCS: procedure 16,int32,GA_SID_2015q4_CORE
+I10_PRCCS17,ICD-10-PCS CCS: procedure 17,int32,GA_SID_2015q4_CORE
+I10_PRCCS18,ICD-10-PCS CCS: procedure 18,int32,GA_SID_2015q4_CORE
+I10_PRCCS19,ICD-10-PCS CCS: procedure 19,int32,GA_SID_2015q4_CORE
+I10_PRCCS20,ICD-10-PCS CCS: procedure 20,int32,GA_SID_2015q4_CORE
+I10_PRCCS21,ICD-10-PCS CCS: procedure 21,int32,GA_SID_2015q4_CORE
+I10_PRCCS22,ICD-10-PCS CCS: procedure 22,int32,GA_SID_2015q4_CORE
+I10_PRCCS23,ICD-10-PCS CCS: procedure 23,int32,GA_SID_2015q4_CORE
+I10_PRCCS24,ICD-10-PCS CCS: procedure 24,int32,GA_SID_2015q4_CORE
+I10_PRCCS25,ICD-10-PCS CCS: procedure 25,int32,GA_SID_2015q4_CORE
+I10_PRCCS26,ICD-10-PCS CCS: procedure 26,int32,GA_SID_2015q4_CORE
+I10_PRCCS27,ICD-10-PCS CCS: procedure 27,int32,GA_SID_2015q4_CORE
+I10_PRCCS28,ICD-10-PCS CCS: procedure 28,int32,GA_SID_2015q4_CORE
+I10_PRCCS29,ICD-10-PCS CCS: procedure 29,int32,GA_SID_2015q4_CORE
+I10_PRCCS30,ICD-10-PCS CCS: procedure 30,int32,GA_SID_2015q4_CORE
+I10_PRCCS31,ICD-10-PCS CCS: procedure 31,int32,GA_SID_2015q4_CORE
+I10_PRCCS32,ICD-10-PCS CCS: procedure 32,int32,GA_SID_2015q4_CORE
+I10_PRCCS33,ICD-10-PCS CCS: procedure 33,int32,GA_SID_2015q4_CORE
+I10_PRCCS34,ICD-10-PCS CCS: procedure 34,int32,GA_SID_2015q4_CORE
+I10_PRCCS35,ICD-10-PCS CCS: procedure 35,int32,GA_SID_2015q4_CORE
+I10_PRCCS36,ICD-10-PCS CCS: procedure 36,int32,GA_SID_2015q4_CORE
+I10_PRCCS37,ICD-10-PCS CCS: procedure 37,int32,GA_SID_2015q4_CORE
+I10_PRCCS38,ICD-10-PCS CCS: procedure 38,int32,GA_SID_2015q4_CORE
+I10_PRCCS39,ICD-10-PCS CCS: procedure 39,int32,GA_SID_2015q4_CORE
+I10_PRCCS40,ICD-10-PCS CCS: procedure 40,int32,GA_SID_2015q4_CORE
+I10_PRCCS41,ICD-10-PCS CCS: procedure 41,int32,GA_SID_2015q4_CORE
+I10_PRCCS42,ICD-10-PCS CCS: procedure 42,int32,GA_SID_2015q4_CORE
+I10_PRCCS43,ICD-10-PCS CCS: procedure 43,int32,GA_SID_2015q4_CORE
+I10_PRCCS44,ICD-10-PCS CCS: procedure 44,int32,GA_SID_2015q4_CORE
+I10_PRCCS45,ICD-10-PCS CCS: procedure 45,int32,GA_SID_2015q4_CORE
+I10_PRCCS46,ICD-10-PCS CCS: procedure 46,int32,GA_SID_2015q4_CORE
+I10_PRCCS47,ICD-10-PCS CCS: procedure 47,int32,GA_SID_2015q4_CORE
+I10_PRCCS48,ICD-10-PCS CCS: procedure 48,int32,GA_SID_2015q4_CORE
+I10_PRCCS49,ICD-10-PCS CCS: procedure 49,int32,GA_SID_2015q4_CORE
+I10_PRCCS50,ICD-10-PCS CCS: procedure 50,int32,GA_SID_2015q4_CORE
+I10_PROCTYPE,ICD-10-PCS Procedure type indicator,int32,GA_SID_2015q4_CORE
+I10_SERVICELINE,ICD-10-CM/PCS Hospital Service Line,int32,GA_SID_2015q4_CORE
+KEY,HCUP record identifier,double,GA_SID_2015q4_CORE
+LOS,Length of stay (cleaned),int32,GA_SID_2015q4_CORE
+LOS_X,Length of stay (as received from source),int32,GA_SID_2015q4_CORE
+MARITALSTATUS_X,Patient's marital status (as received from source),string,GA_SID_2015q4_CORE
+MARITALSTATUSUB04,"Patient's marital status, UB-04 standard coding",string,GA_SID_2015q4_CORE
+MDC,MDC in effect on discharge date,int32,GA_SID_2015q4_CORE
+MDC_NoPOA,"MDC in use on discharge date, calculated without POA",int32,GA_SID_2015q4_CORE
+MDC32,"MDC, version 32",int32,GA_SID_2015q4_CORE
+MDNUM1_R,Physician 1 number (re-identified),int32,GA_SID_2015q4_CORE
+MDNUM2_R,Physician 2 number (re-identified),int32,GA_SID_2015q4_CORE
+MDNUM3_R,Physician 3 number (re-identified),int32,GA_SID_2015q4_CORE
+MDNUM4_R,Physician 4 number (re-identified),int32,GA_SID_2015q4_CORE
+MEDINCSTQ,Median household income state quartile for patient ZIP Code,int32,GA_SID_2015q4_CORE
+NCPT,Number of CPT/HCPCS procedures for this visit,int32,GA_SID_2015q4_CORE
+OS_TIME,Observation stay time summed from UNITS,double,GA_SID_2015q4_CORE
+PAY1,Primary expected payer (uniform),int32,GA_SID_2015q4_CORE
+PAY1_X,Primary expected payer (as received from source),string,GA_SID_2015q4_CORE
+PAY2,Secondary expected payer (uniform),int32,GA_SID_2015q4_CORE
+PAY2_X,Secondary expected payer (as received from source),string,GA_SID_2015q4_CORE
+PAY3,Tertiary expected payer (uniform),int32,GA_SID_2015q4_CORE
+PAY3_X,Tertiary expected payer (as received from source),string,GA_SID_2015q4_CORE
+PL_CBSA,Patient location: Core Based Statistical Area (CBSA),int32,GA_SID_2015q4_CORE
+PL_NCHS,Patient Location: NCHS Urban-Rural Code,int32,GA_SID_2015q4_CORE
+PL_RUCC,Patient location: Rural-Urban Continuum Codes(RUCC),int32,GA_SID_2015q4_CORE
+PL_UIC,Patient location: Urban Influence Codes,int32,GA_SID_2015q4_CORE
+PL_UR_CAT4,Patient Location: Urban-Rural 4 Categories,int32,GA_SID_2015q4_CORE
+POA_Disch_Edit1,Discharge has POA missing on all nonexempt diagnoses,int32,GA_SID_2015q4_CORE
+POA_Disch_Edit2,Discharge has POA missing on all nonexempt secondary diagnoses,int32,GA_SID_2015q4_CORE
+POA_Hosp_Edit1,Hospital reported POA as Y on all diagnoses on all discharges,int32,GA_SID_2015q4_CORE
+POA_Hosp_Edit2,Hospital reported POA as missing on all non-Medicare discharges,int32,GA_SID_2015q4_CORE
+POA_Hosp_Edit3,Hospital reported POA as missing on all nonexempt diagnoses for 15% or more of d,int32,GA_SID_2015q4_CORE
+POA_Hosp_Edit3_Value,Percentage of discharges with all nonexempt diagnoses missing POA indicators,double,GA_SID_2015q4_CORE
+PointOfOrigin_X,"Point of origin for admission or visit, as received from source",string,GA_SID_2015q4_CORE
+PointOfOriginUB04,"Point of origin for admission or visit, UB-04 standard coding",string,GA_SID_2015q4_CORE
+PRDAY1,Number of days from admission to I10_PR1,int32,GA_SID_2015q4_CORE
+PRDAY2,Number of days from admission to I10_PR2,int32,GA_SID_2015q4_CORE
+PRDAY3,Number of days from admission to I10_PR3,int32,GA_SID_2015q4_CORE
+PRDAY4,Number of days from admission to I10_PR4,int32,GA_SID_2015q4_CORE
+PRDAY5,Number of days from admission to I10_PR5,int32,GA_SID_2015q4_CORE
+PRDAY6,Number of days from admission to I10_PR6,int32,GA_SID_2015q4_CORE
+PRDAY7,Number of days from admission to I10_PR7,int32,GA_SID_2015q4_CORE
+PRDAY8,Number of days from admission to I10_PR8,int32,GA_SID_2015q4_CORE
+PRDAY9,Number of days from admission to I10_PR9,int32,GA_SID_2015q4_CORE
+PRDAY10,Number of days from admission to I10_PR10,int32,GA_SID_2015q4_CORE
+PRDAY11,Number of days from admission to I10_PR11,int32,GA_SID_2015q4_CORE
+PRDAY12,Number of days from admission to I10_PR12,int32,GA_SID_2015q4_CORE
+PRDAY13,Number of days from admission to I10_PR13,int32,GA_SID_2015q4_CORE
+PRDAY14,Number of days from admission to I10_PR14,int32,GA_SID_2015q4_CORE
+PRDAY15,Number of days from admission to I10_PR15,int32,GA_SID_2015q4_CORE
+PRDAY16,Number of days from admission to I10_PR16,int32,GA_SID_2015q4_CORE
+PRDAY17,Number of days from admission to I10_PR17,int32,GA_SID_2015q4_CORE
+PRDAY18,Number of days from admission to I10_PR18,int32,GA_SID_2015q4_CORE
+PRDAY19,Number of days from admission to I10_PR19,int32,GA_SID_2015q4_CORE
+PRDAY20,Number of days from admission to I10_PR20,int32,GA_SID_2015q4_CORE
+PRDAY21,Number of days from admission to I10_PR21,int32,GA_SID_2015q4_CORE
+PRDAY22,Number of days from admission to I10_PR22,int32,GA_SID_2015q4_CORE
+PRDAY23,Number of days from admission to I10_PR23,int32,GA_SID_2015q4_CORE
+PRDAY24,Number of days from admission to I10_PR24,int32,GA_SID_2015q4_CORE
+PRDAY25,Number of days from admission to I10_PR25,int32,GA_SID_2015q4_CORE
+PRDAY26,Number of days from admission to I10_PR26,int32,GA_SID_2015q4_CORE
+PRDAY27,Number of days from admission to I10_PR27,int32,GA_SID_2015q4_CORE
+PRDAY28,Number of days from admission to I10_PR28,int32,GA_SID_2015q4_CORE
+PRDAY29,Number of days from admission to I10_PR29,int32,GA_SID_2015q4_CORE
+PRDAY30,Number of days from admission to I10_PR30,int32,GA_SID_2015q4_CORE
+PRDAY31,Number of days from admission to I10_PR31,int32,GA_SID_2015q4_CORE
+PRDAY32,Number of days from admission to I10_PR32,int32,GA_SID_2015q4_CORE
+PRDAY33,Number of days from admission to I10_PR33,int32,GA_SID_2015q4_CORE
+PRDAY34,Number of days from admission to I10_PR34,int32,GA_SID_2015q4_CORE
+PRDAY35,Number of days from admission to I10_PR35,int32,GA_SID_2015q4_CORE
+PRDAY36,Number of days from admission to I10_PR36,int32,GA_SID_2015q4_CORE
+PRDAY37,Number of days from admission to I10_PR37,int32,GA_SID_2015q4_CORE
+PRDAY38,Number of days from admission to I10_PR38,int32,GA_SID_2015q4_CORE
+PRDAY39,Number of days from admission to I10_PR39,int32,GA_SID_2015q4_CORE
+PRDAY40,Number of days from admission to I10_PR40,int32,GA_SID_2015q4_CORE
+PRDAY41,Number of days from admission to I10_PR41,int32,GA_SID_2015q4_CORE
+PRDAY42,Number of days from admission to I10_PR42,int32,GA_SID_2015q4_CORE
+PRDAY43,Number of days from admission to I10_PR43,int32,GA_SID_2015q4_CORE
+PRDAY44,Number of days from admission to I10_PR44,int32,GA_SID_2015q4_CORE
+PRDAY45,Number of days from admission to I10_PR45,int32,GA_SID_2015q4_CORE
+PRDAY46,Number of days from admission to I10_PR46,int32,GA_SID_2015q4_CORE
+PRDAY47,Number of days from admission to I10_PR47,int32,GA_SID_2015q4_CORE
+PRDAY48,Number of days from admission to I10_PR48,int32,GA_SID_2015q4_CORE
+PRDAY49,Number of days from admission to I10_PR49,int32,GA_SID_2015q4_CORE
+PRDAY50,Number of days from admission to I10_PR50,int32,GA_SID_2015q4_CORE
+PrimLang,Primary language of patient,string,GA_SID_2015q4_CORE
+PRVER,Procedure Version,int32,GA_SID_2015q4_CORE
+PSTATE,Patient State postal code,string,GA_SID_2015q4_CORE
+PSTCO,Patient state/county FIPS code,int32,GA_SID_2015q4_CORE
+PSTCO2,"Patient state/county FIPS code, possibly derived from ZIP Code",int32,GA_SID_2015q4_CORE
+RACE,Race (uniform),int32,GA_SID_2015q4_CORE
+RACE_X,Race (as received from source),string,GA_SID_2015q4_CORE
+TOTCHG,Total charges (cleaned),double,GA_SID_2015q4_CORE
+TOTCHG_X,Total charges (as received from source),double,GA_SID_2015q4_CORE
+TRAN_IN,Transfer in indicator,int32,GA_SID_2015q4_CORE
+TRAN_OUT,Transfer out indicator,int32,GA_SID_2015q4_CORE
+VisitLink,Visit linkage variable,int32,GA_SID_2015q4_CORE
+YEAR,Calendar year,int32,GA_SID_2015q4_CORE
+ZIP,Patient ZIP Code,string,GA_SID_2015q4_CORE
+ZIP3,"Patient ZIP Code, first 3 digits",string,GA_SID_2015q4_CORE
+ZIPINC_QRTL,Median household income national quartile for patient ZIP Code,int32,GA_SID_2015q4_CORE
+HOSPID,HCUP hospital identification number,int32,GA_SID_2015q4_CORE
+AYEAR,Admission year,int32,GA_SID_2015q4_CORE
+BMONTH,Birth month,int32,GA_SID_2015q4_CORE
+BYEAR,Birth year,int32,GA_SID_2015q4_CORE
+PRMONTH1,Month of procedure 1,int32,GA_SID_2015q4_CORE
+PRMONTH2,Month of procedure 2,int32,GA_SID_2015q4_CORE
+PRMONTH3,Month of procedure 3,int32,GA_SID_2015q4_CORE
+PRMONTH4,Month of procedure 4,int32,GA_SID_2015q4_CORE
+PRMONTH5,Month of procedure 5,int32,GA_SID_2015q4_CORE
+PRMONTH6,Month of procedure 6,int32,GA_SID_2015q4_CORE
+PRMONTH7,Month of procedure 7,int32,GA_SID_2015q4_CORE
+PRMONTH8,Month of procedure 8,int32,GA_SID_2015q4_CORE
+PRMONTH9,Month of procedure 9,int32,GA_SID_2015q4_CORE
+PRMONTH10,Month of procedure 10,int32,GA_SID_2015q4_CORE
+PRMONTH11,Month of procedure 11,int32,GA_SID_2015q4_CORE
+PRMONTH12,Month of procedure 12,int32,GA_SID_2015q4_CORE
+PRMONTH13,Month of procedure 13,int32,GA_SID_2015q4_CORE
+PRMONTH14,Month of procedure 14,int32,GA_SID_2015q4_CORE
+PRMONTH15,Month of procedure 15,int32,GA_SID_2015q4_CORE
+PRMONTH16,Month of procedure 16,int32,GA_SID_2015q4_CORE
+PRMONTH17,Month of procedure 17,int32,GA_SID_2015q4_CORE
+PRMONTH18,Month of procedure 18,int32,GA_SID_2015q4_CORE
+PRMONTH19,Month of procedure 19,int32,GA_SID_2015q4_CORE
+PRMONTH20,Month of procedure 20,int32,GA_SID_2015q4_CORE
+PRMONTH21,Month of procedure 21,int32,GA_SID_2015q4_CORE
+PRMONTH22,Month of procedure 22,int32,GA_SID_2015q4_CORE
+PRMONTH23,Month of procedure 23,int32,GA_SID_2015q4_CORE
+PRMONTH24,Month of procedure 24,int32,GA_SID_2015q4_CORE
+PRMONTH25,Month of procedure 25,int32,GA_SID_2015q4_CORE
+PRMONTH26,Month of procedure 26,int32,GA_SID_2015q4_CORE
+PRMONTH27,Month of procedure 27,int32,GA_SID_2015q4_CORE
+PRMONTH28,Month of procedure 28,int32,GA_SID_2015q4_CORE
+PRMONTH29,Month of procedure 29,int32,GA_SID_2015q4_CORE
+PRMONTH30,Month of procedure 30,int32,GA_SID_2015q4_CORE
+PRMONTH31,Month of procedure 31,int32,GA_SID_2015q4_CORE
+PRMONTH32,Month of procedure 32,int32,GA_SID_2015q4_CORE
+PRMONTH33,Month of procedure 33,int32,GA_SID_2015q4_CORE
+PRMONTH34,Month of procedure 34,int32,GA_SID_2015q4_CORE
+PRMONTH35,Month of procedure 35,int32,GA_SID_2015q4_CORE
+PRMONTH36,Month of procedure 36,int32,GA_SID_2015q4_CORE
+PRMONTH37,Month of procedure 37,int32,GA_SID_2015q4_CORE
+PRMONTH38,Month of procedure 38,int32,GA_SID_2015q4_CORE
+PRMONTH39,Month of procedure 39,int32,GA_SID_2015q4_CORE
+PRMONTH40,Month of procedure 40,int32,GA_SID_2015q4_CORE
+PRMONTH41,Month of procedure 41,int32,GA_SID_2015q4_CORE
+PRMONTH42,Month of procedure 42,int32,GA_SID_2015q4_CORE
+PRMONTH43,Month of procedure 43,int32,GA_SID_2015q4_CORE
+PRMONTH44,Month of procedure 44,int32,GA_SID_2015q4_CORE
+PRMONTH45,Month of procedure 45,int32,GA_SID_2015q4_CORE
+PRMONTH46,Month of procedure 46,int32,GA_SID_2015q4_CORE
+PRMONTH47,Month of procedure 47,int32,GA_SID_2015q4_CORE
+PRMONTH48,Month of procedure 48,int32,GA_SID_2015q4_CORE
+PRMONTH49,Month of procedure 49,int32,GA_SID_2015q4_CORE
+PRMONTH50,Month of procedure 50,int32,GA_SID_2015q4_CORE
+PRYEAR1,Year of procedure 1,int32,GA_SID_2015q4_CORE
+PRYEAR2,Year of procedure 2,int32,GA_SID_2015q4_CORE
+PRYEAR3,Year of procedure 3,int32,GA_SID_2015q4_CORE
+PRYEAR4,Year of procedure 4,int32,GA_SID_2015q4_CORE
+PRYEAR5,Year of procedure 5,int32,GA_SID_2015q4_CORE
+PRYEAR6,Year of procedure 6,int32,GA_SID_2015q4_CORE
+PRYEAR7,Year of procedure 7,int32,GA_SID_2015q4_CORE
+PRYEAR8,Year of procedure 8,int32,GA_SID_2015q4_CORE
+PRYEAR9,Year of procedure 9,int32,GA_SID_2015q4_CORE
+PRYEAR10,Year of procedure 10,int32,GA_SID_2015q4_CORE
+PRYEAR11,Year of procedure 11,int32,GA_SID_2015q4_CORE
+PRYEAR12,Year of procedure 12,int32,GA_SID_2015q4_CORE
+PRYEAR13,Year of procedure 13,int32,GA_SID_2015q4_CORE
+PRYEAR14,Year of procedure 14,int32,GA_SID_2015q4_CORE
+PRYEAR15,Year of procedure 15,int32,GA_SID_2015q4_CORE
+PRYEAR16,Year of procedure 16,int32,GA_SID_2015q4_CORE
+PRYEAR17,Year of procedure 17,int32,GA_SID_2015q4_CORE
+PRYEAR18,Year of procedure 18,int32,GA_SID_2015q4_CORE
+PRYEAR19,Year of procedure 19,int32,GA_SID_2015q4_CORE
+PRYEAR20,Year of procedure 20,int32,GA_SID_2015q4_CORE
+PRYEAR21,Year of procedure 21,int32,GA_SID_2015q4_CORE
+PRYEAR22,Year of procedure 22,int32,GA_SID_2015q4_CORE
+PRYEAR23,Year of procedure 23,int32,GA_SID_2015q4_CORE
+PRYEAR24,Year of procedure 24,int32,GA_SID_2015q4_CORE
+PRYEAR25,Year of procedure 25,int32,GA_SID_2015q4_CORE
+PRYEAR26,Year of procedure 26,int32,GA_SID_2015q4_CORE
+PRYEAR27,Year of procedure 27,int32,GA_SID_2015q4_CORE
+PRYEAR28,Year of procedure 28,int32,GA_SID_2015q4_CORE
+PRYEAR29,Year of procedure 29,int32,GA_SID_2015q4_CORE
+PRYEAR30,Year of procedure 30,int32,GA_SID_2015q4_CORE
+PRYEAR31,Year of procedure 31,int32,GA_SID_2015q4_CORE
+PRYEAR32,Year of procedure 32,int32,GA_SID_2015q4_CORE
+PRYEAR33,Year of procedure 33,int32,GA_SID_2015q4_CORE
+PRYEAR34,Year of procedure 34,int32,GA_SID_2015q4_CORE
+PRYEAR35,Year of procedure 35,int32,GA_SID_2015q4_CORE
+PRYEAR36,Year of procedure 36,int32,GA_SID_2015q4_CORE
+PRYEAR37,Year of procedure 37,int32,GA_SID_2015q4_CORE
+PRYEAR38,Year of procedure 38,int32,GA_SID_2015q4_CORE
+PRYEAR39,Year of procedure 39,int32,GA_SID_2015q4_CORE
+PRYEAR40,Year of procedure 40,int32,GA_SID_2015q4_CORE
+PRYEAR41,Year of procedure 41,int32,GA_SID_2015q4_CORE
+PRYEAR42,Year of procedure 42,int32,GA_SID_2015q4_CORE
+PRYEAR43,Year of procedure 43,int32,GA_SID_2015q4_CORE
+PRYEAR44,Year of procedure 44,int32,GA_SID_2015q4_CORE
+PRYEAR45,Year of procedure 45,int32,GA_SID_2015q4_CORE
+PRYEAR46,Year of procedure 46,int32,GA_SID_2015q4_CORE
+PRYEAR47,Year of procedure 47,int32,GA_SID_2015q4_CORE
+PRYEAR48,Year of procedure 48,int32,GA_SID_2015q4_CORE
+PRYEAR49,Year of procedure 49,int32,GA_SID_2015q4_CORE
+PRYEAR50,Year of procedure 50,int32,GA_SID_2015q4_CORE

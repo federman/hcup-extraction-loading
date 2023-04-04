@@ -1,0 +1,150 @@
+var,var_label,value_type,dataset_id
+KEY,HCUP record identifier,double,MA_SID_2017_CHGS
+NREVCD,Number of revenue codes for this discharge,int32,MA_SID_2017_CHGS
+REVCD1,Revenue code 1 (as received from source),string,MA_SID_2017_CHGS
+REVCD2,Revenue code 2 (as received from source),string,MA_SID_2017_CHGS
+REVCD3,Revenue code 3 (as received from source),string,MA_SID_2017_CHGS
+REVCD4,Revenue code 4 (as received from source),string,MA_SID_2017_CHGS
+REVCD5,Revenue code 5 (as received from source),string,MA_SID_2017_CHGS
+REVCD6,Revenue code 6 (as received from source),string,MA_SID_2017_CHGS
+REVCD7,Revenue code 7 (as received from source),string,MA_SID_2017_CHGS
+REVCD8,Revenue code 8 (as received from source),string,MA_SID_2017_CHGS
+REVCD9,Revenue code 9 (as received from source),string,MA_SID_2017_CHGS
+REVCD10,Revenue code 10 (as received from source),string,MA_SID_2017_CHGS
+REVCD11,Revenue code 11 (as received from source),string,MA_SID_2017_CHGS
+REVCD12,Revenue code 12 (as received from source),string,MA_SID_2017_CHGS
+REVCD13,Revenue code 13 (as received from source),string,MA_SID_2017_CHGS
+REVCD14,Revenue code 14 (as received from source),string,MA_SID_2017_CHGS
+REVCD15,Revenue code 15 (as received from source),string,MA_SID_2017_CHGS
+REVCD16,Revenue code 16 (as received from source),string,MA_SID_2017_CHGS
+REVCD17,Revenue code 17 (as received from source),string,MA_SID_2017_CHGS
+REVCD18,Revenue code 18 (as received from source),string,MA_SID_2017_CHGS
+REVCD19,Revenue code 19 (as received from source),string,MA_SID_2017_CHGS
+REVCD20,Revenue code 20 (as received from source),string,MA_SID_2017_CHGS
+REVCD21,Revenue code 21 (as received from source),string,MA_SID_2017_CHGS
+REVCD22,Revenue code 22 (as received from source),string,MA_SID_2017_CHGS
+REVCD23,Revenue code 23 (as received from source),string,MA_SID_2017_CHGS
+REVCD24,Revenue code 24 (as received from source),string,MA_SID_2017_CHGS
+REVCD25,Revenue code 25 (as received from source),string,MA_SID_2017_CHGS
+REVCD26,Revenue code 26 (as received from source),string,MA_SID_2017_CHGS
+REVCD27,Revenue code 27 (as received from source),string,MA_SID_2017_CHGS
+REVCD28,Revenue code 28 (as received from source),string,MA_SID_2017_CHGS
+REVCD29,Revenue code 29 (as received from source),string,MA_SID_2017_CHGS
+REVCD30,Revenue code 30 (as received from source),string,MA_SID_2017_CHGS
+REVCD31,Revenue code 31 (as received from source),string,MA_SID_2017_CHGS
+REVCD32,Revenue code 32 (as received from source),string,MA_SID_2017_CHGS
+REVCD33,Revenue code 33 (as received from source),string,MA_SID_2017_CHGS
+REVCD34,Revenue code 34 (as received from source),string,MA_SID_2017_CHGS
+REVCD35,Revenue code 35 (as received from source),string,MA_SID_2017_CHGS
+REVCD36,Revenue code 36 (as received from source),string,MA_SID_2017_CHGS
+REVCD37,Revenue code 37 (as received from source),string,MA_SID_2017_CHGS
+REVCD38,Revenue code 38 (as received from source),string,MA_SID_2017_CHGS
+REVCD39,Revenue code 39 (as received from source),string,MA_SID_2017_CHGS
+REVCD40,Revenue code 40 (as received from source),string,MA_SID_2017_CHGS
+REVCD41,Revenue code 41 (as received from source),string,MA_SID_2017_CHGS
+REVCD42,Revenue code 42 (as received from source),string,MA_SID_2017_CHGS
+REVCD43,Revenue code 43 (as received from source),string,MA_SID_2017_CHGS
+REVCD44,Revenue code 44 (as received from source),string,MA_SID_2017_CHGS
+REVCD45,Revenue code 45 (as received from source),string,MA_SID_2017_CHGS
+REVCD46,Revenue code 46 (as received from source),string,MA_SID_2017_CHGS
+REVCD47,Revenue code 47 (as received from source),string,MA_SID_2017_CHGS
+REVCD48,Revenue code 48 (as received from source),string,MA_SID_2017_CHGS
+REVCD49,Revenue code 49 (as received from source),string,MA_SID_2017_CHGS
+REVCHG1,Detailed charges for revenue code 1 (as received from source),double,MA_SID_2017_CHGS
+REVCHG2,Detailed charges for revenue code 2 (as received from source),double,MA_SID_2017_CHGS
+REVCHG3,Detailed charges for revenue code 3 (as received from source),double,MA_SID_2017_CHGS
+REVCHG4,Detailed charges for revenue code 4 (as received from source),double,MA_SID_2017_CHGS
+REVCHG5,Detailed charges for revenue code 5 (as received from source),double,MA_SID_2017_CHGS
+REVCHG6,Detailed charges for revenue code 6 (as received from source),double,MA_SID_2017_CHGS
+REVCHG7,Detailed charges for revenue code 7 (as received from source),double,MA_SID_2017_CHGS
+REVCHG8,Detailed charges for revenue code 8 (as received from source),double,MA_SID_2017_CHGS
+REVCHG9,Detailed charges for revenue code 9 (as received from source),double,MA_SID_2017_CHGS
+REVCHG10,Detailed charges for revenue code 10 (as received from source),double,MA_SID_2017_CHGS
+REVCHG11,Detailed charges for revenue code 11 (as received from source),double,MA_SID_2017_CHGS
+REVCHG12,Detailed charges for revenue code 12 (as received from source),double,MA_SID_2017_CHGS
+REVCHG13,Detailed charges for revenue code 13 (as received from source),double,MA_SID_2017_CHGS
+REVCHG14,Detailed charges for revenue code 14 (as received from source),double,MA_SID_2017_CHGS
+REVCHG15,Detailed charges for revenue code 15 (as received from source),double,MA_SID_2017_CHGS
+REVCHG16,Detailed charges for revenue code 16 (as received from source),double,MA_SID_2017_CHGS
+REVCHG17,Detailed charges for revenue code 17 (as received from source),double,MA_SID_2017_CHGS
+REVCHG18,Detailed charges for revenue code 18 (as received from source),double,MA_SID_2017_CHGS
+REVCHG19,Detailed charges for revenue code 19 (as received from source),double,MA_SID_2017_CHGS
+REVCHG20,Detailed charges for revenue code 20 (as received from source),double,MA_SID_2017_CHGS
+REVCHG21,Detailed charges for revenue code 21 (as received from source),double,MA_SID_2017_CHGS
+REVCHG22,Detailed charges for revenue code 22 (as received from source),double,MA_SID_2017_CHGS
+REVCHG23,Detailed charges for revenue code 23 (as received from source),double,MA_SID_2017_CHGS
+REVCHG24,Detailed charges for revenue code 24 (as received from source),double,MA_SID_2017_CHGS
+REVCHG25,Detailed charges for revenue code 25 (as received from source),double,MA_SID_2017_CHGS
+REVCHG26,Detailed charges for revenue code 26 (as received from source),double,MA_SID_2017_CHGS
+REVCHG27,Detailed charges for revenue code 27 (as received from source),double,MA_SID_2017_CHGS
+REVCHG28,Detailed charges for revenue code 28 (as received from source),double,MA_SID_2017_CHGS
+REVCHG29,Detailed charges for revenue code 29 (as received from source),double,MA_SID_2017_CHGS
+REVCHG30,Detailed charges for revenue code 30 (as received from source),double,MA_SID_2017_CHGS
+REVCHG31,Detailed charges for revenue code 31 (as received from source),double,MA_SID_2017_CHGS
+REVCHG32,Detailed charges for revenue code 32 (as received from source),double,MA_SID_2017_CHGS
+REVCHG33,Detailed charges for revenue code 33 (as received from source),double,MA_SID_2017_CHGS
+REVCHG34,Detailed charges for revenue code 34 (as received from source),double,MA_SID_2017_CHGS
+REVCHG35,Detailed charges for revenue code 35 (as received from source),double,MA_SID_2017_CHGS
+REVCHG36,Detailed charges for revenue code 36 (as received from source),double,MA_SID_2017_CHGS
+REVCHG37,Detailed charges for revenue code 37 (as received from source),double,MA_SID_2017_CHGS
+REVCHG38,Detailed charges for revenue code 38 (as received from source),double,MA_SID_2017_CHGS
+REVCHG39,Detailed charges for revenue code 39 (as received from source),double,MA_SID_2017_CHGS
+REVCHG40,Detailed charges for revenue code 40 (as received from source),double,MA_SID_2017_CHGS
+REVCHG41,Detailed charges for revenue code 41 (as received from source),double,MA_SID_2017_CHGS
+REVCHG42,Detailed charges for revenue code 42 (as received from source),double,MA_SID_2017_CHGS
+REVCHG43,Detailed charges for revenue code 43 (as received from source),double,MA_SID_2017_CHGS
+REVCHG44,Detailed charges for revenue code 44 (as received from source),double,MA_SID_2017_CHGS
+REVCHG45,Detailed charges for revenue code 45 (as received from source),double,MA_SID_2017_CHGS
+REVCHG46,Detailed charges for revenue code 46 (as received from source),double,MA_SID_2017_CHGS
+REVCHG47,Detailed charges for revenue code 47 (as received from source),double,MA_SID_2017_CHGS
+REVCHG48,Detailed charges for revenue code 48 (as received from source),double,MA_SID_2017_CHGS
+REVCHG49,Detailed charges for revenue code 49 (as received from source),double,MA_SID_2017_CHGS
+UNIT1,Units of service 1 (as received from source),double,MA_SID_2017_CHGS
+UNIT2,Units of service 2 (as received from source),double,MA_SID_2017_CHGS
+UNIT3,Units of service 3 (as received from source),double,MA_SID_2017_CHGS
+UNIT4,Units of service 4 (as received from source),double,MA_SID_2017_CHGS
+UNIT5,Units of service 5 (as received from source),double,MA_SID_2017_CHGS
+UNIT6,Units of service 6 (as received from source),double,MA_SID_2017_CHGS
+UNIT7,Units of service 7 (as received from source),double,MA_SID_2017_CHGS
+UNIT8,Units of service 8 (as received from source),double,MA_SID_2017_CHGS
+UNIT9,Units of service 9 (as received from source),double,MA_SID_2017_CHGS
+UNIT10,Units of service 10 (as received from source),double,MA_SID_2017_CHGS
+UNIT11,Units of service 11 (as received from source),double,MA_SID_2017_CHGS
+UNIT12,Units of service 12 (as received from source),double,MA_SID_2017_CHGS
+UNIT13,Units of service 13 (as received from source),double,MA_SID_2017_CHGS
+UNIT14,Units of service 14 (as received from source),double,MA_SID_2017_CHGS
+UNIT15,Units of service 15 (as received from source),double,MA_SID_2017_CHGS
+UNIT16,Units of service 16 (as received from source),double,MA_SID_2017_CHGS
+UNIT17,Units of service 17 (as received from source),double,MA_SID_2017_CHGS
+UNIT18,Units of service 18 (as received from source),double,MA_SID_2017_CHGS
+UNIT19,Units of service 19 (as received from source),double,MA_SID_2017_CHGS
+UNIT20,Units of service 20 (as received from source),double,MA_SID_2017_CHGS
+UNIT21,Units of service 21 (as received from source),double,MA_SID_2017_CHGS
+UNIT22,Units of service 22 (as received from source),double,MA_SID_2017_CHGS
+UNIT23,Units of service 23 (as received from source),double,MA_SID_2017_CHGS
+UNIT24,Units of service 24 (as received from source),double,MA_SID_2017_CHGS
+UNIT25,Units of service 25 (as received from source),double,MA_SID_2017_CHGS
+UNIT26,Units of service 26 (as received from source),double,MA_SID_2017_CHGS
+UNIT27,Units of service 27 (as received from source),double,MA_SID_2017_CHGS
+UNIT28,Units of service 28 (as received from source),double,MA_SID_2017_CHGS
+UNIT29,Units of service 29 (as received from source),double,MA_SID_2017_CHGS
+UNIT30,Units of service 30 (as received from source),double,MA_SID_2017_CHGS
+UNIT31,Units of service 31 (as received from source),double,MA_SID_2017_CHGS
+UNIT32,Units of service 32 (as received from source),double,MA_SID_2017_CHGS
+UNIT33,Units of service 33 (as received from source),double,MA_SID_2017_CHGS
+UNIT34,Units of service 34 (as received from source),double,MA_SID_2017_CHGS
+UNIT35,Units of service 35 (as received from source),double,MA_SID_2017_CHGS
+UNIT36,Units of service 36 (as received from source),double,MA_SID_2017_CHGS
+UNIT37,Units of service 37 (as received from source),double,MA_SID_2017_CHGS
+UNIT38,Units of service 38 (as received from source),double,MA_SID_2017_CHGS
+UNIT39,Units of service 39 (as received from source),double,MA_SID_2017_CHGS
+UNIT40,Units of service 40 (as received from source),double,MA_SID_2017_CHGS
+UNIT41,Units of service 41 (as received from source),double,MA_SID_2017_CHGS
+UNIT42,Units of service 42 (as received from source),double,MA_SID_2017_CHGS
+UNIT43,Units of service 43 (as received from source),double,MA_SID_2017_CHGS
+UNIT44,Units of service 44 (as received from source),double,MA_SID_2017_CHGS
+UNIT45,Units of service 45 (as received from source),double,MA_SID_2017_CHGS
+UNIT46,Units of service 46 (as received from source),double,MA_SID_2017_CHGS
+UNIT47,Units of service 47 (as received from source),double,MA_SID_2017_CHGS
+UNIT48,Units of service 48 (as received from source),double,MA_SID_2017_CHGS
+UNIT49,Units of service 49 (as received from source),double,MA_SID_2017_CHGS

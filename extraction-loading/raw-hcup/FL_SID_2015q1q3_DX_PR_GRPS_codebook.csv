@@ -1,0 +1,179 @@
+var,var_label,value_type,dataset_id
+BODYSYSTEM1,Body system 1,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM2,Body system 2,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM3,Body system 3,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM4,Body system 4,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM5,Body system 5,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM6,Body system 6,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM7,Body system 7,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM8,Body system 8,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM9,Body system 9,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM10,Body system 10,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM11,Body system 11,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM12,Body system 12,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM13,Body system 13,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM14,Body system 14,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM15,Body system 15,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM16,Body system 16,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM17,Body system 17,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM18,Body system 18,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM19,Body system 19,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM20,Body system 20,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM21,Body system 21,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM22,Body system 22,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM23,Body system 23,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM24,Body system 24,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM25,Body system 25,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM26,Body system 26,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM27,Body system 27,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM28,Body system 28,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM29,Body system 29,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM30,Body system 30,int32,FL_SID_2015q1q3_DX_PR_GRPS
+BODYSYSTEM31,Body system 31,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON1,Chronic condition indicator 1,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON2,Chronic condition indicator 2,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON3,Chronic condition indicator 3,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON4,Chronic condition indicator 4,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON5,Chronic condition indicator 5,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON6,Chronic condition indicator 6,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON7,Chronic condition indicator 7,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON8,Chronic condition indicator 8,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON9,Chronic condition indicator 9,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON10,Chronic condition indicator 10,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON11,Chronic condition indicator 11,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON12,Chronic condition indicator 12,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON13,Chronic condition indicator 13,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON14,Chronic condition indicator 14,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON15,Chronic condition indicator 15,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON16,Chronic condition indicator 16,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON17,Chronic condition indicator 17,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON18,Chronic condition indicator 18,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON19,Chronic condition indicator 19,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON20,Chronic condition indicator 20,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON21,Chronic condition indicator 21,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON22,Chronic condition indicator 22,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON23,Chronic condition indicator 23,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON24,Chronic condition indicator 24,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON25,Chronic condition indicator 25,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON26,Chronic condition indicator 26,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON27,Chronic condition indicator 27,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON28,Chronic condition indicator 28,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON29,Chronic condition indicator 29,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON30,Chronic condition indicator 30,int32,FL_SID_2015q1q3_DX_PR_GRPS
+CHRON31,Chronic condition indicator 31,int32,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS1,Multi-Level CCS:  Diagnosis 1,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS2,Multi-Level CCS:  Diagnosis 2,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS3,Multi-Level CCS:  Diagnosis 3,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS4,Multi-Level CCS:  Diagnosis 4,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS5,Multi-Level CCS:  Diagnosis 5,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS6,Multi-Level CCS:  Diagnosis 6,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS7,Multi-Level CCS:  Diagnosis 7,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS8,Multi-Level CCS:  Diagnosis 8,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS9,Multi-Level CCS:  Diagnosis 9,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS10,Multi-Level CCS:  Diagnosis 10,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS11,Multi-Level CCS:  Diagnosis 11,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS12,Multi-Level CCS:  Diagnosis 12,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS13,Multi-Level CCS:  Diagnosis 13,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS14,Multi-Level CCS:  Diagnosis 14,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS15,Multi-Level CCS:  Diagnosis 15,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS16,Multi-Level CCS:  Diagnosis 16,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS17,Multi-Level CCS:  Diagnosis 17,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS18,Multi-Level CCS:  Diagnosis 18,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS19,Multi-Level CCS:  Diagnosis 19,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS20,Multi-Level CCS:  Diagnosis 20,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS21,Multi-Level CCS:  Diagnosis 21,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS22,Multi-Level CCS:  Diagnosis 22,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS23,Multi-Level CCS:  Diagnosis 23,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS24,Multi-Level CCS:  Diagnosis 24,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS25,Multi-Level CCS:  Diagnosis 25,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS26,Multi-Level CCS:  Diagnosis 26,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS27,Multi-Level CCS:  Diagnosis 27,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS28,Multi-Level CCS:  Diagnosis 28,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS29,Multi-Level CCS:  Diagnosis 29,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS30,Multi-Level CCS:  Diagnosis 30,string,FL_SID_2015q1q3_DX_PR_GRPS
+DXMCCS31,Multi-Level CCS:  Diagnosis 31,string,FL_SID_2015q1q3_DX_PR_GRPS
+E_MCCS1,Multi-Level CCS:  E Code 1,string,FL_SID_2015q1q3_DX_PR_GRPS
+E_MCCS2,Multi-Level CCS:  E Code 2,string,FL_SID_2015q1q3_DX_PR_GRPS
+E_MCCS3,Multi-Level CCS:  E Code 3,string,FL_SID_2015q1q3_DX_PR_GRPS
+E_MCCS4,Multi-Level CCS:  E Code 4,string,FL_SID_2015q1q3_DX_PR_GRPS
+E_MCCS5,Multi-Level CCS:  E Code 5,string,FL_SID_2015q1q3_DX_PR_GRPS
+E_MCCS6,Multi-Level CCS:  E Code 6,string,FL_SID_2015q1q3_DX_PR_GRPS
+INJURY,Injury diagnosis reported on record (1:DX1 is an injury; 2:DX2+ is an injury; 0:,int32,FL_SID_2015q1q3_DX_PR_GRPS
+INJURY_CUT,Injury by cutting or piercing (by E codes),int32,FL_SID_2015q1q3_DX_PR_GRPS
+INJURY_DROWN,Injury by drowning or submersion (by E codes),int32,FL_SID_2015q1q3_DX_PR_GRPS
+INJURY_FALL,Injury by falling (by E codes),int32,FL_SID_2015q1q3_DX_PR_GRPS
+INJURY_FIRE,"Injury by fire, flame or hot object (by E codes)",int32,FL_SID_2015q1q3_DX_PR_GRPS
+INJURY_FIREARM,Injury by firearm (by E codes),int32,FL_SID_2015q1q3_DX_PR_GRPS
+INJURY_MACHINERY,Injury by machinery (by E codes),int32,FL_SID_2015q1q3_DX_PR_GRPS
+INJURY_MVT,Injury involving motor vehicle traffic (by E codes),int32,FL_SID_2015q1q3_DX_PR_GRPS
+INJURY_NATURE,Injury involving nature or environmental factors (by E codes),int32,FL_SID_2015q1q3_DX_PR_GRPS
+INJURY_POISON,Injury by poison (by E codes),int32,FL_SID_2015q1q3_DX_PR_GRPS
+INJURY_STRUCK,Injury from being struck by or against (by E codes),int32,FL_SID_2015q1q3_DX_PR_GRPS
+INJURY_SUFFOCATION,Injury by suffocation (by E codes),int32,FL_SID_2015q1q3_DX_PR_GRPS
+INTENT_ASSAULT,Injury by assault indicated on the record (by E codes),int32,FL_SID_2015q1q3_DX_PR_GRPS
+INTENT_SELF_HARM,Intentional self harm indicated on the record (by diagnosis and/or E codes),int32,FL_SID_2015q1q3_DX_PR_GRPS
+INTENT_UNINTENTIONAL,Unintentional injury indicated on the record (by E codes),int32,FL_SID_2015q1q3_DX_PR_GRPS
+KEY,HCUP record identifier,double,FL_SID_2015q1q3_DX_PR_GRPS
+MULTINJURY,More than one injury diagnosis reported on record,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS1,Procedure class 1,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS2,Procedure class 2,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS3,Procedure class 3,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS4,Procedure class 4,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS5,Procedure class 5,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS6,Procedure class 6,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS7,Procedure class 7,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS8,Procedure class 8,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS9,Procedure class 9,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS10,Procedure class 10,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS11,Procedure class 11,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS12,Procedure class 12,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS13,Procedure class 13,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS14,Procedure class 14,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS15,Procedure class 15,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS16,Procedure class 16,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS17,Procedure class 17,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS18,Procedure class 18,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS19,Procedure class 19,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS20,Procedure class 20,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS21,Procedure class 21,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS22,Procedure class 22,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS23,Procedure class 23,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS24,Procedure class 24,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS25,Procedure class 25,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS26,Procedure class 26,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS27,Procedure class 27,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS28,Procedure class 28,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS29,Procedure class 29,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS30,Procedure class 30,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PCLASS31,Procedure class 31,int32,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS1,Multi-Level CCS:  Procedure 1,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS2,Multi-Level CCS:  Procedure 2,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS3,Multi-Level CCS:  Procedure 3,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS4,Multi-Level CCS:  Procedure 4,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS5,Multi-Level CCS:  Procedure 5,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS6,Multi-Level CCS:  Procedure 6,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS7,Multi-Level CCS:  Procedure 7,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS8,Multi-Level CCS:  Procedure 8,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS9,Multi-Level CCS:  Procedure 9,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS10,Multi-Level CCS:  Procedure 10,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS11,Multi-Level CCS:  Procedure 11,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS12,Multi-Level CCS:  Procedure 12,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS13,Multi-Level CCS:  Procedure 13,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS14,Multi-Level CCS:  Procedure 14,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS15,Multi-Level CCS:  Procedure 15,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS16,Multi-Level CCS:  Procedure 16,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS17,Multi-Level CCS:  Procedure 17,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS18,Multi-Level CCS:  Procedure 18,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS19,Multi-Level CCS:  Procedure 19,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS20,Multi-Level CCS:  Procedure 20,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS21,Multi-Level CCS:  Procedure 21,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS22,Multi-Level CCS:  Procedure 22,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS23,Multi-Level CCS:  Procedure 23,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS24,Multi-Level CCS:  Procedure 24,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS25,Multi-Level CCS:  Procedure 25,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS26,Multi-Level CCS:  Procedure 26,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS27,Multi-Level CCS:  Procedure 27,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS28,Multi-Level CCS:  Procedure 28,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS29,Multi-Level CCS:  Procedure 29,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS30,Multi-Level CCS:  Procedure 30,string,FL_SID_2015q1q3_DX_PR_GRPS
+PRMCCS31,Multi-Level CCS:  Procedure 31,string,FL_SID_2015q1q3_DX_PR_GRPS

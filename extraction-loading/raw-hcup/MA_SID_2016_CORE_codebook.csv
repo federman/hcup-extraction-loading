@@ -1,0 +1,519 @@
+var,var_label,value_type,dataset_id
+ADRG,All Patient Refined DRG,int32,MA_SID_2016_CORE
+ADRGRISKMORTALITY,All Patient Refined DRG mortality risk,int32,MA_SID_2016_CORE
+ADRGSEV,All Patient Refined DRG severity level,int32,MA_SID_2016_CORE
+AGE,Age in years at admission,int32,MA_SID_2016_CORE
+AGEMONTH,Age in months (when age < 11 years),int32,MA_SID_2016_CORE
+AMDC,All Patient Refined MDC,int32,MA_SID_2016_CORE
+AMONTH,Admission month,int32,MA_SID_2016_CORE
+ASOURCE,Admission source (uniform),int32,MA_SID_2016_CORE
+ASOURCE_X,Admission source (as received from source),string,MA_SID_2016_CORE
+ASOURCEUB92,Admission source (UB-92 standard coding),string,MA_SID_2016_CORE
+ATYPE,Admission type,int32,MA_SID_2016_CORE
+AWEEKEND,Admission day is a weekend,int32,MA_SID_2016_CORE
+BWT,Birth weight in grams,int32,MA_SID_2016_CORE
+DaysBetweenVisits,Number of days between visits,int32,MA_SID_2016_CORE
+DaysToEvent,Days from 'start date' to admission,int32,MA_SID_2016_CORE
+DIED,Died during hospitalization,int32,MA_SID_2016_CORE
+DISP_X,Disposition of patient (as received from source),string,MA_SID_2016_CORE
+DISPUB04,Disposition of patient (UB-04 standard coding),int32,MA_SID_2016_CORE
+DISPUNIFORM,Disposition of patient (uniform),int32,MA_SID_2016_CORE
+DMONTH,Discharge month,int32,MA_SID_2016_CORE
+DNR,Do not resuscitate indicator,int32,MA_SID_2016_CORE
+DQTR,Discharge quarter,int32,MA_SID_2016_CORE
+DRG,DRG in effect on discharge date,int32,MA_SID_2016_CORE
+DRG_NoPOA,"DRG in use on discharge date, calculated without POA",int32,MA_SID_2016_CORE
+DRGVER,DRG grouper version used on discharge date,int32,MA_SID_2016_CORE
+DSHOSPID,Data source hospital identifier,string,MA_SID_2016_CORE
+DXPOA1,"Diagnosis 1, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA2,"Diagnosis 2, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA3,"Diagnosis 3, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA4,"Diagnosis 4, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA5,"Diagnosis 5, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA6,"Diagnosis 6, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA7,"Diagnosis 7, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA8,"Diagnosis 8, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA9,"Diagnosis 9, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA10,"Diagnosis 10, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA11,"Diagnosis 11, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA12,"Diagnosis 12, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA13,"Diagnosis 13, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA14,"Diagnosis 14, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA15,"Diagnosis 15, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA16,"Diagnosis 16, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA17,"Diagnosis 17, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA18,"Diagnosis 18, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA19,"Diagnosis 19, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA20,"Diagnosis 20, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA21,"Diagnosis 21, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA22,"Diagnosis 22, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA23,"Diagnosis 23, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA24,"Diagnosis 24, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA25,"Diagnosis 25, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA26,"Diagnosis 26, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA27,"Diagnosis 27, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA28,"Diagnosis 28, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA29,"Diagnosis 29, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA30,"Diagnosis 30, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA31,"Diagnosis 31, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA32,"Diagnosis 32, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA33,"Diagnosis 33, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA34,"Diagnosis 34, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA35,"Diagnosis 35, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA36,"Diagnosis 36, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA37,"Diagnosis 37, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA38,"Diagnosis 38, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA39,"Diagnosis 39, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA40,"Diagnosis 40, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA41,"Diagnosis 41, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA42,"Diagnosis 42, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA43,"Diagnosis 43, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA44,"Diagnosis 44, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA45,"Diagnosis 45, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA46,"Diagnosis 46, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA47,"Diagnosis 47, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA48,"Diagnosis 48, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA49,"Diagnosis 49, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA50,"Diagnosis 50, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA51,"Diagnosis 51, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA52,"Diagnosis 52, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA53,"Diagnosis 53, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA54,"Diagnosis 54, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA55,"Diagnosis 55, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA56,"Diagnosis 56, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA57,"Diagnosis 57, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA58,"Diagnosis 58, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA59,"Diagnosis 59, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA60,"Diagnosis 60, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA61,"Diagnosis 61, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA62,"Diagnosis 62, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA63,"Diagnosis 63, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA64,"Diagnosis 64, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA65,"Diagnosis 65, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA66,"Diagnosis 66, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA67,"Diagnosis 67, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA68,"Diagnosis 68, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA69,"Diagnosis 69, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA70,"Diagnosis 70, present on admission indicator",string,MA_SID_2016_CORE
+DXPOA71,"Diagnosis 71, present on admission indicator",string,MA_SID_2016_CORE
+DXVER,Diagnosis Version,int32,MA_SID_2016_CORE
+E_POA1,"External cause 1, present on admission indicator",string,MA_SID_2016_CORE
+E_POA2,"External cause 2, present on admission indicator",string,MA_SID_2016_CORE
+E_POA3,"External cause 3, present on admission indicator",string,MA_SID_2016_CORE
+E_POA4,"External cause 4, present on admission indicator",string,MA_SID_2016_CORE
+E_POA5,"External cause 5, present on admission indicator",string,MA_SID_2016_CORE
+E_POA6,"External cause 6, present on admission indicator",string,MA_SID_2016_CORE
+E_POA7,"External cause 7, present on admission indicator",string,MA_SID_2016_CORE
+E_POA8,"External cause 8, present on admission indicator",string,MA_SID_2016_CORE
+E_POA9,"External cause 9, present on admission indicator",string,MA_SID_2016_CORE
+E_POA10,"External cause 10, present on admission indicator",string,MA_SID_2016_CORE
+E_POA11,"External cause 11, present on admission indicator",string,MA_SID_2016_CORE
+FEMALE,Indicator of sex,int32,MA_SID_2016_CORE
+HCUP_ED,HCUP Emergency Department service indicator,int32,MA_SID_2016_CORE
+HCUP_OS,HCUP Observation Stay service indicator,int32,MA_SID_2016_CORE
+HISPANIC,Hispanic ethnicity (uniform),int32,MA_SID_2016_CORE
+HISPANIC_X,Hispanic ethnicity (as received from source),string,MA_SID_2016_CORE
+Homeless,Indicator that patient is homeless,int32,MA_SID_2016_CORE
+HOSPST,Hospital state postal code,string,MA_SID_2016_CORE
+I10_DX_Admitting,ICD-10-CM Admitting Diagnosis Code,string,MA_SID_2016_CORE
+I10_DX1,ICD-10-CM Diagnosis 1,string,MA_SID_2016_CORE
+I10_DX2,ICD-10-CM Diagnosis 2,string,MA_SID_2016_CORE
+I10_DX3,ICD-10-CM Diagnosis 3,string,MA_SID_2016_CORE
+I10_DX4,ICD-10-CM Diagnosis 4,string,MA_SID_2016_CORE
+I10_DX5,ICD-10-CM Diagnosis 5,string,MA_SID_2016_CORE
+I10_DX6,ICD-10-CM Diagnosis 6,string,MA_SID_2016_CORE
+I10_DX7,ICD-10-CM Diagnosis 7,string,MA_SID_2016_CORE
+I10_DX8,ICD-10-CM Diagnosis 8,string,MA_SID_2016_CORE
+I10_DX9,ICD-10-CM Diagnosis 9,string,MA_SID_2016_CORE
+I10_DX10,ICD-10-CM Diagnosis 10,string,MA_SID_2016_CORE
+I10_DX11,ICD-10-CM Diagnosis 11,string,MA_SID_2016_CORE
+I10_DX12,ICD-10-CM Diagnosis 12,string,MA_SID_2016_CORE
+I10_DX13,ICD-10-CM Diagnosis 13,string,MA_SID_2016_CORE
+I10_DX14,ICD-10-CM Diagnosis 14,string,MA_SID_2016_CORE
+I10_DX15,ICD-10-CM Diagnosis 15,string,MA_SID_2016_CORE
+I10_DX16,ICD-10-CM Diagnosis 16,string,MA_SID_2016_CORE
+I10_DX17,ICD-10-CM Diagnosis 17,string,MA_SID_2016_CORE
+I10_DX18,ICD-10-CM Diagnosis 18,string,MA_SID_2016_CORE
+I10_DX19,ICD-10-CM Diagnosis 19,string,MA_SID_2016_CORE
+I10_DX20,ICD-10-CM Diagnosis 20,string,MA_SID_2016_CORE
+I10_DX21,ICD-10-CM Diagnosis 21,string,MA_SID_2016_CORE
+I10_DX22,ICD-10-CM Diagnosis 22,string,MA_SID_2016_CORE
+I10_DX23,ICD-10-CM Diagnosis 23,string,MA_SID_2016_CORE
+I10_DX24,ICD-10-CM Diagnosis 24,string,MA_SID_2016_CORE
+I10_DX25,ICD-10-CM Diagnosis 25,string,MA_SID_2016_CORE
+I10_DX26,ICD-10-CM Diagnosis 26,string,MA_SID_2016_CORE
+I10_DX27,ICD-10-CM Diagnosis 27,string,MA_SID_2016_CORE
+I10_DX28,ICD-10-CM Diagnosis 28,string,MA_SID_2016_CORE
+I10_DX29,ICD-10-CM Diagnosis 29,string,MA_SID_2016_CORE
+I10_DX30,ICD-10-CM Diagnosis 30,string,MA_SID_2016_CORE
+I10_DX31,ICD-10-CM Diagnosis 31,string,MA_SID_2016_CORE
+I10_DX32,ICD-10-CM Diagnosis 32,string,MA_SID_2016_CORE
+I10_DX33,ICD-10-CM Diagnosis 33,string,MA_SID_2016_CORE
+I10_DX34,ICD-10-CM Diagnosis 34,string,MA_SID_2016_CORE
+I10_DX35,ICD-10-CM Diagnosis 35,string,MA_SID_2016_CORE
+I10_DX36,ICD-10-CM Diagnosis 36,string,MA_SID_2016_CORE
+I10_DX37,ICD-10-CM Diagnosis 37,string,MA_SID_2016_CORE
+I10_DX38,ICD-10-CM Diagnosis 38,string,MA_SID_2016_CORE
+I10_DX39,ICD-10-CM Diagnosis 39,string,MA_SID_2016_CORE
+I10_DX40,ICD-10-CM Diagnosis 40,string,MA_SID_2016_CORE
+I10_DX41,ICD-10-CM Diagnosis 41,string,MA_SID_2016_CORE
+I10_DX42,ICD-10-CM Diagnosis 42,string,MA_SID_2016_CORE
+I10_DX43,ICD-10-CM Diagnosis 43,string,MA_SID_2016_CORE
+I10_DX44,ICD-10-CM Diagnosis 44,string,MA_SID_2016_CORE
+I10_DX45,ICD-10-CM Diagnosis 45,string,MA_SID_2016_CORE
+I10_DX46,ICD-10-CM Diagnosis 46,string,MA_SID_2016_CORE
+I10_DX47,ICD-10-CM Diagnosis 47,string,MA_SID_2016_CORE
+I10_DX48,ICD-10-CM Diagnosis 48,string,MA_SID_2016_CORE
+I10_DX49,ICD-10-CM Diagnosis 49,string,MA_SID_2016_CORE
+I10_DX50,ICD-10-CM Diagnosis 50,string,MA_SID_2016_CORE
+I10_DX51,ICD-10-CM Diagnosis 51,string,MA_SID_2016_CORE
+I10_DX52,ICD-10-CM Diagnosis 52,string,MA_SID_2016_CORE
+I10_DX53,ICD-10-CM Diagnosis 53,string,MA_SID_2016_CORE
+I10_DX54,ICD-10-CM Diagnosis 54,string,MA_SID_2016_CORE
+I10_DX55,ICD-10-CM Diagnosis 55,string,MA_SID_2016_CORE
+I10_DX56,ICD-10-CM Diagnosis 56,string,MA_SID_2016_CORE
+I10_DX57,ICD-10-CM Diagnosis 57,string,MA_SID_2016_CORE
+I10_DX58,ICD-10-CM Diagnosis 58,string,MA_SID_2016_CORE
+I10_DX59,ICD-10-CM Diagnosis 59,string,MA_SID_2016_CORE
+I10_DX60,ICD-10-CM Diagnosis 60,string,MA_SID_2016_CORE
+I10_DX61,ICD-10-CM Diagnosis 61,string,MA_SID_2016_CORE
+I10_DX62,ICD-10-CM Diagnosis 62,string,MA_SID_2016_CORE
+I10_DX63,ICD-10-CM Diagnosis 63,string,MA_SID_2016_CORE
+I10_DX64,ICD-10-CM Diagnosis 64,string,MA_SID_2016_CORE
+I10_DX65,ICD-10-CM Diagnosis 65,string,MA_SID_2016_CORE
+I10_DX66,ICD-10-CM Diagnosis 66,string,MA_SID_2016_CORE
+I10_DX67,ICD-10-CM Diagnosis 67,string,MA_SID_2016_CORE
+I10_DX68,ICD-10-CM Diagnosis 68,string,MA_SID_2016_CORE
+I10_DX69,ICD-10-CM Diagnosis 69,string,MA_SID_2016_CORE
+I10_DX70,ICD-10-CM Diagnosis 70,string,MA_SID_2016_CORE
+I10_DX71,ICD-10-CM Diagnosis 71,string,MA_SID_2016_CORE
+I10_ECAUSE1,ICD-10-CM External cause 1,string,MA_SID_2016_CORE
+I10_ECAUSE2,ICD-10-CM External cause 2,string,MA_SID_2016_CORE
+I10_ECAUSE3,ICD-10-CM External cause 3,string,MA_SID_2016_CORE
+I10_ECAUSE4,ICD-10-CM External cause 4,string,MA_SID_2016_CORE
+I10_ECAUSE5,ICD-10-CM External cause 5,string,MA_SID_2016_CORE
+I10_ECAUSE6,ICD-10-CM External cause 6,string,MA_SID_2016_CORE
+I10_ECAUSE7,ICD-10-CM External cause 7,string,MA_SID_2016_CORE
+I10_ECAUSE8,ICD-10-CM External cause 8,string,MA_SID_2016_CORE
+I10_ECAUSE9,ICD-10-CM External cause 9,string,MA_SID_2016_CORE
+I10_ECAUSE10,ICD-10-CM External cause 10,string,MA_SID_2016_CORE
+I10_ECAUSE11,ICD-10-CM External cause 11,string,MA_SID_2016_CORE
+I10_NDX,ICD-10-CM Number of diagnoses on this record,int32,MA_SID_2016_CORE
+I10_NECAUSE,ICD-10-CM Number of External cause codes on this record,int32,MA_SID_2016_CORE
+I10_NPR,ICD-10-PCS Number of procedures on this record,int32,MA_SID_2016_CORE
+I10_PR1,ICD-10-PCS Procedure 1,string,MA_SID_2016_CORE
+I10_PR2,ICD-10-PCS Procedure 2,string,MA_SID_2016_CORE
+I10_PR3,ICD-10-PCS Procedure 3,string,MA_SID_2016_CORE
+I10_PR4,ICD-10-PCS Procedure 4,string,MA_SID_2016_CORE
+I10_PR5,ICD-10-PCS Procedure 5,string,MA_SID_2016_CORE
+I10_PR6,ICD-10-PCS Procedure 6,string,MA_SID_2016_CORE
+I10_PR7,ICD-10-PCS Procedure 7,string,MA_SID_2016_CORE
+I10_PR8,ICD-10-PCS Procedure 8,string,MA_SID_2016_CORE
+I10_PR9,ICD-10-PCS Procedure 9,string,MA_SID_2016_CORE
+I10_PR10,ICD-10-PCS Procedure 10,string,MA_SID_2016_CORE
+I10_PR11,ICD-10-PCS Procedure 11,string,MA_SID_2016_CORE
+I10_PR12,ICD-10-PCS Procedure 12,string,MA_SID_2016_CORE
+I10_PR13,ICD-10-PCS Procedure 13,string,MA_SID_2016_CORE
+I10_PR14,ICD-10-PCS Procedure 14,string,MA_SID_2016_CORE
+I10_PR15,ICD-10-PCS Procedure 15,string,MA_SID_2016_CORE
+I10_PR16,ICD-10-PCS Procedure 16,string,MA_SID_2016_CORE
+I10_PR17,ICD-10-PCS Procedure 17,string,MA_SID_2016_CORE
+I10_PR18,ICD-10-PCS Procedure 18,string,MA_SID_2016_CORE
+I10_PR19,ICD-10-PCS Procedure 19,string,MA_SID_2016_CORE
+I10_PR20,ICD-10-PCS Procedure 20,string,MA_SID_2016_CORE
+I10_PR21,ICD-10-PCS Procedure 21,string,MA_SID_2016_CORE
+I10_PR22,ICD-10-PCS Procedure 22,string,MA_SID_2016_CORE
+I10_PR23,ICD-10-PCS Procedure 23,string,MA_SID_2016_CORE
+I10_PR24,ICD-10-PCS Procedure 24,string,MA_SID_2016_CORE
+I10_PR25,ICD-10-PCS Procedure 25,string,MA_SID_2016_CORE
+I10_PR26,ICD-10-PCS Procedure 26,string,MA_SID_2016_CORE
+I10_PR27,ICD-10-PCS Procedure 27,string,MA_SID_2016_CORE
+I10_PR28,ICD-10-PCS Procedure 28,string,MA_SID_2016_CORE
+I10_PR29,ICD-10-PCS Procedure 29,string,MA_SID_2016_CORE
+I10_PR30,ICD-10-PCS Procedure 30,string,MA_SID_2016_CORE
+I10_PR31,ICD-10-PCS Procedure 31,string,MA_SID_2016_CORE
+I10_PR32,ICD-10-PCS Procedure 32,string,MA_SID_2016_CORE
+I10_PR33,ICD-10-PCS Procedure 33,string,MA_SID_2016_CORE
+I10_PR34,ICD-10-PCS Procedure 34,string,MA_SID_2016_CORE
+I10_PR35,ICD-10-PCS Procedure 35,string,MA_SID_2016_CORE
+I10_PR36,ICD-10-PCS Procedure 36,string,MA_SID_2016_CORE
+I10_PR37,ICD-10-PCS Procedure 37,string,MA_SID_2016_CORE
+I10_PR38,ICD-10-PCS Procedure 38,string,MA_SID_2016_CORE
+I10_PR39,ICD-10-PCS Procedure 39,string,MA_SID_2016_CORE
+I10_PR40,ICD-10-PCS Procedure 40,string,MA_SID_2016_CORE
+I10_PR41,ICD-10-PCS Procedure 41,string,MA_SID_2016_CORE
+I10_PR42,ICD-10-PCS Procedure 42,string,MA_SID_2016_CORE
+I10_PR43,ICD-10-PCS Procedure 43,string,MA_SID_2016_CORE
+I10_PR44,ICD-10-PCS Procedure 44,string,MA_SID_2016_CORE
+I10_PR45,ICD-10-PCS Procedure 45,string,MA_SID_2016_CORE
+I10_PR46,ICD-10-PCS Procedure 46,string,MA_SID_2016_CORE
+I10_PR47,ICD-10-PCS Procedure 47,string,MA_SID_2016_CORE
+I10_PR48,ICD-10-PCS Procedure 48,string,MA_SID_2016_CORE
+I10_PR49,ICD-10-PCS Procedure 49,string,MA_SID_2016_CORE
+I10_PR50,ICD-10-PCS Procedure 50,string,MA_SID_2016_CORE
+I10_PR51,ICD-10-PCS Procedure 51,string,MA_SID_2016_CORE
+I10_PR52,ICD-10-PCS Procedure 52,string,MA_SID_2016_CORE
+I10_PR53,ICD-10-PCS Procedure 53,string,MA_SID_2016_CORE
+I10_PR54,ICD-10-PCS Procedure 54,string,MA_SID_2016_CORE
+I10_PR55,ICD-10-PCS Procedure 55,string,MA_SID_2016_CORE
+I10_PR56,ICD-10-PCS Procedure 56,string,MA_SID_2016_CORE
+I10_PR57,ICD-10-PCS Procedure 57,string,MA_SID_2016_CORE
+I10_PR58,ICD-10-PCS Procedure 58,string,MA_SID_2016_CORE
+I10_PR59,ICD-10-PCS Procedure 59,string,MA_SID_2016_CORE
+I10_PR60,ICD-10-PCS Procedure 60,string,MA_SID_2016_CORE
+I10_PR61,ICD-10-PCS Procedure 61,string,MA_SID_2016_CORE
+I10_PR62,ICD-10-PCS Procedure 62,string,MA_SID_2016_CORE
+I10_PR63,ICD-10-PCS Procedure 63,string,MA_SID_2016_CORE
+I10_PR64,ICD-10-PCS Procedure 64,string,MA_SID_2016_CORE
+I10_PR65,ICD-10-PCS Procedure 65,string,MA_SID_2016_CORE
+I10_PR66,ICD-10-PCS Procedure 66,string,MA_SID_2016_CORE
+I10_PR67,ICD-10-PCS Procedure 67,string,MA_SID_2016_CORE
+I10_PR68,ICD-10-PCS Procedure 68,string,MA_SID_2016_CORE
+I10_PR69,ICD-10-PCS Procedure 69,string,MA_SID_2016_CORE
+I10_PR70,ICD-10-PCS Procedure 70,string,MA_SID_2016_CORE
+I10_PROCTYPE,ICD-10-PCS Procedure type indicator,int32,MA_SID_2016_CORE
+KEY,HCUP record identifier,double,MA_SID_2016_CORE
+LOS,Length of stay (cleaned),int32,MA_SID_2016_CORE
+LOS_X,Length of stay (as received from source),int32,MA_SID_2016_CORE
+MDC,MDC in effect on discharge date,int32,MA_SID_2016_CORE
+MDC_NoPOA,"MDC in use on discharge date, calculated without POA",int32,MA_SID_2016_CORE
+MEDINCSTQ,Median household income state quartile for patient ZIP Code,int32,MA_SID_2016_CORE
+OS_TIME,Observation stay time summed from UNITS,double,MA_SID_2016_CORE
+PAY1,Primary expected payer (uniform),int32,MA_SID_2016_CORE
+PAY1_X,Primary expected payer (as received from source),string,MA_SID_2016_CORE
+PAY2,Secondary expected payer (uniform),int32,MA_SID_2016_CORE
+PAY2_X,Secondary expected payer (as received from source),string,MA_SID_2016_CORE
+PAYER1_X,Primary expected payer plan identifier (as received from source),string,MA_SID_2016_CORE
+PAYER2_X,Secondary expected payer plan identifier (as received from source),string,MA_SID_2016_CORE
+PL_CBSA,Patient location: Core Based Statistical Area (CBSA),int32,MA_SID_2016_CORE
+PL_UR_CAT4,Patient Location: Urban-Rural 4 Categories,int32,MA_SID_2016_CORE
+POA_Disch_Edit1,Discharge has POA missing on all nonexempt diagnoses,int32,MA_SID_2016_CORE
+POA_Disch_Edit2,Discharge has POA missing on all nonexempt secondary diagnoses,int32,MA_SID_2016_CORE
+POA_Hosp_Edit1,Hospital reported POA as Y on all diagnoses on all discharges,int32,MA_SID_2016_CORE
+POA_Hosp_Edit2,Hospital reported POA as missing on all non-Medicare discharges,int32,MA_SID_2016_CORE
+POA_Hosp_Edit3,Hospital reported POA as missing on all nonexempt diagnoses for 15% or more of d,int32,MA_SID_2016_CORE
+POA_Hosp_Edit3_Value,Percentage of discharges with all nonexempt diagnoses missing POA indicators,double,MA_SID_2016_CORE
+PRDAY1,Number of days from admission to I10_PR1,int32,MA_SID_2016_CORE
+PRDAY2,Number of days from admission to I10_PR2,int32,MA_SID_2016_CORE
+PRDAY3,Number of days from admission to I10_PR3,int32,MA_SID_2016_CORE
+PRDAY4,Number of days from admission to I10_PR4,int32,MA_SID_2016_CORE
+PRDAY5,Number of days from admission to I10_PR5,int32,MA_SID_2016_CORE
+PRDAY6,Number of days from admission to I10_PR6,int32,MA_SID_2016_CORE
+PRDAY7,Number of days from admission to I10_PR7,int32,MA_SID_2016_CORE
+PRDAY8,Number of days from admission to I10_PR8,int32,MA_SID_2016_CORE
+PRDAY9,Number of days from admission to I10_PR9,int32,MA_SID_2016_CORE
+PRDAY10,Number of days from admission to I10_PR10,int32,MA_SID_2016_CORE
+PRDAY11,Number of days from admission to I10_PR11,int32,MA_SID_2016_CORE
+PRDAY12,Number of days from admission to I10_PR12,int32,MA_SID_2016_CORE
+PRDAY13,Number of days from admission to I10_PR13,int32,MA_SID_2016_CORE
+PRDAY14,Number of days from admission to I10_PR14,int32,MA_SID_2016_CORE
+PRDAY15,Number of days from admission to I10_PR15,int32,MA_SID_2016_CORE
+PRDAY16,Number of days from admission to I10_PR16,int32,MA_SID_2016_CORE
+PRDAY17,Number of days from admission to I10_PR17,int32,MA_SID_2016_CORE
+PRDAY18,Number of days from admission to I10_PR18,int32,MA_SID_2016_CORE
+PRDAY19,Number of days from admission to I10_PR19,int32,MA_SID_2016_CORE
+PRDAY20,Number of days from admission to I10_PR20,int32,MA_SID_2016_CORE
+PRDAY21,Number of days from admission to I10_PR21,int32,MA_SID_2016_CORE
+PRDAY22,Number of days from admission to I10_PR22,int32,MA_SID_2016_CORE
+PRDAY23,Number of days from admission to I10_PR23,int32,MA_SID_2016_CORE
+PRDAY24,Number of days from admission to I10_PR24,int32,MA_SID_2016_CORE
+PRDAY25,Number of days from admission to I10_PR25,int32,MA_SID_2016_CORE
+PRDAY26,Number of days from admission to I10_PR26,int32,MA_SID_2016_CORE
+PRDAY27,Number of days from admission to I10_PR27,int32,MA_SID_2016_CORE
+PRDAY28,Number of days from admission to I10_PR28,int32,MA_SID_2016_CORE
+PRDAY29,Number of days from admission to I10_PR29,int32,MA_SID_2016_CORE
+PRDAY30,Number of days from admission to I10_PR30,int32,MA_SID_2016_CORE
+PRDAY31,Number of days from admission to I10_PR31,int32,MA_SID_2016_CORE
+PRDAY32,Number of days from admission to I10_PR32,int32,MA_SID_2016_CORE
+PRDAY33,Number of days from admission to I10_PR33,int32,MA_SID_2016_CORE
+PRDAY34,Number of days from admission to I10_PR34,int32,MA_SID_2016_CORE
+PRDAY35,Number of days from admission to I10_PR35,int32,MA_SID_2016_CORE
+PRDAY36,Number of days from admission to I10_PR36,int32,MA_SID_2016_CORE
+PRDAY37,Number of days from admission to I10_PR37,int32,MA_SID_2016_CORE
+PRDAY38,Number of days from admission to I10_PR38,int32,MA_SID_2016_CORE
+PRDAY39,Number of days from admission to I10_PR39,int32,MA_SID_2016_CORE
+PRDAY40,Number of days from admission to I10_PR40,int32,MA_SID_2016_CORE
+PRDAY41,Number of days from admission to I10_PR41,int32,MA_SID_2016_CORE
+PRDAY42,Number of days from admission to I10_PR42,int32,MA_SID_2016_CORE
+PRDAY43,Number of days from admission to I10_PR43,int32,MA_SID_2016_CORE
+PRDAY44,Number of days from admission to I10_PR44,int32,MA_SID_2016_CORE
+PRDAY45,Number of days from admission to I10_PR45,int32,MA_SID_2016_CORE
+PRDAY46,Number of days from admission to I10_PR46,int32,MA_SID_2016_CORE
+PRDAY47,Number of days from admission to I10_PR47,int32,MA_SID_2016_CORE
+PRDAY48,Number of days from admission to I10_PR48,int32,MA_SID_2016_CORE
+PRDAY49,Number of days from admission to I10_PR49,int32,MA_SID_2016_CORE
+PRDAY50,Number of days from admission to I10_PR50,int32,MA_SID_2016_CORE
+PRDAY51,Number of days from admission to I10_PR51,int32,MA_SID_2016_CORE
+PRDAY52,Number of days from admission to I10_PR52,int32,MA_SID_2016_CORE
+PRDAY53,Number of days from admission to I10_PR53,int32,MA_SID_2016_CORE
+PRDAY54,Number of days from admission to I10_PR54,int32,MA_SID_2016_CORE
+PRDAY55,Number of days from admission to I10_PR55,int32,MA_SID_2016_CORE
+PRDAY56,Number of days from admission to I10_PR56,int32,MA_SID_2016_CORE
+PRDAY57,Number of days from admission to I10_PR57,int32,MA_SID_2016_CORE
+PRDAY58,Number of days from admission to I10_PR58,int32,MA_SID_2016_CORE
+PRDAY59,Number of days from admission to I10_PR59,int32,MA_SID_2016_CORE
+PRDAY60,Number of days from admission to I10_PR60,int32,MA_SID_2016_CORE
+PRDAY61,Number of days from admission to I10_PR61,int32,MA_SID_2016_CORE
+PRDAY62,Number of days from admission to I10_PR62,int32,MA_SID_2016_CORE
+PRDAY63,Number of days from admission to I10_PR63,int32,MA_SID_2016_CORE
+PRDAY64,Number of days from admission to I10_PR64,int32,MA_SID_2016_CORE
+PRDAY65,Number of days from admission to I10_PR65,int32,MA_SID_2016_CORE
+PRDAY66,Number of days from admission to I10_PR66,int32,MA_SID_2016_CORE
+PRDAY67,Number of days from admission to I10_PR67,int32,MA_SID_2016_CORE
+PRDAY68,Number of days from admission to I10_PR68,int32,MA_SID_2016_CORE
+PRDAY69,Number of days from admission to I10_PR69,int32,MA_SID_2016_CORE
+PRDAY70,Number of days from admission to I10_PR70,int32,MA_SID_2016_CORE
+PRVER,Procedure Version,int32,MA_SID_2016_CORE
+PSTATE,Patient State postal code,string,MA_SID_2016_CORE
+PSTCO2,"Patient state/county FIPS code, possibly derived from ZIP Code",int32,MA_SID_2016_CORE
+RACE,Race (uniform),int32,MA_SID_2016_CORE
+RACE_X,Race (as received from source),string,MA_SID_2016_CORE
+TOTCHG,Total charges (cleaned),double,MA_SID_2016_CORE
+TOTCHG_X,Total charges (as received from source),double,MA_SID_2016_CORE
+TRAN_IN,Transfer in indicator,int32,MA_SID_2016_CORE
+TRAN_OUT,Transfer out indicator,int32,MA_SID_2016_CORE
+VisitLink,Visit linkage variable,int32,MA_SID_2016_CORE
+YEAR,Calendar year,int32,MA_SID_2016_CORE
+ZIP3,"Patient ZIP Code, first 3 digits",string,MA_SID_2016_CORE
+ZIPINC_QRTL,Median household income national quartile for patient ZIP Code,int32,MA_SID_2016_CORE
+AYEAR,Admission year,int32,MA_SID_2016_CORE
+PRMONTH1,Month of procedure 1,int32,MA_SID_2016_CORE
+PRMONTH2,Month of procedure 2,int32,MA_SID_2016_CORE
+PRMONTH3,Month of procedure 3,int32,MA_SID_2016_CORE
+PRMONTH4,Month of procedure 4,int32,MA_SID_2016_CORE
+PRMONTH5,Month of procedure 5,int32,MA_SID_2016_CORE
+PRMONTH6,Month of procedure 6,int32,MA_SID_2016_CORE
+PRMONTH7,Month of procedure 7,int32,MA_SID_2016_CORE
+PRMONTH8,Month of procedure 8,int32,MA_SID_2016_CORE
+PRMONTH9,Month of procedure 9,int32,MA_SID_2016_CORE
+PRMONTH10,Month of procedure 10,int32,MA_SID_2016_CORE
+PRMONTH11,Month of procedure 11,int32,MA_SID_2016_CORE
+PRMONTH12,Month of procedure 12,int32,MA_SID_2016_CORE
+PRMONTH13,Month of procedure 13,int32,MA_SID_2016_CORE
+PRMONTH14,Month of procedure 14,int32,MA_SID_2016_CORE
+PRMONTH15,Month of procedure 15,int32,MA_SID_2016_CORE
+PRMONTH16,Month of procedure 16,int32,MA_SID_2016_CORE
+PRMONTH17,Month of procedure 17,int32,MA_SID_2016_CORE
+PRMONTH18,Month of procedure 18,int32,MA_SID_2016_CORE
+PRMONTH19,Month of procedure 19,int32,MA_SID_2016_CORE
+PRMONTH20,Month of procedure 20,int32,MA_SID_2016_CORE
+PRMONTH21,Month of procedure 21,int32,MA_SID_2016_CORE
+PRMONTH22,Month of procedure 22,int32,MA_SID_2016_CORE
+PRMONTH23,Month of procedure 23,int32,MA_SID_2016_CORE
+PRMONTH24,Month of procedure 24,int32,MA_SID_2016_CORE
+PRMONTH25,Month of procedure 25,int32,MA_SID_2016_CORE
+PRMONTH26,Month of procedure 26,int32,MA_SID_2016_CORE
+PRMONTH27,Month of procedure 27,int32,MA_SID_2016_CORE
+PRMONTH28,Month of procedure 28,int32,MA_SID_2016_CORE
+PRMONTH29,Month of procedure 29,int32,MA_SID_2016_CORE
+PRMONTH30,Month of procedure 30,int32,MA_SID_2016_CORE
+PRMONTH31,Month of procedure 31,int32,MA_SID_2016_CORE
+PRMONTH32,Month of procedure 32,int32,MA_SID_2016_CORE
+PRMONTH33,Month of procedure 33,int32,MA_SID_2016_CORE
+PRMONTH34,Month of procedure 34,int32,MA_SID_2016_CORE
+PRMONTH35,Month of procedure 35,int32,MA_SID_2016_CORE
+PRMONTH36,Month of procedure 36,int32,MA_SID_2016_CORE
+PRMONTH37,Month of procedure 37,int32,MA_SID_2016_CORE
+PRMONTH38,Month of procedure 38,int32,MA_SID_2016_CORE
+PRMONTH39,Month of procedure 39,int32,MA_SID_2016_CORE
+PRMONTH40,Month of procedure 40,int32,MA_SID_2016_CORE
+PRMONTH41,Month of procedure 41,int32,MA_SID_2016_CORE
+PRMONTH42,Month of procedure 42,int32,MA_SID_2016_CORE
+PRMONTH43,Month of procedure 43,int32,MA_SID_2016_CORE
+PRMONTH44,Month of procedure 44,int32,MA_SID_2016_CORE
+PRMONTH45,Month of procedure 45,int32,MA_SID_2016_CORE
+PRMONTH46,Month of procedure 46,int32,MA_SID_2016_CORE
+PRMONTH47,Month of procedure 47,int32,MA_SID_2016_CORE
+PRMONTH48,Month of procedure 48,int32,MA_SID_2016_CORE
+PRMONTH49,Month of procedure 49,int32,MA_SID_2016_CORE
+PRMONTH50,Month of procedure 50,int32,MA_SID_2016_CORE
+PRMONTH51,Month of procedure 51,int32,MA_SID_2016_CORE
+PRMONTH52,Month of procedure 52,int32,MA_SID_2016_CORE
+PRMONTH53,Month of procedure 53,int32,MA_SID_2016_CORE
+PRMONTH54,Month of procedure 54,int32,MA_SID_2016_CORE
+PRMONTH55,Month of procedure 55,int32,MA_SID_2016_CORE
+PRMONTH56,Month of procedure 56,int32,MA_SID_2016_CORE
+PRMONTH57,Month of procedure 57,int32,MA_SID_2016_CORE
+PRMONTH58,Month of procedure 58,int32,MA_SID_2016_CORE
+PRMONTH59,Month of procedure 59,int32,MA_SID_2016_CORE
+PRMONTH60,Month of procedure 60,int32,MA_SID_2016_CORE
+PRMONTH61,Month of procedure 61,int32,MA_SID_2016_CORE
+PRMONTH62,Month of procedure 62,int32,MA_SID_2016_CORE
+PRMONTH63,Month of procedure 63,int32,MA_SID_2016_CORE
+PRMONTH64,Month of procedure 64,int32,MA_SID_2016_CORE
+PRMONTH65,Month of procedure 65,int32,MA_SID_2016_CORE
+PRMONTH66,Month of procedure 66,int32,MA_SID_2016_CORE
+PRMONTH67,Month of procedure 67,int32,MA_SID_2016_CORE
+PRMONTH68,Month of procedure 68,int32,MA_SID_2016_CORE
+PRMONTH69,Month of procedure 69,int32,MA_SID_2016_CORE
+PRMONTH70,Month of procedure 70,int32,MA_SID_2016_CORE
+PRYEAR1,Year of procedure 1,int32,MA_SID_2016_CORE
+PRYEAR2,Year of procedure 2,int32,MA_SID_2016_CORE
+PRYEAR3,Year of procedure 3,int32,MA_SID_2016_CORE
+PRYEAR4,Year of procedure 4,int32,MA_SID_2016_CORE
+PRYEAR5,Year of procedure 5,int32,MA_SID_2016_CORE
+PRYEAR6,Year of procedure 6,int32,MA_SID_2016_CORE
+PRYEAR7,Year of procedure 7,int32,MA_SID_2016_CORE
+PRYEAR8,Year of procedure 8,int32,MA_SID_2016_CORE
+PRYEAR9,Year of procedure 9,int32,MA_SID_2016_CORE
+PRYEAR10,Year of procedure 10,int32,MA_SID_2016_CORE
+PRYEAR11,Year of procedure 11,int32,MA_SID_2016_CORE
+PRYEAR12,Year of procedure 12,int32,MA_SID_2016_CORE
+PRYEAR13,Year of procedure 13,int32,MA_SID_2016_CORE
+PRYEAR14,Year of procedure 14,int32,MA_SID_2016_CORE
+PRYEAR15,Year of procedure 15,int32,MA_SID_2016_CORE
+PRYEAR16,Year of procedure 16,int32,MA_SID_2016_CORE
+PRYEAR17,Year of procedure 17,int32,MA_SID_2016_CORE
+PRYEAR18,Year of procedure 18,int32,MA_SID_2016_CORE
+PRYEAR19,Year of procedure 19,int32,MA_SID_2016_CORE
+PRYEAR20,Year of procedure 20,int32,MA_SID_2016_CORE
+PRYEAR21,Year of procedure 21,int32,MA_SID_2016_CORE
+PRYEAR22,Year of procedure 22,int32,MA_SID_2016_CORE
+PRYEAR23,Year of procedure 23,int32,MA_SID_2016_CORE
+PRYEAR24,Year of procedure 24,int32,MA_SID_2016_CORE
+PRYEAR25,Year of procedure 25,int32,MA_SID_2016_CORE
+PRYEAR26,Year of procedure 26,int32,MA_SID_2016_CORE
+PRYEAR27,Year of procedure 27,int32,MA_SID_2016_CORE
+PRYEAR28,Year of procedure 28,int32,MA_SID_2016_CORE
+PRYEAR29,Year of procedure 29,int32,MA_SID_2016_CORE
+PRYEAR30,Year of procedure 30,int32,MA_SID_2016_CORE
+PRYEAR31,Year of procedure 31,int32,MA_SID_2016_CORE
+PRYEAR32,Year of procedure 32,int32,MA_SID_2016_CORE
+PRYEAR33,Year of procedure 33,int32,MA_SID_2016_CORE
+PRYEAR34,Year of procedure 34,int32,MA_SID_2016_CORE
+PRYEAR35,Year of procedure 35,int32,MA_SID_2016_CORE
+PRYEAR36,Year of procedure 36,int32,MA_SID_2016_CORE
+PRYEAR37,Year of procedure 37,int32,MA_SID_2016_CORE
+PRYEAR38,Year of procedure 38,int32,MA_SID_2016_CORE
+PRYEAR39,Year of procedure 39,int32,MA_SID_2016_CORE
+PRYEAR40,Year of procedure 40,int32,MA_SID_2016_CORE
+PRYEAR41,Year of procedure 41,int32,MA_SID_2016_CORE
+PRYEAR42,Year of procedure 42,int32,MA_SID_2016_CORE
+PRYEAR43,Year of procedure 43,int32,MA_SID_2016_CORE
+PRYEAR44,Year of procedure 44,int32,MA_SID_2016_CORE
+PRYEAR45,Year of procedure 45,int32,MA_SID_2016_CORE
+PRYEAR46,Year of procedure 46,int32,MA_SID_2016_CORE
+PRYEAR47,Year of procedure 47,int32,MA_SID_2016_CORE
+PRYEAR48,Year of procedure 48,int32,MA_SID_2016_CORE
+PRYEAR49,Year of procedure 49,int32,MA_SID_2016_CORE
+PRYEAR50,Year of procedure 50,int32,MA_SID_2016_CORE
+PRYEAR51,Year of procedure 51,int32,MA_SID_2016_CORE
+PRYEAR52,Year of procedure 52,int32,MA_SID_2016_CORE
+PRYEAR53,Year of procedure 53,int32,MA_SID_2016_CORE
+PRYEAR54,Year of procedure 54,int32,MA_SID_2016_CORE
+PRYEAR55,Year of procedure 55,int32,MA_SID_2016_CORE
+PRYEAR56,Year of procedure 56,int32,MA_SID_2016_CORE
+PRYEAR57,Year of procedure 57,int32,MA_SID_2016_CORE
+PRYEAR58,Year of procedure 58,int32,MA_SID_2016_CORE
+PRYEAR59,Year of procedure 59,int32,MA_SID_2016_CORE
+PRYEAR60,Year of procedure 60,int32,MA_SID_2016_CORE
+PRYEAR61,Year of procedure 61,int32,MA_SID_2016_CORE
+PRYEAR62,Year of procedure 62,int32,MA_SID_2016_CORE
+PRYEAR63,Year of procedure 63,int32,MA_SID_2016_CORE
+PRYEAR64,Year of procedure 64,int32,MA_SID_2016_CORE
+PRYEAR65,Year of procedure 65,int32,MA_SID_2016_CORE
+PRYEAR66,Year of procedure 66,int32,MA_SID_2016_CORE
+PRYEAR67,Year of procedure 67,int32,MA_SID_2016_CORE
+PRYEAR68,Year of procedure 68,int32,MA_SID_2016_CORE
+PRYEAR69,Year of procedure 69,int32,MA_SID_2016_CORE
+PRYEAR70,Year of procedure 70,int32,MA_SID_2016_CORE

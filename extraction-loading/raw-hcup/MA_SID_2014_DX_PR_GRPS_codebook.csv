@@ -1,0 +1,407 @@
+var,var_label,value_type,dataset_id
+BODYSYSTEM1,Body system 1,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM2,Body system 2,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM3,Body system 3,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM4,Body system 4,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM5,Body system 5,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM6,Body system 6,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM7,Body system 7,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM8,Body system 8,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM9,Body system 9,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM10,Body system 10,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM11,Body system 11,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM12,Body system 12,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM13,Body system 13,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM14,Body system 14,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM15,Body system 15,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM16,Body system 16,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM17,Body system 17,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM18,Body system 18,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM19,Body system 19,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM20,Body system 20,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM21,Body system 21,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM22,Body system 22,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM23,Body system 23,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM24,Body system 24,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM25,Body system 25,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM26,Body system 26,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM27,Body system 27,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM28,Body system 28,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM29,Body system 29,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM30,Body system 30,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM31,Body system 31,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM32,Body system 32,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM33,Body system 33,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM34,Body system 34,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM35,Body system 35,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM36,Body system 36,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM37,Body system 37,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM38,Body system 38,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM39,Body system 39,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM40,Body system 40,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM41,Body system 41,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM42,Body system 42,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM43,Body system 43,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM44,Body system 44,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM45,Body system 45,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM46,Body system 46,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM47,Body system 47,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM48,Body system 48,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM49,Body system 49,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM50,Body system 50,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM51,Body system 51,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM52,Body system 52,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM53,Body system 53,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM54,Body system 54,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM55,Body system 55,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM56,Body system 56,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM57,Body system 57,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM58,Body system 58,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM59,Body system 59,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM60,Body system 60,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM61,Body system 61,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM62,Body system 62,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM63,Body system 63,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM64,Body system 64,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM65,Body system 65,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM66,Body system 66,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM67,Body system 67,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM68,Body system 68,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM69,Body system 69,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM70,Body system 70,int32,MA_SID_2014_DX_PR_GRPS
+BODYSYSTEM71,Body system 71,int32,MA_SID_2014_DX_PR_GRPS
+CHRON1,Chronic condition indicator 1,int32,MA_SID_2014_DX_PR_GRPS
+CHRON2,Chronic condition indicator 2,int32,MA_SID_2014_DX_PR_GRPS
+CHRON3,Chronic condition indicator 3,int32,MA_SID_2014_DX_PR_GRPS
+CHRON4,Chronic condition indicator 4,int32,MA_SID_2014_DX_PR_GRPS
+CHRON5,Chronic condition indicator 5,int32,MA_SID_2014_DX_PR_GRPS
+CHRON6,Chronic condition indicator 6,int32,MA_SID_2014_DX_PR_GRPS
+CHRON7,Chronic condition indicator 7,int32,MA_SID_2014_DX_PR_GRPS
+CHRON8,Chronic condition indicator 8,int32,MA_SID_2014_DX_PR_GRPS
+CHRON9,Chronic condition indicator 9,int32,MA_SID_2014_DX_PR_GRPS
+CHRON10,Chronic condition indicator 10,int32,MA_SID_2014_DX_PR_GRPS
+CHRON11,Chronic condition indicator 11,int32,MA_SID_2014_DX_PR_GRPS
+CHRON12,Chronic condition indicator 12,int32,MA_SID_2014_DX_PR_GRPS
+CHRON13,Chronic condition indicator 13,int32,MA_SID_2014_DX_PR_GRPS
+CHRON14,Chronic condition indicator 14,int32,MA_SID_2014_DX_PR_GRPS
+CHRON15,Chronic condition indicator 15,int32,MA_SID_2014_DX_PR_GRPS
+CHRON16,Chronic condition indicator 16,int32,MA_SID_2014_DX_PR_GRPS
+CHRON17,Chronic condition indicator 17,int32,MA_SID_2014_DX_PR_GRPS
+CHRON18,Chronic condition indicator 18,int32,MA_SID_2014_DX_PR_GRPS
+CHRON19,Chronic condition indicator 19,int32,MA_SID_2014_DX_PR_GRPS
+CHRON20,Chronic condition indicator 20,int32,MA_SID_2014_DX_PR_GRPS
+CHRON21,Chronic condition indicator 21,int32,MA_SID_2014_DX_PR_GRPS
+CHRON22,Chronic condition indicator 22,int32,MA_SID_2014_DX_PR_GRPS
+CHRON23,Chronic condition indicator 23,int32,MA_SID_2014_DX_PR_GRPS
+CHRON24,Chronic condition indicator 24,int32,MA_SID_2014_DX_PR_GRPS
+CHRON25,Chronic condition indicator 25,int32,MA_SID_2014_DX_PR_GRPS
+CHRON26,Chronic condition indicator 26,int32,MA_SID_2014_DX_PR_GRPS
+CHRON27,Chronic condition indicator 27,int32,MA_SID_2014_DX_PR_GRPS
+CHRON28,Chronic condition indicator 28,int32,MA_SID_2014_DX_PR_GRPS
+CHRON29,Chronic condition indicator 29,int32,MA_SID_2014_DX_PR_GRPS
+CHRON30,Chronic condition indicator 30,int32,MA_SID_2014_DX_PR_GRPS
+CHRON31,Chronic condition indicator 31,int32,MA_SID_2014_DX_PR_GRPS
+CHRON32,Chronic condition indicator 32,int32,MA_SID_2014_DX_PR_GRPS
+CHRON33,Chronic condition indicator 33,int32,MA_SID_2014_DX_PR_GRPS
+CHRON34,Chronic condition indicator 34,int32,MA_SID_2014_DX_PR_GRPS
+CHRON35,Chronic condition indicator 35,int32,MA_SID_2014_DX_PR_GRPS
+CHRON36,Chronic condition indicator 36,int32,MA_SID_2014_DX_PR_GRPS
+CHRON37,Chronic condition indicator 37,int32,MA_SID_2014_DX_PR_GRPS
+CHRON38,Chronic condition indicator 38,int32,MA_SID_2014_DX_PR_GRPS
+CHRON39,Chronic condition indicator 39,int32,MA_SID_2014_DX_PR_GRPS
+CHRON40,Chronic condition indicator 40,int32,MA_SID_2014_DX_PR_GRPS
+CHRON41,Chronic condition indicator 41,int32,MA_SID_2014_DX_PR_GRPS
+CHRON42,Chronic condition indicator 42,int32,MA_SID_2014_DX_PR_GRPS
+CHRON43,Chronic condition indicator 43,int32,MA_SID_2014_DX_PR_GRPS
+CHRON44,Chronic condition indicator 44,int32,MA_SID_2014_DX_PR_GRPS
+CHRON45,Chronic condition indicator 45,int32,MA_SID_2014_DX_PR_GRPS
+CHRON46,Chronic condition indicator 46,int32,MA_SID_2014_DX_PR_GRPS
+CHRON47,Chronic condition indicator 47,int32,MA_SID_2014_DX_PR_GRPS
+CHRON48,Chronic condition indicator 48,int32,MA_SID_2014_DX_PR_GRPS
+CHRON49,Chronic condition indicator 49,int32,MA_SID_2014_DX_PR_GRPS
+CHRON50,Chronic condition indicator 50,int32,MA_SID_2014_DX_PR_GRPS
+CHRON51,Chronic condition indicator 51,int32,MA_SID_2014_DX_PR_GRPS
+CHRON52,Chronic condition indicator 52,int32,MA_SID_2014_DX_PR_GRPS
+CHRON53,Chronic condition indicator 53,int32,MA_SID_2014_DX_PR_GRPS
+CHRON54,Chronic condition indicator 54,int32,MA_SID_2014_DX_PR_GRPS
+CHRON55,Chronic condition indicator 55,int32,MA_SID_2014_DX_PR_GRPS
+CHRON56,Chronic condition indicator 56,int32,MA_SID_2014_DX_PR_GRPS
+CHRON57,Chronic condition indicator 57,int32,MA_SID_2014_DX_PR_GRPS
+CHRON58,Chronic condition indicator 58,int32,MA_SID_2014_DX_PR_GRPS
+CHRON59,Chronic condition indicator 59,int32,MA_SID_2014_DX_PR_GRPS
+CHRON60,Chronic condition indicator 60,int32,MA_SID_2014_DX_PR_GRPS
+CHRON61,Chronic condition indicator 61,int32,MA_SID_2014_DX_PR_GRPS
+CHRON62,Chronic condition indicator 62,int32,MA_SID_2014_DX_PR_GRPS
+CHRON63,Chronic condition indicator 63,int32,MA_SID_2014_DX_PR_GRPS
+CHRON64,Chronic condition indicator 64,int32,MA_SID_2014_DX_PR_GRPS
+CHRON65,Chronic condition indicator 65,int32,MA_SID_2014_DX_PR_GRPS
+CHRON66,Chronic condition indicator 66,int32,MA_SID_2014_DX_PR_GRPS
+CHRON67,Chronic condition indicator 67,int32,MA_SID_2014_DX_PR_GRPS
+CHRON68,Chronic condition indicator 68,int32,MA_SID_2014_DX_PR_GRPS
+CHRON69,Chronic condition indicator 69,int32,MA_SID_2014_DX_PR_GRPS
+CHRON70,Chronic condition indicator 70,int32,MA_SID_2014_DX_PR_GRPS
+CHRON71,Chronic condition indicator 71,int32,MA_SID_2014_DX_PR_GRPS
+DXMCCS1,Multi-Level CCS:  Diagnosis 1,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS2,Multi-Level CCS:  Diagnosis 2,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS3,Multi-Level CCS:  Diagnosis 3,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS4,Multi-Level CCS:  Diagnosis 4,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS5,Multi-Level CCS:  Diagnosis 5,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS6,Multi-Level CCS:  Diagnosis 6,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS7,Multi-Level CCS:  Diagnosis 7,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS8,Multi-Level CCS:  Diagnosis 8,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS9,Multi-Level CCS:  Diagnosis 9,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS10,Multi-Level CCS:  Diagnosis 10,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS11,Multi-Level CCS:  Diagnosis 11,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS12,Multi-Level CCS:  Diagnosis 12,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS13,Multi-Level CCS:  Diagnosis 13,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS14,Multi-Level CCS:  Diagnosis 14,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS15,Multi-Level CCS:  Diagnosis 15,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS16,Multi-Level CCS:  Diagnosis 16,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS17,Multi-Level CCS:  Diagnosis 17,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS18,Multi-Level CCS:  Diagnosis 18,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS19,Multi-Level CCS:  Diagnosis 19,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS20,Multi-Level CCS:  Diagnosis 20,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS21,Multi-Level CCS:  Diagnosis 21,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS22,Multi-Level CCS:  Diagnosis 22,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS23,Multi-Level CCS:  Diagnosis 23,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS24,Multi-Level CCS:  Diagnosis 24,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS25,Multi-Level CCS:  Diagnosis 25,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS26,Multi-Level CCS:  Diagnosis 26,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS27,Multi-Level CCS:  Diagnosis 27,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS28,Multi-Level CCS:  Diagnosis 28,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS29,Multi-Level CCS:  Diagnosis 29,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS30,Multi-Level CCS:  Diagnosis 30,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS31,Multi-Level CCS:  Diagnosis 31,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS32,Multi-Level CCS:  Diagnosis 32,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS33,Multi-Level CCS:  Diagnosis 33,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS34,Multi-Level CCS:  Diagnosis 34,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS35,Multi-Level CCS:  Diagnosis 35,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS36,Multi-Level CCS:  Diagnosis 36,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS37,Multi-Level CCS:  Diagnosis 37,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS38,Multi-Level CCS:  Diagnosis 38,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS39,Multi-Level CCS:  Diagnosis 39,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS40,Multi-Level CCS:  Diagnosis 40,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS41,Multi-Level CCS:  Diagnosis 41,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS42,Multi-Level CCS:  Diagnosis 42,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS43,Multi-Level CCS:  Diagnosis 43,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS44,Multi-Level CCS:  Diagnosis 44,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS45,Multi-Level CCS:  Diagnosis 45,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS46,Multi-Level CCS:  Diagnosis 46,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS47,Multi-Level CCS:  Diagnosis 47,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS48,Multi-Level CCS:  Diagnosis 48,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS49,Multi-Level CCS:  Diagnosis 49,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS50,Multi-Level CCS:  Diagnosis 50,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS51,Multi-Level CCS:  Diagnosis 51,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS52,Multi-Level CCS:  Diagnosis 52,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS53,Multi-Level CCS:  Diagnosis 53,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS54,Multi-Level CCS:  Diagnosis 54,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS55,Multi-Level CCS:  Diagnosis 55,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS56,Multi-Level CCS:  Diagnosis 56,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS57,Multi-Level CCS:  Diagnosis 57,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS58,Multi-Level CCS:  Diagnosis 58,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS59,Multi-Level CCS:  Diagnosis 59,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS60,Multi-Level CCS:  Diagnosis 60,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS61,Multi-Level CCS:  Diagnosis 61,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS62,Multi-Level CCS:  Diagnosis 62,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS63,Multi-Level CCS:  Diagnosis 63,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS64,Multi-Level CCS:  Diagnosis 64,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS65,Multi-Level CCS:  Diagnosis 65,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS66,Multi-Level CCS:  Diagnosis 66,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS67,Multi-Level CCS:  Diagnosis 67,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS68,Multi-Level CCS:  Diagnosis 68,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS69,Multi-Level CCS:  Diagnosis 69,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS70,Multi-Level CCS:  Diagnosis 70,string,MA_SID_2014_DX_PR_GRPS
+DXMCCS71,Multi-Level CCS:  Diagnosis 71,string,MA_SID_2014_DX_PR_GRPS
+E_MCCS1,Multi-Level CCS:  E Code 1,string,MA_SID_2014_DX_PR_GRPS
+E_MCCS2,Multi-Level CCS:  E Code 2,string,MA_SID_2014_DX_PR_GRPS
+E_MCCS3,Multi-Level CCS:  E Code 3,string,MA_SID_2014_DX_PR_GRPS
+E_MCCS4,Multi-Level CCS:  E Code 4,string,MA_SID_2014_DX_PR_GRPS
+E_MCCS5,Multi-Level CCS:  E Code 5,string,MA_SID_2014_DX_PR_GRPS
+E_MCCS6,Multi-Level CCS:  E Code 6,string,MA_SID_2014_DX_PR_GRPS
+E_MCCS7,Multi-Level CCS:  E Code 7,string,MA_SID_2014_DX_PR_GRPS
+E_MCCS8,Multi-Level CCS:  E Code 8,string,MA_SID_2014_DX_PR_GRPS
+E_MCCS9,Multi-Level CCS:  E Code 9,string,MA_SID_2014_DX_PR_GRPS
+E_MCCS10,Multi-Level CCS:  E Code 10,string,MA_SID_2014_DX_PR_GRPS
+E_MCCS11,Multi-Level CCS:  E Code 11,string,MA_SID_2014_DX_PR_GRPS
+E_MCCS12,Multi-Level CCS:  E Code 12,string,MA_SID_2014_DX_PR_GRPS
+E_MCCS13,Multi-Level CCS:  E Code 13,string,MA_SID_2014_DX_PR_GRPS
+E_MCCS14,Multi-Level CCS:  E Code 14,string,MA_SID_2014_DX_PR_GRPS
+INJURY,Injury diagnosis reported on record (1:DX1 is an injury; 2:DX2+ is an injury; 0:,int32,MA_SID_2014_DX_PR_GRPS
+INJURY_CUT,Injury by cutting or piercing (by E codes),int32,MA_SID_2014_DX_PR_GRPS
+INJURY_DROWN,Injury by drowning or submersion (by E codes),int32,MA_SID_2014_DX_PR_GRPS
+INJURY_FALL,Injury by falling (by E codes),int32,MA_SID_2014_DX_PR_GRPS
+INJURY_FIRE,"Injury by fire, flame or hot object (by E codes)",int32,MA_SID_2014_DX_PR_GRPS
+INJURY_FIREARM,Injury by firearm (by E codes),int32,MA_SID_2014_DX_PR_GRPS
+INJURY_MACHINERY,Injury by machinery (by E codes),int32,MA_SID_2014_DX_PR_GRPS
+INJURY_MVT,Injury involving motor vehicle traffic (by E codes),int32,MA_SID_2014_DX_PR_GRPS
+INJURY_NATURE,Injury involving nature or environmental factors (by E codes),int32,MA_SID_2014_DX_PR_GRPS
+INJURY_POISON,Injury by poison (by E codes),int32,MA_SID_2014_DX_PR_GRPS
+INJURY_STRUCK,Injury from being struck by or against (by E codes),int32,MA_SID_2014_DX_PR_GRPS
+INJURY_SUFFOCATION,Injury by suffocation (by E codes),int32,MA_SID_2014_DX_PR_GRPS
+INTENT_ASSAULT,Injury by assault indicated on the record (by E codes),int32,MA_SID_2014_DX_PR_GRPS
+INTENT_SELF_HARM,Intentional self harm indicated on the record (by diagnosis and/or E codes),int32,MA_SID_2014_DX_PR_GRPS
+INTENT_UNINTENTIONAL,Unintentional injury indicated on the record (by E codes),int32,MA_SID_2014_DX_PR_GRPS
+KEY,HCUP record identifier,double,MA_SID_2014_DX_PR_GRPS
+MULTINJURY,More than one injury diagnosis reported on record,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS1,Procedure class 1,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS2,Procedure class 2,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS3,Procedure class 3,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS4,Procedure class 4,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS5,Procedure class 5,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS6,Procedure class 6,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS7,Procedure class 7,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS8,Procedure class 8,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS9,Procedure class 9,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS10,Procedure class 10,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS11,Procedure class 11,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS12,Procedure class 12,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS13,Procedure class 13,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS14,Procedure class 14,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS15,Procedure class 15,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS16,Procedure class 16,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS17,Procedure class 17,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS18,Procedure class 18,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS19,Procedure class 19,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS20,Procedure class 20,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS21,Procedure class 21,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS22,Procedure class 22,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS23,Procedure class 23,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS24,Procedure class 24,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS25,Procedure class 25,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS26,Procedure class 26,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS27,Procedure class 27,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS28,Procedure class 28,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS29,Procedure class 29,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS30,Procedure class 30,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS31,Procedure class 31,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS32,Procedure class 32,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS33,Procedure class 33,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS34,Procedure class 34,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS35,Procedure class 35,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS36,Procedure class 36,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS37,Procedure class 37,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS38,Procedure class 38,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS39,Procedure class 39,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS40,Procedure class 40,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS41,Procedure class 41,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS42,Procedure class 42,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS43,Procedure class 43,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS44,Procedure class 44,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS45,Procedure class 45,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS46,Procedure class 46,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS47,Procedure class 47,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS48,Procedure class 48,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS49,Procedure class 49,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS50,Procedure class 50,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS51,Procedure class 51,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS52,Procedure class 52,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS53,Procedure class 53,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS54,Procedure class 54,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS55,Procedure class 55,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS56,Procedure class 56,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS57,Procedure class 57,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS58,Procedure class 58,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS59,Procedure class 59,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS60,Procedure class 60,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS61,Procedure class 61,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS62,Procedure class 62,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS63,Procedure class 63,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS64,Procedure class 64,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS65,Procedure class 65,int32,MA_SID_2014_DX_PR_GRPS
+PCLASS66,Procedure class 66,int32,MA_SID_2014_DX_PR_GRPS
+PRMCCS1,Multi-Level CCS:  Procedure 1,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS2,Multi-Level CCS:  Procedure 2,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS3,Multi-Level CCS:  Procedure 3,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS4,Multi-Level CCS:  Procedure 4,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS5,Multi-Level CCS:  Procedure 5,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS6,Multi-Level CCS:  Procedure 6,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS7,Multi-Level CCS:  Procedure 7,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS8,Multi-Level CCS:  Procedure 8,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS9,Multi-Level CCS:  Procedure 9,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS10,Multi-Level CCS:  Procedure 10,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS11,Multi-Level CCS:  Procedure 11,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS12,Multi-Level CCS:  Procedure 12,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS13,Multi-Level CCS:  Procedure 13,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS14,Multi-Level CCS:  Procedure 14,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS15,Multi-Level CCS:  Procedure 15,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS16,Multi-Level CCS:  Procedure 16,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS17,Multi-Level CCS:  Procedure 17,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS18,Multi-Level CCS:  Procedure 18,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS19,Multi-Level CCS:  Procedure 19,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS20,Multi-Level CCS:  Procedure 20,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS21,Multi-Level CCS:  Procedure 21,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS22,Multi-Level CCS:  Procedure 22,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS23,Multi-Level CCS:  Procedure 23,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS24,Multi-Level CCS:  Procedure 24,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS25,Multi-Level CCS:  Procedure 25,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS26,Multi-Level CCS:  Procedure 26,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS27,Multi-Level CCS:  Procedure 27,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS28,Multi-Level CCS:  Procedure 28,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS29,Multi-Level CCS:  Procedure 29,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS30,Multi-Level CCS:  Procedure 30,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS31,Multi-Level CCS:  Procedure 31,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS32,Multi-Level CCS:  Procedure 32,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS33,Multi-Level CCS:  Procedure 33,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS34,Multi-Level CCS:  Procedure 34,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS35,Multi-Level CCS:  Procedure 35,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS36,Multi-Level CCS:  Procedure 36,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS37,Multi-Level CCS:  Procedure 37,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS38,Multi-Level CCS:  Procedure 38,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS39,Multi-Level CCS:  Procedure 39,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS40,Multi-Level CCS:  Procedure 40,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS41,Multi-Level CCS:  Procedure 41,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS42,Multi-Level CCS:  Procedure 42,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS43,Multi-Level CCS:  Procedure 43,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS44,Multi-Level CCS:  Procedure 44,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS45,Multi-Level CCS:  Procedure 45,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS46,Multi-Level CCS:  Procedure 46,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS47,Multi-Level CCS:  Procedure 47,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS48,Multi-Level CCS:  Procedure 48,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS49,Multi-Level CCS:  Procedure 49,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS50,Multi-Level CCS:  Procedure 50,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS51,Multi-Level CCS:  Procedure 51,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS52,Multi-Level CCS:  Procedure 52,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS53,Multi-Level CCS:  Procedure 53,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS54,Multi-Level CCS:  Procedure 54,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS55,Multi-Level CCS:  Procedure 55,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS56,Multi-Level CCS:  Procedure 56,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS57,Multi-Level CCS:  Procedure 57,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS58,Multi-Level CCS:  Procedure 58,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS59,Multi-Level CCS:  Procedure 59,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS60,Multi-Level CCS:  Procedure 60,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS61,Multi-Level CCS:  Procedure 61,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS62,Multi-Level CCS:  Procedure 62,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS63,Multi-Level CCS:  Procedure 63,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS64,Multi-Level CCS:  Procedure 64,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS65,Multi-Level CCS:  Procedure 65,string,MA_SID_2014_DX_PR_GRPS
+PRMCCS66,Multi-Level CCS:  Procedure 66,string,MA_SID_2014_DX_PR_GRPS
+U_BLOOD,Utilization Flag: Blood,int32,MA_SID_2014_DX_PR_GRPS
+U_CATH,Utilization Flag: Cardiac Catheterization Lab,int32,MA_SID_2014_DX_PR_GRPS
+U_CCU,Utilization Flag: Coronary Care Unit (CCU),int32,MA_SID_2014_DX_PR_GRPS
+U_CHESTXRAY,Utilization Flag: Chest X-Ray,int32,MA_SID_2014_DX_PR_GRPS
+U_CTSCAN,Utilization Flag: Computed Tomography Scan,int32,MA_SID_2014_DX_PR_GRPS
+U_DIALYSIS,Utilization Flag: Renal Dialysis,int32,MA_SID_2014_DX_PR_GRPS
+U_ECHO,Utilization Flag: Echocardiology,int32,MA_SID_2014_DX_PR_GRPS
+U_ED,Utilization Flag: Emergency Room,int32,MA_SID_2014_DX_PR_GRPS
+U_EEG,Utilization Flag: Electroencephalogram,int32,MA_SID_2014_DX_PR_GRPS
+U_EKG,Utilization Flag: Electrocardiogram,int32,MA_SID_2014_DX_PR_GRPS
+U_EPO,Utilization Flag: EPO,int32,MA_SID_2014_DX_PR_GRPS
+U_ICU,Utilization Flag: Intensive Care Unit (ICU),int32,MA_SID_2014_DX_PR_GRPS
+U_LITHOTRIPSY,Utilization Flag: Lithotripsy,int32,MA_SID_2014_DX_PR_GRPS
+U_MHSA,Utilization Flag: Mental Health and Substance Abuse,int32,MA_SID_2014_DX_PR_GRPS
+U_MRT,Utilization Flag: Magnetic Resonance Technology,int32,MA_SID_2014_DX_PR_GRPS
+U_NEWBN2L,Utilization Flag: Nursery Level II,int32,MA_SID_2014_DX_PR_GRPS
+U_NEWBN3L,Utilization Flag: Nursery Level III,int32,MA_SID_2014_DX_PR_GRPS
+U_NEWBN4L,Utilization Flag: Nursery Level IV,int32,MA_SID_2014_DX_PR_GRPS
+U_NUCMED,Utilization Flag: Nuclear Medicine,int32,MA_SID_2014_DX_PR_GRPS
+U_OBSERVATION,Utilization Flag: Observation Room,int32,MA_SID_2014_DX_PR_GRPS
+U_OCCTHERAPY,Utilization Flag: Occupational Therapy,int32,MA_SID_2014_DX_PR_GRPS
+U_ORGANACQ,Utilization Flag: Organ Acquisition,int32,MA_SID_2014_DX_PR_GRPS
+U_OTHIMPLANTS,Utilization Flag: Other Implants,int32,MA_SID_2014_DX_PR_GRPS
+U_PACEMAKER,Utilization Flag: Pacemaker,int32,MA_SID_2014_DX_PR_GRPS
+U_PHYTHERAPY,Utilization Flag: Physical Therapy,int32,MA_SID_2014_DX_PR_GRPS
+U_RADTHERAPY,Utilization Flag: Radiology - Therapeutic and/or Chemotherapy Administration,int32,MA_SID_2014_DX_PR_GRPS
+U_RESPTHERAPY,Utilization Flag: Respiratory Services,int32,MA_SID_2014_DX_PR_GRPS
+U_SPEECHTHERAPY,Utilization Flag: Speech - Language Pathology,int32,MA_SID_2014_DX_PR_GRPS
+U_STRESS,Utilization Flag: Cardiac Stress Test,int32,MA_SID_2014_DX_PR_GRPS
+U_ULTRASOUND,Utilization Flag: Ultrasound,int32,MA_SID_2014_DX_PR_GRPS

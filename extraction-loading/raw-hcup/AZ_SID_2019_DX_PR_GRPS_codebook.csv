@@ -1,0 +1,19 @@
+var,var_label,value_type,dataset_id
+I10_INJURY,Injury ICD-10-CM diagnosis reported on record (1: First-listed injury; 2: Other ,int32,AZ_SID_2019_DX_PR_GRPS
+I10_INJURY_CUT,Mechanism of injury: cut or pierce,int32,AZ_SID_2019_DX_PR_GRPS
+I10_INJURY_DROWN,Mechanism of injury: drowning or submersion,int32,AZ_SID_2019_DX_PR_GRPS
+I10_INJURY_FALL,Mechanism of injury: fall,int32,AZ_SID_2019_DX_PR_GRPS
+I10_INJURY_FIRE,"Mechanism of injury: fire, flame, hot object, or hot substance",int32,AZ_SID_2019_DX_PR_GRPS
+I10_INJURY_FIREARM,Mechanism of injury: firearm,int32,AZ_SID_2019_DX_PR_GRPS
+I10_INJURY_MACHINERY,Mechanism of injury: machinery,int32,AZ_SID_2019_DX_PR_GRPS
+I10_INJURY_MVT,"Mechanism of injury: motor vehicle traffic, including the occupant of a car, mot",int32,AZ_SID_2019_DX_PR_GRPS
+I10_INJURY_NATURE,"Mechanism of injury: natural or environmental, included venomous and nonvenomous",int32,AZ_SID_2019_DX_PR_GRPS
+I10_INJURY_OVEREXERTION,Mechanism of injury: overexertion,int32,AZ_SID_2019_DX_PR_GRPS
+I10_INJURY_POISON,"Mechanism of injury: poisoning, including drugs and nondrugs",int32,AZ_SID_2019_DX_PR_GRPS
+I10_INJURY_STRUCK,Mechanism of injury: struck by or against,int32,AZ_SID_2019_DX_PR_GRPS
+I10_INJURY_SUFFOCATION,Mechanism of injury: suffocation,int32,AZ_SID_2019_DX_PR_GRPS
+I10_INTENT_ASSAULT,Intent of injury: assault,int32,AZ_SID_2019_DX_PR_GRPS
+I10_INTENT_SELF_HARM,Intent of injury: intentional self-harm,int32,AZ_SID_2019_DX_PR_GRPS
+I10_INTENT_UNINTENTIONAL,Intent of injury: unintentional,int32,AZ_SID_2019_DX_PR_GRPS
+I10_MULTINJURY,Multiple ICD-10-CM injuries reported on record,int32,AZ_SID_2019_DX_PR_GRPS
+KEY,HCUP record identifier,double,AZ_SID_2019_DX_PR_GRPS

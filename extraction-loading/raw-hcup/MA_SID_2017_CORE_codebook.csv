@@ -1,0 +1,651 @@
+var,var_label,value_type,dataset_id
+ADRG,All Patient Refined DRG,int32,MA_SID_2017_CORE
+ADRGRISKMORTALITY,All Patient Refined DRG mortality risk,int32,MA_SID_2017_CORE
+ADRGSEV,All Patient Refined DRG severity level,int32,MA_SID_2017_CORE
+AGE,Age in years at admission,int32,MA_SID_2017_CORE
+AGEMONTH,Age in months (when age < 11 years),int32,MA_SID_2017_CORE
+AMDC,All Patient Refined MDC,int32,MA_SID_2017_CORE
+AMONTH,Admission month,int32,MA_SID_2017_CORE
+ASOURCE,Admission source (uniform),int32,MA_SID_2017_CORE
+ASOURCE_X,Admission source (as received from source),string,MA_SID_2017_CORE
+ASOURCEUB92,Admission source (UB-92 standard coding),string,MA_SID_2017_CORE
+ATYPE,Admission type,int32,MA_SID_2017_CORE
+AWEEKEND,Admission day is a weekend,int32,MA_SID_2017_CORE
+BWT,Birth weight in grams,int32,MA_SID_2017_CORE
+DaysBetweenVisits,Number of days between visits,int32,MA_SID_2017_CORE
+DaysToEvent,Days from 'start date' to admission,int32,MA_SID_2017_CORE
+DIED,Died during hospitalization,int32,MA_SID_2017_CORE
+DISP_X,Disposition of patient (as received from source),string,MA_SID_2017_CORE
+DISPUB04,Disposition of patient (UB-04 standard coding),int32,MA_SID_2017_CORE
+DISPUNIFORM,Disposition of patient (uniform),int32,MA_SID_2017_CORE
+DMONTH,Discharge month,int32,MA_SID_2017_CORE
+DNR,Do not resuscitate indicator,int32,MA_SID_2017_CORE
+DQTR,Discharge quarter,int32,MA_SID_2017_CORE
+DRG,DRG in effect on discharge date,int32,MA_SID_2017_CORE
+DRG_NoPOA,"DRG in use on discharge date, calculated without POA",int32,MA_SID_2017_CORE
+DRGVER,DRG grouper version used on discharge date,int32,MA_SID_2017_CORE
+DSHOSPID,Data source hospital identifier,string,MA_SID_2017_CORE
+DXPOA1,"Diagnosis 1, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA2,"Diagnosis 2, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA3,"Diagnosis 3, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA4,"Diagnosis 4, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA5,"Diagnosis 5, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA6,"Diagnosis 6, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA7,"Diagnosis 7, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA8,"Diagnosis 8, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA9,"Diagnosis 9, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA10,"Diagnosis 10, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA11,"Diagnosis 11, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA12,"Diagnosis 12, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA13,"Diagnosis 13, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA14,"Diagnosis 14, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA15,"Diagnosis 15, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA16,"Diagnosis 16, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA17,"Diagnosis 17, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA18,"Diagnosis 18, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA19,"Diagnosis 19, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA20,"Diagnosis 20, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA21,"Diagnosis 21, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA22,"Diagnosis 22, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA23,"Diagnosis 23, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA24,"Diagnosis 24, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA25,"Diagnosis 25, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA26,"Diagnosis 26, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA27,"Diagnosis 27, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA28,"Diagnosis 28, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA29,"Diagnosis 29, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA30,"Diagnosis 30, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA31,"Diagnosis 31, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA32,"Diagnosis 32, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA33,"Diagnosis 33, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA34,"Diagnosis 34, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA35,"Diagnosis 35, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA36,"Diagnosis 36, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA37,"Diagnosis 37, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA38,"Diagnosis 38, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA39,"Diagnosis 39, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA40,"Diagnosis 40, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA41,"Diagnosis 41, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA42,"Diagnosis 42, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA43,"Diagnosis 43, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA44,"Diagnosis 44, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA45,"Diagnosis 45, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA46,"Diagnosis 46, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA47,"Diagnosis 47, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA48,"Diagnosis 48, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA49,"Diagnosis 49, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA50,"Diagnosis 50, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA51,"Diagnosis 51, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA52,"Diagnosis 52, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA53,"Diagnosis 53, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA54,"Diagnosis 54, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA55,"Diagnosis 55, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA56,"Diagnosis 56, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA57,"Diagnosis 57, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA58,"Diagnosis 58, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA59,"Diagnosis 59, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA60,"Diagnosis 60, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA61,"Diagnosis 61, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA62,"Diagnosis 62, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA63,"Diagnosis 63, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA64,"Diagnosis 64, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA65,"Diagnosis 65, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA66,"Diagnosis 66, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA67,"Diagnosis 67, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA68,"Diagnosis 68, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA69,"Diagnosis 69, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA70,"Diagnosis 70, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA71,"Diagnosis 71, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA72,"Diagnosis 72, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA73,"Diagnosis 73, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA74,"Diagnosis 74, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA75,"Diagnosis 75, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA76,"Diagnosis 76, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA77,"Diagnosis 77, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA78,"Diagnosis 78, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA79,"Diagnosis 79, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA80,"Diagnosis 80, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA81,"Diagnosis 81, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA82,"Diagnosis 82, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA83,"Diagnosis 83, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA84,"Diagnosis 84, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA85,"Diagnosis 85, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA86,"Diagnosis 86, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA87,"Diagnosis 87, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA88,"Diagnosis 88, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA89,"Diagnosis 89, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA90,"Diagnosis 90, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA91,"Diagnosis 91, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA92,"Diagnosis 92, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA93,"Diagnosis 93, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA94,"Diagnosis 94, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA95,"Diagnosis 95, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA96,"Diagnosis 96, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA97,"Diagnosis 97, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA98,"Diagnosis 98, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA99,"Diagnosis 99, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA100,"Diagnosis 100, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA101,"Diagnosis 101, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA102,"Diagnosis 102, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA103,"Diagnosis 103, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA104,"Diagnosis 104, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA105,"Diagnosis 105, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA106,"Diagnosis 106, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA107,"Diagnosis 107, present on admission indicator",string,MA_SID_2017_CORE
+DXPOA108,"Diagnosis 108, present on admission indicator",string,MA_SID_2017_CORE
+DXVER,Diagnosis Version,int32,MA_SID_2017_CORE
+FEMALE,Indicator of sex,int32,MA_SID_2017_CORE
+HCUP_ED,HCUP Emergency Department service indicator,int32,MA_SID_2017_CORE
+HCUP_OS,HCUP Observation Stay service indicator,int32,MA_SID_2017_CORE
+HISPANIC,Hispanic ethnicity (uniform),int32,MA_SID_2017_CORE
+HISPANIC_X,Hispanic ethnicity (as received from source),string,MA_SID_2017_CORE
+Homeless,Indicator that patient is homeless,int32,MA_SID_2017_CORE
+HOSPST,Hospital state postal code,string,MA_SID_2017_CORE
+I10_DX_Admitting,ICD-10-CM Admitting Diagnosis Code,string,MA_SID_2017_CORE
+I10_DX1,ICD-10-CM Diagnosis 1,string,MA_SID_2017_CORE
+I10_DX2,ICD-10-CM Diagnosis 2,string,MA_SID_2017_CORE
+I10_DX3,ICD-10-CM Diagnosis 3,string,MA_SID_2017_CORE
+I10_DX4,ICD-10-CM Diagnosis 4,string,MA_SID_2017_CORE
+I10_DX5,ICD-10-CM Diagnosis 5,string,MA_SID_2017_CORE
+I10_DX6,ICD-10-CM Diagnosis 6,string,MA_SID_2017_CORE
+I10_DX7,ICD-10-CM Diagnosis 7,string,MA_SID_2017_CORE
+I10_DX8,ICD-10-CM Diagnosis 8,string,MA_SID_2017_CORE
+I10_DX9,ICD-10-CM Diagnosis 9,string,MA_SID_2017_CORE
+I10_DX10,ICD-10-CM Diagnosis 10,string,MA_SID_2017_CORE
+I10_DX11,ICD-10-CM Diagnosis 11,string,MA_SID_2017_CORE
+I10_DX12,ICD-10-CM Diagnosis 12,string,MA_SID_2017_CORE
+I10_DX13,ICD-10-CM Diagnosis 13,string,MA_SID_2017_CORE
+I10_DX14,ICD-10-CM Diagnosis 14,string,MA_SID_2017_CORE
+I10_DX15,ICD-10-CM Diagnosis 15,string,MA_SID_2017_CORE
+I10_DX16,ICD-10-CM Diagnosis 16,string,MA_SID_2017_CORE
+I10_DX17,ICD-10-CM Diagnosis 17,string,MA_SID_2017_CORE
+I10_DX18,ICD-10-CM Diagnosis 18,string,MA_SID_2017_CORE
+I10_DX19,ICD-10-CM Diagnosis 19,string,MA_SID_2017_CORE
+I10_DX20,ICD-10-CM Diagnosis 20,string,MA_SID_2017_CORE
+I10_DX21,ICD-10-CM Diagnosis 21,string,MA_SID_2017_CORE
+I10_DX22,ICD-10-CM Diagnosis 22,string,MA_SID_2017_CORE
+I10_DX23,ICD-10-CM Diagnosis 23,string,MA_SID_2017_CORE
+I10_DX24,ICD-10-CM Diagnosis 24,string,MA_SID_2017_CORE
+I10_DX25,ICD-10-CM Diagnosis 25,string,MA_SID_2017_CORE
+I10_DX26,ICD-10-CM Diagnosis 26,string,MA_SID_2017_CORE
+I10_DX27,ICD-10-CM Diagnosis 27,string,MA_SID_2017_CORE
+I10_DX28,ICD-10-CM Diagnosis 28,string,MA_SID_2017_CORE
+I10_DX29,ICD-10-CM Diagnosis 29,string,MA_SID_2017_CORE
+I10_DX30,ICD-10-CM Diagnosis 30,string,MA_SID_2017_CORE
+I10_DX31,ICD-10-CM Diagnosis 31,string,MA_SID_2017_CORE
+I10_DX32,ICD-10-CM Diagnosis 32,string,MA_SID_2017_CORE
+I10_DX33,ICD-10-CM Diagnosis 33,string,MA_SID_2017_CORE
+I10_DX34,ICD-10-CM Diagnosis 34,string,MA_SID_2017_CORE
+I10_DX35,ICD-10-CM Diagnosis 35,string,MA_SID_2017_CORE
+I10_DX36,ICD-10-CM Diagnosis 36,string,MA_SID_2017_CORE
+I10_DX37,ICD-10-CM Diagnosis 37,string,MA_SID_2017_CORE
+I10_DX38,ICD-10-CM Diagnosis 38,string,MA_SID_2017_CORE
+I10_DX39,ICD-10-CM Diagnosis 39,string,MA_SID_2017_CORE
+I10_DX40,ICD-10-CM Diagnosis 40,string,MA_SID_2017_CORE
+I10_DX41,ICD-10-CM Diagnosis 41,string,MA_SID_2017_CORE
+I10_DX42,ICD-10-CM Diagnosis 42,string,MA_SID_2017_CORE
+I10_DX43,ICD-10-CM Diagnosis 43,string,MA_SID_2017_CORE
+I10_DX44,ICD-10-CM Diagnosis 44,string,MA_SID_2017_CORE
+I10_DX45,ICD-10-CM Diagnosis 45,string,MA_SID_2017_CORE
+I10_DX46,ICD-10-CM Diagnosis 46,string,MA_SID_2017_CORE
+I10_DX47,ICD-10-CM Diagnosis 47,string,MA_SID_2017_CORE
+I10_DX48,ICD-10-CM Diagnosis 48,string,MA_SID_2017_CORE
+I10_DX49,ICD-10-CM Diagnosis 49,string,MA_SID_2017_CORE
+I10_DX50,ICD-10-CM Diagnosis 50,string,MA_SID_2017_CORE
+I10_DX51,ICD-10-CM Diagnosis 51,string,MA_SID_2017_CORE
+I10_DX52,ICD-10-CM Diagnosis 52,string,MA_SID_2017_CORE
+I10_DX53,ICD-10-CM Diagnosis 53,string,MA_SID_2017_CORE
+I10_DX54,ICD-10-CM Diagnosis 54,string,MA_SID_2017_CORE
+I10_DX55,ICD-10-CM Diagnosis 55,string,MA_SID_2017_CORE
+I10_DX56,ICD-10-CM Diagnosis 56,string,MA_SID_2017_CORE
+I10_DX57,ICD-10-CM Diagnosis 57,string,MA_SID_2017_CORE
+I10_DX58,ICD-10-CM Diagnosis 58,string,MA_SID_2017_CORE
+I10_DX59,ICD-10-CM Diagnosis 59,string,MA_SID_2017_CORE
+I10_DX60,ICD-10-CM Diagnosis 60,string,MA_SID_2017_CORE
+I10_DX61,ICD-10-CM Diagnosis 61,string,MA_SID_2017_CORE
+I10_DX62,ICD-10-CM Diagnosis 62,string,MA_SID_2017_CORE
+I10_DX63,ICD-10-CM Diagnosis 63,string,MA_SID_2017_CORE
+I10_DX64,ICD-10-CM Diagnosis 64,string,MA_SID_2017_CORE
+I10_DX65,ICD-10-CM Diagnosis 65,string,MA_SID_2017_CORE
+I10_DX66,ICD-10-CM Diagnosis 66,string,MA_SID_2017_CORE
+I10_DX67,ICD-10-CM Diagnosis 67,string,MA_SID_2017_CORE
+I10_DX68,ICD-10-CM Diagnosis 68,string,MA_SID_2017_CORE
+I10_DX69,ICD-10-CM Diagnosis 69,string,MA_SID_2017_CORE
+I10_DX70,ICD-10-CM Diagnosis 70,string,MA_SID_2017_CORE
+I10_DX71,ICD-10-CM Diagnosis 71,string,MA_SID_2017_CORE
+I10_DX72,ICD-10-CM Diagnosis 72,string,MA_SID_2017_CORE
+I10_DX73,ICD-10-CM Diagnosis 73,string,MA_SID_2017_CORE
+I10_DX74,ICD-10-CM Diagnosis 74,string,MA_SID_2017_CORE
+I10_DX75,ICD-10-CM Diagnosis 75,string,MA_SID_2017_CORE
+I10_DX76,ICD-10-CM Diagnosis 76,string,MA_SID_2017_CORE
+I10_DX77,ICD-10-CM Diagnosis 77,string,MA_SID_2017_CORE
+I10_DX78,ICD-10-CM Diagnosis 78,string,MA_SID_2017_CORE
+I10_DX79,ICD-10-CM Diagnosis 79,string,MA_SID_2017_CORE
+I10_DX80,ICD-10-CM Diagnosis 80,string,MA_SID_2017_CORE
+I10_DX81,ICD-10-CM Diagnosis 81,string,MA_SID_2017_CORE
+I10_DX82,ICD-10-CM Diagnosis 82,string,MA_SID_2017_CORE
+I10_DX83,ICD-10-CM Diagnosis 83,string,MA_SID_2017_CORE
+I10_DX84,ICD-10-CM Diagnosis 84,string,MA_SID_2017_CORE
+I10_DX85,ICD-10-CM Diagnosis 85,string,MA_SID_2017_CORE
+I10_DX86,ICD-10-CM Diagnosis 86,string,MA_SID_2017_CORE
+I10_DX87,ICD-10-CM Diagnosis 87,string,MA_SID_2017_CORE
+I10_DX88,ICD-10-CM Diagnosis 88,string,MA_SID_2017_CORE
+I10_DX89,ICD-10-CM Diagnosis 89,string,MA_SID_2017_CORE
+I10_DX90,ICD-10-CM Diagnosis 90,string,MA_SID_2017_CORE
+I10_DX91,ICD-10-CM Diagnosis 91,string,MA_SID_2017_CORE
+I10_DX92,ICD-10-CM Diagnosis 92,string,MA_SID_2017_CORE
+I10_DX93,ICD-10-CM Diagnosis 93,string,MA_SID_2017_CORE
+I10_DX94,ICD-10-CM Diagnosis 94,string,MA_SID_2017_CORE
+I10_DX95,ICD-10-CM Diagnosis 95,string,MA_SID_2017_CORE
+I10_DX96,ICD-10-CM Diagnosis 96,string,MA_SID_2017_CORE
+I10_DX97,ICD-10-CM Diagnosis 97,string,MA_SID_2017_CORE
+I10_DX98,ICD-10-CM Diagnosis 98,string,MA_SID_2017_CORE
+I10_DX99,ICD-10-CM Diagnosis 99,string,MA_SID_2017_CORE
+I10_DX100,ICD-10-CM Diagnosis 100,string,MA_SID_2017_CORE
+I10_DX101,ICD-10-CM Diagnosis 101,string,MA_SID_2017_CORE
+I10_DX102,ICD-10-CM Diagnosis 102,string,MA_SID_2017_CORE
+I10_DX103,ICD-10-CM Diagnosis 103,string,MA_SID_2017_CORE
+I10_DX104,ICD-10-CM Diagnosis 104,string,MA_SID_2017_CORE
+I10_DX105,ICD-10-CM Diagnosis 105,string,MA_SID_2017_CORE
+I10_DX106,ICD-10-CM Diagnosis 106,string,MA_SID_2017_CORE
+I10_DX107,ICD-10-CM Diagnosis 107,string,MA_SID_2017_CORE
+I10_DX108,ICD-10-CM Diagnosis 108,string,MA_SID_2017_CORE
+I10_NDX,ICD-10-CM Number of diagnoses on this record,int32,MA_SID_2017_CORE
+I10_NPR,ICD-10-PCS Number of procedures on this record,int32,MA_SID_2017_CORE
+I10_PR1,ICD-10-PCS Procedure 1,string,MA_SID_2017_CORE
+I10_PR2,ICD-10-PCS Procedure 2,string,MA_SID_2017_CORE
+I10_PR3,ICD-10-PCS Procedure 3,string,MA_SID_2017_CORE
+I10_PR4,ICD-10-PCS Procedure 4,string,MA_SID_2017_CORE
+I10_PR5,ICD-10-PCS Procedure 5,string,MA_SID_2017_CORE
+I10_PR6,ICD-10-PCS Procedure 6,string,MA_SID_2017_CORE
+I10_PR7,ICD-10-PCS Procedure 7,string,MA_SID_2017_CORE
+I10_PR8,ICD-10-PCS Procedure 8,string,MA_SID_2017_CORE
+I10_PR9,ICD-10-PCS Procedure 9,string,MA_SID_2017_CORE
+I10_PR10,ICD-10-PCS Procedure 10,string,MA_SID_2017_CORE
+I10_PR11,ICD-10-PCS Procedure 11,string,MA_SID_2017_CORE
+I10_PR12,ICD-10-PCS Procedure 12,string,MA_SID_2017_CORE
+I10_PR13,ICD-10-PCS Procedure 13,string,MA_SID_2017_CORE
+I10_PR14,ICD-10-PCS Procedure 14,string,MA_SID_2017_CORE
+I10_PR15,ICD-10-PCS Procedure 15,string,MA_SID_2017_CORE
+I10_PR16,ICD-10-PCS Procedure 16,string,MA_SID_2017_CORE
+I10_PR17,ICD-10-PCS Procedure 17,string,MA_SID_2017_CORE
+I10_PR18,ICD-10-PCS Procedure 18,string,MA_SID_2017_CORE
+I10_PR19,ICD-10-PCS Procedure 19,string,MA_SID_2017_CORE
+I10_PR20,ICD-10-PCS Procedure 20,string,MA_SID_2017_CORE
+I10_PR21,ICD-10-PCS Procedure 21,string,MA_SID_2017_CORE
+I10_PR22,ICD-10-PCS Procedure 22,string,MA_SID_2017_CORE
+I10_PR23,ICD-10-PCS Procedure 23,string,MA_SID_2017_CORE
+I10_PR24,ICD-10-PCS Procedure 24,string,MA_SID_2017_CORE
+I10_PR25,ICD-10-PCS Procedure 25,string,MA_SID_2017_CORE
+I10_PR26,ICD-10-PCS Procedure 26,string,MA_SID_2017_CORE
+I10_PR27,ICD-10-PCS Procedure 27,string,MA_SID_2017_CORE
+I10_PR28,ICD-10-PCS Procedure 28,string,MA_SID_2017_CORE
+I10_PR29,ICD-10-PCS Procedure 29,string,MA_SID_2017_CORE
+I10_PR30,ICD-10-PCS Procedure 30,string,MA_SID_2017_CORE
+I10_PR31,ICD-10-PCS Procedure 31,string,MA_SID_2017_CORE
+I10_PR32,ICD-10-PCS Procedure 32,string,MA_SID_2017_CORE
+I10_PR33,ICD-10-PCS Procedure 33,string,MA_SID_2017_CORE
+I10_PR34,ICD-10-PCS Procedure 34,string,MA_SID_2017_CORE
+I10_PR35,ICD-10-PCS Procedure 35,string,MA_SID_2017_CORE
+I10_PR36,ICD-10-PCS Procedure 36,string,MA_SID_2017_CORE
+I10_PR37,ICD-10-PCS Procedure 37,string,MA_SID_2017_CORE
+I10_PR38,ICD-10-PCS Procedure 38,string,MA_SID_2017_CORE
+I10_PR39,ICD-10-PCS Procedure 39,string,MA_SID_2017_CORE
+I10_PR40,ICD-10-PCS Procedure 40,string,MA_SID_2017_CORE
+I10_PR41,ICD-10-PCS Procedure 41,string,MA_SID_2017_CORE
+I10_PR42,ICD-10-PCS Procedure 42,string,MA_SID_2017_CORE
+I10_PR43,ICD-10-PCS Procedure 43,string,MA_SID_2017_CORE
+I10_PR44,ICD-10-PCS Procedure 44,string,MA_SID_2017_CORE
+I10_PR45,ICD-10-PCS Procedure 45,string,MA_SID_2017_CORE
+I10_PR46,ICD-10-PCS Procedure 46,string,MA_SID_2017_CORE
+I10_PR47,ICD-10-PCS Procedure 47,string,MA_SID_2017_CORE
+I10_PR48,ICD-10-PCS Procedure 48,string,MA_SID_2017_CORE
+I10_PR49,ICD-10-PCS Procedure 49,string,MA_SID_2017_CORE
+I10_PR50,ICD-10-PCS Procedure 50,string,MA_SID_2017_CORE
+I10_PR51,ICD-10-PCS Procedure 51,string,MA_SID_2017_CORE
+I10_PR52,ICD-10-PCS Procedure 52,string,MA_SID_2017_CORE
+I10_PR53,ICD-10-PCS Procedure 53,string,MA_SID_2017_CORE
+I10_PR54,ICD-10-PCS Procedure 54,string,MA_SID_2017_CORE
+I10_PR55,ICD-10-PCS Procedure 55,string,MA_SID_2017_CORE
+I10_PR56,ICD-10-PCS Procedure 56,string,MA_SID_2017_CORE
+I10_PR57,ICD-10-PCS Procedure 57,string,MA_SID_2017_CORE
+I10_PR58,ICD-10-PCS Procedure 58,string,MA_SID_2017_CORE
+I10_PR59,ICD-10-PCS Procedure 59,string,MA_SID_2017_CORE
+I10_PR60,ICD-10-PCS Procedure 60,string,MA_SID_2017_CORE
+I10_PR61,ICD-10-PCS Procedure 61,string,MA_SID_2017_CORE
+I10_PR62,ICD-10-PCS Procedure 62,string,MA_SID_2017_CORE
+I10_PR63,ICD-10-PCS Procedure 63,string,MA_SID_2017_CORE
+I10_PR64,ICD-10-PCS Procedure 64,string,MA_SID_2017_CORE
+I10_PR65,ICD-10-PCS Procedure 65,string,MA_SID_2017_CORE
+I10_PR66,ICD-10-PCS Procedure 66,string,MA_SID_2017_CORE
+I10_PR67,ICD-10-PCS Procedure 67,string,MA_SID_2017_CORE
+I10_PR68,ICD-10-PCS Procedure 68,string,MA_SID_2017_CORE
+I10_PR69,ICD-10-PCS Procedure 69,string,MA_SID_2017_CORE
+I10_PR70,ICD-10-PCS Procedure 70,string,MA_SID_2017_CORE
+I10_PR71,ICD-10-PCS Procedure 71,string,MA_SID_2017_CORE
+I10_PR72,ICD-10-PCS Procedure 72,string,MA_SID_2017_CORE
+I10_PR73,ICD-10-PCS Procedure 73,string,MA_SID_2017_CORE
+I10_PR74,ICD-10-PCS Procedure 74,string,MA_SID_2017_CORE
+I10_PR75,ICD-10-PCS Procedure 75,string,MA_SID_2017_CORE
+I10_PR76,ICD-10-PCS Procedure 76,string,MA_SID_2017_CORE
+I10_PR77,ICD-10-PCS Procedure 77,string,MA_SID_2017_CORE
+I10_PR78,ICD-10-PCS Procedure 78,string,MA_SID_2017_CORE
+I10_PR79,ICD-10-PCS Procedure 79,string,MA_SID_2017_CORE
+I10_PR80,ICD-10-PCS Procedure 80,string,MA_SID_2017_CORE
+I10_PR81,ICD-10-PCS Procedure 81,string,MA_SID_2017_CORE
+I10_PR82,ICD-10-PCS Procedure 82,string,MA_SID_2017_CORE
+I10_PR83,ICD-10-PCS Procedure 83,string,MA_SID_2017_CORE
+I10_PR84,ICD-10-PCS Procedure 84,string,MA_SID_2017_CORE
+I10_PR85,ICD-10-PCS Procedure 85,string,MA_SID_2017_CORE
+I10_PR86,ICD-10-PCS Procedure 86,string,MA_SID_2017_CORE
+I10_PR87,ICD-10-PCS Procedure 87,string,MA_SID_2017_CORE
+I10_PR88,ICD-10-PCS Procedure 88,string,MA_SID_2017_CORE
+I10_PR89,ICD-10-PCS Procedure 89,string,MA_SID_2017_CORE
+I10_PR90,ICD-10-PCS Procedure 90,string,MA_SID_2017_CORE
+I10_PROCTYPE,ICD-10-PCS Procedure type indicator,int32,MA_SID_2017_CORE
+KEY,HCUP record identifier,double,MA_SID_2017_CORE
+LOS,Length of stay (cleaned),int32,MA_SID_2017_CORE
+LOS_X,Length of stay (as received from source),int32,MA_SID_2017_CORE
+MDC,MDC in effect on discharge date,int32,MA_SID_2017_CORE
+MDC_NoPOA,"MDC in use on discharge date, calculated without POA",int32,MA_SID_2017_CORE
+MEDINCSTQ,Median household income state quartile for patient ZIP Code,int32,MA_SID_2017_CORE
+OS_TIME,Observation stay time summed from UNITS,double,MA_SID_2017_CORE
+PAY1,Primary expected payer (uniform),int32,MA_SID_2017_CORE
+PAY1_X,Primary expected payer (as received from source),string,MA_SID_2017_CORE
+PAY2,Secondary expected payer (uniform),int32,MA_SID_2017_CORE
+PAY2_X,Secondary expected payer (as received from source),string,MA_SID_2017_CORE
+PAYER1_X,Primary expected payer plan identifier (as received from source),string,MA_SID_2017_CORE
+PAYER2_X,Secondary expected payer plan identifier (as received from source),string,MA_SID_2017_CORE
+PL_CBSA,Patient location: Core Based Statistical Area (CBSA),int32,MA_SID_2017_CORE
+PL_UR_CAT4,Patient Location: Urban-Rural 4 Categories,int32,MA_SID_2017_CORE
+POA_Disch_Edit1,Discharge has POA missing on all nonexempt diagnoses,int32,MA_SID_2017_CORE
+POA_Disch_Edit2,Discharge has POA missing on all nonexempt secondary diagnoses,int32,MA_SID_2017_CORE
+POA_Hosp_Edit1,Hospital reported POA as Y on all diagnoses on all discharges,int32,MA_SID_2017_CORE
+POA_Hosp_Edit2,Hospital reported POA as missing on all non-Medicare discharges,int32,MA_SID_2017_CORE
+POA_Hosp_Edit3,Hospital reported POA as missing on all nonexempt diagnoses for 15% or more of d,int32,MA_SID_2017_CORE
+POA_Hosp_Edit3_Value,Percentage of discharges with all nonexempt diagnoses missing POA indicators,double,MA_SID_2017_CORE
+PRDAY1,Number of days from admission to I10_PR1,int32,MA_SID_2017_CORE
+PRDAY2,Number of days from admission to I10_PR2,int32,MA_SID_2017_CORE
+PRDAY3,Number of days from admission to I10_PR3,int32,MA_SID_2017_CORE
+PRDAY4,Number of days from admission to I10_PR4,int32,MA_SID_2017_CORE
+PRDAY5,Number of days from admission to I10_PR5,int32,MA_SID_2017_CORE
+PRDAY6,Number of days from admission to I10_PR6,int32,MA_SID_2017_CORE
+PRDAY7,Number of days from admission to I10_PR7,int32,MA_SID_2017_CORE
+PRDAY8,Number of days from admission to I10_PR8,int32,MA_SID_2017_CORE
+PRDAY9,Number of days from admission to I10_PR9,int32,MA_SID_2017_CORE
+PRDAY10,Number of days from admission to I10_PR10,int32,MA_SID_2017_CORE
+PRDAY11,Number of days from admission to I10_PR11,int32,MA_SID_2017_CORE
+PRDAY12,Number of days from admission to I10_PR12,int32,MA_SID_2017_CORE
+PRDAY13,Number of days from admission to I10_PR13,int32,MA_SID_2017_CORE
+PRDAY14,Number of days from admission to I10_PR14,int32,MA_SID_2017_CORE
+PRDAY15,Number of days from admission to I10_PR15,int32,MA_SID_2017_CORE
+PRDAY16,Number of days from admission to I10_PR16,int32,MA_SID_2017_CORE
+PRDAY17,Number of days from admission to I10_PR17,int32,MA_SID_2017_CORE
+PRDAY18,Number of days from admission to I10_PR18,int32,MA_SID_2017_CORE
+PRDAY19,Number of days from admission to I10_PR19,int32,MA_SID_2017_CORE
+PRDAY20,Number of days from admission to I10_PR20,int32,MA_SID_2017_CORE
+PRDAY21,Number of days from admission to I10_PR21,int32,MA_SID_2017_CORE
+PRDAY22,Number of days from admission to I10_PR22,int32,MA_SID_2017_CORE
+PRDAY23,Number of days from admission to I10_PR23,int32,MA_SID_2017_CORE
+PRDAY24,Number of days from admission to I10_PR24,int32,MA_SID_2017_CORE
+PRDAY25,Number of days from admission to I10_PR25,int32,MA_SID_2017_CORE
+PRDAY26,Number of days from admission to I10_PR26,int32,MA_SID_2017_CORE
+PRDAY27,Number of days from admission to I10_PR27,int32,MA_SID_2017_CORE
+PRDAY28,Number of days from admission to I10_PR28,int32,MA_SID_2017_CORE
+PRDAY29,Number of days from admission to I10_PR29,int32,MA_SID_2017_CORE
+PRDAY30,Number of days from admission to I10_PR30,int32,MA_SID_2017_CORE
+PRDAY31,Number of days from admission to I10_PR31,int32,MA_SID_2017_CORE
+PRDAY32,Number of days from admission to I10_PR32,int32,MA_SID_2017_CORE
+PRDAY33,Number of days from admission to I10_PR33,int32,MA_SID_2017_CORE
+PRDAY34,Number of days from admission to I10_PR34,int32,MA_SID_2017_CORE
+PRDAY35,Number of days from admission to I10_PR35,int32,MA_SID_2017_CORE
+PRDAY36,Number of days from admission to I10_PR36,int32,MA_SID_2017_CORE
+PRDAY37,Number of days from admission to I10_PR37,int32,MA_SID_2017_CORE
+PRDAY38,Number of days from admission to I10_PR38,int32,MA_SID_2017_CORE
+PRDAY39,Number of days from admission to I10_PR39,int32,MA_SID_2017_CORE
+PRDAY40,Number of days from admission to I10_PR40,int32,MA_SID_2017_CORE
+PRDAY41,Number of days from admission to I10_PR41,int32,MA_SID_2017_CORE
+PRDAY42,Number of days from admission to I10_PR42,int32,MA_SID_2017_CORE
+PRDAY43,Number of days from admission to I10_PR43,int32,MA_SID_2017_CORE
+PRDAY44,Number of days from admission to I10_PR44,int32,MA_SID_2017_CORE
+PRDAY45,Number of days from admission to I10_PR45,int32,MA_SID_2017_CORE
+PRDAY46,Number of days from admission to I10_PR46,int32,MA_SID_2017_CORE
+PRDAY47,Number of days from admission to I10_PR47,int32,MA_SID_2017_CORE
+PRDAY48,Number of days from admission to I10_PR48,int32,MA_SID_2017_CORE
+PRDAY49,Number of days from admission to I10_PR49,int32,MA_SID_2017_CORE
+PRDAY50,Number of days from admission to I10_PR50,int32,MA_SID_2017_CORE
+PRDAY51,Number of days from admission to I10_PR51,int32,MA_SID_2017_CORE
+PRDAY52,Number of days from admission to I10_PR52,int32,MA_SID_2017_CORE
+PRDAY53,Number of days from admission to I10_PR53,int32,MA_SID_2017_CORE
+PRDAY54,Number of days from admission to I10_PR54,int32,MA_SID_2017_CORE
+PRDAY55,Number of days from admission to I10_PR55,int32,MA_SID_2017_CORE
+PRDAY56,Number of days from admission to I10_PR56,int32,MA_SID_2017_CORE
+PRDAY57,Number of days from admission to I10_PR57,int32,MA_SID_2017_CORE
+PRDAY58,Number of days from admission to I10_PR58,int32,MA_SID_2017_CORE
+PRDAY59,Number of days from admission to I10_PR59,int32,MA_SID_2017_CORE
+PRDAY60,Number of days from admission to I10_PR60,int32,MA_SID_2017_CORE
+PRDAY61,Number of days from admission to I10_PR61,int32,MA_SID_2017_CORE
+PRDAY62,Number of days from admission to I10_PR62,int32,MA_SID_2017_CORE
+PRDAY63,Number of days from admission to I10_PR63,int32,MA_SID_2017_CORE
+PRDAY64,Number of days from admission to I10_PR64,int32,MA_SID_2017_CORE
+PRDAY65,Number of days from admission to I10_PR65,int32,MA_SID_2017_CORE
+PRDAY66,Number of days from admission to I10_PR66,int32,MA_SID_2017_CORE
+PRDAY67,Number of days from admission to I10_PR67,int32,MA_SID_2017_CORE
+PRDAY68,Number of days from admission to I10_PR68,int32,MA_SID_2017_CORE
+PRDAY69,Number of days from admission to I10_PR69,int32,MA_SID_2017_CORE
+PRDAY70,Number of days from admission to I10_PR70,int32,MA_SID_2017_CORE
+PRDAY71,Number of days from admission to I10_PR71,int32,MA_SID_2017_CORE
+PRDAY72,Number of days from admission to I10_PR72,int32,MA_SID_2017_CORE
+PRDAY73,Number of days from admission to I10_PR73,int32,MA_SID_2017_CORE
+PRDAY74,Number of days from admission to I10_PR74,int32,MA_SID_2017_CORE
+PRDAY75,Number of days from admission to I10_PR75,int32,MA_SID_2017_CORE
+PRDAY76,Number of days from admission to I10_PR76,int32,MA_SID_2017_CORE
+PRDAY77,Number of days from admission to I10_PR77,int32,MA_SID_2017_CORE
+PRDAY78,Number of days from admission to I10_PR78,int32,MA_SID_2017_CORE
+PRDAY79,Number of days from admission to I10_PR79,int32,MA_SID_2017_CORE
+PRDAY80,Number of days from admission to I10_PR80,int32,MA_SID_2017_CORE
+PRDAY81,Number of days from admission to I10_PR81,int32,MA_SID_2017_CORE
+PRDAY82,Number of days from admission to I10_PR82,int32,MA_SID_2017_CORE
+PRDAY83,Number of days from admission to I10_PR83,int32,MA_SID_2017_CORE
+PRDAY84,Number of days from admission to I10_PR84,int32,MA_SID_2017_CORE
+PRDAY85,Number of days from admission to I10_PR85,int32,MA_SID_2017_CORE
+PRDAY86,Number of days from admission to I10_PR86,int32,MA_SID_2017_CORE
+PRDAY87,Number of days from admission to I10_PR87,int32,MA_SID_2017_CORE
+PRDAY88,Number of days from admission to I10_PR88,int32,MA_SID_2017_CORE
+PRDAY89,Number of days from admission to I10_PR89,int32,MA_SID_2017_CORE
+PRDAY90,Number of days from admission to I10_PR90,int32,MA_SID_2017_CORE
+PRVER,Procedure Version,int32,MA_SID_2017_CORE
+PSTATE,Patient State postal code,string,MA_SID_2017_CORE
+PSTCO2,"Patient state/county FIPS code, possibly derived from ZIP Code",int32,MA_SID_2017_CORE
+RACE,Race (uniform),int32,MA_SID_2017_CORE
+RACE_EDIT,Race Edit Checks,int32,MA_SID_2017_CORE
+RACE_X,Race (as received from source),string,MA_SID_2017_CORE
+TOTCHG,Total charges (cleaned),double,MA_SID_2017_CORE
+TOTCHG_X,Total charges (as received from source),double,MA_SID_2017_CORE
+TRAN_IN,Transfer in indicator,int32,MA_SID_2017_CORE
+TRAN_OUT,Transfer out indicator,int32,MA_SID_2017_CORE
+VisitLink,Visit linkage variable,int32,MA_SID_2017_CORE
+YEAR,Calendar year,int32,MA_SID_2017_CORE
+ZIP3,"Patient ZIP Code, first 3 digits",string,MA_SID_2017_CORE
+ZIPINC_QRTL,Median household income national quartile for patient ZIP Code,int32,MA_SID_2017_CORE
+AYEAR,Admission year,int32,MA_SID_2017_CORE
+PRMONTH1,Month of procedure 1,int32,MA_SID_2017_CORE
+PRMONTH2,Month of procedure 2,int32,MA_SID_2017_CORE
+PRMONTH3,Month of procedure 3,int32,MA_SID_2017_CORE
+PRMONTH4,Month of procedure 4,int32,MA_SID_2017_CORE
+PRMONTH5,Month of procedure 5,int32,MA_SID_2017_CORE
+PRMONTH6,Month of procedure 6,int32,MA_SID_2017_CORE
+PRMONTH7,Month of procedure 7,int32,MA_SID_2017_CORE
+PRMONTH8,Month of procedure 8,int32,MA_SID_2017_CORE
+PRMONTH9,Month of procedure 9,int32,MA_SID_2017_CORE
+PRMONTH10,Month of procedure 10,int32,MA_SID_2017_CORE
+PRMONTH11,Month of procedure 11,int32,MA_SID_2017_CORE
+PRMONTH12,Month of procedure 12,int32,MA_SID_2017_CORE
+PRMONTH13,Month of procedure 13,int32,MA_SID_2017_CORE
+PRMONTH14,Month of procedure 14,int32,MA_SID_2017_CORE
+PRMONTH15,Month of procedure 15,int32,MA_SID_2017_CORE
+PRMONTH16,Month of procedure 16,int32,MA_SID_2017_CORE
+PRMONTH17,Month of procedure 17,int32,MA_SID_2017_CORE
+PRMONTH18,Month of procedure 18,int32,MA_SID_2017_CORE
+PRMONTH19,Month of procedure 19,int32,MA_SID_2017_CORE
+PRMONTH20,Month of procedure 20,int32,MA_SID_2017_CORE
+PRMONTH21,Month of procedure 21,int32,MA_SID_2017_CORE
+PRMONTH22,Month of procedure 22,int32,MA_SID_2017_CORE
+PRMONTH23,Month of procedure 23,int32,MA_SID_2017_CORE
+PRMONTH24,Month of procedure 24,int32,MA_SID_2017_CORE
+PRMONTH25,Month of procedure 25,int32,MA_SID_2017_CORE
+PRMONTH26,Month of procedure 26,int32,MA_SID_2017_CORE
+PRMONTH27,Month of procedure 27,int32,MA_SID_2017_CORE
+PRMONTH28,Month of procedure 28,int32,MA_SID_2017_CORE
+PRMONTH29,Month of procedure 29,int32,MA_SID_2017_CORE
+PRMONTH30,Month of procedure 30,int32,MA_SID_2017_CORE
+PRMONTH31,Month of procedure 31,int32,MA_SID_2017_CORE
+PRMONTH32,Month of procedure 32,int32,MA_SID_2017_CORE
+PRMONTH33,Month of procedure 33,int32,MA_SID_2017_CORE
+PRMONTH34,Month of procedure 34,int32,MA_SID_2017_CORE
+PRMONTH35,Month of procedure 35,int32,MA_SID_2017_CORE
+PRMONTH36,Month of procedure 36,int32,MA_SID_2017_CORE
+PRMONTH37,Month of procedure 37,int32,MA_SID_2017_CORE
+PRMONTH38,Month of procedure 38,int32,MA_SID_2017_CORE
+PRMONTH39,Month of procedure 39,int32,MA_SID_2017_CORE
+PRMONTH40,Month of procedure 40,int32,MA_SID_2017_CORE
+PRMONTH41,Month of procedure 41,int32,MA_SID_2017_CORE
+PRMONTH42,Month of procedure 42,int32,MA_SID_2017_CORE
+PRMONTH43,Month of procedure 43,int32,MA_SID_2017_CORE
+PRMONTH44,Month of procedure 44,int32,MA_SID_2017_CORE
+PRMONTH45,Month of procedure 45,int32,MA_SID_2017_CORE
+PRMONTH46,Month of procedure 46,int32,MA_SID_2017_CORE
+PRMONTH47,Month of procedure 47,int32,MA_SID_2017_CORE
+PRMONTH48,Month of procedure 48,int32,MA_SID_2017_CORE
+PRMONTH49,Month of procedure 49,int32,MA_SID_2017_CORE
+PRMONTH50,Month of procedure 50,int32,MA_SID_2017_CORE
+PRMONTH51,Month of procedure 51,int32,MA_SID_2017_CORE
+PRMONTH52,Month of procedure 52,int32,MA_SID_2017_CORE
+PRMONTH53,Month of procedure 53,int32,MA_SID_2017_CORE
+PRMONTH54,Month of procedure 54,int32,MA_SID_2017_CORE
+PRMONTH55,Month of procedure 55,int32,MA_SID_2017_CORE
+PRMONTH56,Month of procedure 56,int32,MA_SID_2017_CORE
+PRMONTH57,Month of procedure 57,int32,MA_SID_2017_CORE
+PRMONTH58,Month of procedure 58,int32,MA_SID_2017_CORE
+PRMONTH59,Month of procedure 59,int32,MA_SID_2017_CORE
+PRMONTH60,Month of procedure 60,int32,MA_SID_2017_CORE
+PRMONTH61,Month of procedure 61,int32,MA_SID_2017_CORE
+PRMONTH62,Month of procedure 62,int32,MA_SID_2017_CORE
+PRMONTH63,Month of procedure 63,int32,MA_SID_2017_CORE
+PRMONTH64,Month of procedure 64,int32,MA_SID_2017_CORE
+PRMONTH65,Month of procedure 65,int32,MA_SID_2017_CORE
+PRMONTH66,Month of procedure 66,int32,MA_SID_2017_CORE
+PRMONTH67,Month of procedure 67,int32,MA_SID_2017_CORE
+PRMONTH68,Month of procedure 68,int32,MA_SID_2017_CORE
+PRMONTH69,Month of procedure 69,int32,MA_SID_2017_CORE
+PRMONTH70,Month of procedure 70,int32,MA_SID_2017_CORE
+PRMONTH71,Month of procedure 71,int32,MA_SID_2017_CORE
+PRMONTH72,Month of procedure 72,int32,MA_SID_2017_CORE
+PRMONTH73,Month of procedure 73,int32,MA_SID_2017_CORE
+PRMONTH74,Month of procedure 74,int32,MA_SID_2017_CORE
+PRMONTH75,Month of procedure 75,int32,MA_SID_2017_CORE
+PRMONTH76,Month of procedure 76,int32,MA_SID_2017_CORE
+PRMONTH77,Month of procedure 77,int32,MA_SID_2017_CORE
+PRMONTH78,Month of procedure 78,int32,MA_SID_2017_CORE
+PRMONTH79,Month of procedure 79,int32,MA_SID_2017_CORE
+PRMONTH80,Month of procedure 80,int32,MA_SID_2017_CORE
+PRMONTH81,Month of procedure 81,int32,MA_SID_2017_CORE
+PRMONTH82,Month of procedure 82,int32,MA_SID_2017_CORE
+PRMONTH83,Month of procedure 83,int32,MA_SID_2017_CORE
+PRMONTH84,Month of procedure 84,int32,MA_SID_2017_CORE
+PRMONTH85,Month of procedure 85,int32,MA_SID_2017_CORE
+PRMONTH86,Month of procedure 86,int32,MA_SID_2017_CORE
+PRMONTH87,Month of procedure 87,int32,MA_SID_2017_CORE
+PRMONTH88,Month of procedure 88,int32,MA_SID_2017_CORE
+PRMONTH89,Month of procedure 89,int32,MA_SID_2017_CORE
+PRMONTH90,Month of procedure 90,int32,MA_SID_2017_CORE
+PRYEAR1,Year of procedure 1,int32,MA_SID_2017_CORE
+PRYEAR2,Year of procedure 2,int32,MA_SID_2017_CORE
+PRYEAR3,Year of procedure 3,int32,MA_SID_2017_CORE
+PRYEAR4,Year of procedure 4,int32,MA_SID_2017_CORE
+PRYEAR5,Year of procedure 5,int32,MA_SID_2017_CORE
+PRYEAR6,Year of procedure 6,int32,MA_SID_2017_CORE
+PRYEAR7,Year of procedure 7,int32,MA_SID_2017_CORE
+PRYEAR8,Year of procedure 8,int32,MA_SID_2017_CORE
+PRYEAR9,Year of procedure 9,int32,MA_SID_2017_CORE
+PRYEAR10,Year of procedure 10,int32,MA_SID_2017_CORE
+PRYEAR11,Year of procedure 11,int32,MA_SID_2017_CORE
+PRYEAR12,Year of procedure 12,int32,MA_SID_2017_CORE
+PRYEAR13,Year of procedure 13,int32,MA_SID_2017_CORE
+PRYEAR14,Year of procedure 14,int32,MA_SID_2017_CORE
+PRYEAR15,Year of procedure 15,int32,MA_SID_2017_CORE
+PRYEAR16,Year of procedure 16,int32,MA_SID_2017_CORE
+PRYEAR17,Year of procedure 17,int32,MA_SID_2017_CORE
+PRYEAR18,Year of procedure 18,int32,MA_SID_2017_CORE
+PRYEAR19,Year of procedure 19,int32,MA_SID_2017_CORE
+PRYEAR20,Year of procedure 20,int32,MA_SID_2017_CORE
+PRYEAR21,Year of procedure 21,int32,MA_SID_2017_CORE
+PRYEAR22,Year of procedure 22,int32,MA_SID_2017_CORE
+PRYEAR23,Year of procedure 23,int32,MA_SID_2017_CORE
+PRYEAR24,Year of procedure 24,int32,MA_SID_2017_CORE
+PRYEAR25,Year of procedure 25,int32,MA_SID_2017_CORE
+PRYEAR26,Year of procedure 26,int32,MA_SID_2017_CORE
+PRYEAR27,Year of procedure 27,int32,MA_SID_2017_CORE
+PRYEAR28,Year of procedure 28,int32,MA_SID_2017_CORE
+PRYEAR29,Year of procedure 29,int32,MA_SID_2017_CORE
+PRYEAR30,Year of procedure 30,int32,MA_SID_2017_CORE
+PRYEAR31,Year of procedure 31,int32,MA_SID_2017_CORE
+PRYEAR32,Year of procedure 32,int32,MA_SID_2017_CORE
+PRYEAR33,Year of procedure 33,int32,MA_SID_2017_CORE
+PRYEAR34,Year of procedure 34,int32,MA_SID_2017_CORE
+PRYEAR35,Year of procedure 35,int32,MA_SID_2017_CORE
+PRYEAR36,Year of procedure 36,int32,MA_SID_2017_CORE
+PRYEAR37,Year of procedure 37,int32,MA_SID_2017_CORE
+PRYEAR38,Year of procedure 38,int32,MA_SID_2017_CORE
+PRYEAR39,Year of procedure 39,int32,MA_SID_2017_CORE
+PRYEAR40,Year of procedure 40,int32,MA_SID_2017_CORE
+PRYEAR41,Year of procedure 41,int32,MA_SID_2017_CORE
+PRYEAR42,Year of procedure 42,int32,MA_SID_2017_CORE
+PRYEAR43,Year of procedure 43,int32,MA_SID_2017_CORE
+PRYEAR44,Year of procedure 44,int32,MA_SID_2017_CORE
+PRYEAR45,Year of procedure 45,int32,MA_SID_2017_CORE
+PRYEAR46,Year of procedure 46,int32,MA_SID_2017_CORE
+PRYEAR47,Year of procedure 47,int32,MA_SID_2017_CORE
+PRYEAR48,Year of procedure 48,int32,MA_SID_2017_CORE
+PRYEAR49,Year of procedure 49,int32,MA_SID_2017_CORE
+PRYEAR50,Year of procedure 50,int32,MA_SID_2017_CORE
+PRYEAR51,Year of procedure 51,int32,MA_SID_2017_CORE
+PRYEAR52,Year of procedure 52,int32,MA_SID_2017_CORE
+PRYEAR53,Year of procedure 53,int32,MA_SID_2017_CORE
+PRYEAR54,Year of procedure 54,int32,MA_SID_2017_CORE
+PRYEAR55,Year of procedure 55,int32,MA_SID_2017_CORE
+PRYEAR56,Year of procedure 56,int32,MA_SID_2017_CORE
+PRYEAR57,Year of procedure 57,int32,MA_SID_2017_CORE
+PRYEAR58,Year of procedure 58,int32,MA_SID_2017_CORE
+PRYEAR59,Year of procedure 59,int32,MA_SID_2017_CORE
+PRYEAR60,Year of procedure 60,int32,MA_SID_2017_CORE
+PRYEAR61,Year of procedure 61,int32,MA_SID_2017_CORE
+PRYEAR62,Year of procedure 62,int32,MA_SID_2017_CORE
+PRYEAR63,Year of procedure 63,int32,MA_SID_2017_CORE
+PRYEAR64,Year of procedure 64,int32,MA_SID_2017_CORE
+PRYEAR65,Year of procedure 65,int32,MA_SID_2017_CORE
+PRYEAR66,Year of procedure 66,int32,MA_SID_2017_CORE
+PRYEAR67,Year of procedure 67,int32,MA_SID_2017_CORE
+PRYEAR68,Year of procedure 68,int32,MA_SID_2017_CORE
+PRYEAR69,Year of procedure 69,int32,MA_SID_2017_CORE
+PRYEAR70,Year of procedure 70,int32,MA_SID_2017_CORE
+PRYEAR71,Year of procedure 71,int32,MA_SID_2017_CORE
+PRYEAR72,Year of procedure 72,int32,MA_SID_2017_CORE
+PRYEAR73,Year of procedure 73,int32,MA_SID_2017_CORE
+PRYEAR74,Year of procedure 74,int32,MA_SID_2017_CORE
+PRYEAR75,Year of procedure 75,int32,MA_SID_2017_CORE
+PRYEAR76,Year of procedure 76,int32,MA_SID_2017_CORE
+PRYEAR77,Year of procedure 77,int32,MA_SID_2017_CORE
+PRYEAR78,Year of procedure 78,int32,MA_SID_2017_CORE
+PRYEAR79,Year of procedure 79,int32,MA_SID_2017_CORE
+PRYEAR80,Year of procedure 80,int32,MA_SID_2017_CORE
+PRYEAR81,Year of procedure 81,int32,MA_SID_2017_CORE
+PRYEAR82,Year of procedure 82,int32,MA_SID_2017_CORE
+PRYEAR83,Year of procedure 83,int32,MA_SID_2017_CORE
+PRYEAR84,Year of procedure 84,int32,MA_SID_2017_CORE
+PRYEAR85,Year of procedure 85,int32,MA_SID_2017_CORE
+PRYEAR86,Year of procedure 86,int32,MA_SID_2017_CORE
+PRYEAR87,Year of procedure 87,int32,MA_SID_2017_CORE
+PRYEAR88,Year of procedure 88,int32,MA_SID_2017_CORE
+PRYEAR89,Year of procedure 89,int32,MA_SID_2017_CORE
+PRYEAR90,Year of procedure 90,int32,MA_SID_2017_CORE

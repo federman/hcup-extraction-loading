@@ -1,0 +1,309 @@
+var,var_label,value_type,dataset_id
+AGE,Age in years at admission,int32,KY_SID_2015q1q3_CORE
+AGEDAY,Age in days (when age < 1 year),int32,KY_SID_2015q1q3_CORE
+AGEMONTH,Age in months (when age < 11 years),int32,KY_SID_2015q1q3_CORE
+AMONTH,Admission month,int32,KY_SID_2015q1q3_CORE
+ATYPE,Admission type,int32,KY_SID_2015q1q3_CORE
+AWEEKEND,Admission day is a weekend,int32,KY_SID_2015q1q3_CORE
+BILLTYPE,"Type of bill, UB-04 coding",string,KY_SID_2015q1q3_CORE
+BWT,Birth weight in grams,int32,KY_SID_2015q1q3_CORE
+DIED,Died during hospitalization,int32,KY_SID_2015q1q3_CORE
+DISP_X,Disposition of patient (as received from source),string,KY_SID_2015q1q3_CORE
+DISPUB04,Disposition of patient (UB-04 standard coding),int32,KY_SID_2015q1q3_CORE
+DISPUNIFORM,Disposition of patient (uniform),int32,KY_SID_2015q1q3_CORE
+DMONTH,Discharge month,int32,KY_SID_2015q1q3_CORE
+DNR,Do not resuscitate indicator,int32,KY_SID_2015q1q3_CORE
+DQTR,Discharge quarter,int32,KY_SID_2015q1q3_CORE
+DRG,DRG in effect on discharge date,int32,KY_SID_2015q1q3_CORE
+DRG_NoPOA,"DRG in use on discharge date, calculated without POA",int32,KY_SID_2015q1q3_CORE
+DRG32,"DRG, version 32",int32,KY_SID_2015q1q3_CORE
+DRGVER,DRG grouper version used on discharge date,int32,KY_SID_2015q1q3_CORE
+DSHOSPID,Data source hospital identifier,string,KY_SID_2015q1q3_CORE
+DX_Admitting,Admitting Diagnosis Code,string,KY_SID_2015q1q3_CORE
+DX1,Diagnosis 1,string,KY_SID_2015q1q3_CORE
+DX2,Diagnosis 2,string,KY_SID_2015q1q3_CORE
+DX3,Diagnosis 3,string,KY_SID_2015q1q3_CORE
+DX4,Diagnosis 4,string,KY_SID_2015q1q3_CORE
+DX5,Diagnosis 5,string,KY_SID_2015q1q3_CORE
+DX6,Diagnosis 6,string,KY_SID_2015q1q3_CORE
+DX7,Diagnosis 7,string,KY_SID_2015q1q3_CORE
+DX8,Diagnosis 8,string,KY_SID_2015q1q3_CORE
+DX9,Diagnosis 9,string,KY_SID_2015q1q3_CORE
+DX10,Diagnosis 10,string,KY_SID_2015q1q3_CORE
+DX11,Diagnosis 11,string,KY_SID_2015q1q3_CORE
+DX12,Diagnosis 12,string,KY_SID_2015q1q3_CORE
+DX13,Diagnosis 13,string,KY_SID_2015q1q3_CORE
+DX14,Diagnosis 14,string,KY_SID_2015q1q3_CORE
+DX15,Diagnosis 15,string,KY_SID_2015q1q3_CORE
+DX16,Diagnosis 16,string,KY_SID_2015q1q3_CORE
+DX17,Diagnosis 17,string,KY_SID_2015q1q3_CORE
+DX18,Diagnosis 18,string,KY_SID_2015q1q3_CORE
+DX19,Diagnosis 19,string,KY_SID_2015q1q3_CORE
+DX20,Diagnosis 20,string,KY_SID_2015q1q3_CORE
+DX21,Diagnosis 21,string,KY_SID_2015q1q3_CORE
+DX22,Diagnosis 22,string,KY_SID_2015q1q3_CORE
+DX23,Diagnosis 23,string,KY_SID_2015q1q3_CORE
+DX24,Diagnosis 24,string,KY_SID_2015q1q3_CORE
+DX25,Diagnosis 25,string,KY_SID_2015q1q3_CORE
+DXCCS1,CCS: diagnosis 1,int32,KY_SID_2015q1q3_CORE
+DXCCS2,CCS: diagnosis 2,int32,KY_SID_2015q1q3_CORE
+DXCCS3,CCS: diagnosis 3,int32,KY_SID_2015q1q3_CORE
+DXCCS4,CCS: diagnosis 4,int32,KY_SID_2015q1q3_CORE
+DXCCS5,CCS: diagnosis 5,int32,KY_SID_2015q1q3_CORE
+DXCCS6,CCS: diagnosis 6,int32,KY_SID_2015q1q3_CORE
+DXCCS7,CCS: diagnosis 7,int32,KY_SID_2015q1q3_CORE
+DXCCS8,CCS: diagnosis 8,int32,KY_SID_2015q1q3_CORE
+DXCCS9,CCS: diagnosis 9,int32,KY_SID_2015q1q3_CORE
+DXCCS10,CCS: diagnosis 10,int32,KY_SID_2015q1q3_CORE
+DXCCS11,CCS: diagnosis 11,int32,KY_SID_2015q1q3_CORE
+DXCCS12,CCS: diagnosis 12,int32,KY_SID_2015q1q3_CORE
+DXCCS13,CCS: diagnosis 13,int32,KY_SID_2015q1q3_CORE
+DXCCS14,CCS: diagnosis 14,int32,KY_SID_2015q1q3_CORE
+DXCCS15,CCS: diagnosis 15,int32,KY_SID_2015q1q3_CORE
+DXCCS16,CCS: diagnosis 16,int32,KY_SID_2015q1q3_CORE
+DXCCS17,CCS: diagnosis 17,int32,KY_SID_2015q1q3_CORE
+DXCCS18,CCS: diagnosis 18,int32,KY_SID_2015q1q3_CORE
+DXCCS19,CCS: diagnosis 19,int32,KY_SID_2015q1q3_CORE
+DXCCS20,CCS: diagnosis 20,int32,KY_SID_2015q1q3_CORE
+DXCCS21,CCS: diagnosis 21,int32,KY_SID_2015q1q3_CORE
+DXCCS22,CCS: diagnosis 22,int32,KY_SID_2015q1q3_CORE
+DXCCS23,CCS: diagnosis 23,int32,KY_SID_2015q1q3_CORE
+DXCCS24,CCS: diagnosis 24,int32,KY_SID_2015q1q3_CORE
+DXCCS25,CCS: diagnosis 25,int32,KY_SID_2015q1q3_CORE
+DXPOA1,"Diagnosis 1, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA2,"Diagnosis 2, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA3,"Diagnosis 3, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA4,"Diagnosis 4, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA5,"Diagnosis 5, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA6,"Diagnosis 6, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA7,"Diagnosis 7, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA8,"Diagnosis 8, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA9,"Diagnosis 9, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA10,"Diagnosis 10, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA11,"Diagnosis 11, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA12,"Diagnosis 12, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA13,"Diagnosis 13, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA14,"Diagnosis 14, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA15,"Diagnosis 15, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA16,"Diagnosis 16, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA17,"Diagnosis 17, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA18,"Diagnosis 18, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA19,"Diagnosis 19, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA20,"Diagnosis 20, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA21,"Diagnosis 21, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA22,"Diagnosis 22, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA23,"Diagnosis 23, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA24,"Diagnosis 24, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXPOA25,"Diagnosis 25, present on admission indicator",string,KY_SID_2015q1q3_CORE
+DXVER,Diagnosis Version,int32,KY_SID_2015q1q3_CORE
+E_CCS1,CCS: E Code 1,int32,KY_SID_2015q1q3_CORE
+E_CCS2,CCS: E Code 2,int32,KY_SID_2015q1q3_CORE
+E_CCS3,CCS: E Code 3,int32,KY_SID_2015q1q3_CORE
+E_CCS4,CCS: E Code 4,int32,KY_SID_2015q1q3_CORE
+E_CCS5,CCS: E Code 5,int32,KY_SID_2015q1q3_CORE
+E_CCS6,CCS: E Code 6,int32,KY_SID_2015q1q3_CORE
+E_CCS7,CCS: E Code 7,int32,KY_SID_2015q1q3_CORE
+E_CCS8,CCS: E Code 8,int32,KY_SID_2015q1q3_CORE
+E_CCS9,CCS: E Code 9,int32,KY_SID_2015q1q3_CORE
+E_POA1,"E Code 1, present on admission indicator",string,KY_SID_2015q1q3_CORE
+E_POA2,"E Code 2, present on admission indicator",string,KY_SID_2015q1q3_CORE
+E_POA3,"E Code 3, present on admission indicator",string,KY_SID_2015q1q3_CORE
+E_POA4,"E Code 4, present on admission indicator",string,KY_SID_2015q1q3_CORE
+E_POA5,"E Code 5, present on admission indicator",string,KY_SID_2015q1q3_CORE
+E_POA6,"E Code 6, present on admission indicator",string,KY_SID_2015q1q3_CORE
+E_POA7,"E Code 7, present on admission indicator",string,KY_SID_2015q1q3_CORE
+E_POA8,"E Code 8, present on admission indicator",string,KY_SID_2015q1q3_CORE
+E_POA9,"E Code 9, present on admission indicator",string,KY_SID_2015q1q3_CORE
+ECODE1,E code 1,string,KY_SID_2015q1q3_CORE
+ECODE2,E code 2,string,KY_SID_2015q1q3_CORE
+ECODE3,E code 3,string,KY_SID_2015q1q3_CORE
+ECODE4,E code 4,string,KY_SID_2015q1q3_CORE
+ECODE5,E code 5,string,KY_SID_2015q1q3_CORE
+ECODE6,E code 6,string,KY_SID_2015q1q3_CORE
+ECODE7,E code 7,string,KY_SID_2015q1q3_CORE
+ECODE8,E code 8,string,KY_SID_2015q1q3_CORE
+ECODE9,E code 9,string,KY_SID_2015q1q3_CORE
+FEMALE,Indicator of sex,int32,KY_SID_2015q1q3_CORE
+HCUP_ED,HCUP Emergency Department service indicator,int32,KY_SID_2015q1q3_CORE
+HCUP_OS,HCUP Observation Stay service indicator,int32,KY_SID_2015q1q3_CORE
+HISPANIC,Hispanic ethnicity (uniform),int32,KY_SID_2015q1q3_CORE
+HISPANIC_X,Hispanic ethnicity (as received from source),string,KY_SID_2015q1q3_CORE
+HOSP_NPI,Hospital NPI,string,KY_SID_2015q1q3_CORE
+HOSPBRTH,Indicator of birth in this hospital,int32,KY_SID_2015q1q3_CORE
+HOSPST,Hospital state postal code,string,KY_SID_2015q1q3_CORE
+KEY,HCUP record identifier,double,KY_SID_2015q1q3_CORE
+LOS,Length of stay (cleaned),int32,KY_SID_2015q1q3_CORE
+LOS_X,Length of stay (as received from source),int32,KY_SID_2015q1q3_CORE
+MDC,MDC in effect on discharge date,int32,KY_SID_2015q1q3_CORE
+MDC_NoPOA,"MDC in use on discharge date, calculated without POA",int32,KY_SID_2015q1q3_CORE
+MDC32,"MDC, version 32",int32,KY_SID_2015q1q3_CORE
+MEDINCSTQ,Median household income state quartile for patient ZIP Code,int32,KY_SID_2015q1q3_CORE
+NCHRONIC,Number of chronic conditions,int32,KY_SID_2015q1q3_CORE
+NDX,Number of diagnoses on this record,int32,KY_SID_2015q1q3_CORE
+NECODE,Number of E codes on this record,int32,KY_SID_2015q1q3_CORE
+NEOMAT,Neonatal and/or maternal DX and/or PR,int32,KY_SID_2015q1q3_CORE
+NPR,Number of procedures on this record,int32,KY_SID_2015q1q3_CORE
+ORPROC,Major operating room procedure indicator,int32,KY_SID_2015q1q3_CORE
+OS_TIME,Observation stay time summed from UNITS,double,KY_SID_2015q1q3_CORE
+PAY1,Primary expected payer (uniform),int32,KY_SID_2015q1q3_CORE
+PAY1_X,Primary expected payer (as received from source),string,KY_SID_2015q1q3_CORE
+PAY2,Secondary expected payer (uniform),int32,KY_SID_2015q1q3_CORE
+PAY2_X,Secondary expected payer (as received from source),string,KY_SID_2015q1q3_CORE
+PAY3,Tertiary expected payer (uniform),int32,KY_SID_2015q1q3_CORE
+PAY3_X,Tertiary expected payer (as received from source),string,KY_SID_2015q1q3_CORE
+PL_CBSA,Patient location: Core Based Statistical Area (CBSA),int32,KY_SID_2015q1q3_CORE
+PL_NCHS,Patient Location: NCHS Urban-Rural Code,int32,KY_SID_2015q1q3_CORE
+PL_RUCC,Patient location: Rural-Urban Continuum Codes(RUCC),int32,KY_SID_2015q1q3_CORE
+PL_UIC,Patient location: Urban Influence Codes,int32,KY_SID_2015q1q3_CORE
+PL_UR_CAT4,Patient Location: Urban-Rural 4 Categories,int32,KY_SID_2015q1q3_CORE
+POA_Disch_Edit1,Discharge has POA missing on all nonexempt diagnoses,int32,KY_SID_2015q1q3_CORE
+POA_Disch_Edit2,Discharge has POA missing on all nonexempt secondary diagnoses,int32,KY_SID_2015q1q3_CORE
+POA_Hosp_Edit1,Hospital reported POA as Y on all diagnoses on all discharges,int32,KY_SID_2015q1q3_CORE
+POA_Hosp_Edit2,Hospital reported POA as missing on all non-Medicare discharges,int32,KY_SID_2015q1q3_CORE
+POA_Hosp_Edit3,Hospital reported POA as missing on all nonexempt diagnoses for 15% or more of d,int32,KY_SID_2015q1q3_CORE
+POA_Hosp_Edit3_Value,Percentage of discharges with all nonexempt diagnoses missing POA indicators,double,KY_SID_2015q1q3_CORE
+PointOfOrigin_X,"Point of origin for admission or visit, as received from source",string,KY_SID_2015q1q3_CORE
+PointOfOriginUB04,"Point of origin for admission or visit, UB-04 standard coding",string,KY_SID_2015q1q3_CORE
+PR1,Procedure 1,string,KY_SID_2015q1q3_CORE
+PR2,Procedure 2,string,KY_SID_2015q1q3_CORE
+PR3,Procedure 3,string,KY_SID_2015q1q3_CORE
+PR4,Procedure 4,string,KY_SID_2015q1q3_CORE
+PR5,Procedure 5,string,KY_SID_2015q1q3_CORE
+PR6,Procedure 6,string,KY_SID_2015q1q3_CORE
+PR7,Procedure 7,string,KY_SID_2015q1q3_CORE
+PR8,Procedure 8,string,KY_SID_2015q1q3_CORE
+PR9,Procedure 9,string,KY_SID_2015q1q3_CORE
+PR10,Procedure 10,string,KY_SID_2015q1q3_CORE
+PR11,Procedure 11,string,KY_SID_2015q1q3_CORE
+PR12,Procedure 12,string,KY_SID_2015q1q3_CORE
+PR13,Procedure 13,string,KY_SID_2015q1q3_CORE
+PR14,Procedure 14,string,KY_SID_2015q1q3_CORE
+PR15,Procedure 15,string,KY_SID_2015q1q3_CORE
+PR16,Procedure 16,string,KY_SID_2015q1q3_CORE
+PR17,Procedure 17,string,KY_SID_2015q1q3_CORE
+PR18,Procedure 18,string,KY_SID_2015q1q3_CORE
+PR19,Procedure 19,string,KY_SID_2015q1q3_CORE
+PR20,Procedure 20,string,KY_SID_2015q1q3_CORE
+PR21,Procedure 21,string,KY_SID_2015q1q3_CORE
+PR22,Procedure 22,string,KY_SID_2015q1q3_CORE
+PR23,Procedure 23,string,KY_SID_2015q1q3_CORE
+PR24,Procedure 24,string,KY_SID_2015q1q3_CORE
+PR25,Procedure 25,string,KY_SID_2015q1q3_CORE
+PRCCS1,CCS: procedure 1,int32,KY_SID_2015q1q3_CORE
+PRCCS2,CCS: procedure 2,int32,KY_SID_2015q1q3_CORE
+PRCCS3,CCS: procedure 3,int32,KY_SID_2015q1q3_CORE
+PRCCS4,CCS: procedure 4,int32,KY_SID_2015q1q3_CORE
+PRCCS5,CCS: procedure 5,int32,KY_SID_2015q1q3_CORE
+PRCCS6,CCS: procedure 6,int32,KY_SID_2015q1q3_CORE
+PRCCS7,CCS: procedure 7,int32,KY_SID_2015q1q3_CORE
+PRCCS8,CCS: procedure 8,int32,KY_SID_2015q1q3_CORE
+PRCCS9,CCS: procedure 9,int32,KY_SID_2015q1q3_CORE
+PRCCS10,CCS: procedure 10,int32,KY_SID_2015q1q3_CORE
+PRCCS11,CCS: procedure 11,int32,KY_SID_2015q1q3_CORE
+PRCCS12,CCS: procedure 12,int32,KY_SID_2015q1q3_CORE
+PRCCS13,CCS: procedure 13,int32,KY_SID_2015q1q3_CORE
+PRCCS14,CCS: procedure 14,int32,KY_SID_2015q1q3_CORE
+PRCCS15,CCS: procedure 15,int32,KY_SID_2015q1q3_CORE
+PRCCS16,CCS: procedure 16,int32,KY_SID_2015q1q3_CORE
+PRCCS17,CCS: procedure 17,int32,KY_SID_2015q1q3_CORE
+PRCCS18,CCS: procedure 18,int32,KY_SID_2015q1q3_CORE
+PRCCS19,CCS: procedure 19,int32,KY_SID_2015q1q3_CORE
+PRCCS20,CCS: procedure 20,int32,KY_SID_2015q1q3_CORE
+PRCCS21,CCS: procedure 21,int32,KY_SID_2015q1q3_CORE
+PRCCS22,CCS: procedure 22,int32,KY_SID_2015q1q3_CORE
+PRCCS23,CCS: procedure 23,int32,KY_SID_2015q1q3_CORE
+PRCCS24,CCS: procedure 24,int32,KY_SID_2015q1q3_CORE
+PRCCS25,CCS: procedure 25,int32,KY_SID_2015q1q3_CORE
+PRDAY1,Number of days from admission to PR1,int32,KY_SID_2015q1q3_CORE
+PRDAY2,Number of days from admission to PR2,int32,KY_SID_2015q1q3_CORE
+PRDAY3,Number of days from admission to PR3,int32,KY_SID_2015q1q3_CORE
+PRDAY4,Number of days from admission to PR4,int32,KY_SID_2015q1q3_CORE
+PRDAY5,Number of days from admission to PR5,int32,KY_SID_2015q1q3_CORE
+PRDAY6,Number of days from admission to PR6,int32,KY_SID_2015q1q3_CORE
+PRDAY7,Number of days from admission to PR7,int32,KY_SID_2015q1q3_CORE
+PRDAY8,Number of days from admission to PR8,int32,KY_SID_2015q1q3_CORE
+PRDAY9,Number of days from admission to PR9,int32,KY_SID_2015q1q3_CORE
+PRDAY10,Number of days from admission to PR10,int32,KY_SID_2015q1q3_CORE
+PRDAY11,Number of days from admission to PR11,int32,KY_SID_2015q1q3_CORE
+PRDAY12,Number of days from admission to PR12,int32,KY_SID_2015q1q3_CORE
+PRDAY13,Number of days from admission to PR13,int32,KY_SID_2015q1q3_CORE
+PRDAY14,Number of days from admission to PR14,int32,KY_SID_2015q1q3_CORE
+PRDAY15,Number of days from admission to PR15,int32,KY_SID_2015q1q3_CORE
+PRDAY16,Number of days from admission to PR16,int32,KY_SID_2015q1q3_CORE
+PRDAY17,Number of days from admission to PR17,int32,KY_SID_2015q1q3_CORE
+PRDAY18,Number of days from admission to PR18,int32,KY_SID_2015q1q3_CORE
+PRDAY19,Number of days from admission to PR19,int32,KY_SID_2015q1q3_CORE
+PRDAY20,Number of days from admission to PR20,int32,KY_SID_2015q1q3_CORE
+PRDAY21,Number of days from admission to PR21,int32,KY_SID_2015q1q3_CORE
+PRDAY22,Number of days from admission to PR22,int32,KY_SID_2015q1q3_CORE
+PRDAY23,Number of days from admission to PR23,int32,KY_SID_2015q1q3_CORE
+PRDAY24,Number of days from admission to PR24,int32,KY_SID_2015q1q3_CORE
+PRDAY25,Number of days from admission to PR25,int32,KY_SID_2015q1q3_CORE
+PROCTYPE,Procedure type indicator,int32,KY_SID_2015q1q3_CORE
+PRVER,Procedure Version,int32,KY_SID_2015q1q3_CORE
+PSTATE,Patient State postal code,string,KY_SID_2015q1q3_CORE
+PSTCO,Patient state/county FIPS code,int32,KY_SID_2015q1q3_CORE
+PSTCO2,"Patient state/county FIPS code, possibly derived from ZIP Code",int32,KY_SID_2015q1q3_CORE
+RACE,Race (uniform),int32,KY_SID_2015q1q3_CORE
+RACE_X,Race (as received from source),string,KY_SID_2015q1q3_CORE
+SERVICELINE,Hospital Service Line,int32,KY_SID_2015q1q3_CORE
+TOTCHG,Total charges (cleaned),double,KY_SID_2015q1q3_CORE
+TOTCHG_X,Total charges (as received from source),double,KY_SID_2015q1q3_CORE
+TRAN_IN,Transfer in indicator,int32,KY_SID_2015q1q3_CORE
+TRAN_OUT,Transfer out indicator,int32,KY_SID_2015q1q3_CORE
+YEAR,Calendar year,int32,KY_SID_2015q1q3_CORE
+ZIP,Patient ZIP Code,string,KY_SID_2015q1q3_CORE
+ZIPINC_QRTL,Median household income national quartile for patient ZIP Code,int32,KY_SID_2015q1q3_CORE
+AYEAR,Admission year,int32,KY_SID_2015q1q3_CORE
+BMONTH,Birth month,int32,KY_SID_2015q1q3_CORE
+BYEAR,Birth year,int32,KY_SID_2015q1q3_CORE
+PRMONTH1,Month of procedure 1,int32,KY_SID_2015q1q3_CORE
+PRMONTH2,Month of procedure 2,int32,KY_SID_2015q1q3_CORE
+PRMONTH3,Month of procedure 3,int32,KY_SID_2015q1q3_CORE
+PRMONTH4,Month of procedure 4,int32,KY_SID_2015q1q3_CORE
+PRMONTH5,Month of procedure 5,int32,KY_SID_2015q1q3_CORE
+PRMONTH6,Month of procedure 6,int32,KY_SID_2015q1q3_CORE
+PRMONTH7,Month of procedure 7,int32,KY_SID_2015q1q3_CORE
+PRMONTH8,Month of procedure 8,int32,KY_SID_2015q1q3_CORE
+PRMONTH9,Month of procedure 9,int32,KY_SID_2015q1q3_CORE
+PRMONTH10,Month of procedure 10,int32,KY_SID_2015q1q3_CORE
+PRMONTH11,Month of procedure 11,int32,KY_SID_2015q1q3_CORE
+PRMONTH12,Month of procedure 12,int32,KY_SID_2015q1q3_CORE
+PRMONTH13,Month of procedure 13,int32,KY_SID_2015q1q3_CORE
+PRMONTH14,Month of procedure 14,int32,KY_SID_2015q1q3_CORE
+PRMONTH15,Month of procedure 15,int32,KY_SID_2015q1q3_CORE
+PRMONTH16,Month of procedure 16,int32,KY_SID_2015q1q3_CORE
+PRMONTH17,Month of procedure 17,int32,KY_SID_2015q1q3_CORE
+PRMONTH18,Month of procedure 18,int32,KY_SID_2015q1q3_CORE
+PRMONTH19,Month of procedure 19,int32,KY_SID_2015q1q3_CORE
+PRMONTH20,Month of procedure 20,int32,KY_SID_2015q1q3_CORE
+PRMONTH21,Month of procedure 21,int32,KY_SID_2015q1q3_CORE
+PRMONTH22,Month of procedure 22,int32,KY_SID_2015q1q3_CORE
+PRMONTH23,Month of procedure 23,int32,KY_SID_2015q1q3_CORE
+PRMONTH24,Month of procedure 24,int32,KY_SID_2015q1q3_CORE
+PRMONTH25,Month of procedure 25,int32,KY_SID_2015q1q3_CORE
+PRYEAR1,Year of procedure 1,int32,KY_SID_2015q1q3_CORE
+PRYEAR2,Year of procedure 2,int32,KY_SID_2015q1q3_CORE
+PRYEAR3,Year of procedure 3,int32,KY_SID_2015q1q3_CORE
+PRYEAR4,Year of procedure 4,int32,KY_SID_2015q1q3_CORE
+PRYEAR5,Year of procedure 5,int32,KY_SID_2015q1q3_CORE
+PRYEAR6,Year of procedure 6,int32,KY_SID_2015q1q3_CORE
+PRYEAR7,Year of procedure 7,int32,KY_SID_2015q1q3_CORE
+PRYEAR8,Year of procedure 8,int32,KY_SID_2015q1q3_CORE
+PRYEAR9,Year of procedure 9,int32,KY_SID_2015q1q3_CORE
+PRYEAR10,Year of procedure 10,int32,KY_SID_2015q1q3_CORE
+PRYEAR11,Year of procedure 11,int32,KY_SID_2015q1q3_CORE
+PRYEAR12,Year of procedure 12,int32,KY_SID_2015q1q3_CORE
+PRYEAR13,Year of procedure 13,int32,KY_SID_2015q1q3_CORE
+PRYEAR14,Year of procedure 14,int32,KY_SID_2015q1q3_CORE
+PRYEAR15,Year of procedure 15,int32,KY_SID_2015q1q3_CORE
+PRYEAR16,Year of procedure 16,int32,KY_SID_2015q1q3_CORE
+PRYEAR17,Year of procedure 17,int32,KY_SID_2015q1q3_CORE
+PRYEAR18,Year of procedure 18,int32,KY_SID_2015q1q3_CORE
+PRYEAR19,Year of procedure 19,int32,KY_SID_2015q1q3_CORE
+PRYEAR20,Year of procedure 20,int32,KY_SID_2015q1q3_CORE
+PRYEAR21,Year of procedure 21,int32,KY_SID_2015q1q3_CORE
+PRYEAR22,Year of procedure 22,int32,KY_SID_2015q1q3_CORE
+PRYEAR23,Year of procedure 23,int32,KY_SID_2015q1q3_CORE
+PRYEAR24,Year of procedure 24,int32,KY_SID_2015q1q3_CORE
+PRYEAR25,Year of procedure 25,int32,KY_SID_2015q1q3_CORE

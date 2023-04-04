@@ -1,0 +1,457 @@
+var,var_label,value_type,dataset_id
+AGE,Age in years at admission,int32,NJ_SID_2016_CORE
+AGEDAY,Age in days (when age < 1 year),int32,NJ_SID_2016_CORE
+AGEMONTH,Age in months (when age < 11 years),int32,NJ_SID_2016_CORE
+AHOUR,Admission Hour,int32,NJ_SID_2016_CORE
+AMONTH,Admission month,int32,NJ_SID_2016_CORE
+ATYPE,Admission type,int32,NJ_SID_2016_CORE
+AWEEKEND,Admission day is a weekend,int32,NJ_SID_2016_CORE
+BILLTYPE,"Type of bill, UB-04 coding",string,NJ_SID_2016_CORE
+BWT,Birth weight in grams,int32,NJ_SID_2016_CORE
+CPT1,CPT/HCPCS procedure code 1,string,NJ_SID_2016_CORE
+CPT2,CPT/HCPCS procedure code 2,string,NJ_SID_2016_CORE
+CPT3,CPT/HCPCS procedure code 3,string,NJ_SID_2016_CORE
+CPT4,CPT/HCPCS procedure code 4,string,NJ_SID_2016_CORE
+CPT5,CPT/HCPCS procedure code 5,string,NJ_SID_2016_CORE
+CPT6,CPT/HCPCS procedure code 6,string,NJ_SID_2016_CORE
+CPT7,CPT/HCPCS procedure code 7,string,NJ_SID_2016_CORE
+CPT8,CPT/HCPCS procedure code 8,string,NJ_SID_2016_CORE
+CPT9,CPT/HCPCS procedure code 9,string,NJ_SID_2016_CORE
+CPT10,CPT/HCPCS procedure code 10,string,NJ_SID_2016_CORE
+CPT11,CPT/HCPCS procedure code 11,string,NJ_SID_2016_CORE
+CPT12,CPT/HCPCS procedure code 12,string,NJ_SID_2016_CORE
+CPT13,CPT/HCPCS procedure code 13,string,NJ_SID_2016_CORE
+CPT14,CPT/HCPCS procedure code 14,string,NJ_SID_2016_CORE
+CPT15,CPT/HCPCS procedure code 15,string,NJ_SID_2016_CORE
+CPT16,CPT/HCPCS procedure code 16,string,NJ_SID_2016_CORE
+CPT17,CPT/HCPCS procedure code 17,string,NJ_SID_2016_CORE
+CPT18,CPT/HCPCS procedure code 18,string,NJ_SID_2016_CORE
+CPT19,CPT/HCPCS procedure code 19,string,NJ_SID_2016_CORE
+CPT20,CPT/HCPCS procedure code 20,string,NJ_SID_2016_CORE
+CPT21,CPT/HCPCS procedure code 21,string,NJ_SID_2016_CORE
+CPT22,CPT/HCPCS procedure code 22,string,NJ_SID_2016_CORE
+CPT23,CPT/HCPCS procedure code 23,string,NJ_SID_2016_CORE
+CPT24,CPT/HCPCS procedure code 24,string,NJ_SID_2016_CORE
+CPT25,CPT/HCPCS procedure code 25,string,NJ_SID_2016_CORE
+CPT26,CPT/HCPCS procedure code 26,string,NJ_SID_2016_CORE
+CPT27,CPT/HCPCS procedure code 27,string,NJ_SID_2016_CORE
+CPT28,CPT/HCPCS procedure code 28,string,NJ_SID_2016_CORE
+CPT29,CPT/HCPCS procedure code 29,string,NJ_SID_2016_CORE
+CPT30,CPT/HCPCS procedure code 30,string,NJ_SID_2016_CORE
+CPT31,CPT/HCPCS procedure code 31,string,NJ_SID_2016_CORE
+CPT32,CPT/HCPCS procedure code 32,string,NJ_SID_2016_CORE
+CPT33,CPT/HCPCS procedure code 33,string,NJ_SID_2016_CORE
+CPT34,CPT/HCPCS procedure code 34,string,NJ_SID_2016_CORE
+CPT35,CPT/HCPCS procedure code 35,string,NJ_SID_2016_CORE
+CPT36,CPT/HCPCS procedure code 36,string,NJ_SID_2016_CORE
+CPT37,CPT/HCPCS procedure code 37,string,NJ_SID_2016_CORE
+CPT38,CPT/HCPCS procedure code 38,string,NJ_SID_2016_CORE
+CPT39,CPT/HCPCS procedure code 39,string,NJ_SID_2016_CORE
+CPT40,CPT/HCPCS procedure code 40,string,NJ_SID_2016_CORE
+CPT41,CPT/HCPCS procedure code 41,string,NJ_SID_2016_CORE
+CPT42,CPT/HCPCS procedure code 42,string,NJ_SID_2016_CORE
+CPT43,CPT/HCPCS procedure code 43,string,NJ_SID_2016_CORE
+CPT44,CPT/HCPCS procedure code 44,string,NJ_SID_2016_CORE
+CPT45,CPT/HCPCS procedure code 45,string,NJ_SID_2016_CORE
+CPT46,CPT/HCPCS procedure code 46,string,NJ_SID_2016_CORE
+CPT47,CPT/HCPCS procedure code 47,string,NJ_SID_2016_CORE
+CPT48,CPT/HCPCS procedure code 48,string,NJ_SID_2016_CORE
+CPT49,CPT/HCPCS procedure code 49,string,NJ_SID_2016_CORE
+CPT50,CPT/HCPCS procedure code 50,string,NJ_SID_2016_CORE
+CPTCCS1,CCS: CPT 1,int32,NJ_SID_2016_CORE
+CPTCCS2,CCS: CPT 2,int32,NJ_SID_2016_CORE
+CPTCCS3,CCS: CPT 3,int32,NJ_SID_2016_CORE
+CPTCCS4,CCS: CPT 4,int32,NJ_SID_2016_CORE
+CPTCCS5,CCS: CPT 5,int32,NJ_SID_2016_CORE
+CPTCCS6,CCS: CPT 6,int32,NJ_SID_2016_CORE
+CPTCCS7,CCS: CPT 7,int32,NJ_SID_2016_CORE
+CPTCCS8,CCS: CPT 8,int32,NJ_SID_2016_CORE
+CPTCCS9,CCS: CPT 9,int32,NJ_SID_2016_CORE
+CPTCCS10,CCS: CPT 10,int32,NJ_SID_2016_CORE
+CPTCCS11,CCS: CPT 11,int32,NJ_SID_2016_CORE
+CPTCCS12,CCS: CPT 12,int32,NJ_SID_2016_CORE
+CPTCCS13,CCS: CPT 13,int32,NJ_SID_2016_CORE
+CPTCCS14,CCS: CPT 14,int32,NJ_SID_2016_CORE
+CPTCCS15,CCS: CPT 15,int32,NJ_SID_2016_CORE
+CPTCCS16,CCS: CPT 16,int32,NJ_SID_2016_CORE
+CPTCCS17,CCS: CPT 17,int32,NJ_SID_2016_CORE
+CPTCCS18,CCS: CPT 18,int32,NJ_SID_2016_CORE
+CPTCCS19,CCS: CPT 19,int32,NJ_SID_2016_CORE
+CPTCCS20,CCS: CPT 20,int32,NJ_SID_2016_CORE
+CPTCCS21,CCS: CPT 21,int32,NJ_SID_2016_CORE
+CPTCCS22,CCS: CPT 22,int32,NJ_SID_2016_CORE
+CPTCCS23,CCS: CPT 23,int32,NJ_SID_2016_CORE
+CPTCCS24,CCS: CPT 24,int32,NJ_SID_2016_CORE
+CPTCCS25,CCS: CPT 25,int32,NJ_SID_2016_CORE
+CPTCCS26,CCS: CPT 26,int32,NJ_SID_2016_CORE
+CPTCCS27,CCS: CPT 27,int32,NJ_SID_2016_CORE
+CPTCCS28,CCS: CPT 28,int32,NJ_SID_2016_CORE
+CPTCCS29,CCS: CPT 29,int32,NJ_SID_2016_CORE
+CPTCCS30,CCS: CPT 30,int32,NJ_SID_2016_CORE
+CPTCCS31,CCS: CPT 31,int32,NJ_SID_2016_CORE
+CPTCCS32,CCS: CPT 32,int32,NJ_SID_2016_CORE
+CPTCCS33,CCS: CPT 33,int32,NJ_SID_2016_CORE
+CPTCCS34,CCS: CPT 34,int32,NJ_SID_2016_CORE
+CPTCCS35,CCS: CPT 35,int32,NJ_SID_2016_CORE
+CPTCCS36,CCS: CPT 36,int32,NJ_SID_2016_CORE
+CPTCCS37,CCS: CPT 37,int32,NJ_SID_2016_CORE
+CPTCCS38,CCS: CPT 38,int32,NJ_SID_2016_CORE
+CPTCCS39,CCS: CPT 39,int32,NJ_SID_2016_CORE
+CPTCCS40,CCS: CPT 40,int32,NJ_SID_2016_CORE
+CPTCCS41,CCS: CPT 41,int32,NJ_SID_2016_CORE
+CPTCCS42,CCS: CPT 42,int32,NJ_SID_2016_CORE
+CPTCCS43,CCS: CPT 43,int32,NJ_SID_2016_CORE
+CPTCCS44,CCS: CPT 44,int32,NJ_SID_2016_CORE
+CPTCCS45,CCS: CPT 45,int32,NJ_SID_2016_CORE
+CPTCCS46,CCS: CPT 46,int32,NJ_SID_2016_CORE
+CPTCCS47,CCS: CPT 47,int32,NJ_SID_2016_CORE
+CPTCCS48,CCS: CPT 48,int32,NJ_SID_2016_CORE
+CPTCCS49,CCS: CPT 49,int32,NJ_SID_2016_CORE
+CPTCCS50,CCS: CPT 50,int32,NJ_SID_2016_CORE
+CPTM1_1,First CPT-4/HCPCS modifier 1,string,NJ_SID_2016_CORE
+CPTM1_2,First CPT-4/HCPCS modifier 2,string,NJ_SID_2016_CORE
+CPTM1_3,First CPT-4/HCPCS modifier 3,string,NJ_SID_2016_CORE
+CPTM1_4,First CPT-4/HCPCS modifier 4,string,NJ_SID_2016_CORE
+CPTM1_5,First CPT-4/HCPCS modifier 5,string,NJ_SID_2016_CORE
+CPTM1_6,First CPT-4/HCPCS modifier 6,string,NJ_SID_2016_CORE
+CPTM1_7,First CPT-4/HCPCS modifier 7,string,NJ_SID_2016_CORE
+CPTM1_8,First CPT-4/HCPCS modifier 8,string,NJ_SID_2016_CORE
+CPTM1_9,First CPT-4/HCPCS modifier 9,string,NJ_SID_2016_CORE
+CPTM1_10,First CPT-4/HCPCS modifier 10,string,NJ_SID_2016_CORE
+CPTM1_11,First CPT-4/HCPCS modifier 11,string,NJ_SID_2016_CORE
+CPTM1_12,First CPT-4/HCPCS modifier 12,string,NJ_SID_2016_CORE
+CPTM1_13,First CPT-4/HCPCS modifier 13,string,NJ_SID_2016_CORE
+CPTM1_14,First CPT-4/HCPCS modifier 14,string,NJ_SID_2016_CORE
+CPTM1_15,First CPT-4/HCPCS modifier 15,string,NJ_SID_2016_CORE
+CPTM1_16,First CPT-4/HCPCS modifier 16,string,NJ_SID_2016_CORE
+CPTM1_17,First CPT-4/HCPCS modifier 17,string,NJ_SID_2016_CORE
+CPTM1_18,First CPT-4/HCPCS modifier 18,string,NJ_SID_2016_CORE
+CPTM1_19,First CPT-4/HCPCS modifier 19,string,NJ_SID_2016_CORE
+CPTM1_20,First CPT-4/HCPCS modifier 20,string,NJ_SID_2016_CORE
+CPTM1_21,First CPT-4/HCPCS modifier 21,string,NJ_SID_2016_CORE
+CPTM1_22,First CPT-4/HCPCS modifier 22,string,NJ_SID_2016_CORE
+CPTM1_23,First CPT-4/HCPCS modifier 23,string,NJ_SID_2016_CORE
+CPTM1_24,First CPT-4/HCPCS modifier 24,string,NJ_SID_2016_CORE
+CPTM1_25,First CPT-4/HCPCS modifier 25,string,NJ_SID_2016_CORE
+CPTM1_26,First CPT-4/HCPCS modifier 26,string,NJ_SID_2016_CORE
+CPTM1_27,First CPT-4/HCPCS modifier 27,string,NJ_SID_2016_CORE
+CPTM1_28,First CPT-4/HCPCS modifier 28,string,NJ_SID_2016_CORE
+CPTM1_29,First CPT-4/HCPCS modifier 29,string,NJ_SID_2016_CORE
+CPTM1_30,First CPT-4/HCPCS modifier 30,string,NJ_SID_2016_CORE
+CPTM1_31,First CPT-4/HCPCS modifier 31,string,NJ_SID_2016_CORE
+CPTM1_32,First CPT-4/HCPCS modifier 32,string,NJ_SID_2016_CORE
+CPTM1_33,First CPT-4/HCPCS modifier 33,string,NJ_SID_2016_CORE
+CPTM1_34,First CPT-4/HCPCS modifier 34,string,NJ_SID_2016_CORE
+CPTM1_35,First CPT-4/HCPCS modifier 35,string,NJ_SID_2016_CORE
+CPTM1_36,First CPT-4/HCPCS modifier 36,string,NJ_SID_2016_CORE
+CPTM1_37,First CPT-4/HCPCS modifier 37,string,NJ_SID_2016_CORE
+CPTM1_38,First CPT-4/HCPCS modifier 38,string,NJ_SID_2016_CORE
+CPTM1_39,First CPT-4/HCPCS modifier 39,string,NJ_SID_2016_CORE
+CPTM1_40,First CPT-4/HCPCS modifier 40,string,NJ_SID_2016_CORE
+CPTM1_41,First CPT-4/HCPCS modifier 41,string,NJ_SID_2016_CORE
+CPTM1_42,First CPT-4/HCPCS modifier 42,string,NJ_SID_2016_CORE
+CPTM1_43,First CPT-4/HCPCS modifier 43,string,NJ_SID_2016_CORE
+CPTM1_44,First CPT-4/HCPCS modifier 44,string,NJ_SID_2016_CORE
+CPTM1_45,First CPT-4/HCPCS modifier 45,string,NJ_SID_2016_CORE
+CPTM1_46,First CPT-4/HCPCS modifier 46,string,NJ_SID_2016_CORE
+CPTM1_47,First CPT-4/HCPCS modifier 47,string,NJ_SID_2016_CORE
+CPTM1_48,First CPT-4/HCPCS modifier 48,string,NJ_SID_2016_CORE
+CPTM1_49,First CPT-4/HCPCS modifier 49,string,NJ_SID_2016_CORE
+CPTM1_50,First CPT-4/HCPCS modifier 50,string,NJ_SID_2016_CORE
+CPTM2_1,Second CPT-4/HCPCS modifier 1,string,NJ_SID_2016_CORE
+CPTM2_2,Second CPT-4/HCPCS modifier 2,string,NJ_SID_2016_CORE
+CPTM2_3,Second CPT-4/HCPCS modifier 3,string,NJ_SID_2016_CORE
+CPTM2_4,Second CPT-4/HCPCS modifier 4,string,NJ_SID_2016_CORE
+CPTM2_5,Second CPT-4/HCPCS modifier 5,string,NJ_SID_2016_CORE
+CPTM2_6,Second CPT-4/HCPCS modifier 6,string,NJ_SID_2016_CORE
+CPTM2_7,Second CPT-4/HCPCS modifier 7,string,NJ_SID_2016_CORE
+CPTM2_8,Second CPT-4/HCPCS modifier 8,string,NJ_SID_2016_CORE
+CPTM2_9,Second CPT-4/HCPCS modifier 9,string,NJ_SID_2016_CORE
+CPTM2_10,Second CPT-4/HCPCS modifier 10,string,NJ_SID_2016_CORE
+CPTM2_11,Second CPT-4/HCPCS modifier 11,string,NJ_SID_2016_CORE
+CPTM2_12,Second CPT-4/HCPCS modifier 12,string,NJ_SID_2016_CORE
+CPTM2_13,Second CPT-4/HCPCS modifier 13,string,NJ_SID_2016_CORE
+CPTM2_14,Second CPT-4/HCPCS modifier 14,string,NJ_SID_2016_CORE
+CPTM2_15,Second CPT-4/HCPCS modifier 15,string,NJ_SID_2016_CORE
+CPTM2_16,Second CPT-4/HCPCS modifier 16,string,NJ_SID_2016_CORE
+CPTM2_17,Second CPT-4/HCPCS modifier 17,string,NJ_SID_2016_CORE
+CPTM2_18,Second CPT-4/HCPCS modifier 18,string,NJ_SID_2016_CORE
+CPTM2_19,Second CPT-4/HCPCS modifier 19,string,NJ_SID_2016_CORE
+CPTM2_20,Second CPT-4/HCPCS modifier 20,string,NJ_SID_2016_CORE
+CPTM2_21,Second CPT-4/HCPCS modifier 21,string,NJ_SID_2016_CORE
+CPTM2_22,Second CPT-4/HCPCS modifier 22,string,NJ_SID_2016_CORE
+CPTM2_23,Second CPT-4/HCPCS modifier 23,string,NJ_SID_2016_CORE
+CPTM2_24,Second CPT-4/HCPCS modifier 24,string,NJ_SID_2016_CORE
+CPTM2_25,Second CPT-4/HCPCS modifier 25,string,NJ_SID_2016_CORE
+CPTM2_26,Second CPT-4/HCPCS modifier 26,string,NJ_SID_2016_CORE
+CPTM2_27,Second CPT-4/HCPCS modifier 27,string,NJ_SID_2016_CORE
+CPTM2_28,Second CPT-4/HCPCS modifier 28,string,NJ_SID_2016_CORE
+CPTM2_29,Second CPT-4/HCPCS modifier 29,string,NJ_SID_2016_CORE
+CPTM2_30,Second CPT-4/HCPCS modifier 30,string,NJ_SID_2016_CORE
+CPTM2_31,Second CPT-4/HCPCS modifier 31,string,NJ_SID_2016_CORE
+CPTM2_32,Second CPT-4/HCPCS modifier 32,string,NJ_SID_2016_CORE
+CPTM2_33,Second CPT-4/HCPCS modifier 33,string,NJ_SID_2016_CORE
+CPTM2_34,Second CPT-4/HCPCS modifier 34,string,NJ_SID_2016_CORE
+CPTM2_35,Second CPT-4/HCPCS modifier 35,string,NJ_SID_2016_CORE
+CPTM2_36,Second CPT-4/HCPCS modifier 36,string,NJ_SID_2016_CORE
+CPTM2_37,Second CPT-4/HCPCS modifier 37,string,NJ_SID_2016_CORE
+CPTM2_38,Second CPT-4/HCPCS modifier 38,string,NJ_SID_2016_CORE
+CPTM2_39,Second CPT-4/HCPCS modifier 39,string,NJ_SID_2016_CORE
+CPTM2_40,Second CPT-4/HCPCS modifier 40,string,NJ_SID_2016_CORE
+CPTM2_41,Second CPT-4/HCPCS modifier 41,string,NJ_SID_2016_CORE
+CPTM2_42,Second CPT-4/HCPCS modifier 42,string,NJ_SID_2016_CORE
+CPTM2_43,Second CPT-4/HCPCS modifier 43,string,NJ_SID_2016_CORE
+CPTM2_44,Second CPT-4/HCPCS modifier 44,string,NJ_SID_2016_CORE
+CPTM2_45,Second CPT-4/HCPCS modifier 45,string,NJ_SID_2016_CORE
+CPTM2_46,Second CPT-4/HCPCS modifier 46,string,NJ_SID_2016_CORE
+CPTM2_47,Second CPT-4/HCPCS modifier 47,string,NJ_SID_2016_CORE
+CPTM2_48,Second CPT-4/HCPCS modifier 48,string,NJ_SID_2016_CORE
+CPTM2_49,Second CPT-4/HCPCS modifier 49,string,NJ_SID_2016_CORE
+CPTM2_50,Second CPT-4/HCPCS modifier 50,string,NJ_SID_2016_CORE
+DHOUR,Discharge Hour,int32,NJ_SID_2016_CORE
+DIED,Died during hospitalization,int32,NJ_SID_2016_CORE
+DISP_X,Disposition of patient (as received from source),string,NJ_SID_2016_CORE
+DISPUB04,Disposition of patient (UB-04 standard coding),int32,NJ_SID_2016_CORE
+DISPUNIFORM,Disposition of patient (uniform),int32,NJ_SID_2016_CORE
+DMONTH,Discharge month,int32,NJ_SID_2016_CORE
+DNR,Do not resuscitate indicator,int32,NJ_SID_2016_CORE
+DQTR,Discharge quarter,int32,NJ_SID_2016_CORE
+DRG,DRG in effect on discharge date,int32,NJ_SID_2016_CORE
+DRG_NoPOA,"DRG in use on discharge date, calculated without POA",int32,NJ_SID_2016_CORE
+DRGVER,DRG grouper version used on discharge date,int32,NJ_SID_2016_CORE
+DSHOSPID,Data source hospital identifier,string,NJ_SID_2016_CORE
+DXPOA1,"Diagnosis 1, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA2,"Diagnosis 2, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA3,"Diagnosis 3, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA4,"Diagnosis 4, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA5,"Diagnosis 5, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA6,"Diagnosis 6, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA7,"Diagnosis 7, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA8,"Diagnosis 8, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA9,"Diagnosis 9, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA10,"Diagnosis 10, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA11,"Diagnosis 11, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA12,"Diagnosis 12, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA13,"Diagnosis 13, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA14,"Diagnosis 14, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA15,"Diagnosis 15, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA16,"Diagnosis 16, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA17,"Diagnosis 17, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA18,"Diagnosis 18, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA19,"Diagnosis 19, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA20,"Diagnosis 20, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA21,"Diagnosis 21, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA22,"Diagnosis 22, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA23,"Diagnosis 23, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA24,"Diagnosis 24, present on admission indicator",string,NJ_SID_2016_CORE
+DXPOA25,"Diagnosis 25, present on admission indicator",string,NJ_SID_2016_CORE
+DXVER,Diagnosis Version,int32,NJ_SID_2016_CORE
+E_POA1,"External cause 1, present on admission indicator",string,NJ_SID_2016_CORE
+E_POA2,"External cause 2, present on admission indicator",string,NJ_SID_2016_CORE
+E_POA3,"External cause 3, present on admission indicator",string,NJ_SID_2016_CORE
+E_POA4,"External cause 4, present on admission indicator",string,NJ_SID_2016_CORE
+E_POA5,"External cause 5, present on admission indicator",string,NJ_SID_2016_CORE
+E_POA6,"External cause 6, present on admission indicator",string,NJ_SID_2016_CORE
+E_POA7,"External cause 7, present on admission indicator",string,NJ_SID_2016_CORE
+E_POA8,"External cause 8, present on admission indicator",string,NJ_SID_2016_CORE
+E_POA9,"External cause 9, present on admission indicator",string,NJ_SID_2016_CORE
+FEMALE,Indicator of sex,int32,NJ_SID_2016_CORE
+HCUP_ED,HCUP Emergency Department service indicator,int32,NJ_SID_2016_CORE
+HCUP_OS,HCUP Observation Stay service indicator,int32,NJ_SID_2016_CORE
+HISPANIC,Hispanic ethnicity (uniform),int32,NJ_SID_2016_CORE
+HISPANIC_X,Hispanic ethnicity (as received from source),string,NJ_SID_2016_CORE
+Homeless,Indicator that patient is homeless,int32,NJ_SID_2016_CORE
+HOSPST,Hospital state postal code,string,NJ_SID_2016_CORE
+I10_DX_Admitting,ICD-10-CM Admitting Diagnosis Code,string,NJ_SID_2016_CORE
+I10_DX1,ICD-10-CM Diagnosis 1,string,NJ_SID_2016_CORE
+I10_DX2,ICD-10-CM Diagnosis 2,string,NJ_SID_2016_CORE
+I10_DX3,ICD-10-CM Diagnosis 3,string,NJ_SID_2016_CORE
+I10_DX4,ICD-10-CM Diagnosis 4,string,NJ_SID_2016_CORE
+I10_DX5,ICD-10-CM Diagnosis 5,string,NJ_SID_2016_CORE
+I10_DX6,ICD-10-CM Diagnosis 6,string,NJ_SID_2016_CORE
+I10_DX7,ICD-10-CM Diagnosis 7,string,NJ_SID_2016_CORE
+I10_DX8,ICD-10-CM Diagnosis 8,string,NJ_SID_2016_CORE
+I10_DX9,ICD-10-CM Diagnosis 9,string,NJ_SID_2016_CORE
+I10_DX10,ICD-10-CM Diagnosis 10,string,NJ_SID_2016_CORE
+I10_DX11,ICD-10-CM Diagnosis 11,string,NJ_SID_2016_CORE
+I10_DX12,ICD-10-CM Diagnosis 12,string,NJ_SID_2016_CORE
+I10_DX13,ICD-10-CM Diagnosis 13,string,NJ_SID_2016_CORE
+I10_DX14,ICD-10-CM Diagnosis 14,string,NJ_SID_2016_CORE
+I10_DX15,ICD-10-CM Diagnosis 15,string,NJ_SID_2016_CORE
+I10_DX16,ICD-10-CM Diagnosis 16,string,NJ_SID_2016_CORE
+I10_DX17,ICD-10-CM Diagnosis 17,string,NJ_SID_2016_CORE
+I10_DX18,ICD-10-CM Diagnosis 18,string,NJ_SID_2016_CORE
+I10_DX19,ICD-10-CM Diagnosis 19,string,NJ_SID_2016_CORE
+I10_DX20,ICD-10-CM Diagnosis 20,string,NJ_SID_2016_CORE
+I10_DX21,ICD-10-CM Diagnosis 21,string,NJ_SID_2016_CORE
+I10_DX22,ICD-10-CM Diagnosis 22,string,NJ_SID_2016_CORE
+I10_DX23,ICD-10-CM Diagnosis 23,string,NJ_SID_2016_CORE
+I10_DX24,ICD-10-CM Diagnosis 24,string,NJ_SID_2016_CORE
+I10_DX25,ICD-10-CM Diagnosis 25,string,NJ_SID_2016_CORE
+I10_ECAUSE1,ICD-10-CM External cause 1,string,NJ_SID_2016_CORE
+I10_ECAUSE2,ICD-10-CM External cause 2,string,NJ_SID_2016_CORE
+I10_ECAUSE3,ICD-10-CM External cause 3,string,NJ_SID_2016_CORE
+I10_ECAUSE4,ICD-10-CM External cause 4,string,NJ_SID_2016_CORE
+I10_ECAUSE5,ICD-10-CM External cause 5,string,NJ_SID_2016_CORE
+I10_ECAUSE6,ICD-10-CM External cause 6,string,NJ_SID_2016_CORE
+I10_ECAUSE7,ICD-10-CM External cause 7,string,NJ_SID_2016_CORE
+I10_ECAUSE8,ICD-10-CM External cause 8,string,NJ_SID_2016_CORE
+I10_ECAUSE9,ICD-10-CM External cause 9,string,NJ_SID_2016_CORE
+I10_NDX,ICD-10-CM Number of diagnoses on this record,int32,NJ_SID_2016_CORE
+I10_NECAUSE,ICD-10-CM Number of External cause codes on this record,int32,NJ_SID_2016_CORE
+I10_NPR,ICD-10-PCS Number of procedures on this record,int32,NJ_SID_2016_CORE
+I10_PR1,ICD-10-PCS Procedure 1,string,NJ_SID_2016_CORE
+I10_PR2,ICD-10-PCS Procedure 2,string,NJ_SID_2016_CORE
+I10_PR3,ICD-10-PCS Procedure 3,string,NJ_SID_2016_CORE
+I10_PR4,ICD-10-PCS Procedure 4,string,NJ_SID_2016_CORE
+I10_PR5,ICD-10-PCS Procedure 5,string,NJ_SID_2016_CORE
+I10_PR6,ICD-10-PCS Procedure 6,string,NJ_SID_2016_CORE
+I10_PR7,ICD-10-PCS Procedure 7,string,NJ_SID_2016_CORE
+I10_PR8,ICD-10-PCS Procedure 8,string,NJ_SID_2016_CORE
+I10_PR9,ICD-10-PCS Procedure 9,string,NJ_SID_2016_CORE
+I10_PR10,ICD-10-PCS Procedure 10,string,NJ_SID_2016_CORE
+I10_PR11,ICD-10-PCS Procedure 11,string,NJ_SID_2016_CORE
+I10_PR12,ICD-10-PCS Procedure 12,string,NJ_SID_2016_CORE
+I10_PR13,ICD-10-PCS Procedure 13,string,NJ_SID_2016_CORE
+I10_PR14,ICD-10-PCS Procedure 14,string,NJ_SID_2016_CORE
+I10_PR15,ICD-10-PCS Procedure 15,string,NJ_SID_2016_CORE
+I10_PR16,ICD-10-PCS Procedure 16,string,NJ_SID_2016_CORE
+I10_PR17,ICD-10-PCS Procedure 17,string,NJ_SID_2016_CORE
+I10_PR18,ICD-10-PCS Procedure 18,string,NJ_SID_2016_CORE
+I10_PR19,ICD-10-PCS Procedure 19,string,NJ_SID_2016_CORE
+I10_PR20,ICD-10-PCS Procedure 20,string,NJ_SID_2016_CORE
+I10_PR21,ICD-10-PCS Procedure 21,string,NJ_SID_2016_CORE
+I10_PR22,ICD-10-PCS Procedure 22,string,NJ_SID_2016_CORE
+I10_PR23,ICD-10-PCS Procedure 23,string,NJ_SID_2016_CORE
+I10_PR24,ICD-10-PCS Procedure 24,string,NJ_SID_2016_CORE
+I10_PR25,ICD-10-PCS Procedure 25,string,NJ_SID_2016_CORE
+I10_PROCTYPE,ICD-10-PCS Procedure type indicator,int32,NJ_SID_2016_CORE
+KEY,HCUP record identifier,double,NJ_SID_2016_CORE
+LOS,Length of stay (cleaned),int32,NJ_SID_2016_CORE
+LOS_X,Length of stay (as received from source),int32,NJ_SID_2016_CORE
+MARITALSTATUS_X,Patient's marital status (as received from source),string,NJ_SID_2016_CORE
+MARITALSTATUSUB04,"Patient's marital status, UB-04 standard coding",string,NJ_SID_2016_CORE
+MDC,MDC in effect on discharge date,int32,NJ_SID_2016_CORE
+MDC_NoPOA,"MDC in use on discharge date, calculated without POA",int32,NJ_SID_2016_CORE
+MDNUM1_R,Physician 1 number (re-identified),int32,NJ_SID_2016_CORE
+MDNUM2_R,Physician 2 number (re-identified),int32,NJ_SID_2016_CORE
+MEDINCSTQ,Median household income state quartile for patient ZIP Code,int32,NJ_SID_2016_CORE
+MOMNUM_R,Mother's number (re-identified),int32,NJ_SID_2016_CORE
+MRN_R,Medical record number (re-identified),int32,NJ_SID_2016_CORE
+NCPT,Number of CPT/HCPCS procedures for this visit,int32,NJ_SID_2016_CORE
+OS_TIME,Observation stay time summed from UNITS,double,NJ_SID_2016_CORE
+P7EDSRC_X,"Condition Code P7, Direct Inpatient Admission from Emergency Room",string,NJ_SID_2016_CORE
+PAY1,Primary expected payer (uniform),int32,NJ_SID_2016_CORE
+PAY1_X,Primary expected payer (as received from source),string,NJ_SID_2016_CORE
+PAY2,Secondary expected payer (uniform),int32,NJ_SID_2016_CORE
+PAY2_X,Secondary expected payer (as received from source),string,NJ_SID_2016_CORE
+PAY3,Tertiary expected payer (uniform),int32,NJ_SID_2016_CORE
+PAY3_X,Tertiary expected payer (as received from source),string,NJ_SID_2016_CORE
+PL_CBSA,Patient location: Core Based Statistical Area (CBSA),int32,NJ_SID_2016_CORE
+PL_NCHS,Patient Location: NCHS Urban-Rural Code,int32,NJ_SID_2016_CORE
+PL_RUCC,Patient location: Rural-Urban Continuum Codes(RUCC),int32,NJ_SID_2016_CORE
+PL_UIC,Patient location: Urban Influence Codes,int32,NJ_SID_2016_CORE
+PL_UR_CAT4,Patient Location: Urban-Rural 4 Categories,int32,NJ_SID_2016_CORE
+POA_Disch_Edit1,Discharge has POA missing on all nonexempt diagnoses,int32,NJ_SID_2016_CORE
+POA_Disch_Edit2,Discharge has POA missing on all nonexempt secondary diagnoses,int32,NJ_SID_2016_CORE
+POA_Hosp_Edit1,Hospital reported POA as Y on all diagnoses on all discharges,int32,NJ_SID_2016_CORE
+POA_Hosp_Edit2,Hospital reported POA as missing on all non-Medicare discharges,int32,NJ_SID_2016_CORE
+POA_Hosp_Edit3,Hospital reported POA as missing on all nonexempt diagnoses for 15% or more of d,int32,NJ_SID_2016_CORE
+POA_Hosp_Edit3_Value,Percentage of discharges with all nonexempt diagnoses missing POA indicators,double,NJ_SID_2016_CORE
+PointOfOrigin_X,"Point of origin for admission or visit, as received from source",string,NJ_SID_2016_CORE
+PointOfOriginUB04,"Point of origin for admission or visit, UB-04 standard coding",string,NJ_SID_2016_CORE
+PRDAY1,Number of days from admission to I10_PR1,int32,NJ_SID_2016_CORE
+PRDAY2,Number of days from admission to I10_PR2,int32,NJ_SID_2016_CORE
+PRDAY3,Number of days from admission to I10_PR3,int32,NJ_SID_2016_CORE
+PRDAY4,Number of days from admission to I10_PR4,int32,NJ_SID_2016_CORE
+PRDAY5,Number of days from admission to I10_PR5,int32,NJ_SID_2016_CORE
+PRDAY6,Number of days from admission to I10_PR6,int32,NJ_SID_2016_CORE
+PRDAY7,Number of days from admission to I10_PR7,int32,NJ_SID_2016_CORE
+PRDAY8,Number of days from admission to I10_PR8,int32,NJ_SID_2016_CORE
+PRDAY9,Number of days from admission to I10_PR9,int32,NJ_SID_2016_CORE
+PRDAY10,Number of days from admission to I10_PR10,int32,NJ_SID_2016_CORE
+PRDAY11,Number of days from admission to I10_PR11,int32,NJ_SID_2016_CORE
+PRDAY12,Number of days from admission to I10_PR12,int32,NJ_SID_2016_CORE
+PRDAY13,Number of days from admission to I10_PR13,int32,NJ_SID_2016_CORE
+PRDAY14,Number of days from admission to I10_PR14,int32,NJ_SID_2016_CORE
+PRDAY15,Number of days from admission to I10_PR15,int32,NJ_SID_2016_CORE
+PRDAY16,Number of days from admission to I10_PR16,int32,NJ_SID_2016_CORE
+PRDAY17,Number of days from admission to I10_PR17,int32,NJ_SID_2016_CORE
+PRDAY18,Number of days from admission to I10_PR18,int32,NJ_SID_2016_CORE
+PRDAY19,Number of days from admission to I10_PR19,int32,NJ_SID_2016_CORE
+PRDAY20,Number of days from admission to I10_PR20,int32,NJ_SID_2016_CORE
+PRDAY21,Number of days from admission to I10_PR21,int32,NJ_SID_2016_CORE
+PRDAY22,Number of days from admission to I10_PR22,int32,NJ_SID_2016_CORE
+PRDAY23,Number of days from admission to I10_PR23,int32,NJ_SID_2016_CORE
+PRDAY24,Number of days from admission to I10_PR24,int32,NJ_SID_2016_CORE
+PRDAY25,Number of days from admission to I10_PR25,int32,NJ_SID_2016_CORE
+PrimLang,Primary language of patient,string,NJ_SID_2016_CORE
+PRVER,Procedure Version,int32,NJ_SID_2016_CORE
+PSTATE,Patient State postal code,string,NJ_SID_2016_CORE
+PSTCO,Patient state/county FIPS code,int32,NJ_SID_2016_CORE
+PSTCO2,"Patient state/county FIPS code, possibly derived from ZIP Code",int32,NJ_SID_2016_CORE
+RACE,Race (uniform),int32,NJ_SID_2016_CORE
+RACE_X,Race (as received from source),string,NJ_SID_2016_CORE
+READMIT,Readmission,int32,NJ_SID_2016_CORE
+TOTCHG,Total charges (cleaned),double,NJ_SID_2016_CORE
+TOTCHG_X,Total charges (as received from source),double,NJ_SID_2016_CORE
+TRAN_IN,Transfer in indicator,int32,NJ_SID_2016_CORE
+TRAN_OUT,Transfer out indicator,int32,NJ_SID_2016_CORE
+YEAR,Calendar year,int32,NJ_SID_2016_CORE
+ZIP,Patient ZIP Code,string,NJ_SID_2016_CORE
+ZIP3,"Patient ZIP Code, first 3 digits",string,NJ_SID_2016_CORE
+ZIPINC_QRTL,Median household income national quartile for patient ZIP Code,int32,NJ_SID_2016_CORE
+TOWN,Patient town of residence (as received from source),string,NJ_SID_2016_CORE
+AYEAR,Admission year,int32,NJ_SID_2016_CORE
+BMONTH,Birth month,int32,NJ_SID_2016_CORE
+BYEAR,Birth year,int32,NJ_SID_2016_CORE
+PRMONTH1,Month of procedure 1,int32,NJ_SID_2016_CORE
+PRMONTH2,Month of procedure 2,int32,NJ_SID_2016_CORE
+PRMONTH3,Month of procedure 3,int32,NJ_SID_2016_CORE
+PRMONTH4,Month of procedure 4,int32,NJ_SID_2016_CORE
+PRMONTH5,Month of procedure 5,int32,NJ_SID_2016_CORE
+PRMONTH6,Month of procedure 6,int32,NJ_SID_2016_CORE
+PRMONTH7,Month of procedure 7,int32,NJ_SID_2016_CORE
+PRMONTH8,Month of procedure 8,int32,NJ_SID_2016_CORE
+PRMONTH9,Month of procedure 9,int32,NJ_SID_2016_CORE
+PRMONTH10,Month of procedure 10,int32,NJ_SID_2016_CORE
+PRMONTH11,Month of procedure 11,int32,NJ_SID_2016_CORE
+PRMONTH12,Month of procedure 12,int32,NJ_SID_2016_CORE
+PRMONTH13,Month of procedure 13,int32,NJ_SID_2016_CORE
+PRMONTH14,Month of procedure 14,int32,NJ_SID_2016_CORE
+PRMONTH15,Month of procedure 15,int32,NJ_SID_2016_CORE
+PRMONTH16,Month of procedure 16,int32,NJ_SID_2016_CORE
+PRMONTH17,Month of procedure 17,int32,NJ_SID_2016_CORE
+PRMONTH18,Month of procedure 18,int32,NJ_SID_2016_CORE
+PRMONTH19,Month of procedure 19,int32,NJ_SID_2016_CORE
+PRMONTH20,Month of procedure 20,int32,NJ_SID_2016_CORE
+PRMONTH21,Month of procedure 21,int32,NJ_SID_2016_CORE
+PRMONTH22,Month of procedure 22,int32,NJ_SID_2016_CORE
+PRMONTH23,Month of procedure 23,int32,NJ_SID_2016_CORE
+PRMONTH24,Month of procedure 24,int32,NJ_SID_2016_CORE
+PRMONTH25,Month of procedure 25,int32,NJ_SID_2016_CORE
+PRYEAR1,Year of procedure 1,int32,NJ_SID_2016_CORE
+PRYEAR2,Year of procedure 2,int32,NJ_SID_2016_CORE
+PRYEAR3,Year of procedure 3,int32,NJ_SID_2016_CORE
+PRYEAR4,Year of procedure 4,int32,NJ_SID_2016_CORE
+PRYEAR5,Year of procedure 5,int32,NJ_SID_2016_CORE
+PRYEAR6,Year of procedure 6,int32,NJ_SID_2016_CORE
+PRYEAR7,Year of procedure 7,int32,NJ_SID_2016_CORE
+PRYEAR8,Year of procedure 8,int32,NJ_SID_2016_CORE
+PRYEAR9,Year of procedure 9,int32,NJ_SID_2016_CORE
+PRYEAR10,Year of procedure 10,int32,NJ_SID_2016_CORE
+PRYEAR11,Year of procedure 11,int32,NJ_SID_2016_CORE
+PRYEAR12,Year of procedure 12,int32,NJ_SID_2016_CORE
+PRYEAR13,Year of procedure 13,int32,NJ_SID_2016_CORE
+PRYEAR14,Year of procedure 14,int32,NJ_SID_2016_CORE
+PRYEAR15,Year of procedure 15,int32,NJ_SID_2016_CORE
+PRYEAR16,Year of procedure 16,int32,NJ_SID_2016_CORE
+PRYEAR17,Year of procedure 17,int32,NJ_SID_2016_CORE
+PRYEAR18,Year of procedure 18,int32,NJ_SID_2016_CORE
+PRYEAR19,Year of procedure 19,int32,NJ_SID_2016_CORE
+PRYEAR20,Year of procedure 20,int32,NJ_SID_2016_CORE
+PRYEAR21,Year of procedure 21,int32,NJ_SID_2016_CORE
+PRYEAR22,Year of procedure 22,int32,NJ_SID_2016_CORE
+PRYEAR23,Year of procedure 23,int32,NJ_SID_2016_CORE
+PRYEAR24,Year of procedure 24,int32,NJ_SID_2016_CORE
+PRYEAR25,Year of procedure 25,int32,NJ_SID_2016_CORE

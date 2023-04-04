@@ -1,0 +1,6 @@
+var,value_type,dataset_id
+CHARGE,double,GA_SID_2018_CHGS
+CPTHCPCS,string,GA_SID_2018_CHGS
+KEY,double,GA_SID_2018_CHGS
+REVCODE,string,GA_SID_2018_CHGS
+UNITS,double,GA_SID_2018_CHGS

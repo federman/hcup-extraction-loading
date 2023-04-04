@@ -1,0 +1,5 @@
+var,value_type,dataset_id
+CHARGE,double,KY_SID_2012_CHGS
+KEY,double,KY_SID_2012_CHGS
+REVCODE,string,KY_SID_2012_CHGS
+UNITS,double,KY_SID_2012_CHGS

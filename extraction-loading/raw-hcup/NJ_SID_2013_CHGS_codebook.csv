@@ -1,0 +1,8 @@
+var,value_type,dataset_id
+CHARGE,double,NJ_SID_2013_CHGS
+CPTHCPCS,string,NJ_SID_2013_CHGS
+CPTMod1,string,NJ_SID_2013_CHGS
+CPTMod2,string,NJ_SID_2013_CHGS
+KEY,double,NJ_SID_2013_CHGS
+REVCODE,string,NJ_SID_2013_CHGS
+UNITS,double,NJ_SID_2013_CHGS

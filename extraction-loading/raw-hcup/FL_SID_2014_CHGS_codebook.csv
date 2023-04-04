@@ -1,0 +1,27 @@
+var,var_label,value_type,dataset_id
+CHG1,Detailed charges 1 (as received from source),double,FL_SID_2014_CHGS
+CHG2,Detailed charges 2 (as received from source),double,FL_SID_2014_CHGS
+CHG3,Detailed charges 3 (as received from source),double,FL_SID_2014_CHGS
+CHG4,Detailed charges 4 (as received from source),double,FL_SID_2014_CHGS
+CHG5,Detailed charges 5 (as received from source),double,FL_SID_2014_CHGS
+CHG6,Detailed charges 6 (as received from source),double,FL_SID_2014_CHGS
+CHG7,Detailed charges 7 (as received from source),double,FL_SID_2014_CHGS
+CHG8,Detailed charges 8 (as received from source),double,FL_SID_2014_CHGS
+CHG9,Detailed charges 9 (as received from source),double,FL_SID_2014_CHGS
+CHG10,Detailed charges 10 (as received from source),double,FL_SID_2014_CHGS
+CHG11,Detailed charges 11 (as received from source),double,FL_SID_2014_CHGS
+CHG12,Detailed charges 12 (as received from source),double,FL_SID_2014_CHGS
+CHG13,Detailed charges 13 (as received from source),double,FL_SID_2014_CHGS
+CHG14,Detailed charges 14 (as received from source),double,FL_SID_2014_CHGS
+CHG15,Detailed charges 15 (as received from source),double,FL_SID_2014_CHGS
+CHG16,Detailed charges 16 (as received from source),double,FL_SID_2014_CHGS
+CHG17,Detailed charges 17 (as received from source),double,FL_SID_2014_CHGS
+CHG18,Detailed charges 18 (as received from source),double,FL_SID_2014_CHGS
+CHG19,Detailed charges 19 (as received from source),double,FL_SID_2014_CHGS
+CHG20,Detailed charges 20 (as received from source),double,FL_SID_2014_CHGS
+CHG21,Detailed charges 21 (as received from source),double,FL_SID_2014_CHGS
+CHG22,Detailed charges 22 (as received from source),double,FL_SID_2014_CHGS
+CHG23,Detailed charges 23 (as received from source),double,FL_SID_2014_CHGS
+CHG24,Detailed charges 24 (as received from source),double,FL_SID_2014_CHGS
+CHG25,Detailed charges 25 (as received from source),double,FL_SID_2014_CHGS
+KEY,HCUP record identifier,double,FL_SID_2014_CHGS
