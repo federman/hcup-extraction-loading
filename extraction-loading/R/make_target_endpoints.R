@@ -6,17 +6,26 @@
 #' and paths. 
 #'
 
-make_target_endpoints = function(df_status, keep_column = 0){
-  keep_column = "codebook"
+make_target_endpoints = function(df_status, keep_column = NA){
   
-  col_index_keep = which(names(df_status)== keep_column)
-  
-  df_status%>% 
+  df_path = df_status%>% 
     mutate(path_dta = glue("raw-hcup/{dataset_id}.dta"),
            path_parquet = glue("raw-hcup/{dataset_id}.parquet"),
-           path_codebook = glue("raw-hcup/{dataset_id}_codebook.csv")) %>% 
-    select(dataset_id, 
-           contains("path"),
-           ifelse(is_empty(col_index_keep),0,col_index_keep)) %>% 
-    return()
+           path_codebook = glue("raw-hcup/{dataset_id}_codebook.csv"))
+  
+  if (is.na(keep_column)){
+    df_final = df_path %>% 
+      select(dataset_id, 
+             contains("path") ) 
+      
+  }
+  
+  if (!is.na(keep_column)){
+    df_final =  df_path %>% 
+      select(dataset_id, 
+             contains("path"),
+             any_of(c(keep_column))) 
+  }
+  
+  return(df_final)
 }
