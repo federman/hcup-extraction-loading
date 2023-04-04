@@ -46,6 +46,8 @@
   ## Step 4: Load as parquet
   load_dta_to_db()
   load_sas7bdat_to_db()
+  get_elt_status() %>% filter(is.na(parquet)) 
+  
   
   ## Step 5: Generate codebooks
   generate_codebooks()
