@@ -77,8 +77,15 @@ generate_codebooks = function(){
              year_raw = split[[3]],
              year = str_sub(year_raw,1,4),
              file = split[4:length(split)] %>% paste(collapse = '_'),
-             n_rows =   open_dataset(glue("raw-hcup/{dataset_id}.parquet"))$num_rows) %>% 
-      select(dataset_id, n_columns, n_rows, state, db, year,year_raw, file)
+             n_rows =   open_dataset(glue("raw-hcup/{dataset_id}.parquet"))$num_rows,
+             db_year = case_when(
+               between(year,2019,2021)~glue("{db}_2019_2021"),
+               between(year,2016,2018)~glue("{db}_2016_2018"),
+               year==2015~glue("{db}_2015"),
+               between(year,2005,2014)~glue("{db}_2005_2014"),
+               TRUE ~"ERROR"
+             )) %>% 
+      select(dataset_id, n_columns, n_rows, state, db, year,year_raw, file, db_year)
     df_summary %>% write_parquet("clean/df_summary.parquet")
     cli_alert_success("Compiled source summary at clean/df_summary.parquet")
     
