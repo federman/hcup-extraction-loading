@@ -1,6 +1,6 @@
 #' get stage models metadata
 
-source('R/parse_hcup_file_name.R')
+source('R/parse_hcup_table_name.R')
 
 get_stage_models = function(){
   
