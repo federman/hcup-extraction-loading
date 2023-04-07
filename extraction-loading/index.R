@@ -22,16 +22,19 @@
   }
   
   { # Load pipeline dependencies ----------------------------------------------
-    
+
     ## Utility functions
     list.files(path = 'R/', all.files = T,recursive = T, full.names = T, pattern = '.R') %>% 
       walk(~source(.x))
+    
+    ## Imports
+    xwalk_zip_zcta = arrow::read_parquet("clean/xwalk_zip_zcta.parquet")
   }
   
   cli_alert_success("SALURBAL ETL pipeline setup completed!")
 }
 
-
+list.files()
 { # 1. Extraction (done on desktop with high RAM) ----
   
   ## Step 1: Evaluate ELT status
@@ -44,8 +47,9 @@
   get_elt_status() %>% filter(is.na(loaded_data)) 
   
   ## Step 4: Load as parquet
-  load_dta_to_db()
-  load_sas7bdat_to_db()
+  # load_dta_to_db()
+  # load_sas7bdat_to_db()
+  etl_to_db(xwalk_zip_zcta)
   get_elt_status() %>% filter(is.na(parquet)) 
   
   
