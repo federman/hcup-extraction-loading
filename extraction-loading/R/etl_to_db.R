@@ -70,45 +70,64 @@ etl_individual_table = function(dataset_id_tmp, xwalk_zip_zcta){
 
     ## Pivot charges long if needed
     if (!chgs_long) {
-      df_revcd = df_raw %>%
-        select(-NREVCD) %>%
-        select(KEY, contains('REVCD')) %>%
-        mutate_all(~as.character(.x)) %>%
-        pivot_longer(-KEY, values_to = 'REVCODE') %>%
-        filter(!is.na(REVCODE),
-               REVCODE!='') %>%
-        mutate(charge_id = parse_number(name)) %>%
-        select(-name)
-
-      df_units = df_raw %>%
-        select(-NREVCD) %>%
-        select(KEY, contains('UNIT')) %>%
-        mutate_all(~as.character(.x)) %>%
-        pivot_longer(-KEY, values_to = 'UNITS') %>%
-        filter(!is.na(UNITS),
-               UNITS!='') %>%
-        mutate(charge_id = parse_number(name)) %>%
-        select(-name)
-
+      
+      ## setup
+      has_revcd =  any(str_detect(names(df_raw %>% select(-any_of('NREVCD') )  ), "REVCD" ))
+      has_units =  any(str_detect(names(df_raw %>% select(-any_of('NREVCD') )  ), "UNIT" ))
+      has_chgs = any(str_detect(names(df_raw %>% select(-any_of('NREVCD') )  ), "CHG" ))
+      
+      ## process charges
       df_charges = df_raw %>%
-        select(-NREVCD) %>%
-        select(KEY, contains('REVCHG')) %>%
+        select(-any_of('NREVCD')) %>%
+        select(KEY, contains('CHG')) %>%
         mutate_all(~as.character(.x)) %>%
         pivot_longer(-KEY, values_to = 'CHARGE') %>%
         filter(!is.na(CHARGE),
                CHARGE!='') %>%
         mutate(charge_id = parse_number(name)) %>%
         select(-name)
+      
+      ## Process others if available
+      # if (has_revcd){
+      #   df_revcd = df_raw %>%
+      #     select(-any_of('NREVCD')) %>%
+      #     select(KEY, contains('REVCD')) %>%
+      #     mutate_all(~as.character(.x)) %>%
+      #     pivot_longer(-KEY, values_to = 'REVCODE') %>%
+      #     filter(!is.na(REVCODE),
+      #            REVCODE!='') %>%
+      #     mutate(charge_id = parse_number(name)) %>%
+      #     select(-name)
+      # }
+      # 
+      # if (has_units){
+      #   df_units = df_raw %>%
+      #     select(-any_of('NREVCD')) %>%
+      #     select(KEY, contains('UNIT')) %>%
+      #     mutate_all(~as.character(.x)) %>%
+      #     pivot_longer(-KEY, values_to = 'UNITS') %>%
+      #     filter(!is.na(UNITS),
+      #            UNITS!='') %>%
+      #     mutate(charge_id = parse_number(name)) %>%
+      #     select(-name)
+      # }
 
-      df_revcd %>%
-        left_join(df_units, by = c("KEY", "charge_id")) %>%
-        left_join(df_charges, by = c("KEY", "charge_id")) %>%
-        select(CHARGE, KEY, REVCODE, UNITS) %>%
+      
+      # df_revcd %>%
+      #   left_join(df_units, by = c("KEY", "charge_id")) %>%
+      #   left_join(df_charges, by = c("KEY", "charge_id")) %>%
+      #   select(CHARGE, KEY, REVCODE, UNITS) %>%
+      # mutate(CHARGE = as.double(CHARGE),
+      #        KEY = as.double(KEY),
+      #        REVCODE = as.character(REVCODE),
+      #        UNITS = as.double(UNITS))
+      
+      df_charges %>%
+        select(KEY, CHARGE) %>%
         mutate(CHARGE = as.double(CHARGE),
-               KEY = as.double(KEY),
-               REVCODE = as.character(REVCODE),
-               UNITS = as.double(UNITS)) %>%
+               KEY = as.double(KEY)) %>%
         write_parquet(sink = glue("raw-hcup/{dataset_id_tmp}.parquet"))
+      
       cli_alert_success(cli_msg2, .envir = globalenv())
     }
 
