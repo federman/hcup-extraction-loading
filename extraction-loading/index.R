@@ -1,8 +1,9 @@
-{# 1. Setup ----
+{# 0. Setup ----
 
   { # Load pipeline packages ----------------------------------------------
     
     ## Packages
+    rm(list = ls())
     suppressWarnings({
       suppressMessages({
         library(rstudioapi) 
@@ -50,9 +51,8 @@
   get_elt_status() %>% filter(is.na(loaded_data)) 
   
   ## Step 4: Load as parquet
-  # load_dta_to_db()
-  # load_sas7bdat_to_db()
   etl_to_db(xwalk_zip_zcta)
+  
   get_elt_status() %>% filter(is.na(parquet)) 
   
   
