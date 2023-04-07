@@ -3,17 +3,16 @@
 #'    @dataset_id: this arguemnt is just the HCUP dataset id (e.g. "NY_SEDD_2017_CHGS")
 #'
 #' Example:
-#'     datasets_to_load = c('NJ_SID_2017_CHGS')
-#'     dataset_id_tmp = 'NJ_SID_2017_CHGS'
-#'     datasets_to_load = c('NJ_SID_2016_CORE')
 #'     dataset_id_tmp = 'NJ_SID_2016_CORE'
-
+#'     dataset_id_tmp = 'NJ_SID_2016_CHGS'
+#'     dataset_id_tmp = 'KY_SID_2012_CHGS'
+#'     dataset_id_tmp = 'MA_SID_2016_CHGS'  # charges wide
 
 source("R/get_elt_status.R")
 source("R/make_target_endpoints.R")
 
 
-etl_individual_table = function(dataset_id_tmp){
+etl_individual_table = function(dataset_id_tmp, xwalk_zip_zcta){
   
   { # Setup -------------------------------------------------------------------
     file_tmp = list.files(path = "raw-hcup/",
@@ -40,19 +39,77 @@ etl_individual_table = function(dataset_id_tmp){
       left_join(xwalk_zip_zcta) %>% 
       arrow::write_csv_arrow(sink = glue('intermediate/zip-zcta/{dataset_id_tmp}__linkage_quality.csv'))
    
-    ## Merge zip-zcta thene xport
+    ## Merge zip-zcta + export
     df_raw %>%
       left_join(xwalk_zip_zcta)  %>% 
       write_parquet(sink = glue("raw-hcup/{dataset_id_tmp}.parquet"))
+    cli_alert_success("Finished .dta to parquet conversion for {dataset_id_tmp}")    
   }
-  #' 
-  #' if (str_detect(file_tmp, "CHGS")){
-  #'   # CHGS transformations ----------------------------------------------------------
-  #'   #' - [ ] standardize  to long
-  #'   #' 
-  #' }
-  #' 
-  #' 
+
+  if (str_detect(file_tmp, "CHGS")){
+    # CHGS transformations ----------------------------------------------------------
+    
+    ## check relationship type
+    chgs_long = df_raw %>%
+      slice(1:10 ^ 3) %>%
+      count(KEY) %>%
+      count(n, name = 'key_row_count') %>%
+      nrow() != 1
+    
+    ## Export long charges table by default
+    if (chgs_long) {
+      df_raw %>% write_parquet(sink = glue("raw-hcup/{dataset_id_tmp}.parquet"))
+      cli_alert_success("Finished .dta to parquet conversion for {dataset_id_tmp}")
+    }
+    
+    
+    ## Pivot charges long if needed
+    if (!chgs_long) {
+      df_revcd = df_raw %>% 
+        select(-NREVCD) %>% 
+        select(KEY, contains('REVCD')) %>% 
+        mutate_all(~as.character(.x)) %>% 
+        pivot_longer(-KEY, values_to = 'REVCODE') %>% 
+        filter(!is.na(REVCODE),
+               REVCODE!='') %>% 
+        mutate(charge_id = parse_number(name)) %>% 
+        select(-name)
+      
+      df_units = df_raw %>% 
+        select(-NREVCD) %>% 
+        select(KEY, contains('UNIT')) %>% 
+        mutate_all(~as.character(.x)) %>% 
+        pivot_longer(-KEY, values_to = 'UNITS') %>% 
+        filter(!is.na(UNITS),
+               UNITS!='') %>% 
+        mutate(charge_id = parse_number(name)) %>% 
+        select(-name)
+      
+      df_charges = df_raw %>% 
+        select(-NREVCD) %>% 
+        select(KEY, contains('REVCHG')) %>% 
+        mutate_all(~as.character(.x)) %>% 
+        pivot_longer(-KEY, values_to = 'CHARGE') %>% 
+        filter(!is.na(CHARGE),
+               CHARGE!='') %>% 
+        mutate(charge_id = parse_number(name)) %>% 
+        select(-name)
+      
+      df_revcd %>% 
+        left_join(df_units, by = c("KEY", "charge_id")) %>% 
+        left_join(df_charges, by = c("KEY", "charge_id")) %>% 
+        select(CHARGE, KEY, REVCODE, UNITS) %>% 
+        mutate(CHARGE = as.double(CHARGE),
+               KEY = as.double(KEY),
+               REVCODE = as.character(REVCODE),
+               UNITS = as.double(UNITS)) %>% 
+        write_parquet(sink = glue("raw-hcup/{dataset_id_tmp}.parquet"))
+      cli_alert_success("Finished .dta to parquet conversion for {dataset_id_tmp}")
+    }
+    
+  }
+
+
   if (!str_detect(file_tmp, "CORE|CHGS")) { 
     # Default export ------------------------------------------------------------------
     write_parquet(sink = glue("raw-hcup/{dataset_id_tmp}.parquet"))
@@ -62,8 +119,8 @@ etl_individual_table = function(dataset_id_tmp){
 
 
 etl_to_db = function(xwalk_zip_zcta) {
-  {
-    # Setup -------------------------------------------------------------------
+  
+  { # Setup -------------------------------------------------------------------
     
     ## get datasets that have .dta but not parquet
     datasets_to_load = get_elt_status() %>%
@@ -78,28 +135,10 @@ etl_to_db = function(xwalk_zip_zcta) {
     }
   }
   
-  {
-    # Load --------------------------------------------------------------------
-    
-    
-    
+  { # Loop --------------------------------------------------------------------
     datasets_to_load %>%
-      walk(function(dataset_id_tmp) {
-        li
-        
-        
-        cli_alert("Start .dta to parquet conversion for {dataset_id_tmp}")
-        
-        list
-        
-        
-        %>%
-         
-      })
-    
+      walk(~etl_individual_table(dataset_id_tmp =.x, xwalk_zip_zcta))
   }
-  
-  
   
 }
 
