@@ -31,10 +31,13 @@
     xwalk_zip_zcta = arrow::read_parquet("clean/xwalk_zip_zcta.parquet")
   }
   
+  { # Scripts -------------------------------------------------------------------
+    'code/eda/v0_eda/v0_eda.R'
+  }
+  
   cli_alert_success("SALURBAL ETL pipeline setup completed!")
 }
-
-list.files()
+ 
 { # 1. Extraction (done on desktop with high RAM) ----
   
   ## Step 1: Evaluate ELT status
