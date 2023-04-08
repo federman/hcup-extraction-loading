@@ -1,7 +1,6 @@
 {
   # Setup -------------------------------------------------------------------
-  load("seeds/raw/zip_zcta_cw_2010_2019.Rdata")
-  xwalk_zip_urban = read_excel("seeds/raw/RUCA2010zipcode.xlsx",
+  xwalk_zip_urban = readxl::read_excel("seeds/raw/RUCA2010zipcode.xlsx",
                       sheet = "Data") %>% 
     select("ZIP"="ZIP_CODE",
            "RUCA"="RUCA1") %>% 
@@ -23,3 +22,4 @@
   
   xwalk_zip_urban %>% arrow::write_parquet("clean/xwalk_zip_urban.parquet")
 }
+
