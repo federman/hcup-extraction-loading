@@ -37,6 +37,8 @@
     'code/transformations/indicators.R'
     'code/transformations/zip-zcta.R'
     'code/transformations/zip-ruca.R'
+    'code/transformations/zcta-place.R'
+    
   }
   
   cli_alert_success("SALURBAL ETL pipeline setup completed!")

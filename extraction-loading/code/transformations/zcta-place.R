@@ -1,22 +1,23 @@
 {
   # Setup -------------------------------------------------------------------
  
-  df_raw = read.csv("seeds/raw/zcta_place_rel_10.txt") %>% 
-    as_tibble()
-  
+  xwalk_zcta_place = read.csv("seeds/raw/zcta_place_rel_10.txt") %>% 
+    as_tibble() %>% 
+    mutate(ZCTA = str_pad(ZCTA5,width=5,side='left', pad='0' )) %>% 
+    select(ZCTA, PLACE = GEOID) %>% 
+    mutate_all(~as.character(.x)) %>% 
+    distinct()
   
 }
 
 
 { # QC ----------------------------------------------------------------------
-  
-  ## Check that 1:1 zip to zcta: Good!
-  xwalk_zip_zcta %>% count(ZIP) %>% count(n)
+   
   
   
 }
 
 { # Op. as parquet ----------------------------------------------------------
   
-  xwalk_zip_zcta %>% arrow::write_parquet("clean/xwalk_zip_zcta.parquet")
+  xwalk_zcta_place %>% arrow::write_parquet("clean/xwalk_zcta_place.parquet")
 }
