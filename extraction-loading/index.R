@@ -34,6 +34,9 @@
   
   { # Scripts -------------------------------------------------------------------
     'code/eda/v0_eda/v0_eda.R'
+    'code/transformations/indicators.R'
+    'code/transformations/zip-zcta.R'
+    'code/transformations/zip-ruca.R'
   }
   
   cli_alert_success("SALURBAL ETL pipeline setup completed!")
