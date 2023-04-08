@@ -3,7 +3,7 @@
 #'    @dataset_id: this arguemnt is just the HCUP dataset id (e.g. "NY_SEDD_2017_CHGS")
 #'
 #' Example:
-#'     dataset_id_tmp = 'NJ_SID_2016_CORE'
+#'     dataset_id_tmp = 'MA_SID_2014_CORE'
 #'     dataset_id_tmp = 'AZ_SID_2015q1q3_DX_PR_GRPS'
 #'     dataset_id_tmp = 'AZ_SID_2015q1q3_CHGS'
 #'     dataset_id_tmp = 'MA_SID_2016_CHGS'  # charges wide
@@ -34,22 +34,7 @@ etl_individual_table = function(dataset_id_tmp, xwalk_zip_zcta){
 
   }
 
-  if (str_detect(file_tmp, 'CORE')) {
-    # CORE transformations ----------------------------------------------------------
-
-    ## store linkage metadata
-    df_raw %>%
-      as_tibble() %>%
-      count(ZIP, name = 'n_discharges') %>%
-      left_join(xwalk_zip_zcta) %>%
-      arrow::write_csv_arrow(sink = glue('intermediate/zip-zcta/{dataset_id_tmp}__linkage_quality.csv'))
-
-    ## Merge zip-zcta + export
-    df_raw %>%
-      left_join(xwalk_zip_zcta)  %>%
-      write_parquet(sink = glue("raw-hcup/{dataset_id_tmp}.parquet"))
-    cli_alert_success(cli_msg2, .envir = globalenv())
-  }
+ 
 
   if (str_detect(file_tmp, "CHGS")){
     # CHGS transformations ----------------------------------------------------------
@@ -134,7 +119,7 @@ etl_individual_table = function(dataset_id_tmp, xwalk_zip_zcta){
   }
 
 
-  if (!str_detect(file_tmp, "CORE|CHGS")) {
+  if (!str_detect(file_tmp, "CHGS")) {
     # Default export ------------------------------------------------------------------
     df_raw %>% write_parquet(sink = glue("raw-hcup/{dataset_id_tmp}.parquet"))
     cli_alert_success(cli_msg2, .envir = globalenv())
