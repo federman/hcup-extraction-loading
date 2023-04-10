@@ -67,6 +67,25 @@ generate_codebooks = function(){
   }
   
   { # Compile source metadata --------------------------------------------------------
+   
+     get_file_size_mb =  function(dataset_id_tmp, type){
+      dataset_files =  list.files(path = "raw-hcup/", 
+                                  pattern = dataset_id_tmp, 
+                                  full.names = T) 
+      if (type == 'raw'){
+        file_dir = dataset_files %>%   keep(~str_detect(.x, '.dta|.sas7bdat'))
+      }
+      
+      if (type == 'parquet'){
+        file_dir =  dataset_files %>%    keep(~str_detect(.x, '.parquet'))
+      }
+      
+      file_metadata = file.info(file_dir)
+      file_mb = file_metadata$size/10^6
+       
+      return(file_mb)
+    }
+    
     
     df_summary = df_codebooks %>% 
       count(dataset_id, name = 'n_columns') %>% 
@@ -83,12 +102,17 @@ generate_codebooks = function(){
                between(year,2016,2018)~glue("{db}_2016_2018"),
                year==2015~glue("{db}_2015"),
                between(year,2005,2014)~glue("{db}_2005_2014"),
-               TRUE ~"ERROR"
-             )) %>% 
-      select(dataset_id, n_columns, n_rows, state, db, year,year_raw, file, db_year)
+               TRUE ~"ERROR"  ),
+             dataset_instance = paste(c(db, state, year_raw), collapse = "_"),
+             size_mb_raw = get_file_size_mb(dataset_id,'raw'),
+             size_mb_parquet =  get_file_size_mb(dataset_id,'parquet')
+             ) %>% 
+      select(dataset_id, n_columns, n_rows, state, db, year,year_raw, file, db_year, 
+             dataset_instance, size_mb_raw, size_mb_parquet) %>% 
+      ungroup()
     df_summary %>% write_parquet("clean/df_summary.parquet")
     cli_alert_success("Compiled source summary at clean/df_summary.parquet")
-    
+ 
   }
   
 }
