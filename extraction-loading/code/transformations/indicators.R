@@ -32,5 +32,5 @@
 }
 
 { # load to dbt  ------------------------------------------------------------
-  df_indicators %>% write_parquet(sink = glue("seeds/acs_zcta_indicators.parquet"))
+  df_indicators %>% write_parquet(sink = glue("clean/acs_zcta_indicators.parquet"))
 }
