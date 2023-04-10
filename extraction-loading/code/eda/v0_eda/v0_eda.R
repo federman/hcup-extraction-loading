@@ -108,10 +108,8 @@
 
 }
 
-{ # Time granularity: month!! ----------------------------------------
-  #' - in terms of date, we can get month-year at best!
-  #' - there is also wee
-  
+{ # Insurance/Hospital ----------------------------------------
+  #' where is isnurance type found (self-pay, medicaid ... etc)
   df_summary %>% 
     filter(file == "CORE") %>% 
     slice(1) %>% 
@@ -119,8 +117,29 @@
   
   ds = open_dataset('raw-hcup/AZ_SID_2015q1q3_CORE.parquet')
   
+  ## https://hcup-us.ahrq.gov/db/vars/siddistnote.jsp?var=pay1
   ds %>% 
-    count(AMONTH) %>% 
+    count(PAY1) %>% 
     collect()
+  
+  ## https://hcup-us.ahrq.gov/db/vars/siddistnote.jsp?var=pointoforigin_x
+  ds %>% 
+    count(PointOfOrigin_X ) %>% 
+    collect()
+}
+
+{ # VisitLink  --------------------------------------------------------------
+
+  df_summary  %>% 
+    filter(file == "CORE",
+           db == 'SEDD')%>% 
+    group_by(db) %>% 
+    slice(1) %>% 
+    ungroup() %>% 
+    pull(dataset_id) %>% 
+    paste0("raw-hcup/",.,".parquet")
+  ds = open_dataset('raw-hcup/NY_SEDD_2017_CORE.parquet')
+  
+  ds %>% count(VisitLink)
 }
 
