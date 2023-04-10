@@ -1,11 +1,19 @@
 { # 0. Setup ----------------------------------------------------------------
-  
-  df_summary = arrow::read_parquet("clean/df_summary.parquet") %>% 
-    mutate(dataset_instance = paste(c(db, state, year_raw), collapse = "_")) 
-  
-  
+  df_summary = arrow::read_parquet("clean/df_summary.parquet") 
 }
 
+
+{ # Stats -------------------------------------------------------------------
+  
+  ## Total rows: 528,035,025
+  n_rows = df_summary %>% pull(n_rows) %>% sum()
+  
+  ## dta/sasbdat7 size:
+  df_summary %>% 
+    summarize(size_gb_raw = sum(size_mb_raw)/10^3,
+              size_mgb_parquet = sum(size_mb_parquet)/10^3)
+  
+}
 
 { # CORE vs CHGS relationship --------------------------------------------------------------------
   
@@ -95,6 +103,24 @@
     mutate(n = sum(q1q3,q4, na.rm = T)) %>% 
     count(n)
   
-  #' It seems these are completely unique dataset, with different Keys. So unique encounters.
-  
+  #' It seems these are completely unique dataset, with different Keys. So unique encounters. 
+  #' The q1 vs q3 a4 is financial quarters. for this dataset they split into quarters.
+
 }
+
+{ # Time granularity: month!! ----------------------------------------
+  #' - in terms of date, we can get month-year at best!
+  #' - there is also wee
+  
+  df_summary %>% 
+    filter(file == "CORE") %>% 
+    slice(1) %>% 
+    pull(dataset_id)
+  
+  ds = open_dataset('raw-hcup/AZ_SID_2015q1q3_CORE.parquet')
+  
+  ds %>% 
+    count(AMONTH) %>% 
+    collect()
+}
+
