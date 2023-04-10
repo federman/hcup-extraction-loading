@@ -33,7 +33,9 @@
   }
   
   { # Scripts -------------------------------------------------------------------
-    'code/eda/v0_eda/v0_eda.R'
+    'code/eda/eda/v0.2/eda.R'
+    'code/eda/eda/v0.2/sid-base-models.R'
+    'code/eda/eda/v0.2/sedd-base-models.R'
     'code/transformations/indicators.R'
     'code/transformations/zip-zcta.R'
     'code/transformations/zip-ruca.R'

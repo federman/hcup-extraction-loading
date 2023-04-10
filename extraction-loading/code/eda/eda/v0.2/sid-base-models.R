@@ -2,13 +2,17 @@
 
 { # Setup -------------------------------------------------------------------
   sid_base_columns = c(
-    "AGE", "YEAR", "ZIP", "ZIP3", "VisitLink", "CPT1", "CPT2", "CPT3", "CPTCCS1",
-    "CPTCCS2", "DHOUR", "DMONTH", "DQTR", "DRG", "DISP_X", "DISPUB04", "DMONTH", "DQTR", "DSHOSPID", "HCUP_ED",
-                   "HCUP_OS", "HOSPST",  "I10_DX1",
-                   "I10_DX2", "LOS", "PSTCO", "PSTCO2","HISPANIC", "RACE", "ZIPINC_QRTL", "PAY1", "DIED", "FEMALE", "HOSP_NPI", 
-                   "I10_DX_Admitting")
+    "AGE", "YEAR", "ZIP", "ZIP3", "VisitLink", 
+    "CPT1", "CPT2", "CPT3", "CPTCCS1","CPTCCS2", 
+    "DHOUR", "DMONTH", "DQTR", "DRG", "DISP_X", "DISPUB04", "DMONTH", "DQTR", "DSHOSPID", 
+    "HCUP_ED","HCUP_OS", "HOSPST",  
+    "I10_DX1","I10_DX2", 
+    "LOS", "PSTCO", "PSTCO2","HISPANIC", "RACE", "ZIPINC_QRTL", "PAY1", "DIED", "FEMALE", "HOSP_NPI", 
+    "I10_DX_Admitting")
   
   df_summary = arrow::read_parquet("clean/df_summary.parquet") %>% 
+    filter(year>=2016,
+           state!='MA') %>% 
     mutate(path = glue("raw-hcup/{dataset_id}.parquet"))
 }
 
@@ -40,10 +44,31 @@
     pivot_wider(names_from = name,
                 values_from = n) %>% 
     arrange(desc(`SID-False`)) %>% 
-      View()
+    View()
   
+}
+
+{ # HOSP_NPI  --------------------------------------------------------
+  df_base %>% 
+    filter(base == 'HOSP_NPI') %>% 
+    arrange(base_exists)
+}
+
+
+{ # ZIP ---------------------------------------------------------------------
+  df_base %>% 
+    filter(base == "ZIP",
+           base_exists == F) %>% 
+    arrange(base_exists, dataset_id)
   
-  ## SIDmissing I10_DX1/2
+  ## MA files all are missing ZIP and only have ZIP3
+  open_dataset("raw-hcup/MA_SID_2017_CORE.parquet") %>% 
+    count(ZIP3) %>% 
+    collect()
+  
+}
+
+{ # DX vs I10_DX ------------------------------------------------------------
   df_base %>% 
     filter(base == "I10_DX1",
            db == "SID") %>% 
