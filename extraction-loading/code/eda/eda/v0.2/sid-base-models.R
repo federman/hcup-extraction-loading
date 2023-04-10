@@ -2,13 +2,13 @@
 
 { # Setup -------------------------------------------------------------------
   sid_base_columns = c(
-    "AGE", "YEAR", "ZIP", "ZIP3", "VisitLink", 
+ "AGE", "AYEAR", "AMONTH", "ZIP", "ZIP3", "VisitLink", 
     "CPT1", "CPT2", "CPT3", "CPTCCS1","CPTCCS2", 
     "DHOUR", "DMONTH", "DQTR", "DRG", "DISP_X", "DISPUB04", "DMONTH", "DQTR", "DSHOSPID", 
     "HCUP_ED","HCUP_OS", "HOSPST",  
     "I10_DX1","I10_DX2", 
     "LOS", "PSTCO", "PSTCO2","HISPANIC", "RACE", "ZIPINC_QRTL", "PAY1", "DIED", "FEMALE", "HOSP_NPI", 
-    "I10_DX_Admitting")
+    "I10_DX_Admitting"   )
   
   df_summary = arrow::read_parquet("clean/df_summary.parquet") %>% 
     filter(year>=2016,
@@ -48,6 +48,15 @@
   
 }
 
+
+{ # YEAR and MONTH ----------------------------------------------------------
+  tibble(
+    field = open_dataset("raw-hcup/NY_SID_2018_CORE.parquet") %>% names() ) %>%
+    View()
+
+        
+  
+}
 { # HOSP_NPI  --------------------------------------------------------
   df_base %>% 
     filter(base == 'HOSP_NPI') %>% 
