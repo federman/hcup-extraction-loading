@@ -10,7 +10,7 @@ get_stage_models = function(){
   
   ## Stage: get paths
   stg_models = tibble(model_path = 
-            list.files("../../hcup-dbt/models/staging/", 
+            list.files("../../hcup-dbt/models/base/", 
                         recursive = T, full.names = T,)) %>% 
     rowwise() %>% 
     filter(str_detect(model_path,'.sql')) %>% 
@@ -22,7 +22,7 @@ get_stage_models = function(){
              str_remove(".sql") %>% 
              str_remove("stg_") %>% 
              str_to_upper(),
-           database = parse_hcup_file_name(dataset_id )$database,
+           database = parse_hcup_table_name(dataset_id )$database,
            yml_path = str_replace(model_path,".sql",".yml")
            ) 
   stg_columns =  tibble(csv_path = 
@@ -38,7 +38,8 @@ get_stage_models = function(){
   
   
   ## Intermediate: get columns
-  int_paths = stg_models %>% left_join(stg_columns, by = 'model') %>% 
+  int_paths = stg_models %>% 
+    left_join(stg_columns, by = 'model') %>% 
     ungroup()
   int_paths %>% 
     group_by(row_number()) %>% 
