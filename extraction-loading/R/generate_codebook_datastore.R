@@ -57,11 +57,35 @@ generate_codebooks = function(){
   }
   
   { # Compile codebook --------------------------------------------------------
-    df_codebooks = get_elt_status() %>% 
+    
+    ## preliminary compilation
+    df_codebooks_raw  = get_elt_status() %>% 
       make_target_endpoints() %>% 
       pull(path_codebook) %>% 
       map_df(~fread(.)) %>% 
       as_tibble() 
+    df_codebooks_raw_missing = df_codebooks_raw %>%  filter(is.na(var_label)) 
+    df_codebooks_raw_full = df_codebooks_raw %>%  filter(!is.na(var_label)) 
+    
+    ## Check for missing var_label
+    vec__missing_label = df_codebooks_raw_missing %>%  
+      count(var) %>% 
+      pull(var)
+    xwalk_var_metadata = df_codebooks_raw_full %>% 
+      select(var, var_label) %>% 
+      distinct() %>% 
+      group_by(var) %>% 
+      slice(1) %>% 
+      ungroup()
+    
+    ## Fill in missing var_label
+    df_codebooks_imputed = df_codebooks_raw_missing %>% 
+      select(-var_label) %>% 
+      left_join(xwalk_var_metadata) 
+    
+    ## Compile
+    df_codebooks = df_codebooks_raw_full %>% 
+      bind_rows(df_codebooks_imputed)
     df_codebooks%>% fwrite("clean/df_codebooks.csv")
     cli_alert_success("Compiled codebooks at clean/df_codebooks.csv")
   }
