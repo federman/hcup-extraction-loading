@@ -2,22 +2,27 @@
 
 { # Setup -------------------------------------------------------------------
   sid_base_columns = c(
- "AGE", "AYEAR", "AMONTH", "ZIP", "ZIP3", "VisitLink", 
+    "AGE", "AYEAR", "AMONTH", "ZIP", "ZIP3", "VisitLink", 
     "CPT1", "CPT2", "CPT3", "CPTCCS1","CPTCCS2", 
     "DHOUR", "DMONTH", "DQTR", "DRG", "DISP_X", "DISPUB04", "DMONTH", "DQTR", "DSHOSPID", 
     "HCUP_ED","HCUP_OS", "HOSPST",  
     "I10_DX1","I10_DX2", 
     "LOS", "PSTCO", "PSTCO2","HISPANIC", "RACE", "ZIPINC_QRTL", "PAY1", "DIED", "FEMALE", "HOSP_NPI", 
-    "I10_DX_Admitting"   )
+    "I10_DX_Admitting")
+  
+  sid_base_chgs_base_columns = c(
+    "CHARGE","KEY","REVCODE","UNITS"
+  )
   
   df_summary = arrow::read_parquet("clean/df_summary.parquet") %>% 
     filter(year>=2016,
-           state!='MA') %>% 
+           state!='MA',
+           db == 'SID') %>% 
     mutate(path = glue("raw-hcup/{dataset_id}.parquet"))
 }
 
 
-{ # Check base columns ------------------------------------------------------
+{ # Check CORE base columns ------------------------------------------------------
 
   ## Check for base columns
   df_base = df_summary %>% 
@@ -43,11 +48,32 @@
     select(name, base, n) %>% 
     pivot_wider(names_from = name,
                 values_from = n) %>% 
-    arrange(desc(`SID-False`)) %>% 
-    View()
+    arrange(desc(`SID-False`))  
   
 }
 
+
+{ # Export CORE/CHGS base columns  ---------------------------------------
+  
+  df_sid_base_fields = df_summary %>%
+    filter(file %in% c("CORE", "CHGS")) %>%
+    group_by(row_number()) %>%
+    group_map( ~ {
+      row = .x
+      base_fields_tmp = sid_base_columns
+      if (row$file == "CHGS") base_fields_tmp = sid_base_chgs_base_columns
+      row %>%
+        select(dataset_id) %>%
+        mutate(base_fields = list(
+          open_dataset(glue("raw-hcup/{dataset_id}.parquet")) %>%
+            names() %>%
+            keep( ~ .x %in% base_fields_tmp)
+        ))
+    }) %>% 
+    bind_rows()
+  
+  df_sid_base_fields %>% write_parquet("clean/df_sid_base_fields.parquet")
+}
 
 { # YEAR and MONTH ----------------------------------------------------------
   tibble(
