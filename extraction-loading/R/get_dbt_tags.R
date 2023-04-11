@@ -17,7 +17,7 @@ get_dbt_tags = function(db, base = F){
   
   ## int
   int_tags = if (base){
-    c(base_db_tags,glue("base__{db}"))
+    c(base_db_tags,'dbt_base',glue("base__{db}"))
   } else if (!base) {
     base_db_tags
   }
