@@ -1,21 +1,25 @@
-#' THis funciton will take a source or stg_model and return associated tags
+#' THis funciton will take a source or base_model and return associated tags
 #' 
-#' @param id: This is either a stg_model_name or a databse_name
+#' @param id: This is either a base_model_name or a databse_name
+#' 
+#' Example
+#'    db = 'sid'; base = T
 
-get_dbt_tags = function(id, stg = F){
+get_dbt_tags = function(db, base = F){
+  db = str_to_lower(db)
   db_tags = list(
     sedd = c('State','ER','SEDD','Source'),
     sid = c('State','Inpatient','SID','Source')
   )
   
   ## stage
-  stg_db_tags = db_tags[[id]]
+  base_db_tags = db_tags[[db]]
   
   ## int
-  int_tags = if (stg){
-    c(stg_db_tags,'Stage')
-  } else if (!stg) {
-    stg_db_tags
+  int_tags = if (base){
+    c(base_db_tags,glue("base__{db}"))
+  } else if (!base) {
+    base_db_tags
   }
   
   ## final
