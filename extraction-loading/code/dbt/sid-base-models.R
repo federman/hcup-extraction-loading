@@ -44,7 +44,7 @@
     select(name, base, n) %>% 
     pivot_wider(names_from = name,
                 values_from = n) %>% 
-    arrange(desc(`SID-False`))  %>% View()
+    arrange(desc(`SID-False`)) 
 }
 
 
@@ -102,19 +102,10 @@
         ))
     }) %>% 
     bind_rows() %>% 
-    left_join(df_summary_sid %>% select(dataset_id, state, db))
+    left_join(df_summary_sid)
    
+  save(df_sid_base_fields, file = "clean/df_sid_base_fields.rdata")
 }
 
 
-{ # Automate base.sql  ------------------------------------------------------
-  df_sid_base_fields %>% 
-    filter(dataset_id =='AZ_SID_2016_CORE') %>% 
-    group_walk(~{
-      db = .x$db
-      dataset_id_tmp = .x$dataset_id
-      state = .x$state
-      fields = .$base_fields
-      write_base_model_sql(db, dataset_id_tmp, state, fields)
-    })
-}
+ 
