@@ -82,10 +82,25 @@ generate_codebooks = function(){
     df_codebooks_imputed = df_codebooks_raw_missing %>% 
       select(-var_label) %>% 
       left_join(xwalk_var_metadata) 
-    
-    ## Compile
-    df_codebooks = df_codebooks_raw_full %>% 
+    df_codebooks_int = df_codebooks_raw_full %>% 
       bind_rows(df_codebooks_imputed)
+    
+    ## Fill in CHARGE for every CHGS file if not available
+    row__charge = df_codebooks_raw %>% filter(var == "CHARGE") %>% 
+      select(-dataset_id) %>% 
+      distinct() %>% 
+      drop_na()
+    df_codebooks_no_charges = df_codebooks_int %>% 
+      filter(var!="CHARGE")
+    df_codebook_charges = df_codebooks_int %>% 
+      select(dataset_id) %>% 
+      distinct() %>% 
+      filter(str_detect(dataset_id,'CHGS')) %>% 
+      bind_cols(row__charge)
+    df_codebooks = df_codebooks_int %>%  
+      bind_rows(df_codebook_charges) %>% 
+      arrange(dataset_id, var) 
+   
     df_codebooks%>% fwrite("clean/df_codebooks.csv")
     cli_alert_success("Compiled codebooks at clean/df_codebooks.csv")
   }
