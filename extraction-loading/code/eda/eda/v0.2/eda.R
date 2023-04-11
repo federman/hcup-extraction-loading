@@ -143,6 +143,19 @@
   ds %>% count(VisitLink)
 }
 
-{
+{ # Race +Hispanic ----------------------------------------------------------
+
   
+  
+  df_summary %>% 
+    filter(file =='CORE') %>% 
+    slice(3,13) %>% 
+    pull(dataset_id)
+  
+  ## 
+  id = 'AZ_SID_2016_CORE'
+  id = 'GA_SID_2017_CORE'
+  ds = glue("raw-hcup/{id}.parquet") %>% open_dataset()
+  
+  ds %>% count(RACE, HISPANIC) %>% collect()
 }
