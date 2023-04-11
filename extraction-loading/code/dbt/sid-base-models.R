@@ -14,22 +14,18 @@
     "CHARGE","KEY","REVCODE","UNITS"
   )
   
-  df_summary = arrow::read_parquet("clean/df_summary.parquet") %>% 
+  df_summary_sid = arrow::read_parquet("clean/df_summary.parquet") %>% 
     filter(year>=2016,
            state!='MA',
            db == 'SID') %>% 
     mutate(path = glue("raw-hcup/{dataset_id}.parquet"))
-}
-
-
-{ # Check CORE base columns ------------------------------------------------------
-
+  
   ## Check for base columns
-  df_base = df_summary %>% 
+  df_base = df_summary_sid %>% 
     filter(file == "CORE") %>% 
     group_by(row_number()) %>% 
     group_map(~{
-      # row = df_summary  %>%  filter(file == "CORE") %>% slice(1)
+      # row = df_summary_sid  %>%  filter(file == "CORE") %>% slice(1)
       row = .x
       ds_tmp = open_dataset(row$path)
       df_exists_tmp = tibble(db = row$db,
@@ -38,10 +34,10 @@
         mutate(base_exists = base%in%names(ds_tmp))
       return(df_exists_tmp)
     }) %>% 
-      bind_rows()
+    bind_rows()
   
-
- ## Summarize availablity
+  
+  ## Summarize availablity
   df_base %>% 
     count(db, base, base_exists) %>% 
     mutate(name = paste0(db,"-",ifelse(base_exists,'True','False'))) %>% 
@@ -49,13 +45,47 @@
     pivot_wider(names_from = name,
                 values_from = n) %>% 
     arrange(desc(`SID-False`))  
-  
 }
 
 
-{ # Export CORE/CHGS base columns  ---------------------------------------
+{ # EDA + QC ------------------------------------------------------
+
+  { # YEAR and MONTH ----------------------------------------------------------
+    tibble(field = open_dataset("raw-hcup/NY_SID_2018_CORE.parquet") %>% names() )
+  }
   
-  df_sid_base_fields = df_summary %>%
+  { # HOSP_NPI  --------------------------------------------------------
+    df_base %>% 
+      filter(base == 'HOSP_NPI') %>% 
+      arrange(base_exists)
+  }
+  
+  
+  { # ZIP ---------------------------------------------------------------------
+    df_base %>% 
+      filter(base == "ZIP",
+             base_exists == F) %>% 
+      arrange(base_exists, dataset_id)
+    
+    ## MA files all are missing ZIP and only have ZIP3
+    open_dataset("raw-hcup/MA_SID_2017_CORE.parquet") %>% 
+      count(ZIP3) %>% 
+      collect()
+    
+  }
+  
+  { # DX vs I10_DX ------------------------------------------------------------
+    df_base %>% 
+      filter(base == "I10_DX1",
+             db == "SID") %>% 
+      arrange(base_exists, dataset_id)
+  }
+}
+
+
+{ # Generate CORE/CHGS base columns  ---------------------------------------
+  
+  df_sid_base_fields = df_summary_sid %>%
     filter(file %in% c("CORE", "CHGS")) %>%
     group_by(row_number()) %>%
     group_map( ~ {
@@ -73,39 +103,4 @@
     bind_rows()
   
   df_sid_base_fields %>% write_parquet("clean/df_sid_base_fields.parquet")
-}
-
-{ # YEAR and MONTH ----------------------------------------------------------
-  tibble(
-    field = open_dataset("raw-hcup/NY_SID_2018_CORE.parquet") %>% names() ) %>%
-    View()
-
-        
-  
-}
-{ # HOSP_NPI  --------------------------------------------------------
-  df_base %>% 
-    filter(base == 'HOSP_NPI') %>% 
-    arrange(base_exists)
-}
-
-
-{ # ZIP ---------------------------------------------------------------------
-  df_base %>% 
-    filter(base == "ZIP",
-           base_exists == F) %>% 
-    arrange(base_exists, dataset_id)
-  
-  ## MA files all are missing ZIP and only have ZIP3
-  open_dataset("raw-hcup/MA_SID_2017_CORE.parquet") %>% 
-    count(ZIP3) %>% 
-    collect()
-  
-}
-
-{ # DX vs I10_DX ------------------------------------------------------------
-  df_base %>% 
-    filter(base == "I10_DX1",
-           db == "SID") %>% 
-    arrange(base_exists, dataset_id) %>% View()
 }

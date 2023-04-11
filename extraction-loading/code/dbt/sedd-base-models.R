@@ -6,21 +6,21 @@
                    "HCUP_OS", "HOSPST", "I10_DX_Visit_Reason1", "I10_DX_Visit_Reason2", "I10_DX1",
                    "I10_DX2", "LOS", "PSTCO", "PSTCO2","HISPANIC", "RACE", "ZIPINC_QRTL", "PAY1", "DIED", "FEMALE", "HOSP_NPI")
   
-  df_summary = arrow::read_parquet("clean/df_summary.parquet") %>% 
+  df_summary_sedd = arrow::read_parquet("clean/df_summary.parquet") %>% 
     mutate(path = glue("raw-hcup/{dataset_id}.parquet"))%>% 
     filter( db == 'SEDD')
 }
 
 
-{ # Check base columns ------------------------------------------------------
+{ # EDA + QC ------------------------------------------------------
 
   ## Check for base columns
-  df_base = df_summary %>% 
+  df_base = df_summary_sedd %>% 
     filter(file == "CORE",
            db == 'SEDD') %>% 
     group_by(row_number()) %>% 
     group_map(~{
-      # row = df_summary  %>%  filter(file == "CORE") %>% slice(1)
+      # row = df_summary_sedd  %>%  filter(file == "CORE") %>% slice(1)
       row = .x
       ds_tmp = open_dataset(row$path)
       df_exists_tmp = tibble(db = row$db,
@@ -44,9 +44,9 @@
 
 
 
-{ # Export CORE/CHGS base columns  ---------------------------------------
+{ # Generate CORE base columns  ---------------------------------------
   
-  df_sedd_base_fields = df_summary %>%
+  df_sedd_base_fields = df_summary_sedd %>%
     filter(file %in% c("CORE")) %>%
     group_by(row_number()) %>%
     group_map( ~ {
