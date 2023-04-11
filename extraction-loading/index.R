@@ -31,6 +31,7 @@
     ## Imports
     df_summary = arrow::read_parquet("clean/df_summary.parquet")
     load("clean/df_sid_base_fields.rdata")
+    load("clean/df_sedd_base_fields.rdata")
   }
   
   { # Scripts -------------------------------------------------------------------
@@ -82,7 +83,7 @@
     filter(year >=2016, state !='MA') %>% 
     group_by(row_number()) %>% 
     group_walk(~{
-      write_dbt_base_model(.x$db, .x$dataset_id, .x$state, .x$base_fields)
+      write_dbt_base_model(.x$db, .x$file, .x$dataset_id, .x$state, .x$base_fields)
       })
   
   

@@ -5,16 +5,16 @@
 #'   @param fields: a list of base fields
 #'   
 #'   Example:
-#'      db = "SID"; dataset_id_tmp = 'NY_SID_2017_CORE'; state = "NY"; fields = as.list(c("KEY","AMONTH"))
+#'      db = "SID"; file = "CORE"; dataset_id_tmp = 'NY_SID_2017_CORE'; state = "NY"; fields = as.list(c("KEY","AMONTH"))
 #'   
 
-write_dbt_base_model = function(db, dataset_id_tmp, state, fields){
+write_dbt_base_model = function(db, file, dataset_id_tmp, state, fields){
   
   base_model_template_sql <-  "{{ config(materialized='external', format =  target.schema) }}
 SELECT
   {{ fields }},
-  'sid_core' AS db_file,
-  CONCAT_WS('', AYEAR, '-', AMONTH, '-01') AS admit_date,
+  '{{ db }}' AS db,
+  '{{ file }}' AS file,
 FROM {{ source('{{ db }}', '{{ dataset }}') }}
 
 {{ limit_data_in_dev() }}"
@@ -34,7 +34,8 @@ FROM {{ source('{{ db }}', '{{ dataset }}') }}
     base_model_template_sql <- gsub("\\{\\{\\s*fields\\s*\\}\\}", paste( fields, collapse = ",\n  "), base_model_template_sql)
     base_model_template_sql <- gsub("\\{\\{\\s*db\\s*\\}\\}",db, base_model_template_sql)
     base_model_template_sql <- gsub("\\{\\{\\s*dataset\\s*\\}\\}",dataset_id_tmp, base_model_template_sql)
-
+    base_model_template_sql <- gsub("\\{\\{\\s*file\\s*\\}\\}",file, base_model_template_sql)
+    
   }
   
   {# Write .sql --------------------------------------------------------------
@@ -45,7 +46,7 @@ FROM {{ source('{{ db }}', '{{ dataset }}') }}
   { # Generate .yml -----------------------------------------------------------
     
     df_codebooks = read.csv("clean/df_codebooks.csv") %>% as_tibble()
-    model_columns = c(fields,'db_file','admit_date')
+    model_columns = c(fields,'db','file')
     df_file_codebook = df_codebooks %>%
       filter(dataset_id == dataset_id_tmp,
              var%in%model_columns)
