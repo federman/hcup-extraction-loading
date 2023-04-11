@@ -1,7 +1,7 @@
 #' This will explore if our sources files have the expected base columns
 
 { # Setup -------------------------------------------------------------------
-  sedd_base_columns = c("AGE", "YEAR", "ZIP", "ZIP3", "VisitLink", "CPT1", "CPT2", "CPT3", "CPTCCS1",
+  sedd_base_columns = c("KEY","AGE", "YEAR", "ZIP", "ZIP3", "VisitLink", "CPT1", "CPT2", "CPT3", "CPTCCS1",
                    "CPTCCS2", "DHOUR", "DMONTH", "DQTR", "DISP_X", "DISPUB04", "DMONTH", "DQTR", "DSHOSPID", "HCUP_ED",
                    "HCUP_OS", "HOSPST", "I10_DX_Visit_Reason1", "I10_DX_Visit_Reason2", "I10_DX1",
                    "I10_DX2", "LOS", "PSTCO", "PSTCO2","HISPANIC", "RACE", "ZIPINC_QRTL", "PAY1", "DIED", "FEMALE", "HOSP_NPI")
@@ -38,8 +38,7 @@
     mutate(name = paste0(db,"-",ifelse(base_exists,'True','False'))) %>% 
     select(name, base, n) %>% 
     pivot_wider(names_from = name,
-                values_from = n) %>% 
-      View()
+                values_from = n) # %>% View()
 }
 
 
@@ -61,7 +60,8 @@
             keep( ~ .x %in% base_fields_tmp)
         ))
     }) %>% 
-    bind_rows()
+    bind_rows() %>% 
+    left_join(df_summary_sedd)
   
-  df_sedd_base_fields %>% write_parquet("clean/df_sedd_base_fields.parquet")
+  save(df_sedd_base_fields, file = "clean/df_sedd_base_fields.rdata")
 }

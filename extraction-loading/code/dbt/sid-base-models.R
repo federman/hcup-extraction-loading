@@ -2,7 +2,7 @@
 
 { # Setup -------------------------------------------------------------------
   sid_base_columns = c(
-    "AGE", "AYEAR", "AMONTH", "ZIP", "ZIP3", "VisitLink", 
+    "KEY","AGE", "AYEAR", "AMONTH", "ZIP", "ZIP3", "VisitLink", 
     "CPT1", "CPT2", "CPT3", "CPTCCS1","CPTCCS2", 
     "DHOUR", "DMONTH", "DQTR", "DRG", "DISP_X", "DISPUB04", "DMONTH", "DQTR", "DSHOSPID", 
     "HCUP_ED","HCUP_OS", "HOSPST",  
@@ -44,7 +44,7 @@
     select(name, base, n) %>% 
     pivot_wider(names_from = name,
                 values_from = n) %>% 
-    arrange(desc(`SID-False`)) 
+    arrange(desc(`SID-False`)) # %>% View()
 }
 
 
