@@ -7,7 +7,8 @@
                    "I10_DX2", "LOS", "PSTCO", "PSTCO2","HISPANIC", "RACE", "ZIPINC_QRTL", "PAY1", "DIED", "FEMALE", "HOSP_NPI")
   
   df_summary = arrow::read_parquet("clean/df_summary.parquet") %>% 
-    mutate(path = glue("raw-hcup/{dataset_id}.parquet"))
+    mutate(path = glue("raw-hcup/{dataset_id}.parquet"))%>% 
+    filter( db == 'SEDD')
 }
 
 
@@ -39,4 +40,28 @@
     pivot_wider(names_from = name,
                 values_from = n) %>% 
       View()
+}
+
+
+
+{ # Export CORE/CHGS base columns  ---------------------------------------
+  
+  df_sedd_base_fields = df_summary %>%
+    filter(file %in% c("CORE")) %>%
+    group_by(row_number()) %>%
+    group_map( ~ {
+      row = .x
+      base_fields_tmp = sedd_base_columns
+      if (row$file == "CHGS") base_fields_tmp = sedd_base_chgs_base_columns
+      row %>%
+        select(dataset_id) %>%
+        mutate(base_fields = list(
+          open_dataset(glue("raw-hcup/{dataset_id}.parquet")) %>%
+            names() %>%
+            keep( ~ .x %in% base_fields_tmp)
+        ))
+    }) %>% 
+    bind_rows()
+  
+  df_sedd_base_fields %>% write_parquet("clean/df_sedd_base_fields.parquet")
 }
