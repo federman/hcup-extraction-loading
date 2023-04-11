@@ -50,6 +50,11 @@
 
 { # EDA + QC ------------------------------------------------------
 
+  { # Universal columns -------------------------------------------------------
+
+    
+    }
+  
   { # YEAR and MONTH ----------------------------------------------------------
     tibble(field = open_dataset("raw-hcup/NY_SID_2018_CORE.parquet") %>% names() )
   }
@@ -89,17 +94,29 @@
     filter(file %in% c("CORE", "CHGS")) %>%
     group_by(row_number()) %>%
     group_map( ~ {
+      # row = df_summary_sid %>% filter(dataset_id == 'AZ_SID_2016_CORE')
       row = .x
       base_fields_tmp = sid_base_columns
       if (row$file == "CHGS") base_fields_tmp = sid_base_chgs_base_columns
+      fields_in_file = open_dataset( glue("raw-hcup/{row$dataset_id}.parquet")) %>%  names()
+      
+      base_fields = base_fields_tmp %>% 
+        sort() %>% 
+        map(function(var){
+          present = var%in%fields_in_file
+          if(present){
+            var %>% return()
+          } else {
+            # cli_alert_warning("{var} NOT PRESENT: Op. as NULL")
+            glue("NULL AS {var}") %>% return()
+          }
+        }) %>% 
+        unique() %>% 
+        list()
+     
       row %>%
         select(dataset_id) %>%
-        mutate(base_fields = list(
-          open_dataset(glue("raw-hcup/{dataset_id}.parquet")) %>%
-            names() %>%
-            keep( ~ .x %in% base_fields_tmp) %>% 
-            sort()
-        ))
+        mutate(base_fields = base_fields)
     }) %>% 
     bind_rows() %>% 
     left_join(df_summary_sid)

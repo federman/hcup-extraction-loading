@@ -5,8 +5,9 @@
 #'   @param fields: a list of base fields
 #'   
 #'   Example:
-#'      db = "SID"; file = "CORE"; dataset_id_tmp = 'NY_SID_2017_CORE'; state = "NY"; fields = as.list(c("KEY","AMONTH"))
-#'   
+#'     row = df_sid_base_fields %>% filter(dataset_id == 'AZ_SID_2016_CORE')
+#'     db = row$db; file = row$file; dataset_id_tmp = row$dataset_id; state = row$state; fields = row$base_fields
+
 
 write_dbt_base_model = function(db, file, dataset_id_tmp, state, fields){
   
@@ -52,7 +53,8 @@ FROM {{ source('{{ db }}', '{{ dataset }}') }}
              var%in%model_columns)
     df_model_new_columns = tibble(var = model_columns,
                                   database = str_to_lower(db)) %>% 
-      filter(!var%in%df_file_codebook$var) 
+      filter(!var%in%df_file_codebook$var,
+             !str_detect(var, 'NULL')) 
     
     ## int
     columns_src = df_file_codebook %>% 
@@ -86,9 +88,7 @@ FROM {{ source('{{ db }}', '{{ dataset }}') }}
   }
   
   
-  {
-
-# Write .yml --------------------------------------------------------------
+  { # Write .yml --------------------------------------------------------------
 
     ## Stage
     stg_model_tags = get_dbt_tags(metadata_tmp$database, base = T) %>% unlist()

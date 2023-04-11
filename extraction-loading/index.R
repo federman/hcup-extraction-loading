@@ -86,8 +86,15 @@
       write_dbt_base_model(.x$db, .x$file, .x$dataset_id, .x$state, .x$base_fields)
       })
   
+  ## SEDD base models
+  df_sedd_base_fields %>% 
+    filter(year >=2016, state !='MA') %>% 
+    group_by(row_number()) %>% 
+    group_walk(~{
+      write_dbt_base_model(.x$db, .x$file, .x$dataset_id, .x$state, .x$base_fields)
+    })
   
-  get_stage_models() %>% walk(~generate_stg_model_yml(.x))
+  
   
   
 }
