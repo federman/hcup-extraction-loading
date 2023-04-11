@@ -44,7 +44,7 @@
     select(name, base, n) %>% 
     pivot_wider(names_from = name,
                 values_from = n) %>% 
-    arrange(desc(`SID-False`))  
+    arrange(desc(`SID-False`))  %>% View()
 }
 
 
@@ -83,7 +83,7 @@
 }
 
 
-{ # Generate CORE/CHGS base columns  ---------------------------------------
+{ # Generate base fields  ---------------------------------------
   
   df_sid_base_fields = df_summary_sid %>%
     filter(file %in% c("CORE", "CHGS")) %>%
@@ -97,10 +97,24 @@
         mutate(base_fields = list(
           open_dataset(glue("raw-hcup/{dataset_id}.parquet")) %>%
             names() %>%
-            keep( ~ .x %in% base_fields_tmp)
+            keep( ~ .x %in% base_fields_tmp) %>% 
+            sort()
         ))
     }) %>% 
-    bind_rows()
-  
-  df_sid_base_fields %>% write_parquet("clean/df_sid_base_fields.parquet")
+    bind_rows() %>% 
+    left_join(df_summary_sid %>% select(dataset_id, state, db))
+   
+}
+
+
+{ # Automate base.sql  ------------------------------------------------------
+  df_sid_base_fields %>% 
+    filter(dataset_id =='AZ_SID_2016_CORE') %>% 
+    group_walk(~{
+      db = .x$db
+      dataset_id_tmp = .x$dataset_id
+      state = .x$state
+      fields = .$base_fields
+      write_base_model_sql(db, dataset_id_tmp, state, fields)
+    })
 }
