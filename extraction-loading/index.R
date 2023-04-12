@@ -74,8 +74,8 @@
 
 { # 2. Loading  -----------------------------------------------------------
   
-  ## load source.ymls into dbt
-  get_file_ids() %>% walk(~generate_source_yml(.x))
+  ## Source files
+  get_file_ids() %>% walk(~generate_source_yml(.x, env = "uhc"))
   
   ## SID base models
   ### . sql
@@ -94,7 +94,18 @@
       write_dbt_base_model(.x$db, .x$file, .x$dataset_id, .x$state, .x$base_fields)
     })
   
+  ## diversify outputs
+  mart_dir = '../../hcup-dbt/external/ran/'
+  list.files(mart_dir) %>% 
+    keep(~str_detect(.,'mart')&str_detect(.x,'parquet')) %>% 
+    walk(~{
+      mart_file = .x
+      mart_name = mart_file %>% str_remove(".parquet")
+      df_mart = arrow::read_parquet(glue("{mart_dir}{mart_name}.parquet"))
+      df_mart %>% haven::write_sas(glue("{mart_dir}{mart_name}.sas7bdat"))
+      df_mart %>% haven::write_dta(glue("{mart_dir}{mart_name}.dta"))
+      cli_alert_success("Diversify outputs for {mart_file}")
+    })
   
-  
-  
+ 
 }
