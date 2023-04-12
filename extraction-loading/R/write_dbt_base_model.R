@@ -6,6 +6,7 @@
 #'   
 #'   Example:
 #'     row = df_sid_base_fields %>% filter(dataset_id == 'AZ_SID_2016_CORE')
+#'     row = df_sid_base_fields %>% filter(dataset_id == 'AZ_SID_2016_CHGS')
 #'     db = row$db; file = row$file; dataset_id_tmp = row$dataset_id; state = row$state; fields = row$base_fields
 
 
@@ -18,7 +19,7 @@ SELECT
   '{{ file }}' AS file,
 FROM {{ source('{{ db }}', '{{ dataset }}') }}
 
-{{ limit_data_in_dev() }}"
+{{ {{ dev_macro }} }}"
   
   {# Setup -------------------------------------------------------------------
     cli_alert("Start base__model.sql for {dataset_id_tmp}")
@@ -28,6 +29,7 @@ FROM {{ source('{{ db }}', '{{ dataset }}') }}
     base_model_yml_name = glue("{base_model_file_name}.yml")
     sql_endpoint = glue("../../hcup-dbt/models/base/{db}/{state}/{base_model_sql_name}")
     yml_endpoint = glue("../../hcup-dbt/models/base/{db}/{state}/{base_model_yml_name}")
+    dev_macro_func = ifelse(file == 'CORE','limit_data_in_dev()',glue("limit_chgs_in_dev(core_model = '{str_replace(base_model_file_name,'chgs','core')}')"))
     
   }
 
@@ -36,6 +38,7 @@ FROM {{ source('{{ db }}', '{{ dataset }}') }}
     base_model_template_sql <- gsub("\\{\\{\\s*db\\s*\\}\\}",db, base_model_template_sql)
     base_model_template_sql <- gsub("\\{\\{\\s*dataset\\s*\\}\\}",dataset_id_tmp, base_model_template_sql)
     base_model_template_sql <- gsub("\\{\\{\\s*file\\s*\\}\\}",file, base_model_template_sql)
+    base_model_template_sql <- gsub("\\{\\{\\s*dev_macro\\s*\\}\\}",dev_macro_func, base_model_template_sql)
     
   }
   
