@@ -159,3 +159,23 @@
   
   ds %>% count(RACE, HISPANIC) %>% collect()
 }
+
+
+{ # KEY dictionary ----------------------------------------------------------
+
+  # df_key = df_summary %>% 
+  #   filter(file =='CORE') %>% 
+  #   mutate(path = glue("raw-hcup/{dataset_id}.parquet")) %>%
+  #   pull(path) %>% 
+  #   map_df(~{
+  #     open_dataset(.x) %>% count(KEY) %>% collect() %>% mutate(path = .x)
+  #   })
+  df_key %>% write_parquet(sink = 'clean/df_key.parquet')
+   
+}
+
+
+{ # Polar joins 362018102833327 ---------------------------------------------
+
+  df_key = read_parquet()
+}

@@ -45,6 +45,11 @@
     pivot_wider(names_from = name,
                 values_from = n) %>% 
     arrange(desc(`SID-False`)) # %>% View()
+  
+  ## Complete base_fields
+  df_base %>% group_by(dataset_id) %>% summarize(n_base_exists = sum(base_exists)) %>% 
+    arrange(desc(n_base_exists)) %>% 
+    slice(1)
 }
 
 
