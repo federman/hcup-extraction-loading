@@ -74,8 +74,8 @@
 
 { # 2. Loading  -----------------------------------------------------------
   
-  ## load source.ymls into dbt
-  get_file_ids() %>% walk(~generate_source_yml(.x))
+  ## Source files
+  get_file_ids() %>% walk(~generate_source_yml(.x, env = "ran"))
   
   ## SID base models
   ### . sql

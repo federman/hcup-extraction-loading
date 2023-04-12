@@ -18,10 +18,13 @@ source("R/get_dbt_source_dir.R")
 
 df_codebooks = read_csv("clean/df_codebooks.csv")
 
-generate_source_yml <- function(table_name) {
+generate_source_yml <- function(table_name, env) {
   {  # Setup -------------------------------------------------------------------
     cli_alert("Start source.yml generation for {table_name}")
-    source_loc = "\\\\files.drexel.edu\\encrypted\\SOPH\\UHC\\SchnakeMahl_HCUP\\dbt\\v0\\sources\\{name}.parquet"
+    source_loc = ifelse(env == "ran",
+                        "D:\\git\\hcup-extraction-loading\\extraction-loading\\raw-hcup\\{name}.parquet",
+                        "\\\\files.drexel.edu\\encrypted\\SOPH\\UHC\\SchnakeMahl_HCUP\\dbt\\v0\\sources\\{name}.parquet")
+    if (env == "ran"){cli_alert_warning('saving to local source folder!')}
     file_metadata = parse_hcup_table_name(table_name)
     src_endpoint = get_dbt_source_dir(file_metadata)
   }
