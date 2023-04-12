@@ -175,7 +175,15 @@
 }
 
 
-{ # Polar joins 362018102833327 ---------------------------------------------
+{ # VistLink ---------------------------------------------
 
-  df_key = read_parquet()
+  ds = open_dataset('raw-hcup/NY_SEDD_2017_CORE.parquet')
+  
+  dfa =  ds %>% 
+    count(VisitLink) %>% 
+    collect()
+  
+  dfa %>% 
+    count(n) %>% 
+    arrange(desc(nn)) %>% View()
 }
