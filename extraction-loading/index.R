@@ -75,7 +75,7 @@
 { # 2. Loading  -----------------------------------------------------------
   
   ## Source files
-  get_file_ids() %>% walk(~generate_source_yml(.x, env = "ran"))
+  get_file_ids() %>% walk(~generate_source_yml(.x, env = "uhc"))
   
   ## SID base models
   ### . sql
