@@ -16,10 +16,7 @@ write_dbt_base_model = function(row){
 base_model_template_sql <-  "{{ config(materialized='external', format =  target.schema) }}
 SELECT
   {{ fields }},
-  '{{ db }}' AS db,
-  '{{ file }}' AS file,
-  '{{ state }}' AS state,
-  '{{ year }}' AS year,
+  {{ state }}
 FROM {{ source('{{ db }}', '{{ dataset }}') }}
 
 {{ {{ dev_macro }} }}
@@ -41,9 +38,13 @@ FROM {{ source('{{ db }}', '{{ dataset }}') }}
     base_model_yml_name = glue("{base_model_file_name}.yml")
     sql_endpoint = glue("../../hcup-dbt/models/base/{db}/{state}/{base_model_sql_name}")
     yml_endpoint = glue("../../hcup-dbt/models/base/{db}/{state}/{base_model_yml_name}")
+    
+    
+    ## File specific
     dev_macro_func = ifelse(file == 'CORE','limit_data_in_dev()',glue("limit_chgs_in_dev(core_model = '{str_replace(base_model_file_name,'chgs','core')}')"))
     group_CHGS_sql = ifelse(file == 'CORE','','GROUP BY KEY')
-    
+    state_tmp = ifelse(file == 'CORE',  glue("'{state}' AS state,"),'')
+  
   }
 
   { # Generate .sql -------------------------------------------------------------
@@ -51,8 +52,7 @@ FROM {{ source('{{ db }}', '{{ dataset }}') }}
     base_model_template_sql <- gsub("\\{\\{\\s*db\\s*\\}\\}",db, base_model_template_sql)
     base_model_template_sql <- gsub("\\{\\{\\s*dataset\\s*\\}\\}",dataset_id_tmp, base_model_template_sql)
     base_model_template_sql <- gsub("\\{\\{\\s*file\\s*\\}\\}",file, base_model_template_sql)
-    base_model_template_sql <- gsub("\\{\\{\\s*state\\s*\\}\\}",state, base_model_template_sql)
-    base_model_template_sql <- gsub("\\{\\{\\s*year\\s*\\}\\}",year, base_model_template_sql)
+    base_model_template_sql <- gsub("\\{\\{\\s*state\\s*\\}\\}",state_tmp, base_model_template_sql)
     base_model_template_sql <- gsub("\\{\\{\\s*dev_macro\\s*\\}\\}",dev_macro_func, base_model_template_sql)
     base_model_template_sql <- gsub("\\{\\{\\s*group_CHGS\\s*\\}\\}",group_CHGS_sql, base_model_template_sql)
   }
@@ -67,7 +67,7 @@ FROM {{ source('{{ db }}', '{{ dataset }}') }}
     df_codebooks = read.csv("clean/df_codebooks.csv") %>% as_tibble()
     model_columns = fields %>% 
       map_chr(~.x %>% recode("SUM(CHARGE) AS total_charge"='total_charge')) %>% 
-      c('db','file','state','year')
+      c('db','file','state')
     df_file_codebook = df_codebooks %>%
       filter(dataset_id == dataset_id_tmp,
              var%in%model_columns)
