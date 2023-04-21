@@ -82,9 +82,7 @@
   df_sid_base_fields %>% 
     filter(year >=2016, state !='MA') %>% 
     group_by(row_number()) %>% 
-    group_walk(~{
-      write_dbt_base_model(.x$db, .x$file, .x$dataset_id, .x$state, .x$base_fields)
-      })
+    group_walk(~.x %>% write_dbt_base_model())
   
   ## SEDD base models
   df_sedd_base_fields %>% 

@@ -10,18 +10,30 @@
 #'     db = row$db; file = row$file; dataset_id_tmp = row$dataset_id; state = row$state; fields = row$base_fields
 
 
-write_dbt_base_model = function(db, file, dataset_id_tmp, state, fields){
+# write_dbt_base_model = function(db, file, dataset_id_tmp, state, fields){
+write_dbt_base_model = function(row){
   
-  base_model_template_sql <-  "{{ config(materialized='external', format =  target.schema) }}
+base_model_template_sql <-  "{{ config(materialized='external', format =  target.schema) }}
 SELECT
   {{ fields }},
   '{{ db }}' AS db,
   '{{ file }}' AS file,
+  '{{ state }}' AS state,
+  '{{ year }}' AS year,
 FROM {{ source('{{ db }}', '{{ dataset }}') }}
 
-{{ {{ dev_macro }} }}"
+{{ {{ dev_macro }} }}
+
+
+{{ group_CHGS }}"
   
   {# Setup -------------------------------------------------------------------
+    db = row$db 
+    file = row$file
+    dataset_id_tmp = row$dataset_id
+    state = row$state
+    year = row$year
+    fields = row$base_fields   
     cli_alert("Start base__model.sql for {dataset_id_tmp}")
     fields = unlist(fields)    
     base_model_file_name = glue("base__{str_to_lower(dataset_id_tmp)}")
@@ -30,6 +42,7 @@ FROM {{ source('{{ db }}', '{{ dataset }}') }}
     sql_endpoint = glue("../../hcup-dbt/models/base/{db}/{state}/{base_model_sql_name}")
     yml_endpoint = glue("../../hcup-dbt/models/base/{db}/{state}/{base_model_yml_name}")
     dev_macro_func = ifelse(file == 'CORE','limit_data_in_dev()',glue("limit_chgs_in_dev(core_model = '{str_replace(base_model_file_name,'chgs','core')}')"))
+    group_CHGS_sql = ifelse(file == 'CORE','','GROUP BY KEY')
     
   }
 
@@ -38,8 +51,10 @@ FROM {{ source('{{ db }}', '{{ dataset }}') }}
     base_model_template_sql <- gsub("\\{\\{\\s*db\\s*\\}\\}",db, base_model_template_sql)
     base_model_template_sql <- gsub("\\{\\{\\s*dataset\\s*\\}\\}",dataset_id_tmp, base_model_template_sql)
     base_model_template_sql <- gsub("\\{\\{\\s*file\\s*\\}\\}",file, base_model_template_sql)
+    base_model_template_sql <- gsub("\\{\\{\\s*state\\s*\\}\\}",state, base_model_template_sql)
+    base_model_template_sql <- gsub("\\{\\{\\s*year\\s*\\}\\}",year, base_model_template_sql)
     base_model_template_sql <- gsub("\\{\\{\\s*dev_macro\\s*\\}\\}",dev_macro_func, base_model_template_sql)
-    
+    base_model_template_sql <- gsub("\\{\\{\\s*group_CHGS\\s*\\}\\}",group_CHGS_sql, base_model_template_sql)
   }
   
   {# Write .sql --------------------------------------------------------------
