@@ -65,7 +65,9 @@ FROM {{ source('{{ db }}', '{{ dataset }}') }}
   { # Generate .yml -----------------------------------------------------------
     
     df_codebooks = read.csv("clean/df_codebooks.csv") %>% as_tibble()
-    model_columns = c(fields,'db','file')
+    model_columns = fields %>% 
+      map_chr(~.x %>% recode("SUM(CHARGE) AS total_charge"='total_charge')) %>% 
+      c('db','file','state','year')
     df_file_codebook = df_codebooks %>%
       filter(dataset_id == dataset_id_tmp,
              var%in%model_columns)
