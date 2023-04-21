@@ -11,7 +11,7 @@
     "I10_DX_Admitting")
   
   sid_base_chgs_base_columns = c(
-    "CHARGE","KEY","REVCODE","UNITS"
+    "KEY","SUM(CHARGE) AS total_charge"
   )
   
   df_summary_sid = arrow::read_parquet("clean/df_summary.parquet") %>% 
@@ -99,7 +99,7 @@
     filter(file %in% c("CORE", "CHGS")) %>%
     group_by(row_number()) %>%
     group_map( ~ {
-      # row = df_summary_sid %>% filter(dataset_id == 'AZ_SID_2016_CORE')
+      # row = df_summary_sid %>% filter(dataset_id == 'AZ_SID_2016_CHGS')
       row = .x
       base_fields_tmp = sid_base_columns
       if (row$file == "CHGS") base_fields_tmp = sid_base_chgs_base_columns
@@ -108,7 +108,7 @@
       base_fields = base_fields_tmp %>% 
         sort() %>% 
         map(function(var){
-          present = var%in%fields_in_file
+          present = var%in%c(fields_in_file, "SUM(CHARGE) AS total_charge")
           if(present){
             var %>% return()
           } else {
