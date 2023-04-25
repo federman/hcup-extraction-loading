@@ -67,7 +67,8 @@ FROM {{ source('{{ db }}', '{{ dataset }}') }}
     df_codebooks = read.csv("clean/df_codebooks.csv") %>% as_tibble()
     model_columns = fields %>% 
       map_chr(~.x %>% recode("SUM(CHARGE) AS total_charge"='total_charge')) %>% 
-      c('db','file','state')
+      c('state') %>% 
+      discard(~(.x=='state'&file!='CORE'))
     df_file_codebook = df_codebooks %>%
       filter(dataset_id == dataset_id_tmp,
              var%in%model_columns)
