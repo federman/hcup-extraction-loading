@@ -52,7 +52,7 @@ copy_load_program = function(dev = F){
     
     ## Delete these `used` load programs
     stata_load_done_paths %>% walk(~unlink(.x))
-    message("Removed used stata load programs.")
+    cli_alert("Removed used stata load programs.")
   } else  {
     # prod: copies all --------------------------------------------------------
     df_missing = get_elt_status() %>% filter(is.na(load_program))
@@ -60,11 +60,11 @@ copy_load_program = function(dev = F){
     if(nrow(df_missing)>0){
       df_missing$dataset_id %>% map(~copy_load_file(.x))
       print(get_elt_status())
-      message(glue("Copied load program files for {nrow(df_missing)} files"))
-      df_missing$dataset_id %>% walk(~message(glue("- {.x}")))
+      cli_alert("Copied load program files for {nrow(df_missing)} files")
+      df_missing$dataset_id %>% walk(~cli_alert("- {.x}"))
     } else {
       print(get_elt_status() %>% select(dataset_id, load_program))
-      message(glue("No load program missing"))
+      cli_alert_info("No load program missing")
     }
   }
   
