@@ -16,7 +16,7 @@ source("R/parse_hcup_table_name.R")
 source("R/get_dbt_source_dir.R")
 
 
-df_codebooks = read_csv("clean/df_codebooks.csv")
+
 
 generate_source_yml <- function(table_name, env) {
   {  # Setup -------------------------------------------------------------------
