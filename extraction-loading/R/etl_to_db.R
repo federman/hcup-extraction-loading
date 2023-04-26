@@ -8,7 +8,7 @@
 #'     dataset_id_tmp = 'AZ_SID_2015q1q3_CHGS'
 #'     dataset_id_tmp = 'MA_SID_2016_CHGS'  # charges wide
 
-source("R/get_elt_status.R")
+source("R/get_etl_status.R")
 source("R/make_target_endpoints.R")
 
 
@@ -133,13 +133,13 @@ etl_to_db = function(xwalk_zip_zcta) {
   { # Setup -------------------------------------------------------------------
     
     ## get datasets that have .dta but not parquet
-    datasets_to_load = get_elt_status() %>%
+    datasets_to_load = get_etl_status() %>%
       filter(loaded_data %in% c("dta", "sas7bdat") ,
              is.na(parquet)) %>%
       pull(dataset_id)
     
     if (length(datasets_to_load) == 0) {
-      print(get_elt_status() %>% select(dataset_id, parquet))
+      print(get_etl_status() %>% select(dataset_id, parquet))
       cli_alert_warning("All .dta have been converted to .parquet. No Action taken.", .envir = globalenv())
       return()
     }

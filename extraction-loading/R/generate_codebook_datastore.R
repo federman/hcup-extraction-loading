@@ -4,7 +4,7 @@
 #'  
 #'    
 
-source("R/get_elt_status.R")
+source("R/get_etl_status.R")
 source("R/make_target_endpoints.R")
 
 make_codebooks = function(df_id){
@@ -41,7 +41,7 @@ make_codebooks = function(df_id){
 generate_codebooks = function(){
   
   { # Generate individual codebooks -------------------------------------------
-    df_targets_without_codebooks = get_elt_status() %>% 
+    df_targets_without_codebooks = get_etl_status() %>% 
       make_target_endpoints(keep_column = 'codebook') %>% 
       select(-path_dta) %>% 
       filter(is.na(codebook))
@@ -59,7 +59,7 @@ generate_codebooks = function(){
   { # Compile codebook --------------------------------------------------------
     
     ## preliminary compilation
-    df_codebooks_raw  = get_elt_status() %>% 
+    df_codebooks_raw  = get_etl_status() %>% 
       make_target_endpoints() %>% 
       pull(path_codebook) %>% 
       map_df(~fread(.)) %>% 

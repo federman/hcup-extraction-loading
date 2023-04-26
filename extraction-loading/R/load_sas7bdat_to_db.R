@@ -4,13 +4,13 @@
 #'    
 
 
-source("R/get_elt_status.R")
+source("R/get_etl_status.R")
 source("R/make_target_endpoints.R")
 
 load_sas7bdat_to_db = function(){
   
   ## get datasets that have .dta but not parquet
-  datasets_to_load = get_elt_status() %>% 
+  datasets_to_load = get_etl_status() %>% 
     filter(loaded_data == "sas7bdat",
            is.na(parquet)) %>% 
     pull(dataset_id)
@@ -27,7 +27,7 @@ load_sas7bdat_to_db = function(){
         cli_alert_success("Finished .sas7bdat to parquet conversion for {dataset_id_tmp}")       
       }) 
   } else {
-    print(get_elt_status() %>% select(dataset_id, parquet))
+    print(get_etl_status() %>% select(dataset_id, parquet))
     cli_alert_warning("All .sas7bdat have been converted to .parquet. No Action taken.")
   }
   
