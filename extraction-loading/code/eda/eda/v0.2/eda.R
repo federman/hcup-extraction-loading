@@ -187,3 +187,88 @@
     count(n) %>% 
     arrange(desc(nn)) %>% View()
 }
+
+
+{ # NJ ZCTA? ---------------------------------------------
+  #'  342017100014233 has no zip?
+  ds = open_dataset('raw-hcup/NJ_SID_2017_CORE.parquet')
+  
+  ds %>% 
+    count(ZIP) %>% 
+    collect() %>% 
+    View()
+}
+
+
+{ # sid base columns --------------------------------------------------------
+  
+  { # EDA + QC ------------------------------------------------------
+    
+    { # Universal columns -------------------------------------------------------
+      
+      
+    }
+    
+    { # YEAR and MONTH ----------------------------------------------------------
+      tibble(field = open_dataset("raw-hcup/NY_SID_2018_CORE.parquet") %>% names() )
+    }
+    
+    { # HOSP_NPI  --------------------------------------------------------
+      df_base %>% 
+        filter(base == 'HOSP_NPI') %>% 
+        arrange(base_exists)
+    }
+    
+    
+    { # ZIP ---------------------------------------------------------------------
+      df_base %>% 
+        filter(base == "ZIP",
+               base_exists == F) %>% 
+        arrange(base_exists, dataset_id)
+      
+      ## MA files all are missing ZIP and only have ZIP3
+      open_dataset("raw-hcup/MA_SID_2017_CORE.parquet") %>% 
+        count(ZIP3) %>% 
+        collect()
+      
+    }
+    
+    { # DX vs I10_DX ------------------------------------------------------------
+      df_base %>% 
+        filter(base == "I10_DX1",
+               db == "SID") %>% 
+        arrange(base_exists, dataset_id)
+    }
+  }
+  
+}
+
+{ # sedd base columns -------------------------------------------------------
+  
+  
+  ## Check for base columns
+  df_base = df_summary_sedd %>% 
+    filter(file == "CORE",
+           db == 'SEDD') %>% 
+    group_by(row_number()) %>% 
+    group_map(~{
+      # row = df_summary_sedd  %>%  filter(file == "CORE") %>% slice(1)
+      row = .x
+      ds_tmp = open_dataset(row$path)
+      df_exists_tmp = tibble(db = row$db,
+                             dataset_id = row$dataset_id,
+                             base = sedd_base_columns) %>% 
+        mutate(base_exists = base%in%names(ds_tmp))
+      return(df_exists_tmp)
+    }) %>% 
+    bind_rows()
+  
+  
+  ## Summarize availablity
+  df_base %>% 
+    count(db, base, base_exists) %>% 
+    mutate(name = paste0(db,"-",ifelse(base_exists,'True','False'))) %>% 
+    select(name, base, n) %>% 
+    pivot_wider(names_from = name,
+                values_from = n) # %>% View()
+}
