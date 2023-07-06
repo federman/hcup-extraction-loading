@@ -14,30 +14,19 @@ generate_dbt_base_metadata = function(db_tmp){
     
     { ## assign db specific columns 
       
-      base_columns_core_all = lst(
-        SID  =  c(
-          "KEY","AGE", "AYEAR", "AMONTH", "ZIP", "ZIP3", "VisitLink", 
-          "CPT1", "CPT2", "CPT3", "CPTCCS1","CPTCCS2", 
-          "DHOUR", "DMONTH", "DQTR", "DRG", "DISP_X", "DISPUB04", "DMONTH", "DQTR", "DSHOSPID", 
-          "HCUP_ED","HCUP_OS", "HOSPST",  
-          "I10_DX1","I10_DX2", 
-          "LOS", "PSTCO", "PSTCO2","HISPANIC", "RACE", "ZIPINC_QRTL", "PAY1", "DIED", "FEMALE", "HOSP_NPI", 
-          "I10_DX_Admitting") 
-      )
-      
       sid_base_columns = c(
-        "KEY","AGE", "AYEAR", "AMONTH", "ZIP", "ZIP3", "VisitLink", 
+        "KEY","AGE", "AYEAR", "AMONTH","PSTATE" , "ZIP", "ZIP3", "VisitLink", 
         "CPT1", "CPT2", "CPT3", "CPTCCS1","CPTCCS2", 
         "DHOUR", "DMONTH", "DQTR", "DRG", "DISP_X", "DISPUB04", "DMONTH", "DQTR", "DSHOSPID", 
         "HCUP_ED","HCUP_OS", "HOSPST",  
         "I10_DX1","I10_DX2", 
-        "LOS", "PSTCO", "PSTCO2","HISPANIC", "RACE", "ZIPINC_QRTL", "PAY1", "DIED", "FEMALE", "HOSP_NPI", 
+        "LOS", "PSTCO", "PSTCO2","HISPANIC", "RACE",'RACE_X', "ZIPINC_QRTL", "PAY1", "DIED", "FEMALE", "HOSP_NPI", 
         "I10_DX_Admitting") %>% list()
       
-      sedd_base_columns = c("KEY","AGE", "AMONTH","AYEAR","YEAR", "ZIP", "ZIP3", "VisitLink", "CPT1", "CPT2", "CPT3", "CPTCCS1",
+      sedd_base_columns = c("KEY","AGE", "AMONTH","AYEAR","YEAR","PSTATE", "ZIP", "ZIP3", "VisitLink", "CPT1", "CPT2", "CPT3", "CPTCCS1",
                                "CPTCCS2", "DHOUR", "DMONTH", "DQTR", "DISP_X", "DISPUB04", "DMONTH", "DQTR", "DSHOSPID", "HCUP_ED",
                                "HCUP_OS", "HOSPST", "I10_DX_Visit_Reason1", "I10_DX_Visit_Reason2", "I10_DX1",
-                               "I10_DX2", "LOS", "PSTCO", "PSTCO2","HISPANIC", "RACE", "ZIPINC_QRTL", 
+                               "I10_DX2", "LOS", "PSTCO", "PSTCO2","HISPANIC", "RACE",'RACE_X', "ZIPINC_QRTL", 
                                "PAY1", "DIED", "FEMALE", "HOSP_NPI") %>% list()
       
       base_columns_core = ifelse(db_tmp == 'SID', sid_base_columns, sedd_base_columns) %>% unlist()
