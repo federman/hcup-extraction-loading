@@ -1,2 +1,4 @@
+^renv$
+^renv\.lock$
 ^drexel\.uhc\.hcup\.etl\.Rproj$
 ^\.Rproj\.user$
