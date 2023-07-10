@@ -2,6 +2,13 @@
 *.dta
 *.parquet
 *.sas7bdat
-*.Rproj.user 
+*.Rproj.user
+
+
+/extraction-loading/intermediate
+quarto/pages/blog/parquet-testing/df_ordered.csv
+quarto/pages/blog/parquet-testing/df_unordered.csv
+quarto/pages/blog/parquet-testing/df_unordered_long_str.csv
+quarto/pages/blog/parquet-testing/index.knit.md
+
 .Rproj.user
-*/intermediate
