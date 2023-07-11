@@ -2,7 +2,7 @@
 
 #'    
 #'    @dataset_id: this arguemnt is just the HCUP dataset id (e.g. "NY_SEDD_2017_CHGS")
-#'    dataset_id = "GA_SID_2018_CHGS" 
+#'    dataset_id = "AZ_SID_2015q1q3_CHGS" 
 #'    
 
 source("R/get_etl_status.R")
@@ -26,8 +26,12 @@ copy_load_file = function(dataset_id){
       pull(path)
   }
    
+  path_raw_hcup = '//files.drexel.edu/encrypted/SOPH/UHC/SchnakeMahl_HCUP/raw'
+  new_file_path_dir = list.files(path_raw_hcup, full.names = T, recursive = T)  |> 
+    keep(~str_detect(.x,dataset_id)) |>
+    dirname()
   
-  new_path = file.path("raw-hcup",basename(load_path))
+  new_path = file.path(new_file_path_dir,basename(load_path))
   
   file.copy(from = load_path, 
             to = new_path)
@@ -36,23 +40,23 @@ copy_load_file = function(dataset_id){
 copy_load_program = function(dev = F){
   
   if (dev){
-    # dev: clears already consumed load programs ------------------------------
-    ## get state load programs that have already generated .dta files
-    stata_load_done = get_etl_status() %>% 
-      filter(load_program == '.Do',
-             !is.na(loaded_data)) %>% 
-      pull(dataset_id) %>% 
-      paste0("raw-hcup/",.,".Do") 
-    
-    ## get their paths from /raw-hcup
-    stata_load_done_paths =   tibble(load_program = list.files('raw-hcup/', full.names = T) ) %>% 
-      rowwise() %>% 
-      filter(load_program%in%stata_load_done) %>% 
-      pull(load_program)
-    
-    ## Delete these `used` load programs
-    stata_load_done_paths %>% walk(~unlink(.x))
-    cli_alert("Removed used stata load programs.")
+    # # dev: clears already consumed load programs ------------------------------
+    # ## get state load programs that have already generated .dta files
+    # stata_load_done = get_etl_status() %>% 
+    #   filter(load_program == '.Do',
+    #          !is.na(loaded_data)) %>% 
+    #   pull(dataset_id) %>% 
+    #   paste0("raw-hcup/",.,".Do") 
+    # 
+    # ## get their paths from /raw-hcup
+    # stata_load_done_paths =   tibble(load_program = list.files('raw-hcup/', full.names = T) ) %>% 
+    #   rowwise() %>% 
+    #   filter(load_program%in%stata_load_done) %>% 
+    #   pull(load_program)
+    # 
+    # ## Delete these `used` load programs
+    # stata_load_done_paths %>% walk(~unlink(.x))
+    # cli_alert("Removed used stata load programs.")
   } else  {
     # prod: copies all --------------------------------------------------------
     df_missing = get_etl_status() %>% filter(is.na(load_program))
