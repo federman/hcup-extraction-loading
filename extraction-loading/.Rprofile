@@ -1,5 +1,6 @@
-{ # renv --------------------------------------------------------------------
-  source("renv/activate.R")  
+{
+  # renv --------------------------------------------------------------------
+  source("renv/activate.R")
 }
 
 { # Setup -------------------------------------------------------------------
@@ -7,7 +8,7 @@
   ## Clear + activate renv
   #  rm(list=ls())
   
-
+  
   { # Load base packages ------------------------------------------------------
     library(base)
     library(datasets)
@@ -20,17 +21,33 @@
   
   { # Load pipeline packages ----------------------------------------------
     
+    
+    ## Install local packages
+    # renv::install('rstudioapi')
+    # renv::install('cli')
+    # renv::install('glue')
+    # renv::install('stringr')
+    # renv::install('data.table')
+    # renv::install('yaml')
+    # renv::install('dplyr')
+    # renv::install('purrr')
+    # renv::install('arrow')
+    # renv::install('tidyr')
+    
+    
     ## Packages
     suppressWarnings({
       suppressMessages({
-        library(rstudioapi) 
+        library(rstudioapi)
         library(cli)
-        library(glue)         
+        library(glue)
         library(stringr)
         library(yaml)
         library(data.table)
         library(arrow)
-        library(tidyverse)
+        library(dplyr)
+        library(purrr)
+        library(tidyr)
       })
     })
     
@@ -45,7 +62,7 @@
     list.files(path = 'R/', all.files = T,recursive = T, full.names = T, pattern = '.R') %>% walk(~source(.x))
     
     ## Imports
-
+    
   }
   
   
