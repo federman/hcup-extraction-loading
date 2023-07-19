@@ -10,12 +10,19 @@ Other useful links include:
 - [Grammer of data manipulation (R/Python) cheatsheet](https://github.com/ran-codes/python-rstudio)
 
 
-## Folders 
-This folder contains our data pipeline.
+# Folders
 
-- `📁 extraction-loading` contains codebase for the extraction of raw data from HCUP  (.acs) via Stata .Do scripts into (.dta) and subsequent loading into our database as both .csv codebooks and .parquet data files.
-- `📁 quarto` contains codebase for our HCUP project documentation website.
-- `📁 docs` contains supporting documents including presentations or third party documentation. 
+This folder contains our extraction and loading codebase.
+
+- `index.R` controller script. Use this to manipulate the data extraction loading process.
+- `📁 renv` contains project specific dependency management as per the [renv](https://rstudio.github.io/renv/articles/renv.html) package.
+- `📁 raw-hcup` local development folder containing .acs, .dta, .do and .csv files.
+- `📁 R` local project functions
+- `📁 documents` supplemental documents
+- `📁 code` local scripts
+- `📁 clean` local cleaned objects  
+
+
 
 ## ELT (Extraction Loading Transform) schematic
 
