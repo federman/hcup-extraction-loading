@@ -5,21 +5,25 @@
 #'   - extract codebook: .csv
 #'   - extract data: .parquet
 
-get_etl_status = function() {
+get_etl_status = function(path = F) {
   
   path_raw_hcup = '//files.drexel.edu/encrypted/SOPH/UHC/SchnakeMahl_HCUP/raw'
   
-  etl_files = list.files(path_raw_hcup,
-                         recursive = T)  |>
-    basename()
-  
-  status_raw = tibble(raw = etl_files) |>
+  etl_files_full = list.files(path_raw_hcup, recursive = T) 
+  etl_files = etl_files_full |>  basename()
+  paths_raw = tibble(raw_full = glue('{path_raw_hcup}/{etl_files_full}')) |>
     rowwise() |>
     mutate(
+      raw = basename(raw_full),
       raw_split = str_split(raw, "\\."),
+      dir = dirname(raw_full),
       dataset_id = raw_split[[1]],
       file_extension = raw_split[[2]]
-    ) |>
+    ) |> 
+    ungroup()
+  
+  status_raw = paths_raw |>
+    rowwise() |>
     select(-contains('raw')) |>
     mutate(value = T) |>
     ## handle codebooks
@@ -31,20 +35,14 @@ get_etl_status = function() {
       ),
       dataset_id = str_remove(dataset_id, "_codebook")
     ) |>
-    pivot_wider(names_from = 'file_extension', values_from = value)
+    pivot_wider(names_from = 'file_extension', values_from = value) 
   
-  if (!"Do" %in% names(status_raw))
-    status_raw = status_raw |> mutate(Do = NA)
-  if (!"sas" %in% names(status_raw))
-    status_raw = status_raw |> mutate(sas = NA)
-  if (!"dta" %in% names(status_raw))
-    status_raw = status_raw |> mutate(dta = NA)
-  if (!"sas7bdat" %in% names(status_raw))
-    status_raw = status_raw |> mutate(sas7bdat = NA)
-  if (!"parquet" %in% names(status_raw))
-    status_raw = status_raw |> mutate(parquet = NA)
-  if (!"codebook" %in% names(status_raw))
-    status_raw = status_raw |> mutate(codebook = NA)
+  if (!"Do" %in% names(status_raw)) status_raw = status_raw |> mutate(Do = NA)
+  if (!"sas" %in% names(status_raw)) status_raw = status_raw |> mutate(sas = NA)
+  if (!"dta" %in% names(status_raw)) status_raw = status_raw |> mutate(dta = NA)
+  if (!"sas7bdat" %in% names(status_raw)) status_raw = status_raw |> mutate(sas7bdat = NA)
+  if (!"parquet" %in% names(status_raw)) status_raw = status_raw |> mutate(parquet = NA)
+  if (!"codebook" %in% names(status_raw)) status_raw = status_raw |> mutate(codebook = NA)
   
   etl_status =   status_raw |>
     mutate(
@@ -63,11 +61,12 @@ get_etl_status = function() {
     arrange(dataset_id) |>
     select(dataset_id, asc,
            load_program, loaded_data,
-           parquet, codebook) |>
+           parquet, codebook, dir) |>
     arrange(codebook, parquet,
             loaded_data,
             load_program,
             asc)
   
-  return(etl_status)
+  if (path == T){return(etl_status)}
+  if (path != T) return(etl_status %>% select(-dir))
 }

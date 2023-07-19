@@ -41,7 +41,7 @@ make_codebooks = function(df_id){
 generate_codebooks = function(){
   
   { # Generate individual codebooks -------------------------------------------
-    df_targets_without_codebooks = get_etl_status() %>% 
+    df_targets_without_codebooks = get_etl_status(path = T) %>% 
       make_target_endpoints(keep_column = 'codebook') %>% 
       select(-path_dta) %>% 
       filter(is.na(codebook))

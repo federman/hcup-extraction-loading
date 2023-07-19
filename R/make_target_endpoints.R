@@ -5,13 +5,16 @@
 #' @param keep_column: string of which other columns to keep other than dataset_id 
 #' and paths. 
 #'
+#'
+#' Example:
+#'    - df_status = get_etl_status(path = T); keep_column = 'codebook'
 
 make_target_endpoints = function(df_status, keep_column = NA){
   
   df_path = df_status%>% 
-    mutate(path_dta = glue("raw-hcup/{dataset_id}.dta"),
-           path_parquet = glue("raw-hcup/{dataset_id}.parquet"),
-           path_codebook = glue("raw-hcup/{dataset_id}_codebook.csv"))
+    mutate(path_dta = glue("{dir}/{dataset_id}.dta"),
+           path_parquet = glue("{dir}/{dataset_id}.parquet"),
+           path_codebook = glue("{dir}/{dataset_id}_codebook.csv"))
   
   if (is.na(keep_column)){
     df_final = df_path %>% 
