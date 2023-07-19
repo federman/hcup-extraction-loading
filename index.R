@@ -29,7 +29,7 @@
   { ## 1.2 Models --------------------------------------------------------------
     
     ## Models > Source
-    df_codebooks = read_csv("clean/df_codebooks.csv")
+    df_codebooks = fread("clean/df_codebooks.csv") |> as_tibble()
     get_file_ids() %>% walk(~generate_source_yml(.x, env = "uhc"))
     
     ## Models > Base > SID 
