@@ -19,7 +19,7 @@ get_dbt_source_dir = function(file_metadata){
     repo_dir = 'hcup-dbt/models/sources'
     endpoint = glue("{base_path}/{repo_dir}/{file_metadata$database}/{str_to_lower(glue('{file_metadata$name}.yml'))}")
   } else {
-    git_index = local_path %>% str_locate('Git') %>% max()
+    git_index = local_path %>% str_locate('GitHub') %>% max()
     base_path = local_path %>% str_sub(0,git_index)
     repo_dir = 'hcup-dbt/models/sources'
     endpoint = glue("{base_path}/{repo_dir}/{file_metadata$database}/{str_to_lower(glue('{file_metadata$name}.yml'))}")
