@@ -119,6 +119,10 @@ generate_codebooks = function(etl){
       arrange(dataset_id, var) 
    
     df_codebooks%>% fwrite("clean/df_codebooks.csv")
+    
+    ## export metadata to server
+    df_codebooks %>% fwrite(glue("{etl$path_server_dbt}/df_codebooks.csv"))
+    etl %>% as_tibble() %>% fwrite(glue("{etl$path_server_dbt}/etl_objects.csv"))
     cli_alert_success("Compiled codebooks at clean/df_codebooks.csv")
   }
   
@@ -159,6 +163,7 @@ generate_codebooks = function(etl){
              dataset_instance, size_mb_raw, size_mb_parquet) %>% 
       ungroup()
     df_summary %>% write_parquet("clean/df_summary.parquet")
+    df_summary %>% write_parquet(glue(etl$path_server_dbt_source))
     cli_alert_success("Compiled source summary at clean/df_summary.parquet")
  
   }
