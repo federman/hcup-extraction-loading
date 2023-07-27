@@ -8,9 +8,15 @@ source("R/get_etl_status.R")
 source("R/make_target_endpoints.R")
 
 make_codebooks = function(df_id){
-  # df_id = df_targets_without_codebooks %>% slice(1)
+  # df_id = df_targets_codebooks %>% slice(1)
+  # df_id = df_targets_codebooks %>% slice(120)
+  
+  cli_alert('Start codebook generation for {df_id$dataset_id}')
   
   ds = arrow::open_dataset(df_id$path_parquet)
+  has_metadata = length(ds$metadata) > 0
+  
+  
   
   # get data type
   df_types = tibble(raw = ds$ToString() %>% str_split("\n") %>% unlist()) %>%
@@ -19,32 +25,44 @@ make_codebooks = function(df_id){
     mutate(raw_split = str_split(raw,":"),
            var = raw_split[[1]],
            value_type = raw_split[[2]] %>% str_trim()) %>%
-    select(var, value_type)
-  
-  # operationalize codebook
-  codebook = tibble(
-    var = names(ds$metadata$r$columns),
-    var_label = ds$metadata$r$attributes$var.labels
-  )  %>%
-    left_join(df_types, by = "var") %>%
+    select(var, value_type)%>%
     mutate(dataset_id = df_id$dataset_id)
   
-  ## Saving
-  codebook %>% write_csv(df_id$path_codebook)
+  # get metadata if available
+  if (has_metadata){
+    codebook = tibble(
+      var = names(ds$metadata$r$columns),
+      var_label = ds$metadata$r$attributes$var.labels
+    )  %>%
+      left_join(df_types, by = "var") 
+  } else {
+    codebook = df_types %>% 
+      mutate(var_label = '')
+  }
   
+
+  ## Saving
+  codebook %>% fwrite(df_id$path_codebook)
+
   ## messeage
   cli_alert_success("Codebook written for {df_id$dataset_id}")
   
-  
 }
 
-generate_codebooks = function(){
+generate_codebooks = function(etl){
+  
+  
+  { # Setup -------------------------------------------------------------------
+    df_targets_codebooks = get_etl_status(etl, path = T) %>% 
+      mutate(path_raw =  glue("{dir}/{dataset_id}.dta"),
+             path_parquet = glue("{etl$path_server_dbt_source}/{dataset_id}.parquet"),
+             path_codebook = glue("{dir}/{dataset_id}_codebook.csv")) 
+    
+  }
   
   { # Generate individual codebooks -------------------------------------------
-    df_targets_without_codebooks = get_etl_status(path = T) %>% 
-      make_target_endpoints(keep_column = 'codebook') %>% 
-      select(-path_dta) %>% 
-      filter(is.na(codebook))
+    df_targets_without_codebooks = df_targets_codebooks %>%
+      filter(is.na(codebook)) 
     
     if (nrow(df_targets_without_codebooks) == 0){
       cli_alert_success("No codebooks missing - No Action taken!")
@@ -59,8 +77,7 @@ generate_codebooks = function(){
   { # Compile codebook --------------------------------------------------------
     
     ## preliminary compilation
-    df_codebooks_raw  = get_etl_status() %>% 
-      make_target_endpoints() %>% 
+    df_codebooks_raw  = df_targets_codebooks %>% 
       pull(path_codebook) %>% 
       map_df(~fread(.)) %>% 
       as_tibble() 
@@ -107,17 +124,8 @@ generate_codebooks = function(){
   
   { # Compile source metadata --------------------------------------------------------
    
-     get_file_size_mb =  function(dataset_id_tmp, type){
-      dataset_files =  list.files(path = "raw-hcup/", 
-                                  pattern = dataset_id_tmp, 
-                                  full.names = T) 
-      if (type == 'raw'){
-        file_dir = dataset_files %>%   keep(~str_detect(.x, '.dta|.sas7bdat'))
-      }
-      
-      if (type == 'parquet'){
-        file_dir =  dataset_files %>%    keep(~str_detect(.x, '.parquet'))
-      }
+     get_file_size_mb =  function(file_dir){
+       
       
       file_metadata = file.info(file_dir)
       file_mb = file_metadata$size/10^6
@@ -128,24 +136,25 @@ generate_codebooks = function(){
     
     df_summary = df_codebooks %>% 
       count(dataset_id, name = 'n_columns') %>% 
-      rowwise() %>% 
+      left_join(df_targets_codebooks %>% select(dataset_id,contains('path'))) %>% 
+      rowwise() %>%
       mutate(split = str_split(dataset_id, "_"),
              state = split[[1]],
              db = split[[2]],
              year_raw = split[[3]],
              year = str_sub(year_raw,1,4),
              file = split[4:length(split)] %>% paste(collapse = '_'),
-             n_rows =   open_dataset(glue("raw-hcup/{dataset_id}.parquet"))$num_rows,
+             n_rows =   open_dataset(path_parquet)$num_rows,
              db_year = case_when(
-               between(year,2019,2021)~glue("{db}_2019_2021"),
-               between(year,2016,2018)~glue("{db}_2016_2018"),
-               year==2015~glue("{db}_2015"),
-               between(year,2005,2014)~glue("{db}_2005_2014"),
+               between(as.numeric(year),2019,2021)~glue("{db}_2019_2021"),
+               between(as.numeric(year),2016,2018)~glue("{db}_2016_2018"),
+               as.numeric(year)==2015~glue("{db}_2015"),
+               between(as.numeric(year),2005,2014)~glue("{db}_2005_2014"),
                TRUE ~"ERROR"  ),
              dataset_instance = paste(c(db, state, year_raw), collapse = "_"),
-             size_mb_raw = get_file_size_mb(dataset_id,'raw'),
-             size_mb_parquet =  get_file_size_mb(dataset_id,'parquet')
-             ) %>% 
+             size_mb_raw = get_file_size_mb(path_raw),
+             size_mb_parquet =  get_file_size_mb(path_parquet)
+             )  %>%  
       select(dataset_id, n_columns, n_rows, state, db, year,year_raw, file, db_year, 
              dataset_instance, size_mb_raw, size_mb_parquet) %>% 
       ungroup()

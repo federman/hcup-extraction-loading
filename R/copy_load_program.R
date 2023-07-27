@@ -7,7 +7,7 @@
 
 source("R/get_etl_status.R")
 
-copy_load_file = function(dataset_id){
+copy_load_file = function(dataset_id, etl){
   
   all_load_paths = tibble( 
     path = list.files(
@@ -25,9 +25,8 @@ copy_load_file = function(dataset_id){
       slice(1) %>% 
       pull(path)
   }
-   
-  path_raw_hcup = '//files.drexel.edu/encrypted/SOPH/UHC/SchnakeMahl_HCUP/raw'
-  new_file_path_dir = list.files(path_raw_hcup, full.names = T, recursive = T)  |> 
+  
+  new_file_path_dir = list.files(etl$path_server_raw, full.names = T, recursive = T)  |> 
     keep(~str_detect(.x,dataset_id)) |>
     dirname()
   
@@ -37,40 +36,20 @@ copy_load_file = function(dataset_id){
             to = new_path)
 }
 
-copy_load_program = function(dev = F){
+copy_load_program = function(etl){
   
-  if (dev){
-    # # dev: clears already consumed load programs ------------------------------
-    # ## get state load programs that have already generated .dta files
-    # stata_load_done = get_etl_status() %>% 
-    #   filter(load_program == '.Do',
-    #          !is.na(loaded_data)) %>% 
-    #   pull(dataset_id) %>% 
-    #   paste0("raw-hcup/",.,".Do") 
-    # 
-    # ## get their paths from /raw-hcup
-    # stata_load_done_paths =   tibble(load_program = list.files('raw-hcup/', full.names = T) ) %>% 
-    #   rowwise() %>% 
-    #   filter(load_program%in%stata_load_done) %>% 
-    #   pull(load_program)
-    # 
-    # ## Delete these `used` load programs
-    # stata_load_done_paths %>% walk(~unlink(.x))
-    # cli_alert("Removed used stata load programs.")
-  } else  {
+
     # prod: copies all --------------------------------------------------------
-    df_missing = get_etl_status() %>% filter(is.na(load_program))
+    df_missing = get_etl_status(etl) %>% filter(is.na(load_program))
     
     if(nrow(df_missing)>0){
-      df_missing$dataset_id %>% map(~copy_load_file(.x))
-      print(get_etl_status())
+      df_missing$dataset_id %>% map(~copy_load_file(.x, etl))
+      print(get_etl_status(etl))
       cli_alert("Copied load program files for {nrow(df_missing)} files")
       df_missing$dataset_id %>% walk(~cli_alert("- {.x}"))
     } else {
-      print(get_etl_status() %>% select(dataset_id, load_program))
+      print(get_etl_status(etl) %>% select(dataset_id, load_program))
       cli_alert_info("No load program missing")
     }
-  }
-  
   
 }

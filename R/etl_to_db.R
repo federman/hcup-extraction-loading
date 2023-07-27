@@ -133,13 +133,13 @@ etl_to_db = function(xwalk_zip_zcta) {
   { # Setup -------------------------------------------------------------------
     
     ## get datasets that have .dta but not parquet
-    datasets_to_load = get_etl_status() %>%
+    datasets_to_load = get_etl_status(etl) %>%
       filter(loaded_data %in% c("dta", "sas7bdat") ,
              is.na(parquet)) %>%
       pull(dataset_id)
     
     if (length(datasets_to_load) == 0) {
-      print(get_etl_status() %>% select(dataset_id, parquet))
+      print(get_etl_status(etl) %>% select(dataset_id, parquet))
       cli_alert_warning("All .dta have been converted to .parquet. No Action taken.", .envir = globalenv())
       return()
     }
