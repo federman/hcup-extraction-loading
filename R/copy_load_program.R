@@ -3,6 +3,8 @@
 #'    
 #'    @dataset_id: this arguemnt is just the HCUP dataset id (e.g. "NY_SEDD_2017_CHGS")
 #'    dataset_id = "AZ_SID_2015q1q3_CHGS" 
+#'    dataset_id = "NY_SID_2012_CORE" 
+#'    dataset_id = "NY_SID_2020_CORE" 
 #'    
 
 source("R/get_etl_status.R")
