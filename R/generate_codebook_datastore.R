@@ -56,8 +56,8 @@ generate_codebooks = function(etl){
     df_targets_codebooks = get_etl_status(etl, path = T) %>% 
       mutate(path_raw =  glue("{dir}/{dataset_id}.dta"),
              path_parquet = glue("{etl$path_server_dbt_source}/{dataset_id}.parquet"),
-             path_codebook = glue("{dir}/{dataset_id}_codebook.csv")) 
-    
+             path_codebook = glue("{dir}/{dataset_id}_codebook.csv")) %>% 
+      filter(parquet == T)
   }
   
   { # Generate individual codebooks -------------------------------------------
@@ -163,7 +163,7 @@ generate_codebooks = function(etl){
              dataset_instance, size_mb_raw, size_mb_parquet) %>% 
       ungroup()
     df_summary %>% write_parquet("clean/df_summary.parquet")
-    df_summary %>% write_parquet(glue(etl$path_server_dbt_source))
+    df_summary %>% write_parquet(glue("{etl$path_server_dbt}/df_summary.parquet"))
     cli_alert_success("Compiled source summary at clean/df_summary.parquet")
  
   }
