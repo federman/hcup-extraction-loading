@@ -12,7 +12,7 @@
   
   { ## 1.1 Data/metadata --------------------------------------------------
 
-    ## Step 1: Evaluate ELT status
+    ## Step 1: Evaluate ETL status
     get_etl_status(etl) 
     
     ## Step 2: Copy load programs
