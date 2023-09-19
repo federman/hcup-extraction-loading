@@ -1,7 +1,7 @@
 /*****************************************************************************
-* Creation Date: 01/23/2023   
-* NY_SID_2019_DX_PR_GRPS.Do
-* This program will load the 2019 NY ASCII DX_PR_GRPS File into Stata.
+* Creation Date: 07/31/2022   
+* SC_SID_2019_DX_PR_GRPS.Do
+* This program will load the 2019 SC ASCII DX_PR_GRPS File into Stata.
 * Because Stata loads the entire file into memory, it may not be possible
 * to load every data element for large files.  If necessary, edit this
 * program to change the memory size or to load only selected data elements.
@@ -39,7 +39,7 @@ infix 3 firstlineoffile                            ///
       byte   I10_INTENT_UNINTENTIONAL    31-  32   ///
       byte   I10_MULTINJURY              33-  34   ///
       double KEY                         35-  49   ///
-      using  "NY_SID_2019_DX_PR_GRPS.ASC"
+      using  "SC_SID_2019_DX_PR_GRPS.ASC"
 
 ***  Assign labels to the data elements ***
 label var I10_INJURY
@@ -85,4 +85,4 @@ recode I10_INTENT_SELF_HARM      (-9 -8 -6 -5=.)
 recode I10_INTENT_UNINTENTIONAL  (-9 -8 -6 -5=.)
 recode I10_MULTINJURY            (-9 -8 -6 -5=.)
 
-save "NY_SID_2019_DX_PR_GRPS.dta", replace
+save "SC_SID_2019_DX_PR_GRPS.dta", replace

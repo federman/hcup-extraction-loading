@@ -1,7 +1,7 @@
 /*****************************************************************************
 * Creation Date: 01/23/2023   
-* NY_SID_2019_AHAL.Do
-* This program will load the 2019 NY ASCII AHAL File into Stata.
+* NY_SID_2020_AHAL.Do
+* This program will load the 2020 NY ASCII AHAL File into Stata.
 * Because Stata loads the entire file into memory, it may not be possible
 * to load every data element for large files.  If necessary, edit this
 * program to change the memory size or to load only selected data elements.
@@ -28,7 +28,7 @@ infix 3 firstlineoffile                            ///
       long   HFIPSSTCO                   34-  38   ///
       str    HOSPST                      39-  40   ///
       int    YEAR                        41-  44   ///
-      using  "NY_SID_2019_AHAL.ASC"
+      using  "NY_SID_2020_AHAL.ASC"
 
 ***  Assign labels to the data elements ***
 label var AHAID                    "AHA hospital identifier with the leading 6"
@@ -45,4 +45,4 @@ recode COMMUNITY_NONREHAB_NONLTAC(-999 -888 -666=.)
 recode HFIPSSTCO                 (-9999 -8888 -6666=.)
 recode YEAR                      (-999 -888 -666=.)
 
-save "NY_SID_2019_AHAL.dta", replace
+save "NY_SID_2020_AHAL.dta", replace

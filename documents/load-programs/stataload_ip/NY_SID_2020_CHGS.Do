@@ -1,7 +1,7 @@
 /*****************************************************************************
 * Creation Date: 01/23/2023   
-* NY_SID_2019_CHGS.Do
-* This program will load the 2019 NY ASCII CHGS File into Stata.
+* NY_SID_2020_CHGS.Do
+* This program will load the 2020 NY ASCII CHGS File into Stata.
 * Because Stata loads the entire file into memory, it may not be possible
 * to load every data element for large files.  If necessary, edit this
 * program to change the memory size or to load only selected data elements.
@@ -25,7 +25,7 @@ infix 3 firstlineoffile                            ///
       double KEY                         13-  27   ///
       str    REVCODE                     28-  31   ///
       double UNITS                       32-  42   ///
-      using  "NY_SID_2019_CHGS.ASC"
+      using  "NY_SID_2020_CHGS.ASC"
 
 ***  Assign labels to the data elements ***
 label var CHARGE                   "Line item charges (as received from source)"
@@ -37,4 +37,4 @@ label var UNITS                    "Line item units (as received from source)"
 recode CHARGE                    (-99999999.99 -88888888.88 -66666666.66=.)
 recode UNITS                     (-9999999.99 -8888888.88 -6666666.66=.)
 
-save "NY_SID_2019_CHGS.dta", replace
+save "NY_SID_2020_CHGS.dta", replace

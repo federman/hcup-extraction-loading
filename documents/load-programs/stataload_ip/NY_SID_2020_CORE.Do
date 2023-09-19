@@ -1,7 +1,7 @@
 /*****************************************************************************
 * Creation Date: 01/23/2023   
-* NY_SID_2019_CORE.Do
-* This program will load the 2019 NY ASCII CORE File into Stata.
+* NY_SID_2020_CORE.Do
+* This program will load the 2020 NY ASCII CORE File into Stata.
 * Because Stata loads the entire file into memory, it may not be possible
 * to load every data element for large files.  If necessary, edit this
 * program to change the memory size or to load only selected data elements.
@@ -84,204 +84,204 @@ infix 3 firstlineoffile                            ///
       byte   HCUP_OS                    124- 125   ///
       int    HEART_RATE_X               126- 129   ///
       byte   HISPANIC                   130- 131   ///
-      str    HISPANIC_X                 132- 156   ///
-      byte   Homeless                   157- 158   ///
-      str    HOSP_NPI                   159- 168   ///
-      str    HOSPST                     169- 170   ///
-      int    I10_BIRTH                  171- 173   ///
-      int    I10_DELIVERY               174- 176   ///
-      str    I10_DX_Admitting           177- 183   ///
-      str    I10_DX1                    184- 190   ///
-      str    I10_DX2                    191- 197   ///
-      str    I10_DX3                    198- 204   ///
-      str    I10_DX4                    205- 211   ///
-      str    I10_DX5                    212- 218   ///
-      str    I10_DX6                    219- 225   ///
-      str    I10_DX7                    226- 232   ///
-      str    I10_DX8                    233- 239   ///
-      str    I10_DX9                    240- 246   ///
-      str    I10_DX10                   247- 253   ///
-      str    I10_DX11                   254- 260   ///
-      str    I10_DX12                   261- 267   ///
-      str    I10_DX13                   268- 274   ///
-      str    I10_DX14                   275- 281   ///
-      str    I10_DX15                   282- 288   ///
-      str    I10_DX16                   289- 295   ///
-      str    I10_DX17                   296- 302   ///
-      str    I10_DX18                   303- 309   ///
-      str    I10_DX19                   310- 316   ///
-      str    I10_DX20                   317- 323   ///
-      str    I10_DX21                   324- 330   ///
-      str    I10_DX22                   331- 337   ///
-      str    I10_DX23                   338- 344   ///
-      str    I10_DX24                   345- 351   ///
-      str    I10_DX25                   352- 358   ///
-      str    I10_DX26                   359- 365   ///
-      str    I10_DX27                   366- 372   ///
-      str    I10_DX28                   373- 379   ///
-      str    I10_DX29                   380- 386   ///
-      str    I10_DX30                   387- 393   ///
-      str    I10_DX31                   394- 400   ///
-      str    I10_DX32                   401- 407   ///
-      str    I10_DX33                   408- 414   ///
-      str    I10_DX34                   415- 421   ///
-      str    I10_DX35                   422- 428   ///
-      int    I10_NDX                    429- 431   ///
-      int    I10_NPR                    432- 434   ///
-      byte   I10_ORPROC                 435- 436   ///
-      str    I10_PR1                    437- 443   ///
-      str    I10_PR2                    444- 450   ///
-      str    I10_PR3                    451- 457   ///
-      str    I10_PR4                    458- 464   ///
-      str    I10_PR5                    465- 471   ///
-      str    I10_PR6                    472- 478   ///
-      str    I10_PR7                    479- 485   ///
-      str    I10_PR8                    486- 492   ///
-      str    I10_PR9                    493- 499   ///
-      str    I10_PR10                   500- 506   ///
-      str    I10_PR11                   507- 513   ///
-      str    I10_PR12                   514- 520   ///
-      str    I10_PR13                   521- 527   ///
-      str    I10_PR14                   528- 534   ///
-      str    I10_PR15                   535- 541   ///
-      str    I10_PR16                   542- 548   ///
-      str    I10_PR17                   549- 555   ///
-      str    I10_PR18                   556- 562   ///
-      str    I10_PR19                   563- 569   ///
-      str    I10_PR20                   570- 576   ///
-      str    I10_PR21                   577- 583   ///
-      str    I10_PR22                   584- 590   ///
-      str    I10_PR23                   591- 597   ///
-      str    I10_PR24                   598- 604   ///
-      str    I10_PR25                   605- 611   ///
-      int    I10_PROCTYPE               612- 614   ///
-      byte   I10_SERVICELINE            615- 616   ///
-      double KEY                        617- 631   ///
-      long   LOS                        632- 636   ///
-      long   LOS_X                      637- 642   ///
-      str    MARITALSTATUS_X            643        ///
-      str    MARITALSTATUSUB04          644        ///
-      byte   MDC                        645- 646   ///
-      byte   MDC_NoPOA                  647- 648   ///
-      long   MDNUM1_R                   649- 657   ///
-      long   MDNUM2_R                   658- 666   ///
-      byte   MEDINCSTQ                  667- 668   ///
-      double OS_TIME                    669- 679   ///
-      str    P7EDSRC_X                  680- 681   ///
-      byte   PAY1                       682- 683   ///
-      str    PAY1_X                     684- 688   ///
-      byte   PAY2                       689- 690   ///
-      str    PAY2_X                     691- 695   ///
-      byte   PAY3                       696- 697   ///
-      str    PAY3_X                     698- 702   ///
-      int    PL_CBSA                    703- 705   ///
-      byte   PL_NCHS                    706- 707   ///
-      byte   PL_RUCC                    708- 709   ///
-      byte   PL_UIC                     710- 711   ///
-      byte   PL_UR_CAT4                 712- 713   ///
-      byte   POA_Disch_Edit1            714- 715   ///
-      byte   POA_Disch_Edit2            716- 717   ///
-      byte   POA_Hosp_Edit1             718- 719   ///
-      byte   POA_Hosp_Edit2             720- 721   ///
-      byte   POA_Hosp_Edit3             722- 723   ///
-      double POA_Hosp_Edit3_Value       724- 731   ///
-      str    PointOfOrigin_X            732        ///
-      str    PointOfOriginUB04          733        ///
-      long   PRDAY1                     734- 738   ///
-      long   PRDAY2                     739- 743   ///
-      long   PRDAY3                     744- 748   ///
-      long   PRDAY4                     749- 753   ///
-      long   PRDAY5                     754- 758   ///
-      long   PRDAY6                     759- 763   ///
-      long   PRDAY7                     764- 768   ///
-      long   PRDAY8                     769- 773   ///
-      long   PRDAY9                     774- 778   ///
-      long   PRDAY10                    779- 783   ///
-      long   PRDAY11                    784- 788   ///
-      long   PRDAY12                    789- 793   ///
-      long   PRDAY13                    794- 798   ///
-      long   PRDAY14                    799- 803   ///
-      long   PRDAY15                    804- 808   ///
-      long   PRDAY16                    809- 813   ///
-      long   PRDAY17                    814- 818   ///
-      long   PRDAY18                    819- 823   ///
-      long   PRDAY19                    824- 828   ///
-      long   PRDAY20                    829- 833   ///
-      long   PRDAY21                    834- 838   ///
-      long   PRDAY22                    839- 843   ///
-      long   PRDAY23                    844- 848   ///
-      long   PRDAY24                    849- 853   ///
-      long   PRDAY25                    854- 858   ///
-      str    PSTATE                     859- 860   ///
-      str    PSTATE_GEO                 861- 862   ///
-      long   PSTCO                      863- 867   ///
-      long   PSTCO_GEO                  868- 872   ///
-      byte   RACE                       873- 874   ///
-      byte   RACE_EDIT                  875- 876   ///
-      str    RACE_X                     877- 920   ///
-      double TOTCHG                     921- 930   ///
-      double TOTCHG_X                   931- 945   ///
-      byte   TRAN_IN                    946- 947   ///
-      byte   TRAN_OUT                   948- 949   ///
-      long   VisitLink                  950- 958   ///
-      int    YEAR                       959- 962   ///
-      str    ZIP                        963- 967   ///
-      str    ZIP3                       968- 970   ///
-      int    ZIPINC_QRTL                971- 973   ///
-      int    AYEAR                      974- 977   ///
-      byte   BMONTH                     978- 979   ///
-      int    BYEAR                      980- 983   ///
-      byte   PRMONTH1                   984- 985   ///
-      byte   PRMONTH2                   986- 987   ///
-      byte   PRMONTH3                   988- 989   ///
-      byte   PRMONTH4                   990- 991   ///
-      byte   PRMONTH5                   992- 993   ///
-      byte   PRMONTH6                   994- 995   ///
-      byte   PRMONTH7                   996- 997   ///
-      byte   PRMONTH8                   998- 999   ///
-      byte   PRMONTH9                  1000-1001   ///
-      byte   PRMONTH10                 1002-1003   ///
-      byte   PRMONTH11                 1004-1005   ///
-      byte   PRMONTH12                 1006-1007   ///
-      byte   PRMONTH13                 1008-1009   ///
-      byte   PRMONTH14                 1010-1011   ///
-      byte   PRMONTH15                 1012-1013   ///
-      byte   PRMONTH16                 1014-1015   ///
-      byte   PRMONTH17                 1016-1017   ///
-      byte   PRMONTH18                 1018-1019   ///
-      byte   PRMONTH19                 1020-1021   ///
-      byte   PRMONTH20                 1022-1023   ///
-      byte   PRMONTH21                 1024-1025   ///
-      byte   PRMONTH22                 1026-1027   ///
-      byte   PRMONTH23                 1028-1029   ///
-      byte   PRMONTH24                 1030-1031   ///
-      byte   PRMONTH25                 1032-1033   ///
-      int    PRYEAR1                   1034-1037   ///
-      int    PRYEAR2                   1038-1041   ///
-      int    PRYEAR3                   1042-1045   ///
-      int    PRYEAR4                   1046-1049   ///
-      int    PRYEAR5                   1050-1053   ///
-      int    PRYEAR6                   1054-1057   ///
-      int    PRYEAR7                   1058-1061   ///
-      int    PRYEAR8                   1062-1065   ///
-      int    PRYEAR9                   1066-1069   ///
-      int    PRYEAR10                  1070-1073   ///
-      int    PRYEAR11                  1074-1077   ///
-      int    PRYEAR12                  1078-1081   ///
-      int    PRYEAR13                  1082-1085   ///
-      int    PRYEAR14                  1086-1089   ///
-      int    PRYEAR15                  1090-1093   ///
-      int    PRYEAR16                  1094-1097   ///
-      int    PRYEAR17                  1098-1101   ///
-      int    PRYEAR18                  1102-1105   ///
-      int    PRYEAR19                  1106-1109   ///
-      int    PRYEAR20                  1110-1113   ///
-      int    PRYEAR21                  1114-1117   ///
-      int    PRYEAR22                  1118-1121   ///
-      int    PRYEAR23                  1122-1125   ///
-      int    PRYEAR24                  1126-1129   ///
-      int    PRYEAR25                  1130-1133   ///
-      using  "NY_SID_2019_CORE.ASC"
+      str    HISPANIC_X                 132- 216   ///
+      byte   Homeless                   217- 218   ///
+      str    HOSP_NPI                   219- 228   ///
+      str    HOSPST                     229- 230   ///
+      int    I10_BIRTH                  231- 233   ///
+      int    I10_DELIVERY               234- 236   ///
+      str    I10_DX_Admitting           237- 243   ///
+      str    I10_DX1                    244- 250   ///
+      str    I10_DX2                    251- 257   ///
+      str    I10_DX3                    258- 264   ///
+      str    I10_DX4                    265- 271   ///
+      str    I10_DX5                    272- 278   ///
+      str    I10_DX6                    279- 285   ///
+      str    I10_DX7                    286- 292   ///
+      str    I10_DX8                    293- 299   ///
+      str    I10_DX9                    300- 306   ///
+      str    I10_DX10                   307- 313   ///
+      str    I10_DX11                   314- 320   ///
+      str    I10_DX12                   321- 327   ///
+      str    I10_DX13                   328- 334   ///
+      str    I10_DX14                   335- 341   ///
+      str    I10_DX15                   342- 348   ///
+      str    I10_DX16                   349- 355   ///
+      str    I10_DX17                   356- 362   ///
+      str    I10_DX18                   363- 369   ///
+      str    I10_DX19                   370- 376   ///
+      str    I10_DX20                   377- 383   ///
+      str    I10_DX21                   384- 390   ///
+      str    I10_DX22                   391- 397   ///
+      str    I10_DX23                   398- 404   ///
+      str    I10_DX24                   405- 411   ///
+      str    I10_DX25                   412- 418   ///
+      str    I10_DX26                   419- 425   ///
+      str    I10_DX27                   426- 432   ///
+      str    I10_DX28                   433- 439   ///
+      str    I10_DX29                   440- 446   ///
+      str    I10_DX30                   447- 453   ///
+      str    I10_DX31                   454- 460   ///
+      str    I10_DX32                   461- 467   ///
+      str    I10_DX33                   468- 474   ///
+      str    I10_DX34                   475- 481   ///
+      str    I10_DX35                   482- 488   ///
+      int    I10_NDX                    489- 491   ///
+      int    I10_NPR                    492- 494   ///
+      str    I10_PR1                    495- 501   ///
+      str    I10_PR2                    502- 508   ///
+      str    I10_PR3                    509- 515   ///
+      str    I10_PR4                    516- 522   ///
+      str    I10_PR5                    523- 529   ///
+      str    I10_PR6                    530- 536   ///
+      str    I10_PR7                    537- 543   ///
+      str    I10_PR8                    544- 550   ///
+      str    I10_PR9                    551- 557   ///
+      str    I10_PR10                   558- 564   ///
+      str    I10_PR11                   565- 571   ///
+      str    I10_PR12                   572- 578   ///
+      str    I10_PR13                   579- 585   ///
+      str    I10_PR14                   586- 592   ///
+      str    I10_PR15                   593- 599   ///
+      str    I10_PR16                   600- 606   ///
+      str    I10_PR17                   607- 613   ///
+      str    I10_PR18                   614- 620   ///
+      str    I10_PR19                   621- 627   ///
+      str    I10_PR20                   628- 634   ///
+      str    I10_PR21                   635- 641   ///
+      str    I10_PR22                   642- 648   ///
+      str    I10_PR23                   649- 655   ///
+      str    I10_PR24                   656- 662   ///
+      str    I10_PR25                   663- 669   ///
+      int    I10_PROCTYPE               670- 672   ///
+      byte   I10_SERVICELINE            673- 674   ///
+      double KEY                        675- 689   ///
+      long   LOS                        690- 694   ///
+      long   LOS_X                      695- 700   ///
+      str    MARITALSTATUS_X            701        ///
+      str    MARITALSTATUSUB04          702        ///
+      byte   MDC                        703- 704   ///
+      byte   MDC_NoPOA                  705- 706   ///
+      long   MDNUM1_R                   707- 715   ///
+      long   MDNUM2_R                   716- 724   ///
+      byte   MEDINCSTQ                  725- 726   ///
+      double OS_TIME                    727- 737   ///
+      str    P7EDSRC_X                  738- 739   ///
+      byte   PAY1                       740- 741   ///
+      str    PAY1_X                     742- 746   ///
+      byte   PAY2                       747- 748   ///
+      str    PAY2_X                     749- 753   ///
+      byte   PAY3                       754- 755   ///
+      str    PAY3_X                     756- 760   ///
+      byte   PCLASS_ORPROC              761- 762   ///
+      int    PL_CBSA                    763- 765   ///
+      byte   PL_NCHS                    766- 767   ///
+      byte   PL_RUCC                    768- 769   ///
+      byte   PL_UIC                     770- 771   ///
+      byte   PL_UR_CAT4                 772- 773   ///
+      byte   POA_Disch_Edit1            774- 775   ///
+      byte   POA_Disch_Edit2            776- 777   ///
+      byte   POA_Hosp_Edit1             778- 779   ///
+      byte   POA_Hosp_Edit2             780- 781   ///
+      byte   POA_Hosp_Edit3             782- 783   ///
+      double POA_Hosp_Edit3_Value       784- 791   ///
+      str    PointOfOrigin_X            792        ///
+      str    PointOfOriginUB04          793        ///
+      long   PRDAY1                     794- 798   ///
+      long   PRDAY2                     799- 803   ///
+      long   PRDAY3                     804- 808   ///
+      long   PRDAY4                     809- 813   ///
+      long   PRDAY5                     814- 818   ///
+      long   PRDAY6                     819- 823   ///
+      long   PRDAY7                     824- 828   ///
+      long   PRDAY8                     829- 833   ///
+      long   PRDAY9                     834- 838   ///
+      long   PRDAY10                    839- 843   ///
+      long   PRDAY11                    844- 848   ///
+      long   PRDAY12                    849- 853   ///
+      long   PRDAY13                    854- 858   ///
+      long   PRDAY14                    859- 863   ///
+      long   PRDAY15                    864- 868   ///
+      long   PRDAY16                    869- 873   ///
+      long   PRDAY17                    874- 878   ///
+      long   PRDAY18                    879- 883   ///
+      long   PRDAY19                    884- 888   ///
+      long   PRDAY20                    889- 893   ///
+      long   PRDAY21                    894- 898   ///
+      long   PRDAY22                    899- 903   ///
+      long   PRDAY23                    904- 908   ///
+      long   PRDAY24                    909- 913   ///
+      long   PRDAY25                    914- 918   ///
+      str    PSTATE                     919- 920   ///
+      str    PSTATE_GEO                 921- 922   ///
+      long   PSTCO                      923- 927   ///
+      long   PSTCO_GEO                  928- 932   ///
+      byte   RACE                       933- 934   ///
+      float  RACE_PCT_MISS_HOSP         935- 941   ///
+      str    RACE_X                     942- 981   ///
+      double TOTCHG                     982- 991   ///
+      double TOTCHG_X                   992-1006   ///
+      byte   TRAN_IN                   1007-1008   ///
+      byte   TRAN_OUT                  1009-1010   ///
+      long   VisitLink                 1011-1019   ///
+      int    YEAR                      1020-1023   ///
+      str    ZIP                       1024-1028   ///
+      str    ZIP3                      1029-1031   ///
+      int    ZIPINC_QRTL               1032-1034   ///
+      int    AYEAR                     1035-1038   ///
+      byte   BMONTH                    1039-1040   ///
+      int    BYEAR                     1041-1044   ///
+      byte   PRMONTH1                  1045-1046   ///
+      byte   PRMONTH2                  1047-1048   ///
+      byte   PRMONTH3                  1049-1050   ///
+      byte   PRMONTH4                  1051-1052   ///
+      byte   PRMONTH5                  1053-1054   ///
+      byte   PRMONTH6                  1055-1056   ///
+      byte   PRMONTH7                  1057-1058   ///
+      byte   PRMONTH8                  1059-1060   ///
+      byte   PRMONTH9                  1061-1062   ///
+      byte   PRMONTH10                 1063-1064   ///
+      byte   PRMONTH11                 1065-1066   ///
+      byte   PRMONTH12                 1067-1068   ///
+      byte   PRMONTH13                 1069-1070   ///
+      byte   PRMONTH14                 1071-1072   ///
+      byte   PRMONTH15                 1073-1074   ///
+      byte   PRMONTH16                 1075-1076   ///
+      byte   PRMONTH17                 1077-1078   ///
+      byte   PRMONTH18                 1079-1080   ///
+      byte   PRMONTH19                 1081-1082   ///
+      byte   PRMONTH20                 1083-1084   ///
+      byte   PRMONTH21                 1085-1086   ///
+      byte   PRMONTH22                 1087-1088   ///
+      byte   PRMONTH23                 1089-1090   ///
+      byte   PRMONTH24                 1091-1092   ///
+      byte   PRMONTH25                 1093-1094   ///
+      int    PRYEAR1                   1095-1098   ///
+      int    PRYEAR2                   1099-1102   ///
+      int    PRYEAR3                   1103-1106   ///
+      int    PRYEAR4                   1107-1110   ///
+      int    PRYEAR5                   1111-1114   ///
+      int    PRYEAR6                   1115-1118   ///
+      int    PRYEAR7                   1119-1122   ///
+      int    PRYEAR8                   1123-1126   ///
+      int    PRYEAR9                   1127-1130   ///
+      int    PRYEAR10                  1131-1134   ///
+      int    PRYEAR11                  1135-1138   ///
+      int    PRYEAR12                  1139-1142   ///
+      int    PRYEAR13                  1143-1146   ///
+      int    PRYEAR14                  1147-1150   ///
+      int    PRYEAR15                  1151-1154   ///
+      int    PRYEAR16                  1155-1158   ///
+      int    PRYEAR17                  1159-1162   ///
+      int    PRYEAR18                  1163-1166   ///
+      int    PRYEAR19                  1167-1170   ///
+      int    PRYEAR20                  1171-1174   ///
+      int    PRYEAR21                  1175-1178   ///
+      int    PRYEAR22                  1179-1182   ///
+      int    PRYEAR23                  1183-1186   ///
+      int    PRYEAR24                  1187-1190   ///
+      int    PRYEAR25                  1191-1194   ///
+      using  "NY_SID_2020_CORE.ASC"
 
 ***  Assign labels to the data elements ***
 label var AGE                      "Age in years at admission"
@@ -391,7 +391,6 @@ label var I10_DX34                 "ICD-10-CM Diagnosis 34"
 label var I10_DX35                 "ICD-10-CM Diagnosis 35"
 label var I10_NDX                  "ICD-10-CM Number of diagnoses on this record"
 label var I10_NPR                  "ICD-10-PCS Number of procedures on this record"
-label var I10_ORPROC               "ICD-10-PCS Major operating room procedure indicator"
 label var I10_PR1                  "ICD-10-PCS Procedure 1"
 label var I10_PR2                  "ICD-10-PCS Procedure 2"
 label var I10_PR3                  "ICD-10-PCS Procedure 3"
@@ -437,6 +436,7 @@ label var PAY2                     "Secondary expected payer (uniform)"
 label var PAY2_X                   "Secondary expected payer (as received from source)"
 label var PAY3                     "Tertiary expected payer (uniform)"
 label var PAY3_X                   "Tertiary expected payer (as received from source)"
+label var PCLASS_ORPROC            "Indicates operating room (major diagnostic or therapeutic) procedure on the record"
 label var PL_CBSA                  "Patient location: Core Based Statistical Area (CBSA)"
 label var PL_NCHS                  "Patient Location: NCHS Urban-Rural Code"
 label var PL_RUCC                  "Patient location: Rural-Urban Continuum Codes (RUCC)"
@@ -480,7 +480,7 @@ label var PSTATE_GEO               "Patient State postal code assigned from ZIP 
 label var PSTCO                    "Patient state/county FIPS code"
 label var PSTCO_GEO                "Counties assigned based on ZIP Code geographic centroids"
 label var RACE                     "Race (uniform)"
-label var RACE_EDIT                "Race Edit Checks"
+label var RACE_PCT_MISS_HOSP       "Hospital percentage of missing or invalid race values"
 label var RACE_X                   "Race (as received from source)"
 label var TOTCHG                   "Total charges (cleaned)"
 label var TOTCHG_X                 "Total charges (as received from source)"
@@ -577,7 +577,6 @@ recode I10_BIRTH                 (-99 -88 -66=.)
 recode I10_DELIVERY              (-99 -88 -66=.)
 recode I10_NDX                   (-99 -88 -66=.)
 recode I10_NPR                   (-99 -88 -66=.)
-recode I10_ORPROC                (-9 -8 -6 -5=.)
 recode I10_PROCTYPE              (-99 -88 -66=.)
 recode I10_SERVICELINE           (-9 -8 -6 -5=.)
 recode LOS                       (-9999 -8888 -6666=.)
@@ -591,6 +590,7 @@ recode OS_TIME                   (-9999999.99 -8888888.88 -6666666.66=.)
 recode PAY1                      (-9 -8 -6 -5=.)
 recode PAY2                      (-9 -8 -6 -5=.)
 recode PAY3                      (-9 -8 -6 -5=.)
+recode PCLASS_ORPROC             (-9 -8 -6 -5=.)
 recode PL_CBSA                   (-99 -88 -66=.)
 recode PL_NCHS                   (-9 -8 -6 -5=.)
 recode PL_RUCC                   (-9 -8 -6 -5=.)
@@ -630,7 +630,7 @@ recode PRDAY25                   (-9999 -8888 -6666=.)
 recode PSTCO                     (-9999 -8888 -6666=.)
 recode PSTCO_GEO                 (-9999 -8888 -6666=.)
 recode RACE                      (-9 -8 -6 -5=.)
-recode RACE_EDIT                 (-9 -8 -6 -5=.)
+recode RACE_PCT_MISS_HOSP        (-999.99 -888.88 -666.66=.)
 recode TOTCHG                    (-999999999 -888888888 -666666666=.)
 recode TOTCHG_X                  (-99999999999.99 -88888888888.88 -66666666666.66=.)
 recode TRAN_IN                   (-9 -8 -6 -5=.)
@@ -692,4 +692,4 @@ recode PRYEAR23                  (-999 -888 -666=.)
 recode PRYEAR24                  (-999 -888 -666=.)
 recode PRYEAR25                  (-999 -888 -666=.)
 
-save "NY_SID_2019_CORE.dta", replace
+save "NY_SID_2020_CORE.dta", replace
