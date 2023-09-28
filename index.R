@@ -23,7 +23,7 @@
     get_etl_status(etl) %>% filter(is.na(loaded_data)) 
     
     ## Step 4: Load as parquet 
-    load_dta_to_db(etl)
+    load_dta_to_db(etl, subset = T)
     
     ## Step 5: Generate codebooks
     generate_codebooks(etl)    

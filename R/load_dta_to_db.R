@@ -6,14 +6,14 @@
 
 source("R/get_etl_status.R") 
 
-load_dta_to_db = function(etl){
+load_dta_to_db = function(etl, subset = F){
   
   ## get datasets that have .dta but not parquet
   datasets_to_load = get_etl_status(etl, path = T) %>% 
     filter(loaded_data == "dta",
            is.na(parquet)|parquet==F)  %>% 
     select(dataset_id, dir, everything())
-  
+  if (subset == T){datasets_to_load = datasets_to_load %>% slice(1)}
   if(nrow(datasets_to_load)>0){
     datasets_to_load %>%
       group_by(row_number()) %>% 
