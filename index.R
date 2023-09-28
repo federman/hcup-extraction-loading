@@ -24,6 +24,7 @@
     
     ## Step 4: Load as parquet 
     load_dta_to_db(etl, subset = T)
+    # load_dta_to_db(etl)
     
     ## Step 5: Generate codebooks
     generate_codebooks(etl)    
