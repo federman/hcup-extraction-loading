@@ -30,23 +30,6 @@
     generate_codebooks(etl)    
   }
   
-  { ## 1.2 Models --------------------------------------------------------------
-    
-    ## Models > Source
-    df_codebooks = fread("clean/df_codebooks.csv") |> as_tibble()
-    get_file_ids() %>% walk(~generate_source_yml(.x, env = "uhc"))
-    
-    ## Models > Base > SID 
-    generate_dbt_base_metadata('SID') %>% 
-      group_by(row_number()) %>% 
-      group_walk(~.x %>% write_dbt_base_model())
-    
-    ## Models > Base > SEDD  
-    generate_dbt_base_metadata('SEDD') %>% 
-      group_by(row_number()) %>% 
-      group_walk(~.x %>% write_dbt_base_model())
-    
-  }
 }
 
 
