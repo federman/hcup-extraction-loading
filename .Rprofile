@@ -34,7 +34,12 @@
     # renv::install('arrow')
     # renv::install('tidyr')
     # renv::install('readstata13')
-    
+    # renv::install('readstata13')
+    # renv::install('haven')
+    # renv::install('reactable')
+    # renv::install('readxl')
+    # renv::install('rmarkdown')
+    # renv::install('tidyverse')
     
     ## Packages
     suppressWarnings({
