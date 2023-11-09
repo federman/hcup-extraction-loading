@@ -27,7 +27,8 @@
     # load_dta_to_db(etl)
     
     ## Step 5: Generate codebooks
-    generate_codebooks(etl)    
+    #generate_codebooks(etl, replace_all = T)   
+    generate_codebooks(etl)   
   }
   
 }

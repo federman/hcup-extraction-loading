@@ -49,7 +49,7 @@ make_codebooks = function(df_id){
   
 }
 
-generate_codebooks = function(etl){
+generate_codebooks = function(etl, replace_all = F){
   
   
   { # Setup -------------------------------------------------------------------
@@ -61,17 +61,25 @@ generate_codebooks = function(etl){
   }
   
   { # Generate individual codebooks -------------------------------------------
-    df_targets_without_codebooks = df_targets_codebooks %>%
-      filter(is.na(codebook)) 
-    
-    if (nrow(df_targets_without_codebooks) == 0){
-      cli_alert_success("No codebooks missing - No Action taken!")
-    } else {
-      df_targets_without_codebooks %>% 
+    if(replace_all == F){
+      df_targets_without_codebooks = df_targets_codebooks %>%
+        filter(is.na(codebook)) 
+      
+      if (nrow(df_targets_without_codebooks) == 0){
+        cli_alert_success("No codebooks missing - No Action taken!")
+      } else {
+        df_targets_without_codebooks %>% 
+          group_by(row_number()) %>% 
+          group_walk(~make_codebooks(.x))
+        cli_alert_success("{nrow(df_targets_without_codebooks)} codebooks written")
+      }
+    }else{
+      df_targets_codebooks %>% 
         group_by(row_number()) %>% 
         group_walk(~make_codebooks(.x))
-      cli_alert_success("{nrow(df_targets_without_codebooks)} codebooks written")
+      cli_alert_success("{nrow(df_targets_codebooks)} codebooks written")
     }
+    
   }
   
   { # Compile codebook --------------------------------------------------------
@@ -102,24 +110,33 @@ generate_codebooks = function(etl){
     df_codebooks_int = df_codebooks_raw_full %>% 
       bind_rows(df_codebooks_imputed)
     
-    ## Fill in CHARGE for every CHGS file if not available
-    row__charge = df_codebooks_raw %>% filter(var == "CHARGE") %>% 
-      select(-dataset_id) %>% 
-      distinct() %>% 
-      drop_na()
-    df_codebooks_no_charges = df_codebooks_int %>% 
-      filter(var!="CHARGE")
-    df_codebook_charges = df_codebooks_int %>% 
-      select(dataset_id) %>% 
-      distinct() %>% 
-      filter(str_detect(dataset_id,'CHGS')) %>% 
-      bind_cols(row__charge)
-    df_codebooks = df_codebooks_int %>%  
-      bind_rows(df_codebook_charges) %>% 
-      arrange(dataset_id, var) 
+    if(F){
+      ## Fill in CHARGE for every CHGS file if not available
+      # DON'T DO THIS 
+      # - NOT ALL CHGS DATA SETS HAVE A VARIABLE CALLED CHARGE
+      # - SOME HAVE MULTIPLE NUMBERED CHARGE COLUMNS:
+      #   CHG1, CHG2, ETC OR REVCHG1, REVCHG2, ETC
+      row__charge = df_codebooks_raw %>% filter(var == "CHARGE") %>% 
+        select(-dataset_id) %>% 
+        distinct() %>% 
+        drop_na()
+      df_codebooks_no_charges = df_codebooks_int %>% 
+        filter(var!="CHARGE")
+      df_codebook_charges = df_codebooks_int %>% 
+        select(dataset_id) %>% 
+        distinct() %>% 
+        filter(str_detect(dataset_id,'CHGS')) %>% 
+        bind_cols(row__charge)
+      df_codebooks = df_codebooks_int %>%  
+        bind_rows(df_codebook_charges) %>% 
+        arrange(dataset_id, var) 
+    }else{
+      # DO THIS STEP INSTEAD
+      df_codebooks = df_codebooks_int %>%  
+        arrange(dataset_id, var) 
+    }
    
     df_codebooks%>% fwrite("clean/df_codebooks.csv")
-    
     ## export metadata to server
     df_codebooks %>% fwrite(glue("{etl$path_server_dbt}/df_codebooks.csv"))
     etl %>% as_tibble() %>% fwrite(glue("{etl$path_server_dbt}/etl_objects.csv"))
@@ -130,7 +147,6 @@ generate_codebooks = function(etl){
    
      get_file_size_mb =  function(file_dir){
        
-      
       file_metadata = file.info(file_dir)
       file_mb = file_metadata$size/10^6
        
